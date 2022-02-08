@@ -8,15 +8,43 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+
+
     <!-- <link rel="stylesheet" href="styles.css" /> -->
     <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.jpeg" type="image/x-icon">
     <title>Engineer 2022 | Home</title>
   </head>
   <body>
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <a href="index.html" class="logo">ENGINEER</a>
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">Workshops</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">Sponsers</a>
+            </li>
+          </ul>
+          <a href="#" id="nav-cta">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+    
+    </section>
+
     <section id="tag_line_page">
       <div class="pg2-navigator">
         <img src="images/navigator.png" alt="" />
@@ -76,5 +104,21 @@
         </div>
       </div>
     </section>
+    
+    <section id="previous-engi">
+
+    </section>
+
+
+
+
+<!-- Scripts -->
+    <script>
+      window.addEventListener('scroll', function () {
+          let header = document.querySelector('header');
+          let windowPosition = window.scrollY > 0;
+          header.classList.toggle('scrolling-active', windowPosition);
+      })
+  </script>
   </body>
 </html>

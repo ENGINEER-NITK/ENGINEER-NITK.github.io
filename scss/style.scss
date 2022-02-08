@@ -1,1 +1,10 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
+@font-face {
+    font-family: engineer;
+    src: url('../fonts/space\ age.ttf');
+}
+
+@import 'sections/landing';
 @import 'sections/tagline';
