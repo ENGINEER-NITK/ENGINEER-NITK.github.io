@@ -6,5 +6,7 @@
     src: url('../fonts/space\ age.ttf');
 }
 
+@import 'global';
 @import 'sections/landing';
 @import 'sections/tagline';
+@import 'sections/footer';

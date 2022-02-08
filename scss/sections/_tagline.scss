@@ -1,11 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 section {
-  height: 100vh;
   background-color: #141414;
   font-family: "Poppins", sans-serif;
 }
@@ -18,7 +11,7 @@ section {
 
 .pg2-navigator img {
   margin: auto;
-  height: 3.125rem;
+  height: 3rem;
 }
 
 .pg2-content {
@@ -41,7 +34,7 @@ section {
 }
 
 .pg2-content h1 {
-  font-size: 3.7rem;
+  font-size: 3rem;
   margin: 1.5rem 0;
 }
 

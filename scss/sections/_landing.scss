@@ -1,19 +1,10 @@
-*,
-*::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: engineer;
     src: url('../../fonts/space\ age.ttf');
 }
 
 html{
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 header{
@@ -25,16 +16,32 @@ header{
     z-index: 1000;
 }
 
-.container{
-    width: 100%;
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+.center {
+    text-align: center;
 }
 
-.nav{
+.home-top-space-custom {
+  width: 100%;
+  height: 244px;
+}
+
+.home-page-text {
+    color: #fff;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 70px;
+    letter-spacing: 2px;
+}
+.main-container{
     width: 100%;
-    height: 10rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 0.9rem;
+}
+
+.main-nav{
+    width: 100%;
+    height: 6.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,14 +49,14 @@ header{
     transition: height .5s ease;
 }
 
-.nav a{
+.main-nav a{
     text-decoration: none;
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1rem;
 }
 
-.nav .logo{
-    font-size: 3.5rem;
+.main-nav .logo{
+    font-size: 2.2rem;
     font-weight: bold;
 }
 
@@ -62,11 +69,13 @@ header{
     list-style: none;
     display: flex;
     margin-right: auto;
-    margin-left: 4rem;
+    margin-left: 2.5rem;
+    margin-bottom: 0 !important;
 }
 
 .nav-link{
-    margin: 0 2rem;
+    margin: 0 1.25rem;
+    padding: 0 10px;
     position: relative;
 }
 
@@ -87,18 +96,18 @@ header{
     transform: scaleX(1);
 }
 
-#nav-cta{
-    display: inline-block;
-    background-color: #fff;
-    color: #313131;
-    padding: 1rem 2rem;
-    border-radius: 2rem;
-    transition: background-color .5s ease;
-}
+// #nav-cta{
+//     display: inline-block;
+//     background-color: #fff;
+//     color: #313131;
+//     padding: 1rem 2rem;
+//     border-radius: 2rem;
+//     transition: background-color .5s ease;
+// }
 
-#nav-cta:hover{
-    background-color: #d3d3d3;
-}
+// #nav-cta:hover{
+//     background-color: #d3d3d3;
+// }
 
 
 /*Apply styles after scroll*/
@@ -116,22 +125,22 @@ header{
     color: #ffdf00;
 }
 
-.scrolling-active .nav{
-    height: 6.6rem;
+.scrolling-active .main-nav{
+    height: 4.2rem;
 }
 
 // .scrolling-active .nav a{
 //     color: #fff;
 // }
 
-.scrolling-active #nav-cta{
-    background-color: #313131;
-    color: #fff;
-}
+// .scrolling-active #nav-cta{
+//     background-color: #313131;
+//     color: #fff;
+// }
 
-.scrolling-active #nav-cta:hover{
-    background-color: #151515;
-}
+// .scrolling-active #nav-cta:hover{
+//     background-color: #151515;
+// }
 
 // .scrolling-active .nav-link::after{
 //     background-color: #313131;
@@ -141,16 +150,22 @@ header{
 
 
 /* Hero Demo Content*/
-.hero{
+.hero {
+    position: relative;
+}
+.bg-blur-box{
     width: 100%;
     height: 100vh;
     background: url("../../images/background.jpeg") center no-repeat;
     background-size: cover;
     position: relative;
     background-position: center;
+    box-shadow: 
+    inset 0px 11px 8px -10px rgb(0, 0, 0),
+    inset 0px -110px 80px -10px rgba(20, 20, 20, 0.1);
 }
 
-.hero::before {
+.bg-blur-box::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -158,7 +173,7 @@ header{
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
 }
-.hero::after{
+.bg-blur-box::after{
     content: '';
     width: inherit;
     height: inherit;
@@ -168,3 +183,9 @@ header{
     background-color: rgba(0,0,0,.1);
 }
 
+.main-start {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+}
