@@ -19,7 +19,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <link rel="stylesheet" href="./dist/css/style.css" />
     <link
       rel="shortcut icon"
@@ -73,8 +74,17 @@
                 "
                 >SOON</span
               >
-              ...
             </h1>
+
+            <a class="text-dark" href="http://engineer.nitk.ac.in">
+              <button class="fancy-button mx-3"> Revisit Engineer'19 </button>
+            </a>
+            <a href="#tag_line_page">
+              <button class="learn-more-btn">
+                <span>See More</span>
+                <div class="liquid"></div>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -140,6 +150,28 @@
       </div>
     </section>
 
+    <section class="gallery-section" id="gallery-section">
+      <div class="container">
+        <div class="gallery-section-inner">
+          <h2 class="engineer-logo text-white">Glimps of Engineer'19</h2>
+          <div class="gallery-section-slider">
+            <div class="item">
+              <img class="gallery-img" src="./images/gallery/others/inaug1.jpg" alt="">
+            </div>
+            <div class="item">
+              <img class="gallery-img" src="./images/gallery/others/inaug2.jpg" alt="">
+            </div>
+            <div class="item">
+              <img class="gallery-img" src="./images/gallery/others/IMG_7348.jpg" alt="">
+            </div>
+            <div class="item">
+              <img class="gallery-img" src="./images/gallery/others/bizzwaves.PNG" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="home-top-space-custom"></div>
     <!-- Footer -->
     <footer
@@ -150,7 +182,7 @@
         <div class="container text-center text-md-start mt-5">
           <div class="row mt-3">
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold logo">Engineer</h6>
+              <h6 class="text-uppercase fw-bold engineer-logo">Engineer</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #ffdf00; height: 2px"
@@ -162,7 +194,7 @@
             </div>
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold">Discover</h6>
+              <h6 class="text-uppercase fw-bold engineer-logo">Discover</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #ffdf00; height: 2px"
@@ -185,7 +217,7 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">About</h6>
+              <h6 class="text-uppercase fw-bold engineer-logo">About</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #ffdf00; height: 2px"
@@ -199,7 +231,7 @@
             </div>
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <h6 class="text-uppercase fw-bold engineer-logo">Contact</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #ffdf00; height: 2px"
@@ -208,7 +240,12 @@
                 <i class="fas fa-home mr-3"></i> National Institute of
                 Technology Karnataka, Surathkal, Mangalore - 575 102
               </p>
-              <p><i class="fas fa-envelope mr-3"></i> <a href="mailto:nitkengineer2022@gmail.com">nitkengineer2022@gmail.com</a></p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i>
+                <a href="mailto:nitkengineer2022@gmail.com"
+                  >nitkengineer2022@gmail.com</a
+                >
+              </p>
               <p><i class="fas fa-phone mr-3"></i> +91 8839404484</p>
             </div>
           </div>
@@ -243,7 +280,10 @@
       </section>
 
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(20, 20, 20, 1)">
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(20, 20, 20, 1)"
+      >
         © 2022 Copyright Engineer | Design by
         <a
           class="text-white py-3"
@@ -253,8 +293,6 @@
       </div>
       <!-- Copyright -->
     </footer>
-    
-    
     <!-- Scripts -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -262,6 +300,43 @@
       crossorigin="anonymous"
     ></script>
     <!-- Local Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+    
+    
+      $(".gallery-section-slider").slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        speed: 1000,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    </script>
     <script src="./js/main.js"></script>
   </body>
 </html>

@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Poppins', sans-serif !important;
     background-color: #141414;
@@ -17,6 +19,7 @@ a {
     color: #fff;
 }
 
-a:hover {
-    color: yellowgreen;
+.engineer-logo {
+    font-family: engineer;
+    letter-spacing: 2px;
 }
