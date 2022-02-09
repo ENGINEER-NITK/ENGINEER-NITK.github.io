@@ -13,6 +13,11 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #141414;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -25,10 +30,6 @@ a:hover {
 @font-face {
   font-family: engineer;
   src: url("../../fonts/space age.ttf");
-}
-
-html {
-  font-family: 'Poppins', sans-serif !important;
 }
 
 header {
@@ -54,7 +55,7 @@ header {
   color: #fff;
   font-family: "Poppins";
   font-weight: bold;
-  font-size: 70px;
+  font-size: 100px;
   letter-spacing: 2px;
 }
 
@@ -275,5 +276,10 @@ section {
 
 .social-icon a i {
   font-size: 25px;
+  padding: 0 5px;
+}
+
+.social-icon a i:hover {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=style.css.map */
