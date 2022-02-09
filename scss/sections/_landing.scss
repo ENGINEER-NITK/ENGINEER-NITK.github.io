@@ -2,6 +2,15 @@
     font-family: engineer;
     src: url('../../fonts/space\ age.ttf');
 }
+@font-face {
+    font-family: coming_soon_r;
+    src: url('../../fonts/MonumentExtended-Regular.otf');
+}
+@font-face {
+    font-family: coming_soon_ub;
+    src: url('../../fonts/MonumentExtended-Ultrabold.otf');
+}
+
 
 header{
     width: 100%;
@@ -23,8 +32,7 @@ header{
 
 .home-page-text {
     color: #fff;
-    font-family: "Poppins";
-    font-weight: bold;
+    font-family: coming_soon_r;
     font-size: 100px;
     letter-spacing: 2px;
 }
@@ -74,37 +82,26 @@ header{
     padding: 0 10px;
     position: relative;
 }
-
-.nav-link::after{
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .5s ease;
+.nav-link:hover {
+    color: #ae3cdb;
 }
-
-.nav-link:hover::after{
-    transform: scaleX(1);
-}
-
-// #nav-cta{
-//     display: inline-block;
+ 
+// .nav-link::after{
+//     content: '';
+//     width: 100%;
+//     height: 2px;
 //     background-color: #fff;
-//     color: #313131;
-//     padding: 1rem 2rem;
-//     border-radius: 2rem;
-//     transition: background-color .5s ease;
+//     position: absolute;
+//     left: 0;
+//     bottom: -3px;
+//     transform: scaleX(0);
+//     transform-origin: left;
+//     transition: transform .5s ease;
 // }
 
-// #nav-cta:hover{
-//     background-color: #d3d3d3;
+// .nav-link:hover::after{
+//     transform: scaleX(1);
 // }
-
 
 /*Apply styles after scroll*/
 .scrolling-active{
@@ -125,22 +122,6 @@ header{
     height: 4.2rem;
 }
 
-// .scrolling-active .nav a{
-//     color: #fff;
-// }
-
-// .scrolling-active #nav-cta{
-//     background-color: #313131;
-//     color: #fff;
-// }
-
-// .scrolling-active #nav-cta:hover{
-//     background-color: #151515;
-// }
-
-// .scrolling-active .nav-link::after{
-//     background-color: #313131;
-// }
 
 /*Apply styles after scroll end*/
 
@@ -195,7 +176,6 @@ header{
 .fancy-button::after {
  padding: 16px 32px;
  font-size: 18px;
-//  background: linear-gradient(45deg, transparent 5%, #fafafa 5%);
  border: 0;
  border-radius: 50px;
  color: rgb(0, 0, 0);
@@ -227,7 +207,7 @@ header{
 .fancy-button:hover::after {
  animation: 1s glitch;
  animation-timing-function: steps(2, end);
- animation-iteration-count: infinite;
+ animation-iteration-count: 1;
 }
 
 @keyframes glitch {

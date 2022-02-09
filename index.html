@@ -19,8 +19,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
     <link rel="stylesheet" href="./dist/css/style.css" />
     <link
       rel="shortcut icon"
@@ -63,21 +69,31 @@
       <div class="main-start">
         <div class="container">
           <div class="home-top-space-custom"></div>
-          <div class="center-y center">
+          <div
+            class="center-y center"
+            style="
+              -moz-user-select: none;
+              -webkit-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              -o-user-select: none;
+            "
+            unselectable="on"
+            onselectstart="return false;"
+          >
             <h1 class="display-1 home-page-text">
               COMING
               <span
                 style="
                   -webkit-text-stroke: 2px rgb(255, 255, 255);
-                  font-family: arial;
                   color: rgba(255, 255, 255, 0);
                 "
                 >SOON</span
               >
             </h1>
-
+            <div class="my-3"></div>
             <a class="text-dark" href="http://engineer.nitk.ac.in">
-              <button class="fancy-button mx-3"> Revisit Engineer'19 </button>
+              <button class="fancy-button mx-3">Revisit Engineer'19</button>
             </a>
             <a href="#tag_line_page">
               <button class="learn-more-btn">
@@ -156,16 +172,32 @@
           <h2 class="engineer-logo text-white">Glimps of Engineer'19</h2>
           <div class="gallery-section-slider">
             <div class="item">
-              <img class="gallery-img" src="./images/gallery/others/inaug1.jpg" alt="">
+              <img
+                class="gallery-img"
+                src="./images/gallery/others/inaug1.jpg"
+                alt=""
+              />
             </div>
             <div class="item">
-              <img class="gallery-img" src="./images/gallery/others/inaug2.jpg" alt="">
+              <img
+                class="gallery-img"
+                src="./images/gallery/others/inaug2.jpg"
+                alt=""
+              />
             </div>
             <div class="item">
-              <img class="gallery-img" src="./images/gallery/others/IMG_7348.jpg" alt="">
+              <img
+                class="gallery-img"
+                src="./images/gallery/others/IMG_7348.jpg"
+                alt=""
+              />
             </div>
             <div class="item">
-              <img class="gallery-img" src="./images/gallery/others/bizzwaves.PNG" alt="">
+              <img
+                class="gallery-img"
+                src="./images/gallery/others/bizzwaves.PNG"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -303,8 +335,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-    
-    
       $(".gallery-section-slider").slick({
         infinite: true,
         slidesToShow: 3,
@@ -317,24 +347,24 @@
               slidesToShow: 3,
               slidesToScroll: 3,
               infinite: true,
-              dots: true
-            }
+              dots: true,
+            },
           },
           {
             breakpoint: 600,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2
-            }
+              slidesToScroll: 2,
+            },
           },
           {
             breakpoint: 480,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
+              slidesToScroll: 1,
+            },
+          },
+        ],
       });
     </script>
     <script src="./js/main.js"></script>
