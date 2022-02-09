@@ -540,6 +540,17 @@ section {
   font-size: 1.3rem;
 }
 
+.about_sec_text {
+  font-family: 'Poppins';
+  font-size: 1.3rem;
+  color: #fff !important;
+  opacity: 0.55;
+}
+
+.section_about_us {
+  padding-top: 100px;
+}
+
 .gallery-section-slider .item {
   width: 300px;
   height: 300px;
