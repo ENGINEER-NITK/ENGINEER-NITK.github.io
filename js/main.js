@@ -44,10 +44,12 @@ let visible = false
 btn.addEventListener("click" ,()=>{
   if(visible == false)
   {
+    btn.style.border = "none"
     document.getElementById('nav-menu').style.width = "100%"
     visible = true
   }
   else{
+    btn.style.border = "none"
     document.getElementById('nav-menu').style.width = "0%"
     visible = false
   }

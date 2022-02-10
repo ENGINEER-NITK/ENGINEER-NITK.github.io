@@ -4,10 +4,7 @@
        font-size: 20px !important;
        letter-spacing: 2px;
     }
-    /* .nav-link{
-        font-size:5px !important ;
-    } */
-
+  
     .home-page-text{
         font-size: 60px;
     }
@@ -34,11 +31,26 @@
     }
     .pg2-think-content , .pg2-create-content , .pg2-engineer-content{
         text-align: left;
+        font-size: 17px;
+        letter-spacing: 1.5px;
     }
     .pg2-line{
         transform: rotate(90deg);
     }
+    .abt-us{
+        text-align: center;
+        font-size: 30px;
+    }
 
+    .about_sec_text{
+        padding: 13px;
+        font-size: 17px;
+        letter-spacing: 1.5px;
+    }
 
+    .glimps-engi{
+        position: relative;
+        left: 18%;
+    }
 
 }
