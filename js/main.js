@@ -37,3 +37,18 @@ $(".gallery-section-slider").slick({
     },
   ],
 });
+
+
+let btn = document.getElementById('nav-button')
+let visible = false
+btn.addEventListener("click" ,()=>{
+  if(visible == false)
+  {
+    document.getElementById('nav-menu').style.width = "100%"
+    visible = true
+  }
+  else{
+    document.getElementById('nav-menu').style.width = "0%"
+    visible = false
+  }
+})
