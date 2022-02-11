@@ -1,0 +1,67 @@
+@media only screen and (max-width: 600px) {
+
+    .logo{
+       font-size: 20px !important;
+       letter-spacing: 2px;
+    }
+  
+    .home-page-text{
+        font-size: 60px;
+    }
+    .fancy-button{
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    /* THINK SECTION */
+
+    .pg2-content{
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
+    }
+    .pg2-think , .pg2-create , .pg2-engineer{
+        text-align: center;
+        margin: 5px;
+        padding: 0px;
+    }
+    .pg2-c-h > h1{
+        padding: 0px 7px;
+        text-align: center;
+    }
+    .pg2-think-content , .pg2-create-content , .pg2-engineer-content{
+        text-align: left;
+        font-size: 17px;
+        letter-spacing: 1.5px;
+    }
+    .pg2-line{
+        transform: rotate(90deg);
+    }
+    .abt-us{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .about_sec_text{
+        padding: 13px;
+        font-size: 17px;
+        letter-spacing: 1.5px;
+    }
+
+    .glimps-engi{
+        position: relative;
+        margin: auto;
+    }
+
+    .slick-next{
+        position: absolute;
+        margin: auto;
+        top:100%;
+        left: 20%;
+    }
+    .slick-prev{
+        margin: auto;
+        top:100%;
+        left: 0%;
+    }
+}

@@ -33,6 +33,8 @@
       href="./images/favicon.jpeg"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="./css//responsive.css"/>
+    <link rel="stylesheet" href="./css//navbar.css"/>
     <title>Engineer 2022 | Home</title>
   </head>
   <body>
@@ -42,7 +44,14 @@
           <a href="index.html" class="logo hero-glitch" data-text="ENGINEER"
             >ENGINEER</a
           >
-          <ul class="nav-list">
+          <button id="nav-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="nav-ham" viewBox="0 0 100 100" width="50" onclick="this.classList.toggle('active')">
+              <path class="nav-ham-line top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+              <path class="nav-ham-line middle" d="m 30,50 h 40" />
+              <path class="nav-ham-line bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+            </svg>
+          </button>
+          <ul class="nav-list" id="nav-menu">
             <li>
               <a href="#hero" class="nav-link">Home</a>
             </li>
@@ -170,7 +179,7 @@
 
     <section class="section_about_us" id="section_about_us">
       <div class="container">
-        <h2 class="engineer-logo text-white my-3">About Us</h2>
+        <h2 class="engineer-logo text-white my-3 abt-us">About Us</h2>
         <div class="about_sec_text">
           Engineer or "Engi" as we call it, is the Annual Technical Symposium of
           NITK Surathkal, to promote technical and managerial enthusiasm amongst
@@ -185,7 +194,7 @@
     <section class="gallery-section" id="gallery-section">
       <div class="container">
         <div class="gallery-section-inner">
-          <h2 class="engineer-logo text-white">Glimps of Engineer'19</h2>
+          <h2 class="engineer-logo text-white glimps-engi">Glimps of Engineer'19</h2>
           <div class="gallery-section-slider">
             <div class="item">
               <img
