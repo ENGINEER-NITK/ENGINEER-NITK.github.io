@@ -15,6 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
     <link
       rel="shortcut icon"
       href="./images/NEWLOGO.png"
@@ -23,6 +25,7 @@
     <link rel="stylesheet" href="./dist/css/style.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./dist/css/workshop.css">
 </head>
 <body>
     <header>
@@ -62,8 +65,84 @@
       </div>
     </header>
 
-    
     <div class="home-top-space-custom"></div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="workshop1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Workshops First</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <form>
+              <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Iwdp9qAGblSpAw" async> </script> 
+            </form>
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="workshop2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Workshops Second</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <section class="hero-section">
+      <div class="card-grid">
+        <a class="card" href="#" data-bs-toggle="modal" data-bs-target="#workshop1">
+          <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading">Example Card Heading</h3>
+          </div>
+        </a>
+        <a class="card" href="#" data-bs-toggle="modal" data-bs-target="#workshop2">
+          <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading">Example Card Heading</h3>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading">Example Card Heading</h3>
+          </div>
+        </li>
+        <a class="card" href="#">
+          <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading">Example Card Heading</h3>
+          </div>
+        </a>
+      <div>
+    </section>
+
+
+
     <div class="home-top-space-custom"></div>
     <!-- Footer -->
     <footer
