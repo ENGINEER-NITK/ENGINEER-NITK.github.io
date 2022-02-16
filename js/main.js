@@ -7,6 +7,8 @@ window.addEventListener("scroll", function () {
 
 // js for gallery carosal
 $(".gallery-section-slider").slick({
+  autoplay: true,
+  dots: true,
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 2,
@@ -54,3 +56,8 @@ btn.addEventListener("click" ,()=>{
     visible = false
   }
 })
+
+
+
+// animate on scroll
+AOS.init();
