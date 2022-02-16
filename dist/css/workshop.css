@@ -20,7 +20,6 @@
 
 html {
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
 
@@ -28,7 +27,11 @@ body {
   height: 100%;
 }
 
-.hero-section {
+.workshops-title {
+  margin-top: 150px;
+}
+
+.workshops {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -104,11 +107,6 @@ body {
 .card:hover .card__background {
   -webkit-transform: scale(1.05) translateZ(0);
           transform: scale(1.05) translateZ(0);
-}
-
-.card-grid:hover > .card:not(:hover) .card__background {
-  -webkit-filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-          filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
 .card__content {

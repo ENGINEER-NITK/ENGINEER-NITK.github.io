@@ -19,17 +19,17 @@
 
 html{
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
 
 body{
   height: 100%;
 }
-
-.hero-section{
+.workshops-title {
+  margin-top: 150px;
+}
+.workshops{
   align-items: flex-start;
-  // background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
   display: flex;
   min-height: 100%;
   justify-content: center;
@@ -91,9 +91,9 @@ body{
   transform: scale(1.05) translateZ(0);
 }
 
-.card-grid:hover > .card:not(:hover) .card__background{
-  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-}
+// .card-grid:hover > .card:not(:hover) .card__background{
+//   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+// }
 
 .card__content{
   left: 0;
