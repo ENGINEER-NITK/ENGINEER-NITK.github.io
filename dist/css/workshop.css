@@ -127,10 +127,16 @@ body {
           transform-origin: center;
   -webkit-transform: scale(1) translateZ(0);
           transform: scale(1) translateZ(0);
-  -webkit-transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
-  transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
-  transition: filter 200ms linear, transform 200ms linear;
-  transition: filter 200ms linear, transform 200ms linear, -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+  -webkit-transition: -webkit-filter 200ms linear,
+ -webkit-transform 200ms linear;
+  transition: -webkit-filter 200ms linear,
+ -webkit-transform 200ms linear;
+  transition: filter 200ms linear,
+ transform 200ms linear;
+  transition: filter 200ms linear,
+ transform 200ms linear,
+ -webkit-filter 200ms linear,
+ -webkit-transform 200ms linear;
 }
 
 .card:hover .card__background {

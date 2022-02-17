@@ -1,12 +1,22 @@
 .about_sec_text {
   font-family: 'Poppins';
-  font-size: 1.3rem;
-  font-weight: 200;
+  font-size: 1.1rem;
+  font-weight: 300;
   color: #fff !important;
-  opacity: 0.55;
 }
 
+@font-face {
+        font-family: Monument;
+        src: url("../../fonts/MonumentExtended-Regular.otf");
+}
+
+.abt-body{
+        
+}
 .section_about_us {
+  background-image: url('/images/about.svg');
+  
+  background-repeat: no-repeat; 
   padding-top: 200px;
   margin-bottom: 100px;
   min-height: 100vh;
@@ -14,7 +24,13 @@
 
 .about_video iframe {
   width: 90%;
-  height: 80%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+.abt-us{
+  font-family: 'Monument';
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -24,8 +40,29 @@
   }
 }
 
+
+
+
+.fancy-button{
+        padding: 14px 20px;
+        letter-spacing: 3px;
+        outline: none;
+        border: none;
+        position: relative;
+        margin: 30px 0;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: 0.5s;
+}
+.fancy-button:hover{
+        background-color: #272727;
+        color: #fff;
+        box-shadow: 1px 0px 45px -9px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 1px 0px 45px -9px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 0px 45px -9px rgba(0,0,0,0.75);
+}
 /* From cssbuttons.io by @namecho */
-.fancy-button,
+/* .fancy-button,
 .fancy-button::after {
   padding: 14px 32px;
   font-size: 16px;
@@ -203,5 +240,5 @@
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-}
+} */
 /*# sourceMappingURL=about.css.map */
