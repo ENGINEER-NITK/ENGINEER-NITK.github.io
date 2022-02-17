@@ -36,6 +36,25 @@ body{
   padding: var(--spacing-xxl) var(--spacing-l);
 }
 
+.modal-content {
+  background: rgb(20,20,20);
+}
+.modal-title {
+  color: #fff;
+}
+.modal-body {
+  color: #fff;
+  font-weight: 200;
+}
+.modal-footer, .modal-header {
+  border: none;
+}
+.alert-warning {
+  color: #ffffff91;
+  background-color: rgba(255,201, 0, 0.1) !important;
+  border: none;
+}
+
 .card-grid{
   display: grid;
   grid-template-columns: repeat(1, 1fr);

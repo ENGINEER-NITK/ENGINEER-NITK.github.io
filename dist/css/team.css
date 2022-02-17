@@ -197,6 +197,7 @@ img {
 /********* Team  Style **********/
 /**********************************/
 .team {
+  margin: 0 auto;
   margin-bottom: 30px;
   height: 350px;
   width: 250px;

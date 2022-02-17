@@ -321,6 +321,31 @@
       crossorigin="anonymous"
     ></script>
     <!-- Local Scripts -->
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script>
+      window.addEventListener("scroll", function () {
+        let header = document.querySelector("header");
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle("scrolling-active", windowPosition);
+      });
+
+
+      let btn = document.getElementById('nav-button')
+      let visible = false
+      btn.addEventListener("click" ,()=>{
+        if(visible == false)
+        {
+          btn.style.border = "none"
+          document.getElementById('nav-menu').style.width = "100%"
+          visible = true
+        }
+        else{
+          btn.style.border = "none"
+          document.getElementById('nav-menu').style.width = "0%"
+          visible = false
+        }
+      })
+
+    </script>
   </body>
 </html>
