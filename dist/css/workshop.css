@@ -45,6 +45,20 @@ body {
   padding: var(--spacing-xxl) var(--spacing-l);
 }
 
+.events {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
 .modal-content {
   background: #141414;
 }
