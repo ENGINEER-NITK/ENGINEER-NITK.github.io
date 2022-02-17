@@ -59,29 +59,6 @@ body {
   padding: var(--spacing-xxl) var(--spacing-l);
 }
 
-.modal-content {
-  background: #141414;
-}
-
-.modal-title {
-  color: #fff;
-}
-
-.modal-body {
-  color: #fff;
-  font-weight: 200;
-}
-
-.modal-footer {
-  border: none;
-}
-
-.modal-header {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
-  border: none;
-}
-
 .alert-warning {
   color: #ffffff91;
   background-color: rgba(255, 201, 0, 0.1) !important;

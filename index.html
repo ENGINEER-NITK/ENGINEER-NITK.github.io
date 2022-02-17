@@ -93,6 +93,40 @@
       </div>
     </header>
 
+    <div class="modal fade" id="shop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">MERCHANDISE</h3>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h4 class="center">Color #1</h4>
+                <img src="./images/t_shirt/black.png" alt="" style="width: 100%; padding: 10px;">
+                <h4 class="center">Color #2</h4>
+                <img src="./images/t_shirt/green.png" alt="" style="width: 100%; padding: 10px;">
+                <h4 class="center">Color #3</h4>
+                <img src="./images/t_shirt/red.png" alt="" style="width: 100%; padding: 10px;">
+                <h5 class="mt-3">Price</h5>
+                    270 INR/
+
+
+              </div>
+              <div class="modal-footer">
+                  <form>
+                      <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                          data-payment_button_id="pl_Iwdp9qAGblSpAw" async> </script>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
     <section class="hero" id="hero">
       <video
         type="video/mp4"
@@ -135,8 +169,8 @@
                   <div class="liquid"></div>
                 </button>
               </a>
-              <a href="#tag_line_page">
-                <button class="landing-btn shop-btn">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#shop">
+                <button class="landing-btn shop-btn" >
                   <i class="fa-solid fa-bag-shopping" style="margin-left: -10px;"></i><span> Shop Now</span>
                   <div class="liquid"></div>
                 </button>
@@ -233,28 +267,28 @@
             <div class="item card" data-aos="fade-up" data-aos-delay="0">
               <img
                 class="gallery-img"
-                src="./images/gallery/others/inaug1.jpg"
+                src="./images/gallery/others/technites.JPG"
                 alt=""
               />
             </div>
             <div class="item card" data-aos="fade-up" data-aos-delay="250">
               <img
                 class="gallery-img"
-                src="./images/gallery/others/inaug2.jpg"
+                src="./images/gallery/others/tech1.JPG"
                 alt=""
               />
             </div>
             <div class="item card" data-aos="fade-up" data-aos-delay="500">
               <img
                 class="gallery-img"
-                src="./images/gallery/others/IMG_7348.jpg"
+                src="./images/gallery/others/laser.JPG"
                 alt=""
               />
             </div>
             <div class="item card">
               <img
                 class="gallery-img"
-                src="./images/gallery/others/bizzwaves.PNG"
+                src="./images/gallery/others/cs.JPG"
                 alt=""
               />
             </div>
