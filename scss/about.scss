@@ -7,9 +7,21 @@
 }
 
 .section_about_us {
-    padding-top: 100px;
+    padding-top: 200px;
+    margin-bottom: 100px;
+    min-height: 100vh;
 }
 
+.about_video iframe {
+    width: 90%;
+    height: 80%;
+}
+@media only screen and (max-width: 600px) {
+    .section_about_us {
+        padding-top: 150px;
+        text-align: center;
+    }
+}
 /* From cssbuttons.io by @namecho */
 .fancy-button,
 .fancy-button::after {

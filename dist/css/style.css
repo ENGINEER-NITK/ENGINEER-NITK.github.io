@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
 @import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
 @font-face {
   font-family: engineer;
@@ -104,10 +104,7 @@ header {
   color: #fff;
   font-size: 1rem;
 }
-.footer-logo{
-  font-family: 'engineer';
-  font-size: 1.4rem;
-}
+
 .main-nav .logo {
   font-size: 2rem;
   font-weight: bold;
@@ -620,18 +617,13 @@ section {
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-.glimps-engi{
-  font-family: 'Poppins';
-  font-weight: 700;
-}
+
 .pg2-c-h:hover {
   opacity: 1;
 }
 
 .pg2-content h2 {
   margin: 1.5rem 0;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
 }
 
 .pg2-think,
@@ -669,199 +661,6 @@ section {
   font-size: 1.3rem;
 }
 
-.about_sec_text {
-  font-family: 'Poppins';
-  font-size: 1.3rem;
-  font-weight: 200;
-  color: #fff !important;
-  opacity: 0.55;
-}
-
-.section_about_us {
-  padding-top: 100px;
-}
-
-/* From cssbuttons.io by @namecho */
-.fancy-button,
-.fancy-button::after {
-  padding: 14px 32px;
-  font-size: 16px;
-  border: 0;
-  color: black;
-  letter-spacing: 3px;
-  line-height: 1;
-  outline: transparent;
-  position: relative;
-  margin: 20px 0;
-}
-
-.fancy-button::after {
-  --slice-0: inset(50% 50% 50% 50%);
-  --slice-1: inset(80% -6px 0 0);
-  --slice-2: inset(50% -6px 30% 0);
-  --slice-3: inset(10% -6px 85% 0);
-  --slice-4: inset(40% -6px 43% 0);
-  --slice-5: inset(80% -6px 5% 0);
-  content: "Revisit Engineer'19";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ffffff 5%);
-  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
-  -webkit-clip-path: var(--slice-0);
-          clip-path: var(--slice-0);
-}
-
-.fancy-button:hover::after {
-  -webkit-animation: 1s glitch;
-          animation: 1s glitch;
-  -webkit-animation-timing-function: steps(2, end);
-          animation-timing-function: steps(2, end);
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-@-webkit-keyframes glitch {
-  0% {
-    -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
-    -webkit-transform: translate(-20px, -10px);
-            transform: translate(-20px, -10px);
-  }
-  10% {
-    -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
-    -webkit-transform: translate(10px, 10px);
-            transform: translate(10px, 10px);
-  }
-  20% {
-    -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
-    -webkit-transform: translate(-10px, 10px);
-            transform: translate(-10px, 10px);
-  }
-  30% {
-    -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
-    -webkit-transform: translate(0px, 5px);
-            transform: translate(0px, 5px);
-  }
-  40% {
-    -webkit-clip-path: var(--slice-2);
-            clip-path: var(--slice-2);
-    -webkit-transform: translate(-5px, 0px);
-            transform: translate(-5px, 0px);
-  }
-  50% {
-    -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
-    -webkit-transform: translate(5px, 0px);
-            transform: translate(5px, 0px);
-  }
-  60% {
-    -webkit-clip-path: var(--slice-4);
-            clip-path: var(--slice-4);
-    -webkit-transform: translate(5px, 10px);
-            transform: translate(5px, 10px);
-  }
-  70% {
-    -webkit-clip-path: var(--slice-2);
-            clip-path: var(--slice-2);
-    -webkit-transform: translate(-10px, 10px);
-            transform: translate(-10px, 10px);
-  }
-  80% {
-    -webkit-clip-path: var(--slice-5);
-            clip-path: var(--slice-5);
-    -webkit-transform: translate(20px, -10px);
-            transform: translate(20px, -10px);
-  }
-  90% {
-    -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
-    -webkit-transform: translate(-10px, 0px);
-            transform: translate(-10px, 0px);
-  }
-  100% {
-    -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@keyframes glitch {
-  0% {
-    -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
-    -webkit-transform: translate(-20px, -10px);
-            transform: translate(-20px, -10px);
-  }
-  10% {
-    -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
-    -webkit-transform: translate(10px, 10px);
-            transform: translate(10px, 10px);
-  }
-  20% {
-    -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
-    -webkit-transform: translate(-10px, 10px);
-            transform: translate(-10px, 10px);
-  }
-  30% {
-    -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
-    -webkit-transform: translate(0px, 5px);
-            transform: translate(0px, 5px);
-  }
-  40% {
-    -webkit-clip-path: var(--slice-2);
-            clip-path: var(--slice-2);
-    -webkit-transform: translate(-5px, 0px);
-            transform: translate(-5px, 0px);
-  }
-  50% {
-    -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
-    -webkit-transform: translate(5px, 0px);
-            transform: translate(5px, 0px);
-  }
-  60% {
-    -webkit-clip-path: var(--slice-4);
-            clip-path: var(--slice-4);
-    -webkit-transform: translate(5px, 10px);
-            transform: translate(5px, 10px);
-  }
-  70% {
-    -webkit-clip-path: var(--slice-2);
-            clip-path: var(--slice-2);
-    -webkit-transform: translate(-10px, 10px);
-            transform: translate(-10px, 10px);
-  }
-  80% {
-    -webkit-clip-path: var(--slice-5);
-            clip-path: var(--slice-5);
-    -webkit-transform: translate(20px, -10px);
-            transform: translate(20px, -10px);
-  }
-  90% {
-    -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
-    -webkit-transform: translate(-10px, 0px);
-            transform: translate(-10px, 0px);
-  }
-  100% {
-    -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
 .gallery-section-slider .item {
   width: 300px;
   height: 300px;
@@ -880,6 +679,8 @@ section {
 }
 
 .gallery-section h2 {
+  font-family: 'Poppins';
+  font-weight: 700;
   max-width: 60%;
 }
 

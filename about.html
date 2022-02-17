@@ -19,20 +19,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
     <link rel="stylesheet" href="./dist/css/style.css" />
-    <link rel="stylesheet" href="./css/gallery_page.css" />
+    <link rel="stylesheet" href="./dist/css/about.css" />
+    <link rel="shortcut icon" href="./images/NEWLOGO.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css//responsive.css" />
     <link rel="stylesheet" href="./css//navbar.css" />
-    <link rel="shortcut icon" href="./images/NEWLOGO.png" type="image/x-icon" />
-    <title>Engineer 2022 | Gallery</title>
+    <link rel="stylesheet" href="./css/gallery_page.css" />
+    <title>Engineer 2022 | Home</title>
   </head>
   <body>
     <header>
       <div class="container">
         <nav class="main-nav">
-          <a href="index.html" class="logo hero-glitch" data-text="ENGINEER"
-            >ENGINEER</a
-          >
+          <a href="index.html" class="logo hero-glitch" data-text="ENGINEER">ENGINEER</a>
           <button
             id="nav-button"
             class="navbar-toggler"
@@ -66,7 +76,7 @@
               <a href="./about.html" class="nav-link">About</a>
             </li>
             <li>
-              <a href="./events.html" class="nav-link">Events</a>
+              <a href="#" class="nav-link">Events</a>
             </li>
             <li>
               <a href="./workshops.html" class="nav-link">Workshops</a>
@@ -82,81 +92,43 @@
       </div>
     </header>
 
-    <div class="my-3">
-      <h2
-        class="text-white title-heading"
-        style="margin-top: 150px"
-      >
-        Gallery
-      </h2>
-    </div>
-    <div class="gallery">
-      <!-- <h2 class="engineer-logo text-white">Gallery</h2> -->
-      <main class="container_gallery">
-        <div class="container__flex-flow">
-          <div class="card">
-            <img src="./images/gallery/others/IMG_7195.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/IMG_7198.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/IMG_7338.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/IMG_7348.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/IMG_7430.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/IMG_7513.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/IMG_9317.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/IMG_9383.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/IMG_9387.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug1.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug2.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug3.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug4.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug5.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug6.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug7.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug8.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/inaug9.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/sky.jpg" alt="" />
-          </div>
-          <div class="card">
-            <img src="./images/gallery/others/umbrella.jpg" alt="" />
+    <!-- <div class="home-top-space-custom"></div> -->
+    <section class="section_about_us" id="section_about_us">
+      <div class="container">
+        <div class="align-middle">
+          <div class="row">
+            <div
+              class="container col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-easing="ease-out"
+            >
+              <h2 class="text-white my-3 abt-us">About Us</h2>
+              <div class="about_sec_text">
+                Engineer or "Engi" as we call it, is the Annual Technical Symposium of NITK
+                Surathkal, to promote technical and managerial enthusiasm amongst young and bright
+                minds of our nation and to provide a platform to transform their innovative ideas
+                into a meaningful reality. You will see the college dressed for the festival in
+                vibrant colors of excitement and joy. It is an amazing experience, we assure you.
+              </div>
+              <a class="text-dark" href="http://engineer.nitk.ac.in" target="_blank">
+                <button class="fancy-button">Revisit Engineer'19</button>
+              </a>
+            </div>
+            <div class="col-md-6 my-3 about_video">
+              <iframe
+                src="https://www.youtube.com/embed/_bQDwgSJyLc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer
       class="text-center text-lg-start text-white contact_use"
@@ -173,8 +145,8 @@
                 style="width: 60px; background-color: #c004d9; height: 2px"
               />
               <p>
-                Engineer is the Annual Technical Symposium of NITK Surathkal and
-                is one of the largest of its kind in India.
+                Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the
+                largest of its kind in India.
               </p>
             </div>
 
@@ -185,7 +157,7 @@
                 style="width: 60px; background-color: #c004d9; height: 2px"
               />
               <p>
-                <a href="team.html" class="text-white link_hover">Our Team</a>
+                <a href="./team.html" class="text-white link_hover">Our Team</a>
               </p>
               <p>
                 <a href="#!" class="text-white link_hover">Brochure</a>
@@ -194,9 +166,7 @@
                 <a href="#!" class="text-white link_hover">Schedule</a>
               </p>
               <p>
-                <a href="#!" class="text-white link_hover"
-                  >Suggestions & Feedback</a
-                >
+                <a href="#!" class="text-white link_hover">Suggestions & Feedback</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -210,13 +180,10 @@
                 style="width: 60px; background-color: #c004d9; height: 2px"
               />
               <p>
-                <a href="#!" class="text-white link_hover">About Us</a>
+                <a href="#" class="text-white link_hover">About Us</a>
               </p>
               <p>
-                <a
-                  href="https://www.nitk.ac.in/"
-                  class="text-white link_hover"
-                  target="_blank"
+                <a href="https://www.nitk.ac.in/" class="text-white link_hover" target="_blank"
                   >NITK</a
                 >
               </p>
@@ -229,8 +196,8 @@
                 style="width: 60px; background-color: #c004d9; height: 2px"
               />
               <p>
-                <i class="fas fa-home mr-3"></i> National Institute of
-                Technology Karnataka, Surathkal, Mangalore - 575 025
+                <i class="fas fa-home mr-3"></i> National Institute of Technology Karnataka,
+                Surathkal, Mangalore - 575 025
               </p>
               <p>
                 <i class="fas fa-envelope mr-3"></i>
@@ -240,9 +207,7 @@
               </p>
               <p>
                 <i class="fas fa-phone mr-3"></i
-                ><a href="tel:+91 8839404484" class="link_hover"
-                  >+91-8839404484</a
-                >
+                ><a href="tel:+91 8839404484" class="link_hover">+91-8839404484</a>
               </p>
             </div>
           </div>
@@ -255,25 +220,13 @@
         style="background-color: rgb(20, 20, 20)"
       >
         <div class="social-icon">
-          <a
-            href="https://www.facebook.com/EngineerNITK/"
-            class="text-white me-4"
-            target="_blank"
-          >
+          <a href="https://www.facebook.com/EngineerNITK/" class="text-white me-4" target="_blank">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a
-            href="mailto:nitkengineer2022@gmail.com"
-            class="text-white me-4"
-            target="_blank"
-          >
+          <a href="mailto:nitkengineer2022@gmail.com" class="text-white me-4" target="_blank">
             <i class="fab fa-google"></i>
           </a>
-          <a
-            href="https://www.instagram.com/engineernitk/"
-            class="text-white me-4"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/engineernitk/" class="text-white me-4" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
           <a
@@ -283,11 +236,7 @@
           >
             <i class="fab fa-linkedin"></i>
           </a>
-          <a
-            href="https://github.com/ENGINEER-NITK"
-            class="text-white me-4"
-            target="_blank"
-          >
+          <a href="https://github.com/ENGINEER-NITK" class="text-white me-4" target="_blank">
             <i class="fab fa-github"></i>
           </a>
           <a
@@ -301,10 +250,7 @@
       </section>
 
       <!-- Copyright -->
-      <div
-        class="text-center p-3 my-3"
-        style="background-color: rgba(20, 20, 20, 1)"
-      >
+      <div class="text-center p-3 my-3" style="background-color: rgba(20, 20, 20, 1)">
         © 2022 Copyright Engineer | Design by
         <a
           class="text-white link_hover"
@@ -320,32 +266,11 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Local Scripts -->
-    <!-- <script src="./js/main.js"></script> -->
-    <script>
-      window.addEventListener("scroll", function () {
-        let header = document.querySelector("header");
-        let windowPosition = window.scrollY > 0;
-        header.classList.toggle("scrolling-active", windowPosition);
-      });
-
-
-      let btn = document.getElementById('nav-button')
-      let visible = false
-      btn.addEventListener("click" ,()=>{
-        if(visible == false)
-        {
-          btn.style.border = "none"
-          document.getElementById('nav-menu').style.width = "100%"
-          visible = true
-        }
-        else{
-          btn.style.border = "none"
-          document.getElementById('nav-menu').style.width = "0%"
-          visible = false
-        }
-      })
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
