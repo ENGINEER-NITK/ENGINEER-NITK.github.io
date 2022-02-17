@@ -1,17 +1,71 @@
+    /* Landing page  */
+
+    .landing-btn{
+        position: relative;
+        font-size: 18px;
+        display: inline;
+        padding: 10px 32px;
+        text-decoration: none;
+        overflow: hidden;
+        border-radius: 50px;
+        border: none;
+        font-weight: 400;
+        transition: all 0.6s ease-in-out;
+    }
+    .landing-btn:hover{
+        transform: scale(0.9);
+    }
+    .heading{
+        font-size:50px;
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+        color: rgba(255, 255, 255, 0);
+        line-height: 19px;
+    }
+    .landing-para{
+        color:white;
+            font-size:18px;
+            letter-spacing: 1.5px;
+            width:70%;
+            margin-top: -19px;
+    }
+    .shop-btn{
+    font-weight: 500;
+    margin: 20px;
+    }
+
 @media only screen and (max-width: 600px) {
 
     .logo{
        font-size: 20px !important;
        letter-spacing: 2px;
     }
-  
-    .home-page-text{
-        font-size: 60px;
-    }
+
     .fancy-button{
         margin-top: 10px;
         margin-bottom: 25px;
     }
+    .heading{
+        font-size:30px;
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+        line-height: 35px;
+    }
+    .heading-2{
+        font-size:35px;
+    }
+    .landing-para{
+        font-size: 14px;
+        width:100%;
+        margin-top: 8px;
+    }
+    .landing-btn{
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .shop-btn{
+        margin: 0px;
+    }
+
 
     /* THINK SECTION */
 
@@ -64,4 +118,5 @@
         top:100%;
         left: 0%;
     }
+
 }
