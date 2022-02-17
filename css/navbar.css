@@ -81,7 +81,6 @@
         letter-spacing: 2px;
     }
     .nav-list > li:hover {
-        border-bottom: solid white 1px ;
         width:60%;
     }
   }
