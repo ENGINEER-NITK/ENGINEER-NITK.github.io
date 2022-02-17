@@ -1,401 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineer 2022 | events</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engineer 2022 | Events</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
 
     <link rel="shortcut icon" href="./images/NEWLOGO.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./dist/css/style.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <link rel="stylesheet" href="./dist/css/workshop.css">
-</head>
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./dist/css/workshop.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container">
-            <nav class="main-nav">
-                <a href="index.html" class="logo hero-glitch" data-text="ENGINEER">ENGINEER</a>
-                <button id="nav-button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <svg class="nav-ham" viewBox="0 0 100 100" width="50" onclick="this.classList.toggle('active')">
-                        <path class="nav-ham-line top"
-                            d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-                        <path class="nav-ham-line middle" d="m 30,50 h 40" />
-                        <path class="nav-ham-line bottom"
-                            d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-                    </svg>
-                </button>
-                <ul class="nav-list" id="nav-menu">
-                    <li>
-                        <a href="/" class="nav-link">Home</a>
-                    </li>
-                    <li>
-                        <a href="./about.html" class="nav-link">About</a>
-                    </li>
-                    <li>
-                        <a href="./events.html" class="nav-link">Events</a>
-                    </li>
-                    <li>
-                        <a href="./workshops.html" class="nav-link">Workshops</a>
-                    </li>
-                    <li>
-                        <a href="./gallery.html" class="nav-link">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="#contact_us" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="main-nav">
+          <a href="index.html" class="logo hero-glitch" data-text="ENGINEER">ENGINEER</a>
+          <button
+            id="nav-button"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              class="nav-ham"
+              viewBox="0 0 100 100"
+              width="50"
+              onclick="this.classList.toggle('active')"
+            >
+              <path
+                class="nav-ham-line top"
+                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+              />
+              <path class="nav-ham-line middle" d="m 30,50 h 40" />
+              <path
+                class="nav-ham-line bottom"
+                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+              />
+            </svg>
+          </button>
+          <ul class="nav-list" id="nav-menu">
+            <li>
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="./about.html" class="nav-link">About</a>
+            </li>
+            <li>
+              <a href="./events.html" class="nav-link">Events</a>
+            </li>
+            <li>
+              <a href="./workshops.html" class="nav-link">Workshops</a>
+            </li>
+            <li>
+              <a href="./gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li>
+              <a href="#contact_us" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Gaming modal -->
     <!-- Game 1 -->
-    <div class="modal fade" id="game1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">BGMI TOURNAMENT</h3>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="./images/e_img/g11.png" alt="" style="width: 100%; padding: 10px;">
-                    <h5 class="mt-3">GAME ACCOUNTS</h5>
-                    - A player is allowed to have only one BGMI account and one discord I’d active on our google form.
-                    <br>
-                    - You are not allowed to share or use another person’s game account. Your account is for your use,
-                    and your use alone.
+    <div
+      class="modal fade"
+      id="game1"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">BGMI TOURNAMENT</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="./images/e_img/g11.png" alt="" style="width: 100%; padding: 10px" />
+            <h5 class="mt-3">GAME ACCOUNTS</h5>
+            - A player is allowed to have only one BGMI account and one discord I’d active on our
+            google form.
+            <br />
+            - You are not allowed to share or use another person’s game account. Your account is for
+            your use, and your use alone.
 
-                    <br>
-                    <h5 class="mt-3">TEAMS AND ROSTERS</h5>
-                    Each team’s roster must consist of maximum 4 players. Players can register either solo or in teams
-                    of two/three/four. A player is allowed to represent only one team’s roster in the same tournament.
-                    <br>
-                    <h5 class="mt-3"><i class="fa-solid fa-trophy"></i> Prize Pool</h5>
-                    Upto 18000 INR
-                    <br>
-                    <h5 class="mt-3">Registration Fees</h5>
-                    100 INR per team
-                    <br>
-                    <h5 class="mt-3">Pre-match</h5>
-                    Registered teams have to join the allotted discord channel within the time limit of 15 minutes.
-                    Players with less than 4 team members will be given random teammates before the start of the game.
-                    Players with different discord I’d than the one mentioned in the google form will not be allowed to
-                    join the discord group.
-                    <br>
-                    All the players have to be in the room before the time limit goes down (15 minutes). If there are
-                    teams missing after this time limit, the game will be started with the number of players already
-                    present in the room. If any team member failed to join the room within the allotted time limit, the
-                    game will be started and they have to play without their team member.
+            <br />
+            <h5 class="mt-3">TEAMS AND ROSTERS</h5>
+            Each team’s roster must consist of maximum 4 players. Players can register either solo
+            or in teams of two/three/four. A player is allowed to represent only one team’s roster
+            in the same tournament.
+            <br />
+            <h5 class="mt-3"><i class="fa-solid fa-trophy"></i> Prize Pool</h5>
+            Upto 18000 INR
+            <br />
+            <h5 class="mt-3">Registration Fees</h5>
+            100 INR per team
+            <br />
+            <h5 class="mt-3">Pre-match</h5>
+            Registered teams have to join the allotted discord channel within the time limit of 15
+            minutes. Players with less than 4 team members will be given random teammates before the
+            start of the game. Players with different discord I’d than the one mentioned in the
+            google form will not be allowed to join the discord group.
+            <br />
+            All the players have to be in the room before the time limit goes down (15 minutes). If
+            there are teams missing after this time limit, the game will be started with the number
+            of players already present in the room. If any team member failed to join the room
+            within the allotted time limit, the game will be started and they have to play without
+            their team member.
 
-                    <h5 class="mt-3">Point Scheme</h5>
-                    <table class="table table-dark center">
-                        <thead>
-                            <tr>
-                                <th scope="col">Placement</th>
-                                <th scope="col">Points</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>15</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>8</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7-11</th>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">12-16</th>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">17-25</th>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    Every finish is worth 1 point.
-                    <h5 class="mt-3">Game Format</h5>
-                    In the first round, Classic Erangle will be played. Five teams with the highest number of points
-                    will move on to the next round.
-                    In the next round, Classic Erangle will be played and the top five teams will move on to the next
-                    round.
-                    Similarly, top five teams will continue to move on to the next round till the finals.
-                    In the final, two matches will be played and the winner will be decided based on the number of
-                    points earned.
-                    In case of a tie between two teams, the winner will be determined in the order of <br>(a) placement
-                    of the team in the game, <br>(b) the number of finishes
-                    <h5 class="mt-3">Cheating</h5>
-                    Cheating is prohibited. Any modification of the BATTLEGROUNDS MOBILE INDIA game client by any
-                    player, Team or other Team Member is prohibited. The use of EMULATOR or any kind of cheating device
-                    or cheat program, or any similar cheating method shall be deemed cheating. Downloading any cheat
-                    program to the device used for Official Competition match is strictly prohibited. Any team member
-                    found cheating will be disqualified from the tournament.
-                    <br>
-                    If a team wants to report a cheat, record the death replay from in-game and post it in the discord
-                    group.
-                    <h5 class="mt-3">Exploiting</h5>
-                    Intentionally using any in-game bug to seek an advantage is exploiting and is prohibited. Exploiting
-                    includes acts such as making use of any game function that is not functioning as intended and
-                    violates the design purpose of BATTLEGROUNDS MOBILE INDIA. Teams will be disqualified if found
-                    exploiting these bugs.
-                    <br><br>
-                    <strong>Date:</strong> 4,5th March 2022
-                </div>
-                <div class="modal-footer">
-                    <form>
-                        <script src="https://checkout.razorpay.com/v1/payment-button.js"
-                            data-payment_button_id="pl_Iwdp9qAGblSpAw" async> </script>
-                    </form>
-                </div>
-            </div>
+            <h5 class="mt-3">Point Scheme</h5>
+            <table class="table table-dark center">
+              <thead>
+                <tr>
+                  <th scope="col">Placement</th>
+                  <th scope="col">Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <th scope="row">7-11</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row">12-16</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th scope="row">17-25</th>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+            Every finish is worth 1 point.
+            <h5 class="mt-3">Game Format</h5>
+            In the first round, Classic Erangle will be played. Five teams with the highest number
+            of points will move on to the next round. In the next round, Classic Erangle will be
+            played and the top five teams will move on to the next round. Similarly, top five teams
+            will continue to move on to the next round till the finals. In the final, two matches
+            will be played and the winner will be decided based on the number of points earned. In
+            case of a tie between two teams, the winner will be determined in the order of <br />(a)
+            placement of the team in the game, <br />(b) the number of finishes
+            <h5 class="mt-3">Cheating</h5>
+            Cheating is prohibited. Any modification of the BATTLEGROUNDS MOBILE INDIA game client
+            by any player, Team or other Team Member is prohibited. The use of EMULATOR or any kind
+            of cheating device or cheat program, or any similar cheating method shall be deemed
+            cheating. Downloading any cheat program to the device used for Official Competition
+            match is strictly prohibited. Any team member found cheating will be disqualified from
+            the tournament.
+            <br />
+            If a team wants to report a cheat, record the death replay from in-game and post it in
+            the discord group.
+            <h5 class="mt-3">Exploiting</h5>
+            Intentionally using any in-game bug to seek an advantage is exploiting and is
+            prohibited. Exploiting includes acts such as making use of any game function that is not
+            functioning as intended and violates the design purpose of BATTLEGROUNDS MOBILE INDIA.
+            Teams will be disqualified if found exploiting these bugs.
+            <br /><br />
+            <strong>Date:</strong> 4,5th March 2022
+          </div>
+          <div class="modal-footer">
+            <form>
+              <script
+                src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_Iwdp9qAGblSpAw"
+                async
+              ></script>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
+    <!-- Game 2 -->
+    <div
+      class="modal fade"
+      id="game2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Valorant Tournament</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="./images/e_img/g21.png" alt="" style="width: 100%; padding: 10px" />
+            <h5 class="mt-3">GAME ACCOUNTS</h5>
+            - A player is allowed to have only one (1) Valorant account active on our google form.
+            Valorant nickname has to be in format Riot ID#Tagline. (Example: Mrsmith#EUNE). Any
+            other format will be invalid.
+            <br />
+            - You are not allowed to share or use another person’s game account. Your account is for
+            your use, and your use alone.
 
+            <br />
+            <h5 class="mt-3">TEAMS AND ROSTERS</h5>
+            - Each team’s roster must consist of at least 5 players. <br />
+            - Each team’s roster will be allowed to have 5 main players and 2 substitute. Once the
+            tournament starts, you cannot replace any player.<br />
+            - A substitute player may only be added before the Tournament Start.<br />
+            - This player cannot be part of any other team’s roster which is participating or has
+            participated in the same tournament.<br />
+            - Match has to be played in the following format: 5v5.<br />
+            - A player is allowed to represent only one (1) team’s roster in the same tournament.<br />
+
+            <br />
+            <h5 class="mt-3"><i class="fa-solid fa-trophy"></i> Prize Pool</h5>
+            Upto 12000 INR
+            <br />
+            <h5 class="mt-3">Registration Fees</h5>
+            100 INR per team
+            <br />
+            <h5 class="mt-3">Pre-match</h5>
+            All the players have to be in the lobby before the time limit goes down (15 minutes). If
+            there are players missing after this time limit, take a screenshot and post it in the
+            #Valorant channel on the NITK Valorant discord server. The team which has less than 5
+            players after the time limit will be disqualified from the tournament. If both teams are
+            missing players, then both are disqualified.
+
+            <h5 class="mt-3">Game Format</h5>
+            BO1 FORMAT(Till Quarters) <br />
+
+            BO3 (SEMI ONWARDS) <br />
+
+            MAP VETO - WILL BE DONE THROUGH A BANNING PROCESS AFTER A DIGITAL TOSS
+
+            <h5 class="mt-3">In Game</h5>
+            BOTH THE TEAMS ARE ALLOWED TO TAKE a maximum of 1 TECHNICAL PAUSE(2 MIN MAX) and 2 in
+            game tactical pauses which are available.
+            <h5 class="mt-3">Cheating</h5>
+            Cheating is prohibited. Any modification of the BATTLEGROUNDS MOBILE INDIA game client
+            by any player, Team or other Team Member is prohibited. The use of EMULATOR or any kind
+            of cheating device or cheat program, or any similar cheating method shall be deemed
+            cheating. Downloading any cheat program to the device used for Official Competition
+            match is strictly prohibited. Any team member found cheating will be disqualified from
+            the tournament.
+            <br />
+            If a team wants to report a cheat, record the death replay from in-game and post it in
+            the discord group.
+            <h5 class="mt-3">Exploiting</h5>
+            Intentionally using any in-game bug to seek an advantage is exploiting and is
+            prohibited. Exploiting includes acts such as making use of any game function that is not
+            functioning as intended and violates the design purpose of BATTLEGROUNDS MOBILE INDIA.
+            Teams will be disqualified if found exploiting these bugs.
+            <br /><br />
+            <strong>Date:</strong> 4,5th March 2022
+          </div>
+          <div class="modal-footer">
+            <form>
+              <script
+                src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_Iwdp9qAGblSpAw"
+                async
+              ></script>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- event modal -->
     <!-- event 1 -->
-    <div class="modal fade" id="event1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">DJ NIGHT</h3>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    This Ethical Hacking workshop is specifically designed to provide the right knowledge to the
-                    aspiring Cyber
-                    Forensics & Ethical Hacking enthusiasts. This workshop will explore the various means that an
-                    intruder has
-                    available to gain access to computer resources. The course objective is to provide the student with
-                    a solid
-                    understanding of the Ethical Hacking techniques to the key design issues, so that the student, when
-                    working as
-                    an industrial developer, is capable of identifying the key problem points and focus his creative
-                    attention.
-                    It will investigate weaknesses by discussing the theoretical background behind, and whenever
-                    possible,
-                    actually performing the attack
-                    <br>
-                    <br>
-                    <strong>Date:</strong> 4,5th March 2022
-                </div>
-                <div class="modal-footer">
-                    <form>
-                        <script src="https://checkout.razorpay.com/v1/payment-button.js"
-                            data-payment_button_id="pl_Iwdp9qAGblSpAw" async> </script>
-                    </form>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="event1"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">DJ NIGHT</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            This Ethical Hacking workshop is specifically designed to provide the right knowledge to
+            the aspiring Cyber Forensics & Ethical Hacking enthusiasts. This workshop will explore
+            the various means that an intruder has available to gain access to computer resources.
+            The course objective is to provide the student with a solid understanding of the Ethical
+            Hacking techniques to the key design issues, so that the student, when working as an
+            industrial developer, is capable of identifying the key problem points and focus his
+            creative attention. It will investigate weaknesses by discussing the theoretical
+            background behind, and whenever possible, actually performing the attack
+            <br />
+            <br />
+            <strong>Date:</strong> 4,5th March 2022
+          </div>
+          <div class="modal-footer">
+            <form>
+              <script
+                src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_Iwdp9qAGblSpAw"
+                async
+              ></script>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-
-
 
     <!-- games -->
-    <div class="center workshops-title" style="margin-top: 150px;">
-        <h2 class="text-white">Games</h2>
+    <div class="center workshops-title" style="margin-top: 150px">
+      <h2 class="text-white">Games</h2>
     </div>
     <section class="workshops">
-        <div class="card-grid">
+      <div class="card-grid">
+        <!-- game -1 -->
+        <a class="card" href="#" data-bs-toggle="modal" data-bs-target="#game1">
+          <div
+            class="card__background"
+            style="background-image: url(../../images/e_img/g1.jpg)"
+          ></div>
+          <div class="card__content">
+            <p class="card__category">Game</p>
+            <h3 class="card__heading">BGMI Tournament</h3>
+          </div>
+        </a>
 
-            <!-- game -1 -->
-            <a class="card" href="#" data-bs-toggle="modal" data-bs-target="#game1">
-                <div class="card__background" style="background-image: url(../../images/e_img/g1.jpg)">
-                </div>
-                <div class="card__content">
-                    <p class="card__category">Game</p>
-                    <h3 class="card__heading">BGMI TOURNAMENT</h3>
-                </div>
-            </a>
-        </div>
+        <!-- game -2 -->
+        <a class="card" href="#" data-bs-toggle="modal" data-bs-target="#game2">
+          <div class="card__background" style="background-image: url(./images/e_img/g2.jpg)"></div>
+          <div class="card__content">
+            <p class="card__category">Game</p>
+            <h3 class="card__heading">Valorant Tournament</h3>
+          </div>
+        </a>
+      </div>
     </section>
-
 
     <!-- events -->
     <div class="center events-title">
-        <h2 class="text-white">Events</h2>
+      <h2 class="text-white">Events</h2>
     </div>
     <section class="events">
-        <div class="card-grid">
-            <a class="card" href="#" data-bs-toggle="modal" data-bs-target="#event1">
-                <div class="card__background" style="background-image: url(../../images/e_img/e1.jpeg)">
-                </div>
-                <div class="card__content">
-                    <p class="card__category">Event</p>
-                    <h3 class="card__heading">DJ NIGHT</h3>
-                </div>
-            </a>
-        </div>
+      <div class="card-grid">
+        <a class="card" href="#" data-bs-toggle="modal" data-bs-target="#event1">
+          <div
+            class="card__background"
+            style="background-image: url(../../images/e_img/e1.jpeg)"
+          ></div>
+          <div class="card__content">
+            <p class="card__category">Event</p>
+            <h3 class="card__heading">DJ NIGHT</h3>
+          </div>
+        </a>
+      </div>
     </section>
 
-
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white contact_use" id="contact_us"
-        style="background-color: rgb(20, 20, 20)">
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <div class="row mt-3">
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold engineer-logo">Engineer</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #C004D9; height: 2px" />
-                        <p>
-                            Engineer is the Annual Technical Symposium of NITK Surathkal and
-                            is one of the largest of its kind in India.
-                        </p>
-                    </div>
-
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold">Discover</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #C004D9; height: 2px" />
-                        <p>
-                            <a href="team.html" class="text-white link_hover">Our Team</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white link_hover">Brochure</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white link_hover">Schedule</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white link_hover">Suggestions & Feedback</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold">About</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #C004D9; height: 2px" />
-                        <p>
-                            <a href="./about.html" class="text-white link_hover">About Us</a>
-                        </p>
-                        <p>
-                            <a href="https://www.nitk.ac.in/" class="text-white link_hover" target="_blank">NITK</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold">Contact</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #C004D9; height: 2px" />
-                        <p>
-                            <i class="fas fa-home mr-3"></i> National Institute of
-                            Technology Karnataka, Surathkal, Mangalore - 575 025
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope mr-3"></i>
-                            <a href="mailto:nitkengineer2022@gmail.com"
-                                class="link_hover">nitkengineer2022@gmail.com</a>
-                        </p>
-                        <p><i class="fas fa-phone mr-3"></i><a href="tel:+91 8839404484"
-                                class="link_hover">+91-8839404484</a></p>
-                    </div>
-                </div>
+    <footer
+      class="text-center text-lg-start text-white contact_use"
+      id="contact_us"
+      style="background-color: rgb(20, 20, 20)"
+    >
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold engineer-logo">Engineer</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c004d9; height: 2px"
+              />
+              <p>
+                Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the
+                largest of its kind in India.
+              </p>
             </div>
-        </section>
-        <!-- Section: Links  -->
 
-        <section class="d-flex justify-content-center p-4 center mt-3" style="background-color: rgb(20, 20, 20)">
-            <div class="social-icon">
-                <a href="https://www.facebook.com/EngineerNITK/" class="text-white me-4" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="mailto:nitkengineer2022@gmail.com" class="text-white me-4" target="_blank">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="https://www.instagram.com/engineernitk/" class="text-white me-4" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/engineer-nitk/mycompany/" class="text-white me-4"
-                    target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/ENGINEER-NITK" class="text-white me-4" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/UCuI2mPU8NqIKvdW9F4wJTVg" class="text-white me-4"
-                    target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Discover</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c004d9; height: 2px"
+              />
+              <p>
+                <a href="team.html" class="text-white link_hover">Our Team</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white link_hover">Brochure</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white link_hover">Schedule</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white link_hover">Suggestions & Feedback</a>
+              </p>
             </div>
-        </section>
+            <!-- Grid column -->
 
-        <!-- Copyright -->
-        <div class="text-center p-3 my-3" style="background-color: rgba(20, 20, 20, 1)">
-            © 2022 Copyright Engineer | Design by
-            <a class="text-white link_hover" href="https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io">Engineer'22
-                Web Team</a>
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">About</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c004d9; height: 2px"
+              />
+              <p>
+                <a href="./about.html" class="text-white link_hover">About Us</a>
+              </p>
+              <p>
+                <a href="https://www.nitk.ac.in/" class="text-white link_hover" target="_blank"
+                  >NITK</a
+                >
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c004d9; height: 2px"
+              />
+              <p>
+                <i class="fas fa-home mr-3"></i> National Institute of Technology Karnataka,
+                Surathkal, Mangalore - 575 025
+              </p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i>
+                <a href="mailto:nitkengineer2022@gmail.com" class="link_hover"
+                  >nitkengineer2022@gmail.com</a
+                >
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i
+                ><a href="tel:+91 8839404484" class="link_hover">+91-8839404484</a>
+              </p>
+            </div>
+          </div>
         </div>
-        <!-- Copyright -->
+      </section>
+      <!-- Section: Links  -->
+
+      <section
+        class="d-flex justify-content-center p-4 center mt-3"
+        style="background-color: rgb(20, 20, 20)"
+      >
+        <div class="social-icon">
+          <a href="https://www.facebook.com/EngineerNITK/" class="text-white me-4" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="mailto:nitkengineer2022@gmail.com" class="text-white me-4" target="_blank">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="https://www.instagram.com/engineernitk/" class="text-white me-4" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/engineer-nitk/mycompany/"
+            class="text-white me-4"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/ENGINEER-NITK" class="text-white me-4" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCuI2mPU8NqIKvdW9F4wJTVg"
+            class="text-white me-4"
+            target="_blank"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Copyright -->
+      <div class="text-center p-3 my-3" style="background-color: rgba(20, 20, 20, 1)">
+        © 2022 Copyright Engineer | Design by
+        <a
+          class="text-white link_hover"
+          href="https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io"
+          >Engineer'22 Web Team</a
+        >
+      </div>
+      <!-- Copyright -->
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <!-- <script src="./js/main.js"></script> -->
     <script>
-        window.addEventListener("scroll", function () {
-            let header = document.querySelector("header");
-            let windowPosition = window.scrollY > 0;
-            header.classList.toggle("scrolling-active", windowPosition);
-        });
+      window.addEventListener('scroll', function () {
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle('scrolling-active', windowPosition);
+      });
 
-
-        let btn = document.getElementById('nav-button')
-        let visible = false
-        btn.addEventListener("click", () => {
-            if (visible == false) {
-                btn.style.border = "none"
-                document.getElementById('nav-menu').style.width = "100%"
-                visible = true
-            }
-            else {
-                btn.style.border = "none"
-                document.getElementById('nav-menu').style.width = "0%"
-                visible = false
-            }
-        })
-
-
+      let btn = document.getElementById('nav-button');
+      let visible = false;
+      btn.addEventListener('click', () => {
+        if (visible == false) {
+          btn.style.border = 'none';
+          document.getElementById('nav-menu').style.width = '100%';
+          visible = true;
+        } else {
+          btn.style.border = 'none';
+          document.getElementById('nav-menu').style.width = '0%';
+          visible = false;
+        }
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
