@@ -94,7 +94,7 @@ header {
 .home-page-text {
   color: #fff;
   font-family: coming_soon_r;
-  font-size: 80px;
+  font-size: 100px;
   letter-spacing: 2px;
 }
 
@@ -310,7 +310,7 @@ header {
 
 .hero-glitch {
   position: relative;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .hero-glitch:before,
