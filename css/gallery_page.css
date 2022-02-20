@@ -47,7 +47,7 @@
   object-fit: cover;
   height: 100%;
   width: auto;
-  /* aspect-ratio: 16 / 9; */
+  aspect-ratio: 16 / 9;
   transition: transform 700ms ease;
 }
 
