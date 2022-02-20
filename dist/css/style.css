@@ -57,6 +57,22 @@ a {
   border: none;
 }
 
+.mrt-50 {
+  margin-top: 100px;
+}
+
+.mrt-100 {
+  margin-top: 100px;
+}
+
+.mrt-150 {
+  margin-top: 150px;
+}
+
+.mrt-200 {
+  margin-top: 200px;
+}
+
 @font-face {
   font-family: engineer;
   src: url("../../fonts/space age.ttf");
