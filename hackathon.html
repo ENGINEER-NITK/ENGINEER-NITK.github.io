@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <link rel="stylesheet" href="./dist/css/hackathon.css" />
+    <link rel="shortcut icon" href="./images/NEWLOGO.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css//responsive.css" />
+    <link rel="stylesheet" href="./css//navbar.css" />
+    <link rel="stylesheet" href="./css/gallery_page.css" />
+    <title>Engineer 2022 | About</title>
+  </head>
+  <body class="abt-body">
+    <header>
+      <div class="container">
+        <nav class="main-nav">
+          <a href="index.html" class="logo hero-glitch" data-text="ENGINEER">ENGINEER</a>
+          <button
+            id="nav-button"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              class="nav-ham"
+              viewBox="0 0 100 100"
+              width="50"
+              onclick="this.classList.toggle('active')"
+            >
+              <path
+                class="nav-ham-line top"
+                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+              />
+              <path class="nav-ham-line middle" d="m 30,50 h 40" />
+              <path
+                class="nav-ham-line bottom"
+                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+              />
+            </svg>
+          </button>
+          <ul class="nav-list" id="nav-menu">
+            <li>
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="./about.html" class="nav-link">About</a>
+            </li>
+            <li>
+              <a href="./events.html" class="nav-link">Events</a>
+            </li>
+            <li>
+              <a href="./workshops.html" class="nav-link">Workshops</a>
+            </li>
+            <li>
+              <a href="./gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li>
+              <a href="#contact_us" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="header-text">
+          <h1>
+            <span class="head-main">The Engineer Hackathon</span>
+            <span class="head-sub">NITK's Annual Technical Fest Hackathon</span>
+          </h1>
+          <h2 class="event-date">March 4th-5th 2022</h2>
+              <!-- Important: Devfolio button -->
+              <div class="apply-button" data-hackathon-slug="the-engineer-hackathon" data-button-theme="dark-inverted" 
+                style="height: 44px; width: 312px"></div>
+      </div>
+      <div class="scroll-down-container">
+          <div class="inner-container">
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+          </div>
+      </div>
+  </section>
+
+    <section class="section_hackathon_intro" id="section_hackathon_intro">
+      <div class="container">
+        <div class="align-middle">
+          <div class="row">
+            <div
+              class="container col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-easing="ease-out">
+              <h2 class="text-white my-3 abt-us">The Engineer Hackathon</h2>
+              <div class="about_sec_text">
+                The Engineer Hackathon, which is a part of NITK's Annual Technical Fest, 
+                is a 24-hour long contest which gives you the opportunity to build something unique
+                to solve existing problems in various spheres of the modern human life.
+                The hackathon
+              </div>
+              
+            </div>
+            <div class="col-md-6 my-3 about_video" 
+            data-aos="fade-up"
+            data-aos-delay="150"
+            data-aos-easing="ease-out">
+              <img src="./images/NEWLOGO.png" alt="">           
+            </>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracks" id="tracks">           
+      <div class="container" data-aos="zoom-in" data-aos-delay="150">
+          <div class="row">
+              <div class="col-12 col-md-12">
+                  <div class="about-content-text mb-80">
+                      <h3 class="text-center wow fadeInUp" data-wow-delay="300ms" style="font-size: 3em; visibility: visible; animation-delay: 300ms; 
+                        animation-name: fadeInUp;">Tracks</h3>
+                  </div>
+              </div>
+          </div>
+          <div class="row align-items-center">
+              <div class="col-12 col-md-6 order-2 order-lg-1">
+                  <div class="about-content-text mb-80">
+                      <h4 class="wow fadeInUp" data-wow-delay="300ms">Track - 1</h4>
+                      <p class="wow fadeInUp" data-wow-delay="300ms"><i>Designed to test your daring. Courage in the face of the unknown is an important quality of any coder.</i></p>
+                  </div>
+              </div>
+
+              <!-- About Thumb -->
+              <div class="col-12 col-md-6 order-1 order-lg-2 d-flex justify-content-center">
+                  <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
+                      <img src="/img/tracks/algo.png" alt="Algorithms">
+                  </div>
+              </div>
+          </div>
+
+          <div class="row align-items-center">
+              <!-- About Thumb -->
+              <div class="col-12 col-md-6 order-1 order-lg-1 d-flex justify-content-center">
+                  <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
+                      <img class="tracks-img" src="/img/tracks/ml.png" alt="AI - ML" style="float:right">
+                  </div>
+              </div>
+
+              <!-- About Content -->
+              <div class="col-12 col-md-6 order-2 order-lg-2">
+                  <div class="about-content-text mb-80">
+                      <h4 class="wow fadeInUp" data-wow-delay="300ms">Track - 2</h4>
+                      <p class="wow fadeInUp" data-wow-delay="300ms"><i>Find your own way to labour against the challenge. Only the most precise, most creative and the fastest will rise to the top.</i></p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row align-items-center">
+              <!-- About Content -->
+              <div class="col-12 col-md-6 order-2 order-lg-1">
+                  <div class="about-content-text mb-80">
+                      <h4 class="wow fadeInUp" data-wow-delay="300ms">Track - 3</h4>
+                          <p class="wow fadeInUp" data-wow-delay="300ms"><i>Oh, attack with vigour, if you can, but be careful. You might just lose your own fort along the way.</i></p>
+                  </div>
+              </div>
+
+              <!-- About Thumb -->
+              <div class="col-12 col-md-6 order-1 order-lg-2 d-flex justify-content-center">
+                  <div class="about-thumb mb-80 p-4 wow fadeInUp " data-wow-delay="300ms">
+                      <img class="tracks-img" src="/img/tracks/ctf.svg" alt="Capture the Flag">
+                  </div>
+              </div>
+          </div>
+
+          <div class="row align-items-center">
+              <!-- About Thumb -->
+              <div class="col-12 col-md-6 order-1 order-lg-1 d-flex justify-content-center">
+                  <div class="about-thumb mb-80 wow p-4 fadeInUp" data-wow-delay="300ms">
+                      <img class="tracks-img dev-img" src="/img/tracks/dev.svg" alt="web Dev" style="float:right;">
+                  </div>
+              </div>
+
+              <!-- About Content -->
+              <div class="col-12 col-md-6 order-2 order-lg-2">
+                  <div class="about-content-text mb-80">
+                      <h4 class="wow fadeInUp" data-wow-delay="300ms">Track - 4</h4>
+                      <p class="wow fadeInUp" data-wow-delay="300ms"><i>
+                          Design your way through, but you have to build well and build fast because the clock is always ticking.
+                      </i></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+    <!-- Prize Modals -->
+    <div class="modal fade" id="prize1" tabindex="-1" aria-labelledby="prize1Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="prize1Label">Polygon Prizes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Polygon (previously Matic) will be giving away a cash prize of <b>₹ &nbsp;&nbsp; 10,000</b> for the best hack built on top of Ethereum during the hackathon.
+            For teams that integrate Polygon in their hacks as well, the prize money will be higher, <b>₹ &nbsp;&nbsp;15000</b> along with eligibility for internship/full-time role 
+            interviews and a chance to land seed funding of upto <b>5000 USD</b>!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="prize2" tabindex="-1" aria-labelledby="prize2Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="prize2Label">Tezos Foundation Prizes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            The Tezos Foundation will be giving away: <br>
+            <ul>
+              <li>
+                A cash prize of <b>₹ &nbsp;&nbsp; 20000 </b> for the best Dapp built on Tezos
+              </li>
+              <li>
+                Every valid submission made in the Tezos track will be rewarded with exclusive Schwag Kits
+              </li>
+              <li>
+                Continuity grant opportunity up to <b>5,000 USD</b> for an outstanding project
+              </li>
+            </ul> 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="prize3" tabindex="-1" aria-labelledby="prize3Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="prize3Label">Celo Foundation Prizes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            The Celo Foundation is giving away <b>₹ &nbsp;&nbsp; 20000</b> for the best Dapp built on Celo
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="prize4" tabindex="-1" aria-labelledby="prize4Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="prize4Label">Protocol Labs Prizes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Protocol Labs is giving away <b>₹ &nbsp;&nbsp;  20000 </b> to a project which makes the best use of IPFS and/or Filecoin
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="prize5" tabindex="-1" aria-labelledby="prize5Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="prize5Label">GeeksforGeeks Prizes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            GFG Goodies and other details
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="prize6" tabindex="-1" aria-labelledby="prize6Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="prize66Label">Additional Cash Prizes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Cash prize details
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <section class="prizes" id="prizes">
+    <div class="prizes-div" data-aos="zoom-in-down" data-aos-delay="150" data-aos-easing="ease-in">
+      <h3 class="prizes-head">
+        Prizes
+      </h3>
+      <div style="color: #ededed; display:flex; flex-wrap: wrap; flex-grow: 1; justify-content: center; align-items: center; width: 80%; margin: auto;">
+        <div class="row prize-row" style="display: flex; flex-wrap: wrap; flex-grow: 1; justify-content: center; align-items: center; ">
+          <div class="col-sm-4 div1">
+            <div class="card zoom-in" data-bs-toggle="modal" data-bs-target="#prize1">
+              <div class="card-body">
+                <img class="prize-logo-i zoom-in" src="images/hackathon/Polygon_Logo-White.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card zoom-in"  data-bs-toggle="modal" data-bs-target="#prize2">
+              <div class="card-body">
+                <img class="prize-logo-i zoom-in" src="images/hackathon/Tezos_Logo-White.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card zoom-in"  data-bs-toggle="modal" data-bs-target="#prize3">
+              <div class="card-body">
+                <img class="prize-logo-i zoom-in" src="images/hackathon/Celo Logo Monochrome Reverse.png">                
+                
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+        <div class="row prize-row" style="display: flex; flex-wrap: wrap; flex-grow: 1; justify-content: center; align-items: center; height: 50%; ">
+            
+            <div class="col-sm-4">
+              <div class="card zoom-in" data-bs-toggle="modal" data-bs-target="#prize4">
+                <div class="card-body">
+                  <img class="prize-logo-i zoom-in" src="images/hackathon/Filecoin White.png">                
+                </div>
+              </div>
+            </div>
+
+          <div class="col-sm-4">
+            <div class="card zoom-in"  data-bs-toggle="modal" data-bs-target="#prize5">
+              <div class="card-body">
+                <img class="prize-logo-i zoom-in" src="images/hackathon/image.png">               
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-4">
+            <div class="card zoom-in"  data-bs-toggle="modal" data-bs-target="#prize6">
+              <div class="card-body">
+                <h3>Additional Cash prizes!</h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Sponsors section -->
+  <section class="sponsors" id="sponsors">
+    <div class="sponsors-div" data-aos="zoom-in-down" data-aos-delay="150" data-aos-easing="ease-in">
+      <h3 class="sponsors-head">
+        Sponsors
+      </h3>
+      <div class="tier-i-sponsors" style="display: flex-box; justify-content: space-between; flex-wrap: wrap;">
+        <a href="https://www.geeksforgeeks.org" target="_blank">
+          <img class="sponsor-logo-i zoom-out" src="images/hackathon/gfg-new-logo.png">
+        </a>
+        <a href="https://devfolio.co" target="_blank">
+          <img class="sponsor-logo-i zoom-out" src="images/hackathon/Devfolio_Logo-Colored.png">
+        </a>
+        <a href="https://polygon.technology/" target="_blank">
+          <img class="sponsor-logo-i zoom-out" src="images/hackathon/Polygon_Logo-Colored.png">
+        </a>
+      </div>
+      <div class="tier-ii-sponsors" style="display: flex-box; justify-content: space-between; flex-wrap: wrap;">
+        <a href="https://tezos.com/" target="_blank">
+          <img class="sponsor-logo-ii zoom-out" src="images/hackathon/Tezos_Logo-Colored.png">
+        </a>
+        <a href="https://celo.org" target="_blank">
+          <img class="sponsor-logo-ii zoom-out" src="images/hackathon/Celo Logo Color.png">
+        </a>
+        <a href="https://filecoin.io " target="_blank">
+          <img class="sponsor-logo-ii zoom-out" src="images/hackathon/Filecoin Coloured White Text.png">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container" data-aos="fade-up" data-aos-delay="1 50"  data-aos-easing="ease-in">
+        <div class="section-header">
+            <h2>FAQs </h2>
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <ul id="faq-list">
+                    <li>
+                        <a data-bs-toggle="collapse" class="collapsed" href="#faq1">If I don't know a lot about a field, how will I attempt it?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq1" class="collapse" data-parent="#faq-list">
+                            <p>There will be apt resources for you to understand and then attempt</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a data-bs-toggle="collapse" class="collapsed" href="#faq2">Will there be any penalty on wrong submissions?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq2" class="collapse" data-parent="#faq-list">
+                            <p>Each problem shall have clarifications about the same</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-lg-6">
+                <ul id="faq2-list">
+                    <li>
+                        <a data-bs-toggle="collapse" href="#faq3" class="collapsed">How many people can be on a team?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq3" class="collapse" data-parent="#faq-list">
+                            <p>Up to 4 people</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a data-bs-toggle="collapse" href="#faq4" class="collapsed">How long will the contest last?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq4" class="collapse" data-parent="#faq-list">
+                            <p>24 hours</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+</section>
+
+
+    <!-- Footer -->
+    <footer
+      class="text-center text-lg-start text-white contact_use"
+      id="contact_us"
+      style="background-color: rgb(20, 20, 20)"
+    >
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold engineer-logo">Engineer</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c004d9; height: 2px"
+              />
+              <p>
+                Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the
+                largest of its kind in India.
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Discover</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c004d9; height: 2px"
+              />
+              <p>
+                <a href="./team.html" class="text-white link_hover">Our Team</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white link_hover">Brochure</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white link_hover">Schedule</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white link_hover">Suggestions & Feedback</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">About</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c004d9; height: 2px"
+              />
+              <p>
+                <a href="#" class="text-white link_hover">About Us</a>
+              </p>
+              <p>
+                <a href="https://www.nitk.ac.in/" class="text-white link_hover" target="_blank"
+                  >NITK</a
+                >
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c004d9; height: 2px"
+              />
+              <p>
+                <i class="fas fa-home mr-3"></i> National Institute of Technology Karnataka,
+                Surathkal, Mangalore - 575 025
+              </p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i>
+                <a href="mailto:nitkengineer2022@gmail.com" class="link_hover"
+                  >nitkengineer2022@gmail.com</a
+                >
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i
+                ><a href="tel:+91 8839404484" class="link_hover">+91-8839404484</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <section
+        class="d-flex justify-content-center p-4 center mt-3"
+        style="background-color: rgb(20, 20, 20)">
+        <div class="social-icon">
+          <a href="https://www.facebook.com/EngineerNITK/" class="text-white me-4" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="mailto:nitkengineer2022@gmail.com" class="text-white me-4" target="_blank">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="https://www.instagram.com/engineernitk/" class="text-white me-4" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/engineer-nitk/mycompany/"
+            class="text-white me-4"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/ENGINEER-NITK" class="text-white me-4" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCuI2mPU8NqIKvdW9F4wJTVg"
+            class="text-white me-4"
+            target="_blank"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Copyright -->
+      <div class="text-center p-3 my-3" style="background-color: rgba(20, 20, 20, 1)">
+        © 2022 Copyright Engineer | Design by
+        <a
+          class="text-white link_hover"
+          href="https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io"
+          >Engineer'22 Web Team</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Scripts -->
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+
+    <!-- Local Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
