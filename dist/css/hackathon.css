@@ -353,6 +353,20 @@
     }
 
 
+  .title-sponsor {
+    max-width: 70% !important;
+    height: auto;
+  }
+
+  .title-sponsor-presents {
+    /* float:right */
+    font-size: small;
+    padding-left: 1% !important;
+  }
+
+  .title-sponsorship {
+    max-width: 100% !important;
+  }
 
   }
   .chevron {
@@ -729,4 +743,18 @@
   .prize-logo-i {
     width: 90%;
     height: 100%;
+  }
+
+  .title-sponsor {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .title-sponsor-presents {
+    /* float:right */
+    padding-left: 1%;
+  }
+
+  .title-sponsorship {
+    max-width: 80%;
   }
