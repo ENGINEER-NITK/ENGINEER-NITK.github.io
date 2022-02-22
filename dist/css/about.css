@@ -10,6 +10,7 @@
   padding-top: 200px;
   margin-bottom: 100px;
   min-height: 100vh;
+  background: url("../../images/about.svg");
 }
 
 .about_video iframe {
