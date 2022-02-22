@@ -321,6 +321,39 @@
     .event-date {
       font-size: 20px;
     }
+
+    .prize-row {
+      margin: auto !important;
+      align-items: center !important;
+    }
+
+    .prize-logo-i {
+      width: 100% !important;
+      height: 100% !important;
+      /* object-fit:contain; */
+    }
+
+    .sponsor-logo-i {
+      display: block !important;
+      padding: 10px;
+      width: 80% !important;
+      height: 20vh !important;
+    }
+
+    .sponsor-logo-ii {
+      display: block !important;
+      padding: 10px;
+      width: 80% !important;
+      height: 20vh !important;
+    }
+
+    .tier-i-sponsors {
+      display: flex !important;
+      flex-direction: column;
+    }
+
+
+
   }
   .chevron {
     position: absolute;
@@ -419,7 +452,7 @@
   }
 
   .sponsors {
-    padding-top: 2%;
+    padding-top: 5%;
     padding-bottom: 5%;
     text-align: center;
     background-color: #ccc;
@@ -447,29 +480,39 @@
 
   .tier-i-sponsors {
     padding: 2%;
+    display: flexbox;
   }
 
   .tier-ii-sponsors {
     padding: 2%;
-    flex: 1; 
+    display: flexbox;
   }
 
 
   .sponsor-logo-i {
     padding: 20px;
+    width: 33%;
+    height: 10vw;
   }
 
   .sponsor-logo-ii {
     padding: 20px;
+    width: 33%;
+    height: 10vw;
   }
 
   .zoom-out {
-    padding: 25px;
+    /* padding: 25px; */
     transition: transform .3s;
     margin: 0 auto;
   }
   
   .zoom-out:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+  }
+
+  .sponsor-logo-card-i:hover {
     cursor: pointer;
     transform: scale(0.9);
   }
@@ -483,7 +526,7 @@
   
   .zoom-in:hover {
     cursor: pointer;
-    transform: scale(1.25);
+    transform: scale(1.2);
   }
 
   #faq a {
@@ -623,8 +666,37 @@
 
   .prize-row {
     margin: 2%;
-    align-items: center;
-    margin: auto;
+  }
+
+  .prize-logo-i {
+    width: 100%;
+    height: 10vw;
+    object-fit: contain;
+  }
+
+  .sponsor-logo-card-i {
+    width: 100%;
+  }
+
+  .sponsor-logo-card-ii {
+    width: 100%;
+  }
+
+  .card {
+    box-shadow: none !important;
+  }
+
+  .sponsor-card {
+    /* background-color: transparent !important; */
+  }
+
+  .sponsor-logo-i {
+    object-fit: contain;
+  }
+
+
+  .sponsor-logo-ii {
+    object-fit: contain;
   }
 
   .modal-body {
