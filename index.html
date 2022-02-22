@@ -250,6 +250,30 @@
               </a>
             </div>
             
+            <div class="flex-w flex-col p-t-34 respon3" style="display: flex; color: #fff;">
+              <div class="flex-col wsize1 m-b-40 respon4" style="margin-left: 20px;">
+                <span class="l1-txt1 p-b-30 days" id="days"></span><br>
+                <span class="s1-txt1">Days</span>
+              </div>
+      
+              <div class="flex-col wsize1 m-b-40 respon4">
+                <span class="l1-txt1 p-b-30 hours" id="hours"></span><br>
+                <span class="s1-txt1">Hours</span>
+              </div>
+      
+              <div class="flex-col wsize1 m-b-40 respon4">
+                <span class="l1-txt1 p-b-30 minutes" id="minutes"></span><br>
+
+                <span class="s1-txt1">Minutes</span>
+              </div>
+      
+              <div class="flex-col wsize1 m-b-40 respon4">
+                <span class="l1-txt1 p-b-30 seconds" id="seconds"></span><br>
+                <span class="s1-txt1">Seconds</span>
+              </div>
+            </div>
+            
+            
           </div>
         </div>
       </div>
@@ -529,6 +553,28 @@
       <!-- Copyright -->
     </footer>
     <!-- Scripts -->
+    <script>
+      var countDownDate = new Date("Mar 4, 2022 00:00:00").getTime();
+      var x= setInterval(function(){
+        var now =new Date().getTime();
+        var distance = countDownDate - now;
+  
+  
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+      document.getElementById("days").innerHTML= days;
+      document.getElementById("hours").innerHTML= (hours<10 ? "0" + hours : hours) + " :";;
+      document.getElementById("minutes").innerHTML= (minutes<10 ? "0" + minutes : minutes) + " :";;
+      document.getElementById("seconds").innerHTML= (seconds<10 ? "0" + seconds : seconds);
+      },1000);		
+  
+    </script>
+
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
