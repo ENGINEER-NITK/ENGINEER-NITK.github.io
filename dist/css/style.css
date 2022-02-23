@@ -619,13 +619,13 @@ header {
 
 .s1-txt1 {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1;
 }
 
 .l1-txt1 {
   font-size: 50px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1;
 }
 
@@ -638,6 +638,16 @@ header {
 [ Width ]*/
 .wsize1 {
   width: 90px;
+}
+
+.flex-w {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 section {
