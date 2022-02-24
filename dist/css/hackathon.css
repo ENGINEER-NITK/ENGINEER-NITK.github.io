@@ -502,25 +502,25 @@
   }
 
   .tier-i-sponsors {
-    padding: 2%;
+    padding: 1%;
     display: flexbox;
   }
 
   .tier-ii-sponsors {
-    padding: 2%;
+    padding: 1%;
     display: flexbox;
   }
 
 
   .sponsor-logo-i {
     padding: 20px;
-    width: 33%;
+    width: 24%;
     height: 10vw;
   }
 
   .sponsor-logo-ii {
     padding: 20px;
-    width: 33%;
+    width: 25%;
     height: 10vw;
   }
 
@@ -796,4 +796,8 @@
 
   #track-end {
     font-size: 1.25em;
+  }
+
+  .sponsor-item {
+    display: contents;
   }
