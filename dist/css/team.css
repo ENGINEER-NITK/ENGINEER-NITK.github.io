@@ -165,7 +165,7 @@ img {
 
 .section-title::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 50px;
   height: 5px;
   left: calc(50% - 25px);
@@ -208,7 +208,7 @@ img {
   border-radius: 8px;
   -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
           box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding-top: 2px;
 }
 
@@ -228,7 +228,7 @@ img {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 50%;
-  margin: 30px auto 20px  auto;
+  margin: 30px auto 20px auto;
 }
 
 .team .team-img img {
@@ -236,8 +236,8 @@ img {
   height: auto;
   border-radius: 100%;
   border: 0px solid rgba(255, 255, 255, 0.02);
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .team:hover .team-img img {
@@ -285,8 +285,8 @@ img {
   text-align: center;
   color: #ffffff;
   border-radius: 100%;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .team .team-social a:hover {
