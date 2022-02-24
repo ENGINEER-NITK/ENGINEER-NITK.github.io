@@ -334,24 +334,24 @@
     }
 
     .sponsor-logo-i {
-      display: block !important;
       padding: 10px;
-      width: 80% !important;
-      height: 20vh !important;
     }
 
     .sponsor-logo-ii {
-      display: block !important;
       padding: 10px;
-      width: 80% !important;
-      height: 20vh !important;
     }
 
     .tier-i-sponsors {
-      display: flex !important;
       flex-direction: column;
     }
 
+    .tier-ii-sponsors {
+      flex-direction: column;
+    }
+
+    .sponsor-logo-i {
+      width: 70% !important;
+    }
 
   .title-sponsor {
     max-width: 60% !important;
@@ -377,7 +377,7 @@
     font-size: 1.4rem !important;
   }
 
-  }
+}
   .chevron {
     position: absolute;
     width: 28px;
@@ -503,25 +503,23 @@
 
   .tier-i-sponsors {
     padding: 1%;
-    display: flexbox;
+    display: flex;
   }
 
   .tier-ii-sponsors {
     padding: 1%;
-    display: flexbox;
+    display: flex;
   }
 
 
   .sponsor-logo-i {
     padding: 20px;
-    width: 24%;
-    height: 10vw;
+    width: 90%;
   }
 
   .sponsor-logo-ii {
     padding: 20px;
-    width: 25%;
-    height: 10vw;
+    width: 60%;
   }
 
   .zoom-out {
@@ -711,10 +709,6 @@
     box-shadow: none !important;
   }
 
-  .sponsor-card {
-    /* background-color: transparent !important; */
-  }
-
   .sponsor-logo-i {
     object-fit: contain;
   }
@@ -799,5 +793,12 @@
   }
 
   .sponsor-item {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .sponsor-tier {
+    font-size: 1.2rem;
   }
