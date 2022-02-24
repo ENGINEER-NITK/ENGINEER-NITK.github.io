@@ -726,6 +726,7 @@
 
   .modal-body {
     color: #ccc;
+    font-size: 1.25em;
   }
 
   .btn-close {
@@ -793,4 +794,6 @@
     flex-basis: 20%;
   }
 
-  
+  #track-end {
+    font-size: 1.25em;
+  }
