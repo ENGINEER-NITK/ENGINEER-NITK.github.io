@@ -27,9 +27,6 @@
     .learn-btn:hover{
         background-color: rgb(100, 99, 99) !important;
     }
-    .landing-btn:hover{
-        /* transform: scale(0.9); */
-    }
     .heading{
         font-size:38px;
         -webkit-text-stroke: 1px rgb(255, 255, 255);
@@ -38,15 +35,15 @@
     }
     .landing-para{
         color:white;
-            font-size:18px;
-            letter-spacing: 1.5px;
-            width:70%;
-            margin-top: -19px;
+        font-size:18px;
+        letter-spacing: 1.5px;
+        width:70%;
+        margin-top: -19px;
             
     }
     .shop-btn{
-    font-weight: 500;
-    margin: 20px;
+        font-weight: 500;
+        margin: 20px;
     }
     .shop-btn:hover{
         background-color: rgb(150, 150, 150);
