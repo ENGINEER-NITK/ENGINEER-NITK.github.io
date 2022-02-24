@@ -726,6 +726,7 @@
 
   .modal-body {
     color: #ccc;
+    font-size: 1.25em;
   }
 
   .btn-close {
@@ -796,5 +797,3 @@
   #track-end {
     font-size: 1.25em;
   }
-
-  
