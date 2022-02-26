@@ -1057,12 +1057,12 @@ section {
 }
 
 .gallery-section-slider {
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 .slick-arrow {
   position: absolute;
-  top: -160px;
+  top: -120px;
 }
 
 .slick-prev {

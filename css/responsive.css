@@ -122,6 +122,7 @@
     .glimps-engi{
         position: relative;
         margin: auto;
+        text-align: center;
     }
 
     .slick-next{
