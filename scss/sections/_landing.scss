@@ -27,7 +27,7 @@ header{
 
 .home-top-space-custom {
   width: 100%;
-  height: 244px;
+  height: 150px;
 }
 
 .home-page-text {
@@ -391,4 +391,39 @@ header{
   100% {
     clip: rect(83px, auto, 40px, 30px);
   }
+}
+
+
+
+.s1-txt1 {
+  // font-family: PlayfairDisplay-Italic;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+}
+
+.l1-txt1 {
+  // font-family: PlayfairDisplay-Bold;
+  // font-family: pop;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1;
+}
+
+.size1 {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Width ]*/
+.wsize1 {
+  width: 90px;
+}
+.flex-w{
+  display: flex;
+  background-color: rgba(255,255,255,0.1);
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
 }
