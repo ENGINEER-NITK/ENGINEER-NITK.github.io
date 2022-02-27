@@ -238,7 +238,7 @@
   .head-main {
     display: block;
     font-family: 'poppins';
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 400;
     /* letter-spacing: 10px; */
     color: #ededed;
@@ -788,8 +788,8 @@
     flex-basis: 20%;
   }
 
-  #track-end {
-    font-size: 1.25em;
+  .track-end {
+    font-size: 1.5em;
   }
 
   .sponsor-item {
@@ -801,4 +801,8 @@
 
   .sponsor-tier {
     font-size: 1.2rem;
+  }
+
+  .prize-amount {
+    white-space: nowrap;
   }
