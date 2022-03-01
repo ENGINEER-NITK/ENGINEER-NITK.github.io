@@ -224,6 +224,20 @@ header {
   height: 4.2rem;
 }
 
+#nav-cta {
+  display: inline-block;
+  background-color: #fff;
+  color: #313131;
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+#nav-cta:hover {
+  background-color: #d3d3d3;
+}
+
 /*Apply styles after scroll end*/
 /* Hero Demo Content*/
 .hero {
