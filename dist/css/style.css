@@ -25,6 +25,10 @@ body {
   overflow-x: hidden;
 }
 
+input {
+  font-size: 20px !important;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -222,6 +226,20 @@ header {
 
 .scrolling-active .main-nav {
   height: 4.2rem;
+}
+
+#nav-cta {
+  display: inline-block;
+  background-color: #fff;
+  color: #313131;
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+#nav-cta:hover {
+  background-color: #d3d3d3;
 }
 
 /*Apply styles after scroll end*/
@@ -694,7 +712,7 @@ header {
 }
 
 .timeline .swiper-container {
-  height: 600px;
+  height: 700px;
   width: 100%;
   position: relative;
 }
@@ -767,7 +785,7 @@ header {
 
 .timeline .swiper-slide .timeline-text {
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.1;
   opacity: 0;
   -webkit-transform: translate3d(20px, 0, 0);
           transform: translate3d(20px, 0, 0);
@@ -821,7 +839,7 @@ header {
   position: absolute;
   left: -30px;
   top: 0;
-  height: 100%;
+  min-height: 100%;
   width: 1px;
   background-color: rgba(255, 255, 255, 0.2);
 }
