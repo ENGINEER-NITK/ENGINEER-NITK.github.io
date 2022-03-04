@@ -41,7 +41,7 @@
 }
 
 /* Modal Content (image) */
-.modal-content {
+.modal-content1 {
   margin: auto;
   display: block;
   width: 80%;
@@ -61,7 +61,7 @@
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content1, #caption {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
