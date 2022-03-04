@@ -1,7 +1,7 @@
 :root {
   --background-dark: #2d3548;
-  --text-light: rgba(255,255,255,0.6);
-  --text-lighter: rgba(255,255,255,0.9);
+  --text-light: rgba(255, 255, 255, 0.6);
+  --text-lighter: rgba(255, 255, 255, 0.9);
   --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 24px;
@@ -45,6 +45,10 @@ body {
   padding: var(--spacing-xxl) var(--spacing-l);
 }
 
+.accordion {
+  background-color: #141414;
+}
+
 .events {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -63,6 +67,7 @@ body {
   color: #ffffff91;
   background-color: rgba(255, 201, 0, 0.1) !important;
   border: none;
+  border: 1px solid rgba(255, 201, 0, 0.25);
 }
 
 .card-grid {
@@ -118,10 +123,10 @@ body {
           transform-origin: center;
   -webkit-transform: scale(1) translateZ(0);
           transform: scale(1) translateZ(0);
-  -webkit-transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
-  transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
-  transition: filter 200ms linear, transform 200ms linear;
-  transition: filter 200ms linear, transform 200ms linear, -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+  -webkit-transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+  transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+  transition: filter 200ms linear, transform 200ms linear;
+  transition: filter 200ms linear, transform 200ms linear, -webkit-filter 200ms linear, -webkit-transform 200ms linear;
 }
 
 .card:hover .card__background {
