@@ -180,6 +180,29 @@
     </div>
   </div>
 
+  <div class="modal fade" id="ecare" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">MERCHANDISE</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <img src="./images/engicare.png" alt="" style="width: 100%; padding: 10px;">
+        </div>
+        <div class="modal-footer">
+          <button onclick="popup('nitk-entry-pass-422411');" class="btn btn-dark">Donate</button><noscript
+            id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript>
+          <script src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js"
+            type="text/javascript"></script>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <section class="hero" id="hero">
     <video type="video/mp4" src="./videos/LandingVid.mp4" autoplay muted loop id="hero_video"></video>
 
@@ -204,13 +227,15 @@
             impossible and is accompanied by the motto <br> "THINK, CREATE, ENGINEER".
           </p>
           <div class="my-3">
-            <button onclick="popup('nitk-entry-pass-422411');"
+
+            <a href="#" id="nav-cta" data-bs-toggle="modal" data-bs-target="#ecare"
               style="color:white;margin: 20px;margin-left: 0px;background-color: rgb(63, 62, 62); border: none;"
               id="nav-cta"> <i class="fas fa-donate"></i>
               <!--<i class="fa fa-ticket" aria-hidden="true"></i> --> Engi Care
-            </button><noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript>
+            </a>
+            <!-- <noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript>
             <script src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js"
-              type="text/javascript"></script>
+              type="text/javascript"></script> -->
 
             <a href="#" id="nav-cta" data-bs-toggle="modal" data-bs-target="#shop">
               <i class="fa-solid fa-bag-shopping"></i> Shop Now
