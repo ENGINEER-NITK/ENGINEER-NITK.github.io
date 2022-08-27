@@ -97,13 +97,27 @@
     gtag('config', 'UA-220930637-1');
   </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
-
-
+<script>
+  function modalClose(){
+    document.getElementById("modalClosing").style.display = "none";
+  }
+</script>
 </head>
 
 <body>
   <header>
     <div class="container">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" id="modalClosing" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" onclick="modalClose()"></button>
+          </div>
+          <div class="modal-body">
+            <img src="./images/Home_Modal_Image.png" alt="" style="width: 100%;height:72vh" />
+          </div>
+        </div>
+      </div>
+
       <nav class="main-nav">
         <a href="/" class="logo hero-glitch" data-text="ENGINEER">ENGINEER</a>
         <button id="nav-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
@@ -209,7 +223,12 @@
             impossible and is accompanied by the motto <br> "THINK, CREATE, ENGINEER".
           </p>
           <div class="my-3">
-            <button onclick="popup('nitk-entry-pass-422411');" style="color:white;margin: 20px;margin-left: 0px;background-color: rgb(63, 62, 62); border: none;" id="nav-cta"><i class="fa fa-ticket" aria-hidden="true"></i> Entry Pass</button><noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript><script src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js" type="text/javascript"></script>
+            <button onclick="popup('nitk-entry-pass-422411');"
+              style="color:white;margin: 20px;margin-left: 0px;background-color: rgb(63, 62, 62); border: none;"
+              id="nav-cta"><i class="fa fa-ticket" aria-hidden="true"></i> Entry Pass</button><noscript
+              id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript>
+            <script src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js"
+              type="text/javascript"></script>
 
             <a href="#" id="nav-cta" data-bs-toggle="modal" data-bs-target="#shop">
               <i class="fa-solid fa-bag-shopping"></i> Shop Now
@@ -305,10 +324,11 @@
       </div>
     </div>
   </section>
-<!-- timeline -->
+  <!-- timeline -->
   <section class="timeline-section">
     <div class="container time">
-      <h1 class="text-white glimps-engi" id="timeline" style="padding-bottom:40px !Important; margin-top: 100px;">Timeline</h1>
+      <h1 class="text-white glimps-engi" id="timeline" style="padding-bottom:40px !Important; margin-top: 100px;">
+        Timeline</h1>
       <div class="timeline">
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -321,8 +341,8 @@
 
 
                 <h4 class="timeline-title">Day 0</h4><br>
-                <p class="timeline-text" >Inaguaral Event (SJA) : 5pm-7pm</p>
-                <p class="timeline-text" >Magic Show (SJA) : 9pm-10pm</p>
+                <p class="timeline-text">Inaguaral Event (SJA) : 5pm-7pm</p>
+                <p class="timeline-text">Magic Show (SJA) : 9pm-10pm</p>
               </div>
             </div>
             <div class="swiper-slide" style="background-image: url(./images/tiemline2.jpg);" data-day="Day 1">
@@ -348,7 +368,7 @@
                 <p class="timeline-text">Starry Night (Science Block) : 8pm-9pm</p>
                 <p class="timeline-text">DJ (Main Ground) : 10pm-12am</p>
 
-                
+
 
 
 
@@ -363,7 +383,7 @@
                 </span>
 
                 <h4 class="timeline-title">Day 2</h4><br>
-                
+
                 <p class="timeline-text">Tradeoff (EC Lab) : 8am-11am</p>
                 <!-- <p class="timeline-text">WORKSHOP (online) : 9am-5pm</p> -->
                 <!-- <p class="timeline-text">Entry Pass Distribution for NITK Students (Main Building) : 9am-4pm</p> -->
@@ -380,7 +400,7 @@
                 <p class="timeline-text">Symphony (MB) : 7pm-8pm</p>
                 <p class="timeline-text">Band (Main Ground) : 8pm-12am</p>
 
-                
+
               </div>
             </div>
             <div class="swiper-slide" style="background-image: url(./images/timeline4.JPG);" data-day="Day 3">
