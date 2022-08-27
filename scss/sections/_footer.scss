@@ -1,0 +1,32 @@
+.social-icon a i {
+  font-size: 25px;
+  padding: 0 5px;
+}
+
+.social-icon a i:hover {
+  opacity: 0.5;
+}
+
+.link_hover {
+  position: relative;
+  color: #fff;
+}
+.link_hover::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.link_hover:hover::after {
+  transform: scaleX(1);
+}
+.link_hover:hover {
+  color: #fff;
+}

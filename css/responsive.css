@@ -1,0 +1,140 @@
+    /* Landing page  */
+
+    .landing-btn{
+        position: relative;
+        font-size: 18px;
+        display: inline;
+        padding: 10px 32px;
+        text-decoration: none;
+        overflow: hidden;
+        border-radius: 20px;
+        border: none;
+        font-weight: 500;
+        transition: all 0.4s ease-in-out;
+    }
+    .learn-btn{
+        position: relative;
+        font-size: 18px;
+        display: inline;
+        padding: 10px 32px;
+        text-decoration: none;
+        overflow: hidden;
+        border-radius: 20px;
+        border: none;
+        font-weight: 500;
+        transition: all 0.4s ease-in-out;
+    }
+    .learn-btn:hover{
+        background-color: rgb(100, 99, 99) !important;
+    }
+    .heading{
+        font-size:38px;
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+        color: rgba(255, 255, 255, 0);
+        line-height: 19px;
+    }
+    .landing-para{
+        color:white;
+        font-size:18px;
+        letter-spacing: 1.5px;
+        width:70%;
+        margin-top: -19px;
+            
+    }
+    .shop-btn{
+        font-weight: 500;
+        margin: 20px;
+    }
+    .shop-btn:hover{
+        background-color: rgb(150, 150, 150);
+    
+    }
+
+@media only screen and (max-width: 600px) {
+
+    .logo{
+       font-size: 20px !important;
+       letter-spacing: 2px;
+    }
+
+    .fancy-button{
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    .heading{
+        font-size:30px;
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+        line-height: 35px;
+    }
+    .heading-2{
+        font-size:35px;
+    }
+    .landing-para{
+        font-size: 14px;
+        width:100%;
+        margin-top: 8px;
+    }
+    .landing-btn{
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .shop-btn{
+        margin: 0px;
+    }
+
+
+    /* THINK SECTION */
+
+    .pg2-content{
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
+    }
+    .pg2-think , .pg2-create , .pg2-engineer{
+        text-align: center;
+        margin: 5px;
+        padding: 0px;
+    }
+    .pg2-c-h > h1{
+        padding: 0px 7px;
+        text-align: center;
+    }
+    .pg2-think-content , .pg2-create-content , .pg2-engineer-content{
+        text-align: left;
+        font-size: 17px;
+        letter-spacing: 1.5px;
+    }
+    .pg2-line{
+        transform: rotate(90deg);
+    }
+    .abt-us{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .about_sec_text{
+        padding: 13px;
+        font-size: 17px;
+        letter-spacing: 1.5px;
+    }
+
+    .glimps-engi{
+        position: relative;
+        margin: auto;
+        text-align: center;
+    }
+
+    .slick-next{
+        position: absolute;
+        margin: auto;
+        top:100%;
+        left: 20%;
+    }
+    .slick-prev{
+        margin: auto;
+        top:100%;
+        left: 0%;
+    }
+
+}

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO and website details stuff -->
+  <meta name="description"
+    content="Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India">
+  <meta name="keywords"
+    content="Engineer, Techfest, Technology, NITK Surathkal, Coding, Prizes, Workshops, Events, DJNight, Engi22, Engi NITK, Engineer NITK">
+  <meta property="og:title" content="Engineer - is the Annual Technical Symposium of NITK Surathkal" />
+  <meta property="og:description"
+    content="Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India" />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/ENGINEER-NITK/ENGINEER-NITK.github.io/main/images/NEWLOGO.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://engineer.nitk.ac.in/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="ienitk">
+  <meta name="twitter:site" content="https://engineer.nitk.ac.in/">
+  <meta name="twitter:title" content="Engineer - is the Annual Technical Symposium of NITK Surathkal">
+  <meta name="twitter:description"
+    content="Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India">
+  <meta name="twitter:image:src" content="./images/NEWLOGO.png">
+
+  <!-- google site varification key -->
+  <meta name="google-site-verification" content="Ztef-PgwdDMROlBNI_rgz1T1meZP6GvWzifM3z3HwAo" />
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- slick carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'>
+
+  <title>Engineer 2022 | NITK</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/NEWLOGO.png" type="image/x-icon" />
+
+  <!-- local style sheets -->
+  <link rel="stylesheet" href="./dist/css/style.css" />
+  <link rel="stylesheet" href="./css//responsive.css" />
+  <link rel="stylesheet" href="./css//navbar.css" />
+  <link rel="stylesheet" href="./css/gallery_page.css" />
+
+  <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Techfest",
+            "name": "Engineer",
+            "email": "nitkengineer2022@gmail.com",
+            "image": "https://raw.githubusercontent.com/ENGINEER-NITK/ENGINEER-NITK.github.io/main/images/NEWLOGO.png",
+            "url": "https://engineer.nitk.ac.in",
+            "sameAs": ["https://www.facebook.com/EngineerNITK", "https://www.linkedin.com/company/engineer-nitk", "https://www.instagram.com/engineernitk"],
+            "description": "Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India",
+            "startDate": "01/03/2022 09:00AM",
+            "endDate": "04/03/2020 11:59PM",
+            "location": {
+                "@type": "Place",
+                "name": "NITK Surathkal",
+                "sameAs": "http://www.nitk.ac.in/",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "NITK Surathkal",
+                    "addressLocality": "Surathkal",
+                    "postalCode": "575025",
+                    "addressCountry": "IND"
+                }
+            }
+        }
+    </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLS4THWWW2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RLS4THWWW2');
+    gtag('config', 'UA-220930637-1');
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="main-nav">
+        <a href="/" class="logo hero-glitch" data-text="ENGINEER">ENGINEER</a>
+        <button id="nav-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <svg class="nav-ham" viewBox="0 0 100 100" width="50" onclick="this.classList.toggle('active')">
+            <path class="nav-ham-line top"
+              d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+            <path class="nav-ham-line middle" d="m 30,50 h 40" />
+            <path class="nav-ham-line bottom"
+              d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+          </svg>
+        </button>
+        <ul class="nav-list" id="nav-menu">
+          <li>
+            <a href="#hero" class="nav-link">Home</a>
+          </li>
+          <li>
+            <a href="https://engineer.nitk.ac.in/about" class="nav-link">About</a>
+          </li>
+          <li>
+            <a href="https://engineer.nitk.ac.in/brochure" class="nav-link">Brochure</a>
+          </li>
+          <li>
+            <a href="https://engineer.nitk.ac.in/events" class="nav-link">Events</a>
+          </li>
+          <li>
+            <a href="https://engineer.nitk.ac.in/workshops" class="nav-link">Workshops</a>
+          </li>
+          <li>
+            <a href="https://engineer.nitk.ac.in/gallery" class="nav-link">Gallery</a>
+          </li>
+          <li>
+            <a href="#contact_us" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- <div class="engi_care">
+    <div class=""></div>
+  </div> -->
+
+
+  <div class="modal fade" id="shop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">MERCHANDISE</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 class="center">Color #1</h4>
+          <img src="./images/t_shirt/black.png" alt="" style="width: 100%; padding: 10px;">
+          <h4 class="center">Color #2</h4>
+          <img src="./images/t_shirt/green.png" alt="" style="width: 100%; padding: 10px;">
+          <h4 class="center">Color #3</h4>
+          <img src="./images/t_shirt/red.png" alt="" style="width: 100%; padding: 10px;">
+          <h5 class="mt-3">Price</h5>
+          330 INR/
+
+
+        </div>
+        <div class="modal-footer">
+          <a href="https://forms.gle/oTmTe6W3gXgVrdPLA" target="_blank">
+            <button type="button" class="btn btn-dark" disabled>
+              Buy Now
+            </button>
+          </a>
+          <!-- <form>
+                      <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                          data-payment_button_id="pl_Iwdp9qAGblSpAw" async> </script>
+                  </form> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero" id="hero">
+    <video type="video/mp4" src="./videos/LandingVid.mp4" autoplay muted loop id="hero_video"></video>
+
+    <div class="main-start">
+      <div class="container">
+        <div class="home-top-space-custom" style="margin-bottom: 50px;"></div>
+        <div style="
+              -moz-user-select: none;
+              -webkit-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              -o-user-select: none;
+
+             
+            " unselectable="on" onselectstart="return false;">
+
+
+          <h2 class='display-1 home-page-text heading'><span>NITK'S TECHFEST</span></h2>
+          <h1 class=" home-page-text  home-page-text heading-2 style=" letter-spacing: 4px;" data-text="COMING SOON">
+            ENGINEER '2K22
+          </h1>
+          <p class='landing-para'>The official logo of Engineer,a Penrose Triangle,serves as a statement <br> to
+            challenge the
+            impossible and is accompanied by the motto <br> "THINK, CREATE, ENGINEER".
+          </p>
+          <div class="my-3">
+            <button onclick="popup('nitk-entry-pass-422411');" style="color:white;margin: 20px;margin-left: 0px;background-color: rgb(63, 62, 62); border: none;" id="nav-cta"><i class="fa fa-ticket" aria-hidden="true"></i> Entry Pass</button><noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript><script src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js" type="text/javascript"></script>
+
+            <a href="#" id="nav-cta" data-bs-toggle="modal" data-bs-target="#shop">
+              <i class="fa-solid fa-bag-shopping"></i> Shop Now
+            </a>
+          </div>
+
+          <div class="flex-w flex-col p-t-34 respon3">
+            <div class="flex-col wsize1 m-b-40 respon4" style="margin-left: 20px;">
+              <span class="l1-txt1 p-b-30 days" id="days"></span><br>
+              <span class="s1-txt1">Days</span>
+            </div>
+
+            <div class="flex-col wsize1 m-b-40 respon4">
+              <span class="l1-txt1 p-b-30 hours" id="hours"></span><br>
+              <span class="s1-txt1">Hours</span>
+            </div>
+
+            <div class="flex-col wsize1 m-b-40 respon4">
+              <span class="l1-txt1 p-b-30 minutes" id="minutes"></span><br>
+
+              <span class="s1-txt1">Minutes</span>
+            </div>
+
+            <div class="flex-col wsize1 m-b-40 respon4">
+              <span class="l1-txt1 p-b-30 seconds" id="seconds"></span><br>
+              <span class="s1-txt1">Seconds</span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tag_line_page">
+    <div class="pg2-navigator">
+      <a href="#hero"><img src="images/navigator.png" alt="" /></a>
+    </div>
+    <div class="pg2-content" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-out">
+      <div class="pg2-think">
+        <div class="pg2-think-img">
+          <img src="images/brain.png" alt="" />
+        </div>
+        <div class="pg2-c-h">
+          <h2>Think</h2>
+          <div class="pg2-think-content">
+            The world as we have created it is a process of our thinking. As
+            it is said “The mind is not a vessel to be filled, but a fire to
+            be kindled. Every year with this motto we give all of our efforts
+            to think new ways to make engineering more worth to society.
+          </div>
+        </div>
+      </div>
+
+      <div class="pg2-line">
+        <div class="pg2-vl"></div>
+      </div>
+
+      <div class="pg2-create" data-aos="fade-up" data-aos-delay="250" data-aos-easing="ease-out">
+        <div class="pg2-create-img">
+          <img src="images/wrench.png" alt="" />
+        </div>
+        <div class="pg2-c-h">
+          <h2>Create</h2>
+          <div class="pg2-create-content">
+            The world as we have created it is a process of our thinking. As
+            it is said “The mind is not a vessel to be filled, but a fire to
+            be kindled. Every year with this motto we give all of our efforts
+            to think new ways to make engineering more worth to society.
+          </div>
+        </div>
+      </div>
+
+      <div class="pg2-line">
+        <div class="pg2-vl"></div>
+      </div>
+
+      <div class="pg2-engineer" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-out">
+        <div class="pg2-engineer-img">
+          <img src="images/gears.png" alt="" />
+        </div>
+
+        <div class="pg2-c-h">
+          <h2>Engineer</h2>
+          <div class="pg2-engineer-content">
+            The world as we have created it is a process of our thinking. As
+            it is said “The mind is not a vessel to be filled, but a fire to
+            be kindled. Every year with this motto we give all of our efforts
+            to think new ways to make engineering more worth to society.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- timeline -->
+  <section class="timeline-section">
+    <div class="container time">
+      <h1 class="text-white glimps-engi" id="timeline" style="padding-bottom:40px !Important; margin-top: 100px;">Timeline</h1>
+      <div class="timeline">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(./images/timeline1.jpg);" data-day="Day 0">
+              <div class="swiper-slide-content">
+
+                <span class="timeline-day">
+                  <h5>(23<sup>rd</sup> September)</h5>
+                </span>
+
+
+                <h4 class="timeline-title">Day 0</h4><br>
+                <p class="timeline-text" >Inaguaral Event (SJA) : 5pm-7pm</p>
+                <p class="timeline-text" >Magic Show (SJA) : 9pm-10pm</p>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./images/tiemline2.jpg);" data-day="Day 1">
+              <div class="swiper-slide-content">
+
+                <span class="timeline-day">
+                  <h5>(24<sup>th</sup> September)</h5>
+                </span>
+
+                <h4 class="timeline-title">Day 1</h4><br>
+                <p class="timeline-text">Workshop Online (Online) : 9am-5pm</p>
+                <p class="timeline-text">Robocon (MSH) : 9am-10am</p>
+                <p class="timeline-text">Gaming (NChem) : 9am-5pm</p>
+
+                <p class="timeline-text">Engi-Insi Talks (SJA) : 10am-12pm</p>
+                <p class="timeline-text">Engi-Insi Talks (SJA) : 1pm-3pm</p>
+                <p class="timeline-text">HACKATHON (CCC) : 2pm-12am</p>
+
+                <p class="timeline-text">BAJA (NSG) : 3pm-5pm</p>
+                <p class="timeline-text">Techmela (Pavilion) : 3pm-5pm</p>
+                <p class="timeline-text">Technites/AAC (LHC-A) : 6pm-8pm</p>
+                <p class="timeline-text">Syphony (MB) : 7pm-8pm</p>
+                <p class="timeline-text">Starry Night (Science Block) : 8pm-9pm</p>
+                <p class="timeline-text">DJ (Main Ground) : 10pm-12am</p>
+
+                
+
+
+
+
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./images/tiemline3.jpg);" data-Day="Day 2">
+              <div class="swiper-slide-content">
+
+                <span class="timeline-day">
+                  <h5>(25<sup>rh</sup> September)</h5>
+                </span>
+
+                <h4 class="timeline-title">Day 2</h4><br>
+                
+                <p class="timeline-text">Tradeoff (EC Lab) : 8am-11am</p>
+                <!-- <p class="timeline-text">WORKSHOP (online) : 9am-5pm</p> -->
+                <!-- <p class="timeline-text">Entry Pass Distribution for NITK Students (Main Building) : 9am-4pm</p> -->
+                <p class="timeline-text">Reflux (NChem) : 9am-10am</p>
+                <p class="timeline-text">Capture the Flag (CCC) : 9am-5pm</p>
+                <p class="timeline-text">VR Games (NChem) : 10am-2pm</p>
+                <p class="timeline-text">VNITK Racing(MB) : 10am-11am</p>
+                <p class="timeline-text">Light of seven (OSP) : 10am-4pm</p>
+                <p class="timeline-text">Tech Mela (Pavilion) : 1pm-4pm</p>
+                <p class="timeline-text">BAJA (NSG) : 3pm-5pm</p>
+                <p class="timeline-text">Inscription (Online) : 4pm-7pm</p>
+                <p class="timeline-text">Technites/AAC : 6pm-8pm</p>
+                <p class="timeline-text">Lazer Show (SJA) : 7pm-8pm</p>
+                <p class="timeline-text">Symphony (MB) : 7pm-8pm</p>
+                <p class="timeline-text">Band (Main Ground) : 8pm-12am</p>
+
+                
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./images/timeline4.JPG);" data-day="Day 3">
+              <div class="swiper-slide-content">
+
+                <span class="timeline-day">
+                  <h5>(26<sup>th</sup> September)</h5>
+                </span>
+
+                <h4 class="timeline-title">Day 3</h4><br>
+
+
+                <p class="timeline-text"> Air Show (NSG) : 8am-11am</p>
+                <p class="timeline-text"> VR Games (NChem) : 9am-5pm</p>
+                <p class="timeline-text"> Workshop (online) : 9am-5pm</p>
+                <p class="timeline-text"> NITK Racing (MB) : 10am-12pm</p>
+                <p class="timeline-text"> Workshop (Civil Department) : 10am-11am</p>
+                <p class="timeline-text"> Endeavour (MSH) : 10am-11am</p>
+                <!-- <p class="timeline-text"> Entry Pass Distribution for NITK Students (MB) : 10am-11am</p> -->
+                <p class="timeline-text"> Flight Simulator and Robowars (Pavilion) : 1pm-4pm</p>
+                <p class="timeline-text"> BAJA (NSG) : 3pm-5pm</p>
+                <p class="timeline-text"> Technites/AAC (LHC-A) : 6pm-8pm</p>
+                <p class="timeline-text"> Star eve (sja) : 6pm-8pm</p>
+                <p class="timeline-text"> Symphony (MB) : 7pm-8pm</p>
+                <p class="timeline-text"> Starry Night (Science Block) : 9pm-10pm</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="gallery-section" id="gallery-section">
+    <div class="container">
+      <div class="gallery-section-inner">
+        <h2 class="text-white glimps-engi">Glimps of Engineer'19</h2>
+        <div class="gallery-section-slider">
+          <div class="item card" data-aos="fade-up" data-aos-delay="0">
+            <img class="gallery-img" src="./images/gallery/others/technites.JPG" alt="" />
+          </div>
+          <div class="item card" data-aos="fade-up" data-aos-delay="250">
+            <img class="gallery-img" src="./images/gallery/others/tech1.JPG" alt="" />
+          </div>
+          <div class="item card" data-aos="fade-up" data-aos-delay="500">
+            <img class="gallery-img" src="./images/gallery/others/laser.JPG" alt="" />
+          </div>
+          <div class="item card">
+            <img class="gallery-img" src="./images/gallery/others/cs.JPG" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="home-top-space-custom"></div>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white contact_use" id="contact_us"
+    style="background-color: rgb(20, 20, 20)">
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold engineer-logo">Engineer</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #c004d9; height: 2px" />
+            <p>
+              Engineer is the Annual Technical Symposium of NITK Surathkal and
+              is one of the largest of its kind in India.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Discover</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #c004d9; height: 2px" />
+            <p>
+              <a href="https://engineer.nitk.ac.in/team" class="text-white link_hover">Our Team</a>
+            </p>
+            <p>
+              <a href="https://drive.google.com/file/d/10MaZBwFFAArGSpD-jwBOA9Dp_k7bvXyD/view?usp=drivesdk"
+                target="_blank" class="text-white link_hover" download="Brochure">Brochure</a>
+            </p>
+            <p>
+              <a href="/#timeline" class="text-white link_hover">Schedule</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white link_hover">Suggestions & Feedback</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">About</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #c004d9; height: 2px" />
+            <p>
+              <a href="https://engineer.nitk.ac.in/about" class="text-white link_hover">About Us</a>
+            </p>
+            <p>
+              <a href="https://www.nitk.ac.in/" class="text-white link_hover" target="_blank">NITK</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #c004d9; height: 2px" />
+            <p>
+              <i class="fas fa-home mr-3"></i> National Institute of
+              Technology Karnataka, Surathkal, Mangalore - 575 025
+            </p>
+            <p>
+              <i class="fas fa-envelope mr-3"></i>
+              <a href="mailto:nitkengineer2022@gmail.com" class="link_hover">nitkengineer2022@gmail.com</a>
+            </p>
+            <p>
+              <i class="fas fa-phone mr-3"></i><a href="tel:+91 8839404484" class="link_hover">+91-8839404484</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <section class="d-flex justify-content-center p-4 center mt-3" style="background-color: rgb(20, 20, 20)">
+      <div class="social-icon">
+        <a href="https://www.facebook.com/EngineerNITK/" class="text-white me-4" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- <a
+            href="mailto:nitkengineer2022@gmail.com"
+            class="text-white me-4"
+            target="_blank"
+          >
+            <i class="fab fa-google"></i>
+          </a> -->
+        <a href="https://www.instagram.com/engineernitk/" class="text-white me-4" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/engineer-nitk/mycompany/" class="text-white me-4" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ENGINEER-NITK" class="text-white me-4" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCuI2mPU8NqIKvdW9F4wJTVg" class="text-white me-4" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="text-center p-3 my-3" style="background-color: rgba(20, 20, 20, 1)">
+      © 2022 Copyright Engineer | Design by
+      <a class="text-white link_hover" href="https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io">Engineer'2K22 Web
+        Team</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Local Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

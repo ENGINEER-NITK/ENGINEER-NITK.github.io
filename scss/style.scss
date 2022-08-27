@@ -1,0 +1,14 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+@import url('https://unpkg.com/aos@2.3.1/dist/aos.css');
+@font-face {
+    font-family: engineer;
+    src: url('../fonts/space\ age.ttf');
+}
+
+@import 'global';
+@import 'sections/landing';
+@import 'sections/tagline';
+// @import 'sections/about';
+@import 'sections/gallery';
+@import 'sections/footer';

@@ -1,0 +1,53 @@
+.brochure-main-heading{
+ padding-top: 120px;
+ width: 100%;
+ text-align: center;
+ color: white;
+
+}
+.brochure-sections-container{
+  margin-bottom:12px;
+}
+.brochure-sections-container:nth-child(even){
+  background: url(../../images/brochure/brochure-bg-1.svg);
+}
+.brochure-sections-container:nth-child(odd){
+  background: url(../../images/brochure/brochure-bg-2.svg);
+}
+.brochure-section-text{
+  font-family: 'Poppins';
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: #fff !important;
+  opacity: 0.55;
+  /* text-align: justify; */
+  text-justify: inter-word;
+  background-color: rgba(24, 24, 24, 0.04);
+  box-shadow: 0px 0px 32px 32px rgba(24, 24, 24, 0.04);
+  border-radius: 32px;
+
+}
+.brochure-sections-container:nth-child(even) .brochure-row{
+  flex-direction: row-reverse;
+}
+
+.brochure-image{
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+}
+.brochure-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.brochure-sections-container:last-child{
+  margin-bottom:150px;
+}
+/* .dummy{
+  color: rgba(15, 150, 71, 0.12);
+  color: rgba(5, 64, 115, 0.5);
+} */

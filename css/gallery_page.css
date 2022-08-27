@@ -1,0 +1,143 @@
+.gallery {
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#myImg {
+
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+
+#myImg2 {
+
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg2:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content1 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content1, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: relative;
+  top: 10%;
+  left: 90%;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.title-heading {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_gallery {
+  width: clamp(30rem, 95%, 62.5rem);
+  padding-block: 1rem;
+  min-width: 22.5rem;
+}
+
+.container__flex-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* margin-inline: clamp(0px, (30rem - 100%) * 999, 1rem); */
+}
+
+.container__flex-flow > * {
+  flex-grow: 1;
+  flex-basis: calc((30rem - 100%) * 999);
+}
+
+.card {
+  display: flex;
+  min-width: 12rem;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  /* border-radius: clamp(0px, (40vw - 100%), 1rem); */
+  box-shadow: rgb(40, 40, 40, 0.1) 0px 2px 3px, rgb(20, 20, 20, 0.2) 0px 5px 8px,
+    rgb(0, 0, 0, 0.25) 0px 10px 12px;
+}
+
+.card > img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+  aspect-ratio: 16 / 9;
+  transition: transform 700ms ease;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 600px) {
+  .title-heading {
+    margin-top: 20%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <link rel="stylesheet" href="./dist/css/style.css" />
+  <link rel="stylesheet" href="./dist/css/hackathon.css" />
+  <link rel="shortcut icon" href="./images/NEWLOGO.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./css//responsive.css" />
+  <link rel="stylesheet" href="./css//navbar.css" />
+  <link rel="stylesheet" href="./css/gallery_page.css" />
+  <title>Engineer 2022 | Hackathon</title>
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="The Engineer Hackathon">
+  <meta name="description" content=" NITK's Annual Technical Fest Hackathon">
+  <meta name="keywords" content="blockchain,technical,fest,hackathon,contest,prizes,ai,ml,engineer">
+  <meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="Web Enthusiasts' Club NITK">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://engineer.nitk.ac.in/hackathon">
+  <meta property="og:title" content="The Engineer Hackathon">
+  <meta property="og:description" content=" NITK's Annual Technical Fest Hackathon">
+  <meta property="og:image"
+    content="https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io/tree/main/images/hackathon/hackathon_og.png">
+  <meta property="og:image:width" content="719" />
+  <meta property="og:image:height" content="259" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://engineer.nitk.ac.in/hackathon">
+  <meta property="twitter:title" content="The Engineer Hackathon">
+  <meta property="twitter:description" content=" NITK's Annual Technical Fest Hackathon">
+  <meta property="twitter:image"
+    content="https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io/tree/main/images/hackathon/hackathon_og.png">
+
+</head>
+
+<body class="abt-body">
+  <header>
+    <div class="container">
+      <nav class="main-nav">
+        <a href="index.html" class="logo hero-glitch" data-text="ENGINEER">ENGINEER</a>
+        <button id="nav-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <svg class="nav-ham" viewBox="0 0 100 100" width="50" onclick="this.classList.toggle('active')">
+            <path class="nav-ham-line top"
+              d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+            <path class="nav-ham-line middle" d="m 30,50 h 40" />
+            <path class="nav-ham-line bottom"
+              d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+          </svg>
+        </button>
+        <ul class="nav-list" id="nav-menu">
+          <li>
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li>
+            <a href="./about.html" class="nav-link">About</a>
+          </li>
+          <li>
+            <a href="https://engineer.nitk.ac.in/brochure" class="nav-link">Brochure</a>
+          </li>
+          <li>
+            <a href="./events.html" class="nav-link">Events</a>
+          </li>
+          <li>
+            <a href="./workshops.html" class="nav-link">Workshops</a>
+          </li>
+          <li>
+            <a href="./gallery.html" class="nav-link">Gallery</a>
+          </li>
+          <li>
+            <a href="#contact_us" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="header-text">
+      <!-- <div class="title-sponsorship">
+        <img class="title-sponsor" src="images/hackathon/image.png"> <span class="title-sponsor-presents" style="color: white;"> presents </span>
+      </div> -->
+      <h1>
+        <span class="head-main">The Engineer Hackathon</span>
+        <span class="head-sub">NITK's Annual Technical Fest Hackathon</span>
+      </h1>
+      <h2 class="event-date">March 4th-5th 2022</h2>
+      <!-- Important: Devfolio button -->
+      <div class="apply-button" data-hackathon-slug="the-engineer-hackathon" data-button-theme="dark-inverted"
+        style="height: 44px; width: 312px"></div>
+    </div>
+    <div class="scroll-down-container">
+      <div class="inner-container">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section_hackathon_intro" id="section_hackathon_intro">
+    <div class="container">
+      <div class="align-middle">
+        <div class="row">
+          <div class="container col-md-6" data-aos="fade-up" data-aos-delay="150" data-aos-easing="ease-out">
+            <h2 class="text-white my-3 abt-us">The Engineer Hackathon</h2>
+            <div class="about_sec_text">
+              The Engineer Hackathon, which is a part of NITK's Annual Technical Fest,
+              is a 24-hour long hackathon that gives you an opportunity to build something unique
+              to solve problems from various spheres of modern human life.
+              Use this hackathon to launch your big idea and potentially get continuity grants to turn your idea into a
+              real-world product!
+            </div>
+
+          </div>
+          <div class="col-md-6 my-3 about_video" data-aos="fade-up" data-aos-delay="150" data-aos-easing="ease-out">
+            <img src="./images/NEWLOGO.png" alt="">
+            </>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="tracks" id="tracks">
+    <div class="container" data-aos="zoom-in" data-aos-delay="150">
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <div class="about-content-text mb-80">
+            <h3 class="text-center wow fadeInUp" data-wow-delay="300ms" style="font-size: 3em; visibility: visible; animation-delay: 300ms;
+                        animation-name: fadeInUp;">Themes</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 order-2 order-lg-1">
+          <div class="about-content-text mb-80">
+            <h4 class="wow fadeInUp" data-wow-delay="300ms">Blockchain</h4>
+            <p class="wow fadeInUp" data-wow-delay="300ms"><i>Intersted in Ethereum development? <br>
+                Have a cool idea to use blockchain to solve a problem? <br>
+                This is your time to shine! Use a Blockchain to build a project that is intersting as well as useful,
+                and stand a chance to win cash prizes, goodies and a continuity grant to turn your project into a
+                real-world product!
+              </i></p>
+          </div>
+        </div>
+
+        <!-- About Thumb -->
+        <div class="col-12 col-md-6 order-1 order-lg-2 d-flex justify-content-center">
+          <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms"
+            style="justify-content: center;display: flex;">
+            <img class="theme-image" src="./images/hackathon/blockchain.jpg" alt="blockchain">
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- About Thumb -->
+        <div class="col-12 col-md-6 order-1 order-lg-1 d-flex justify-content-center">
+          <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms"
+            style="justify-content: center;display: flex;">
+            <img class="theme-image" src="./images/hackathon/ai_theme.png" alt="AI - ML" style="float:right">
+          </div>
+        </div>
+
+        <!-- About Content -->
+        <div class="col-12 col-md-6 order-2 order-lg-2">
+          <div class="about-content-text mb-80">
+            <h4 class="wow fadeInUp" data-wow-delay="300ms">AI/ML</h4>
+            <p class="wow fadeInUp" data-wow-delay="300ms"><i>Do Neural Networks interst you? <br>
+                Do you have an intersting use case for Machine Learning solutions? <br>
+                Build a project involving Machine Learning techniques or models and stand a chance to prizes!
+              </i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- About Content -->
+        <div class="col-12 col-md-6 order-2 order-lg-1">
+          <div class="about-content-text mb-80">
+            <h4 class="wow fadeInUp" data-wow-delay="300ms">HealthTech</h4>
+            <p class="wow fadeInUp" data-wow-delay="300ms"><i>Interested in making Health Care more accessible? <br>
+                Want to make Health Care systems more streamlined? <br>
+                Can you think of ways to use new technologies to improve Health Care? <br>
+                Think of a problem in Health Care that you feel deserves more attention, work on a solution to solve the
+                problem, and
+                stand a chance to win cash prizes and goodies!
+              </i></p>
+          </div>
+        </div>
+
+        <!-- About Thumb -->
+        <div class="col-12 col-md-6 order-1 order-lg-2 d-flex justify-content-center">
+          <div class="about-thumb mb-80 p-4 wow fadeInUp " data-wow-delay="300ms"
+            style="justify-content: center;display: flex;">
+            <img class="theme-image" src="./images/hackathon/health_tech.png" alt="HealthTech">
+          </div>
+        </div>
+      </div>
+      <h3 class="track-end text-center mt-2">
+        Have an intersting idea that isn't related to the themes above? We'd love to hear about it nonetheless!
+      </h3>
+      <h3 class="track-end text-center mt-4">Although these are some suggested themes, you don't have to limit yourself
+        to these. <br>
+        Join the <a href="https://discord.gg/S9hjJp4Whz" target="_blank"
+          style="color: black; text-decoration: underline;"> Hackathon Discord server </a> for more information!
+      </h3>
+    </div>
+  </section>
+
+
+  <section class="prizes" id="prizes">
+    <div class="prizes-div" data-aos="zoom-in-down" data-aos-delay="150" data-aos-easing="ease-in">
+      <h3 class="prizes-head">
+        Prizes
+      </h3>
+      <div class="container" style="color: #ededed;">
+        <div class="row">
+          <div class="col-sm-8 col-md-3 mx-auto">
+            <img class="prize-logo-i zoom-in" src="images/hackathon/Polygon_Logo-White.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-9 mx-auto prize-descriptions text-start">
+            <p>Polygon (previously Matic) will be giving away a cash prize of <b class="prize-amount">10,000 INR</b> for
+              the best hack built
+              on top of Ethereum during the hackathon.</p>
+            <p>
+              For teams that integrate Polygon in their hacks as well, the prize money will be higher, <b
+                class="prize-amount">15,000 INR</b>
+              along with eligibility for internship/full-time role
+              interviews and a chance to land seed funding of upto <b class="prize-amount">5000 USD</b>!</p>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-sm-8 col-md-3 mx-auto">
+            <img class="prize-logo-i zoom-in" src="images/hackathon/Tezos_Logo-White.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-9 mx-auto">
+            The Tezos Foundation will be giving away: <br>
+            <ul class="text-start mt-1">
+              <li>
+                A cash prize of <b class="prize-amount">20000 INR</b> for the best DApp built on Tezos
+              </li>
+              <li>
+                Every valid submission made in the Tezos track will be rewarded with exclusive Schwag Kits
+              </li>
+              <li>
+                Continuity grant opportunity up to <b class="prize-amount">5,000 USD</b> for an outstanding project
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-sm-8 col-md-3 mx-auto">
+            <img class="prize-logo-i zoom-in" src="images/hackathon/Celo Logo Monochrome Reverse.png">
+          </div>
+
+          <div class="col-12">
+            <p>The Celo Foundation is giving away <b class="prize-amount">20000 INR</b> for the best Dapp built on Celo
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-sm-8 col-md-3 mx-auto">
+            <img class="prize-logo-i zoom-in" src="images/hackathon/Filecoin White.png">
+          </div>
+          <div class="col-12">
+            <p>Protocol Labs is giving away <b class="prize-amount">20000 INR</b> to a project which makes the best use
+              of IPFS and/or Filecoin</p>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-sm-8 col-md-3 mx-auto">
+            <img class="prize-logo-i zoom-in" src="images/hackathon/image.png">
+          </div>
+          <div class="col-12">
+            <p>GeeksforGeeks goodies and vouchers worth <b class="prize-amount">12000 INR</b> to each of the top 4
+              teams!
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-sm-8 col-md-3 mx-auto">
+            <img class="prize-logo-i zoom-in" src="images/hackathon/lumos_labs_bw.webp">
+          </div>
+          <div class="col-12">
+            <p>Lumos Labs will be giving away <b class="prize-amount">7000 INR</b> and <b class="prize-amount">5000 INR
+              </b> to the first and second winner
+              respectively under the Cudos India Hackathon Track! (To be considered for this track, you need to use the
+              Cudos platform as a part of your project) </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors section -->
+  <section class="sponsors" id="sponsors">
+    <div class="sponsors-div" data-aos="zoom-in-down" data-aos-delay="150" data-aos-easing="ease-in">
+      <h3 class="sponsors-head">
+        Sponsors
+      </h3>
+      <br>
+      <!-- <h4>Gold Sponsors</h4>
+      <hr style="width: 70%; justify-content: center; text-align: center; height: 0.25em; margin: auto;"> -->
+      <div class="container tier-i-sponsors">
+        <div class="sponsor-item">
+          <a href="https://www.geeksforgeeks.org" target="_blank">
+            <img class="title-spon sponsor-logo-i zoom-out" src="images/hackathon/gfg-new-logo.png">
+          </a>
+          <p class="sponsor-tier">Title Sponsor</p>
+        </div>
+        <div class="sponsor-item">
+          <a href="https://devfolio.co" target="_blank">
+            <img class="sponsor-logo-i zoom-out" src="images/hackathon/Devfolio_Logo.png">
+          </a>
+          <p class="sponsor-tier">Gold Sponsor</p>
+        </div>
+        <div class="sponsor-item">
+          <a href="https://polygon.technology/" target="_blank">
+            <img class="sponsor-logo-i zoom-out" src="images/hackathon/Polygon_Logo.png">
+          </a>
+          <p class="sponsor-tier">Gold Sponsor</p>
+        </div>
+        <div class="sponsor-item">
+          <a href="https://www.lumoslabs.co/" target="_blank">
+            <img class="sponsor-logo-i zoom-out" src="images/hackathon/lumos_labs.webp">
+          </a>
+          <p class="sponsor-tier">Gold Sponsor</p>
+        </div>
+      </div>
+      <div class="container tier-ii-sponsors">
+        <div class="sponsor-item">
+          <a href="https://filecoin.io " target="_blank">
+            <img class="sponsor-logo-ii zoom-out" src="images/hackathon/Filecoin Coloured White Text.png">
+          </a>
+          <p class="sponsor-tier">Silver Sponsor</p>
+        </div>
+        <div class="sponsor-item">
+          <a href="https://tezos.com/" target="_blank">
+            <img class="sponsor-logo-ii zoom-out" src="images/hackathon/Tezos_Logo.png">
+          </a>
+          <p class="sponsor-tier">Silver Sponsor</p>
+        </div>
+        <div class="sponsor-item">
+          <a href="https://celo.org" target="_blank">
+            <img class="sponsor-logo-ii zoom-out" src="images/hackathon/Celo Logo Color.png">
+          </a>
+          <p class="sponsor-tier">Silver Sponsor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="timer">
+    <div style="padding-top: 2%;">
+      <h2 id="hcd-txt" style="text-align: center; font-size: 2.5rem;">
+        Hackathon Countdown
+      </h2>
+    </div>
+    <div class="row cd-row-1" style="text-align: center; justify-content: center;">
+      <div class="col-sm-3 cd">
+        Days
+      </div>
+      <div class="col-sm-3 cd">
+        Hours
+      </div>
+      <div class="col-sm-3 cd">
+        Minutes
+      </div>
+      <div class="col-sm-3 cd">
+        Seconds
+      </div>
+    </div>
+
+    <div class="row cd-row-2" style="text-align: center; justify-content: center;">
+      <div class="col-sm-3 cd">
+        <div data-days></div>
+      </div>
+      <div class="col-sm-3 cd">
+        <div data-hours></div>
+      </div>
+      <div class="col-sm-3 cd">
+        <div data-minutes></div>
+      </div>
+      <div class="col-sm-3 cd">
+        <div data-seconds></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="faq">
+    <div class="container" data-aos="fade-up" data-aos-delay="1 50" data-aos-easing="ease-in">
+      <div class="section-header">
+        <h2>FAQs </h2>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <ul id="faq-list">
+            <li>
+              <a data-bs-toggle="collapse" class="collapsed" href="#faq2">What is the mode of the Hackathon, online or
+                offline?<i class="fa fa-minus-circle"></i></a>
+              <div id="faq2" class="collapse" data-parent="#faq-list">
+                <p>The Hackathon will be conducted in <b>online mode</b>. However, we also have a dedicated venue on
+                  campus, where participants can get together and work offline</p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" href="#faq5" class="collapsed">Can I attend the Hackathon offline?<i
+                  class="fa fa-minus-circle"></i></a>
+              <div id="faq5" class="collapse" data-parent="#faq-list">
+                <p>Yes, you can come to NITK and attend the Hackathon. Please note that if you are not a student of
+                  NITK, you will need to purchase the Engineer 2022 Entry Pass in order to enter the campus during the
+                  Fest.
+                  The passes can be bought from the events page. </p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" class="collapsed" href="#faq6">What is eligibility criteria for the
+                Hackathon?<i class="fa fa-minus-circle"></i></a>
+              <div id="faq6" class="collapse" data-parent="#faq-list">
+                <p>The hackathon is <b>open to all!</b> :)</p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" class="collapsed" href="#faq1">What is the duration of the Hackathon?<i
+                  class="fa fa-minus-circle"></i></a>
+              <div id="faq1" class="collapse" data-parent="#faq-list">
+                <p>This a <b>24-hour</b> long hackathon</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <ul id="faq2-list">
+            <li>
+              <a data-bs-toggle="collapse" href="#faq3" class="collapsed">How many people can be on a team?<i
+                  class="fa fa-minus-circle"></i></a>
+              <div id="faq3" class="collapse" data-parent="#faq-list">
+                <p>Teams can have up to <b>4 people</b></p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" href="#faq4" class="collapsed">Will accomodation be provided to out-of-town
+                participants?<i class="fa fa-minus-circle"></i></a>
+              <div id="faq4" class="collapse" data-parent="#faq-list">
+                <p>All offline participants can use the dedicated offline venue to participate in the hackathon. But we
+                  will not be able to provide separate accomodation to out-of-town participants. However, such
+                  participants can avail accomodation at the <a href="https://www.nitk.ac.in/guest-house"
+                    target="_blank">NITK Guest House</a></p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" class="collapsed" href="#faq0">Is there any registration fee for the
+                Hackathon?<i class="fa fa-minus-circle"></i></a>
+              <div id="faq0" class="collapse" data-parent="#faq-list">
+                <p><b>No</b>. The Hackathon is free for all participants</p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" class="collapsed" href="#faq7">What counts as a valid submission to the Tezos
+                track?<i class="fa fa-minus-circle"></i></a>
+              <div id="faq7" class="collapse" data-parent="#faq-list">
+                <p>Refer to <a
+                    href="https://www.notion.so/Tezos-Devfolio-Hackathon-Season-Prize-e90b6811b0df43e5a7dadf534fc000ff"
+                    style="padding: 0%; margin: 0%; display: inline;"> this </a> notion page for more details on
+                  submission guidelines.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+  </section>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white contact_use" id="contact_us"
+    style="background-color: rgb(20, 20, 20)">
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold engineer-logo">Engineer</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #c004d9; height: 2px" />
+            <p>
+              Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the
+              largest of its kind in India.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Discover</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #c004d9; height: 2px" />
+            <p>
+              <a href="./team.html" class="text-white link_hover">Our Team</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white link_hover">Brochure</a>
+            </p>
+            <p>
+              <a href="/#timeline" class="text-white link_hover">Schedule</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white link_hover">Suggestions & Feedback</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">About</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #c004d9; height: 2px" />
+            <p>
+              <a href="#" class="text-white link_hover">About Us</a>
+            </p>
+            <p>
+              <a href="https://www.nitk.ac.in/" class="text-white link_hover" target="_blank">NITK</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #c004d9; height: 2px" />
+            <p>
+              <i class="fas fa-home mr-3"></i> National Institute of Technology Karnataka,
+              Surathkal, Mangalore - 575 025
+            </p>
+            <p>
+              <i class="fas fa-envelope mr-3"></i>
+              <a href="mailto:nitkengineer2022@gmail.com" class="link_hover">nitkengineer2022@gmail.com</a>
+            </p>
+            <p>
+              <i class="fas fa-phone mr-3"></i><a href="tel:+91 8839404484" class="link_hover">+91-8839404484</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <section class="d-flex justify-content-center p-4 center mt-3" style="background-color: rgb(20, 20, 20)">
+      <div class="social-icon">
+        <a href="https://www.facebook.com/EngineerNITK/" class="text-white me-4" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="mailto:nitkengineer2022@gmail.com" class="text-white me-4" target="_blank">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="https://www.instagram.com/engineernitk/" class="text-white me-4" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/engineer-nitk/mycompany/" class="text-white me-4" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ENGINEER-NITK" class="text-white me-4" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCuI2mPU8NqIKvdW9F4wJTVg" class="text-white me-4" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="text-center p-3 my-3" style="background-color: rgba(20, 20, 20, 1)">
+      © 2022 Copyright Engineer | Design by
+      <a class="text-white link_hover" href="https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io">Engineer'22 Web
+        Team</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Scripts -->
+  <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/timezz.min.js"></script>
+  <script>
+    var timez = new timezz('.timer', {
+      date: 'Mar 04, 2022 14:00:00',
+      canContinue: true,
+      withYears: false,
+      stop: false,
+      beforeCreate() { },
+      beforeDestroy() { },
+      update(event) { },
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+
+  <!-- Local Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

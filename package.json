@@ -1,0 +1,30 @@
+{
+  "name": "engineer-nitk",
+  "version": "1.0.0",
+  "description": "This is Official website for Engineer NITK",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io.git"
+  },
+  "keywords": [
+    "Engineer",
+    "NITK",
+    "TechFest"
+  ],
+  "author": "Engineer-NITK",
+  "license": "ISC",
+    "dependencies": {
+    "slick-carousel": "^1.8.1",
+    "aos": "^2.3.1",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io/issues"
+  },
+  "homepage": "https://github.com/ENGINEER-NITK/ENGINEER-NITK.github.io#readme"
+}
