@@ -4,8 +4,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -19,7 +18,7 @@ body {
   background: url("../../images/team/bg_img4.png") no-repeat center center fixed;
   /* background: url(./bg.png) no-repeat center center fixed; */
   background-size: cover;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
 }
 
@@ -28,7 +27,6 @@ a {
   font-weight: 400;
   outline: none;
   text-decoration: none;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -90,30 +88,23 @@ img {
     max-width: 540px;
   }
 }
-
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 }
-
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
 }
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
 }
-
 .row {
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
@@ -124,39 +115,28 @@ img {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  -ms-flex: 0 0 100%;
-  -webkit-box-flex: 0;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
 }
 
 @media (min-width: 576px) {
   .column {
-    -ms-flex: 0 0 50%;
-    -webkit-box-flex: 0;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 }
-
 @media (min-width: 768px) {
   .column {
-    -ms-flex: 0 0 33.333333%;
-    -webkit-box-flex: 0;
-            flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
 }
-
 @media (min-width: 992px) {
   .column {
-    -ms-flex: 0 0 25%;
-    -webkit-box-flex: 0;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 }
-
 .section-title {
   width: 100%;
   text-align: center;
@@ -165,7 +145,7 @@ img {
 
 .section-title::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 50px;
   height: 5px;
   left: calc(50% - 25px);
@@ -185,14 +165,12 @@ img {
     letter-spacing: 3px;
   }
 }
-
 @media (max-width: 567.98px) {
   .section-title h1 {
     font-size: 30px;
     letter-spacing: 2px;
   }
 }
-
 /**********************************/
 /********* Team  Style **********/
 /**********************************/
@@ -206,18 +184,15 @@ img {
   backdrop-filter: blur(20px);
   bottom: 0;
   border-radius: 8px;
-  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
-          box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
-  font-family: 'Poppins', sans-serif;
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
   padding-top: 2px;
 }
 
 .team .team-img {
   position: relative;
   font-size: 0;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   text-align: center;
   border-radius: 100%;
   margin-bottom: 30px;
@@ -236,7 +211,6 @@ img {
   height: auto;
   border-radius: 100%;
   border: 0px solid rgba(255, 255, 255, 0.02);
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -262,15 +236,9 @@ img {
 }
 
 .team .team-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-size: 0;
 }
 
@@ -285,11 +253,9 @@ img {
   text-align: center;
   color: #ffffff;
   border-radius: 100%;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .team .team-social a:hover {
   background: rgba(255, 255, 255, 0.06);
-}
-/*# sourceMappingURL=team.css.map */
+}/*# sourceMappingURL=team.css.map */
