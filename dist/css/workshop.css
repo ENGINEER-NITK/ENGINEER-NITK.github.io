@@ -14,8 +14,7 @@
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -32,49 +31,35 @@ body {
 }
 
 .workshops {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: flex-start;
   display: flex;
   min-height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: var(--spacing-xxl) var(--spacing-l);
 }
 
 .accordion {
-  background-color: #141414;
+  background-color: rgb(20, 20, 20);
 }
 
 .events {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: flex-start;
   display: flex;
   min-height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: var(--spacing-xxl) var(--spacing-l);
 }
 
 .alert-warning {
-  color: #ffffff91;
+  color: rgba(255, 255, 255, 0.568627451);
   background-color: rgba(255, 201, 0, 0.1) !important;
   border: none;
   border: 1px solid rgba(255, 201, 0, 0.25);
 }
 
 .card-grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-column-gap: var(--spacing-l);
   grid-row-gap: var(--spacing-l);
   max-width: var(--width-container);
@@ -83,18 +68,14 @@ body {
 
 @media (min-width: 540px) {
   .card-grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (min-width: 960px) {
   .card-grid {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-
 .card {
   list-style: none;
   background-color: transparent;
@@ -102,7 +83,7 @@ body {
 }
 
 .card:before {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: 150%;
   width: 100%;
@@ -113,25 +94,18 @@ body {
   background-position: center;
   border-radius: var(--spacing-l);
   bottom: 0;
-  -webkit-filter: brightness(0.75) saturate(1.2) contrast(0.85);
-          filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: scale(1) translateZ(0);
-          transform: scale(1) translateZ(0);
-  -webkit-transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
-  transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
   transition: filter 200ms linear, transform 200ms linear;
-  transition: filter 200ms linear, transform 200ms linear, -webkit-filter 200ms linear, -webkit-transform 200ms linear;
 }
 
 .card:hover .card__background {
-  -webkit-transform: scale(1.05) translateZ(0);
-          transform: scale(1.05) translateZ(0);
+  transform: scale(1.05) translateZ(0);
 }
 
 .card__content {
@@ -154,5 +128,4 @@ body {
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
   line-height: 1.4;
   word-spacing: 100vw;
-}
-/*# sourceMappingURL=workshop.css.map */
+}/*# sourceMappingURL=workshop.css.map */
