@@ -205,7 +205,10 @@ header {
 }
 
 .scrolling-active .logo {
-  color: #ae3cdb;
+  background: linear-gradient(to right, rgb(5, 64, 115), rgb(15, 150, 71));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .scrolling-active .main-nav {
@@ -348,13 +351,13 @@ header {
 
 .hero-glitch:before {
   left: 3px;
-  text-shadow: -2px 0 red;
+  text-shadow: -2px 0 rgb(15, 150, 71);
   animation: glitch-1 2s linear infinite reverse;
 }
 
 .hero-glitch:after {
   left: -10px;
-  text-shadow: -2px 0 blue;
+  text-shadow: -2px 0 rgb(5, 64, 115);
   animation: glitch-2 2s linear infinite reverse;
 }
 
