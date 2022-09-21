@@ -529,6 +529,9 @@ header {
   transform: translate3d(20px, 0, 0);
   transition: 0.2s ease 0.5s;
 }
+.timeline .swiper-slide .timeline-title span {
+  font-size: 24px;
+}
 .timeline .swiper-slide .timeline-text {
   font-size: 15px;
   line-height: 1.1;
@@ -646,6 +649,9 @@ header {
   .timeline .swiper-slide .timeline-title {
     font-size: 46px;
     margin: 0;
+  }
+  .timeline .swiper-slide .timeline-title span {
+    font-size: 24px;
   }
   .timeline .swiper-pagination {
     display: flex;
