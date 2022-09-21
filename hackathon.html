@@ -382,6 +382,99 @@
       </div>
     </div>
   </section>
+  <style>
+    .prize-section {
+      width: 100%;
+      min-height: 200px;
+      margin-top: 16px;
+      color: white;
+    }
+
+    .prize-section>div {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .prize-section>div>h3 {
+      font-size: 48px;
+    }
+
+    .prize-section .prize-amount {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      gap: 16px;
+    }
+
+
+
+    .prize-section .prize {
+      font-size: 1.5rem;
+    }
+
+    .prize-section .prize:nth-child(1) {
+      color: gold;
+      font-size: 36px;
+    }
+
+    .prize-section .prize:nth-child(2) {
+      color: silver;
+      font-size: 28px;
+    }
+
+    .prize-section .prize:nth-child(3) {
+      color: #E1C16E;
+      font-size: 22px;
+    }
+
+    @media screen and (max-width:767px) {
+      .prize-section>div>h3 {
+        font-size: 28px;
+      }
+
+      .prize-section .prize-amount {
+
+        flex-direction: column;
+
+      }
+
+      .prize-section .prize:nth-child(1) {
+        color: gold;
+        font-size: 24px;
+      }
+
+      .prize-section .prize:nth-child(2) {
+        color: silver;
+        font-size: 18px;
+      }
+
+      .prize-section .prize:nth-child(3) {
+        color: #E1C16E;
+        font-size: 16px;
+      }
+    }
+  </style>
+  <section class="prize-section">
+    <div class="container">
+      <h3>Prizes</h3>
+      <div class="prize-amount">
+        <div class="prize">
+          First Prize : 8000
+        </div>
+        <div class="prize">
+          Second Prize : 5000
+        </div>
+        <div class="prize">
+          Third Prize : 2000
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
   <div class="timer">
     <div style="padding-top: 2%;">
@@ -419,6 +512,7 @@
       </div>
     </div>
   </div>
+
 
   <section id="faq">
     <div class="container" data-aos="fade-up" data-aos-delay="1 50" data-aos-easing="ease-in">
