@@ -1,0 +1,19 @@
+.root {
+    background-color: white;
+    z-index: 10000;
+    border-top: 1px solid black;
+    overflow: auto;
+    max-height: 80vh;
+    animation-name: fade;
+    animation-duration: 300ms;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

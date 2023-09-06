@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Delirium';
+  src: local('Delirium'), url(./fonts/DeliriumNcv-Vm5e.ttf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'Mona';
+  src: local('Mona'), url(./fonts/mona/MonaSans-Bold.ttf) format('opentype'), url(./fonts/mona/MonaSans-Medium.ttf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.splide__slide {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+.appear-enter {
+  opacity: 0;
+  transform: translateY(-15px);
+}
+.appear-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 300ms;
+}
+
+.appear-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.appear-exit-active {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 300ms;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.calendaly_button {
+  /* iOS button appearance */
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff; /* iOS blue color */
+  color: #ffffff; /* White text color */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.calendaly_button:hover {
+  background-color: #0056b3; /* Darker shade of iOS blue on hover */
+}
+
+.calendaly_button:focus {
+  outline: none;
+}

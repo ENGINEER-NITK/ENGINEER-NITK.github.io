@@ -1,0 +1,9 @@
+.root {
+    border: 1px solid black;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+}
+
+.root:hover {
+    transform: translateY(-0.5rem);
+}

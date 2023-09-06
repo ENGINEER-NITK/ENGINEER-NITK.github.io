@@ -1,0 +1,80 @@
+.PROJECT-enter {
+    opacity: 0;
+}
+.PROJECT-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+.PROJECT-enter-done {
+    opacity: 1;
+}
+.PROJECT-exit {
+    opacity: 1;
+}
+.PROJECT-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+
+.TITLE-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+.TITLE-enter-active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 500ms;
+}
+
+.TITLE-exit {
+    opacity: 1;
+}
+.TITLE-exit-active {
+    opacity: 0;
+    transition: all 500ms;
+}
+
+
+.INDICATOR {
+    width: 0;
+    animation: normal 3s infinite progress ease;
+}
+
+
+.RESUME-enter {
+    bottom: -50px !important;
+}
+
+.RESUME-enter-active {
+    bottom: 20px !important;
+    transition: all 200ms ease-in-out !important;
+}
+
+.RESUME-enter-done {
+    bottom: 20px !important;
+}
+
+.RESUME-exit {
+    bottom: 20px !important;
+}
+
+.RESUME-exit-active {
+    bottom: -50px !important;
+    transition: all 200ms ease-in-out !important;
+}
+
+.RESUME-exit-done {
+    bottom: -50px !important;
+}
+
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+

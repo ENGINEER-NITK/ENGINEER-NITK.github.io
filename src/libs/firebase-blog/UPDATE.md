@@ -1,0 +1,4 @@
+-> React class updated to use react functional components and hooks
+-> mui version bumped
+-> firebase instance must be passed to avoid coupling code
+-> updated blog design

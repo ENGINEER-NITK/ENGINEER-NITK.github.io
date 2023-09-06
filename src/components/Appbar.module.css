@@ -1,0 +1,10 @@
+.span {
+    transition: all 200ms ease;
+}
+
+.toolbar {
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+    color: rgba(0,0,0,0.8);
+    background-color: #ffffff7d;
+}
