@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.2075b806.css",
-    "main.js": "/static/js/main.4574d237.js",
-    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "main.js": "/static/js/main.481063ce.js",
+    "static/js/787.0d4f6fcd.chunk.js": "/static/js/787.0d4f6fcd.chunk.js",
     "static/media/video.mp4": "/static/media/video.b6fe4784d622c63d06a2.mp4",
     "static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0001.jpg": "/static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0001.5561a030c5ae1e0a17a4.jpg",
     "static/media/ENGINEER'NITK 2K23_BROCHURE_page-0005.jpg": "/static/media/ENGINEER'NITK 2K23_BROCHURE_page-0005.830377d4b2841d5e3610.jpg",
@@ -59,11 +59,11 @@
     "static/media/spiral.svg": "/static/media/spiral.b31ac6ecb15268b3667ba9f423a0fbc4.svg",
     "index.html": "/index.html",
     "main.2075b806.css.map": "/static/css/main.2075b806.css.map",
-    "main.4574d237.js.map": "/static/js/main.4574d237.js.map",
-    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+    "main.481063ce.js.map": "/static/js/main.481063ce.js.map",
+    "787.0d4f6fcd.chunk.js.map": "/static/js/787.0d4f6fcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2075b806.css",
-    "static/js/main.4574d237.js"
+    "static/js/main.481063ce.js"
   ]
 }
