@@ -28,6 +28,10 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Set up Git user
+        run: |
+          git config user.email "cjphonehomec@gmail.com"
+          git config user.name "Engineer-Github"
       - name: Build and Deploy
         run: |
           npm run build
