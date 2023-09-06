@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "engineer2k23",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://oneclickweb.tech",
+  "homepage": "https://engineer.nitk.ac.in",
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
