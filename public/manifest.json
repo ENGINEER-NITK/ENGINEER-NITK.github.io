@@ -1,6 +1,6 @@
 {
-  "short_name": "Engineer 2K23",
-  "name": "Website for official NITK Tech fest",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

@@ -23,7 +23,7 @@ import useGsap from "../hooks/useGsap";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-const navLinks = [
+let navLinks = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
   { title: "Events", path: "/events" },
@@ -34,10 +34,31 @@ const navLinks = [
   { title: "Accommodation", path: "/accomodation" },
   { title: "Contact", path: "/contact" },
 ];
-const Appbar = () => {
+
+let mainLinks = [
+  { title: "Home", path: "/" },
+  { title: "Ambassadors", path: "/ambassador" },
+
+  { title: "Events", path: "/events" },
+  { title: "Brochure", path: "/brochure" },
+  { title: "Accommodation", path: "/accomodation" },
+  { title: "Contact", path: "/contact" },
+];
+
+const Appbar = ({ isGuest = false }) => {
   const appbarRef = useRef();
   const theme = useTheme();
   const color = theme.palette.text.primary;
+
+  if (isGuest)
+    navLinks = navLinks.filter(
+      (_) => _.title === "Brochure" || _.title === "Ambassadors"
+    );
+
+  if (isGuest)
+    mainLinks = mainLinks.filter(
+      (_) => _.title === "Brochure" || _.title === "Ambassadors"
+    );
 
   return (
     <AppBar className="appbar" ref={appbarRef} elevation={0} position="fixed">
@@ -101,7 +122,7 @@ const Appbar = () => {
               gap: 3,
             }}
           >
-            {navLinks.map((link, index) => (
+            {mainLinks.map((link, index) => (
               <Link to={link.path}>
                 <Typography
                   className="action"
@@ -170,9 +191,12 @@ const AppMenu = () => {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <MenuItem onClick={handleClose}> Gallery </MenuItem>{" "}
-        <MenuItem onClick={handleClose}> Contact us </MenuItem>{" "}
-        <MenuItem onClick={handleClose}> About </MenuItem>{" "}
+        {" "}
+        {navLinks.map((link) => (
+          <Link to={link.path}>
+            <MenuItem onClick={handleClose}> {link.title} </MenuItem>
+          </Link>
+        ))}
       </Menu>{" "}
     </Box>
   );

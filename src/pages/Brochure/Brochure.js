@@ -207,7 +207,7 @@ const Brochure = () => {
               position: "absolute",
               left: "50%",
               transform: "translateX(-50%)",
-              width: "70%"
+              width: "70%",
             }}
           >
             <Typography
@@ -335,7 +335,7 @@ const Brochure = () => {
                 }}
               >
                 <Typography color="white" variant="h1">
-                  Sponsors{" "}
+                  Main Brochure
                 </Typography>{" "}
               </Grid>{" "}
             </Grid>{" "}

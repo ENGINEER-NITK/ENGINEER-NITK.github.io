@@ -85,3 +85,27 @@ a {
 .calendaly_button:focus {
   outline: none;
 }
+
+@keyframes shineEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
+.shine {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  background-size: 200% 100%;
+  animation: shineEffect 3s linear infinite; /* 3s here is the duration of one cycle */
+  -webkit-mask-image: linear-gradient(black, black), linear-gradient(black, black);
+  mask-image: linear-gradient(black, black), linear-gradient(black, black);
+  -webkit-mask-composite: destination-out;
+  mask-composite: destination-out;
+  -webkit-mask-position: 0 0, 100% 0;
+  mask-position: 0 0, 100% 0;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}

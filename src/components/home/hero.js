@@ -16,7 +16,7 @@ import {
 import Morph from "../../assets/svg/morph.svg";
 import { FiArrowRightCircle, FiPhoneCall, FiUser } from "react-icons/fi";
 import Spiral from "../../assets/svg/spiral.svg";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Spacer from "../Spacer";
 import { Heading } from "../common/typography";
 import { formatDistanceToNow } from "date-fns";
@@ -103,6 +103,7 @@ export const wrapWordWithSpan = (text, className) => {
 const Hero = () => {
   const theme = useTheme();
   const rootRef = useRef();
+  const containerRef = useRef();
   useGsap(
     rootRef,
     () => {
@@ -161,6 +162,24 @@ const Hero = () => {
     }
   };
 
+  useEffect(() => {
+    const element = containerRef.current;
+
+    const handleScroll = () => {
+      if (element) {
+        const scrollY = window.scrollY;
+        gsap.from(element, {
+          y: -scrollY * 0.3, // Adjust this value to control the speed of the parallax effect
+          duration: 1,
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Box
       ref={rootRef}
@@ -196,8 +215,9 @@ const Hero = () => {
               >
                 {wrapWordsWithSpan("2 0 2 3", "title")}
               </Typography>
-              <Videotext />
-
+              <Box ref={containerRef}>
+                <Videotext />
+              </Box>
               <Stack direction="row" spacing={1} mt={5}>
                 {/*<Button*/}
                 {/*  className="button"*/}

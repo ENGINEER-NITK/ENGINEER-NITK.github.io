@@ -6,13 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import retro from "./themes/retro";
 import { ThemeProvider } from "@mui/material";
 import { BrowserRouter, HashRouter } from "react-router-dom";
-import store from "./store/store";
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <QueryClientProvider client={queryClient}>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

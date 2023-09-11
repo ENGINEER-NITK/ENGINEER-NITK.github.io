@@ -14,47 +14,8 @@ import Spacer from "../../components/Spacer";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
 import { wrapWordsWithSpan } from "../../components/home/hero";
+import imageGallery from "../../assets/data/gallery";
 
-const imageGallery = [
-  {
-    url: "image1.jpg",
-    caption: "Beautiful Sunset",
-  },
-  {
-    url: "image2.jpg",
-    caption: "Serene Lake",
-  },
-  {
-    url: "image3.jpg",
-    caption: "Majestic Mountains",
-  },
-  {
-    url: "image3.jpg",
-    caption: "Majestic Mountains",
-  },
-  {
-    url: "image3.jpg",
-    caption: "Majestic Mountains",
-  },
-  {
-    url: "image3.jpg",
-    caption: "Majestic Mountains",
-  },
-  {
-    url: "image3.jpg",
-    caption: "Majestic Mountains",
-  },
-  {
-    url: "image3.jpg",
-    caption: "Majestic Mountains",
-  },
-  {
-    url: "image3.jpg",
-    caption: "Majestic Mountains",
-  },
-
-  // ... add more images
-];
 const Hero = () => {
   return <p>a</p>;
 };
@@ -62,6 +23,7 @@ const Gallery = () => {
   const rootRef = useRef();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  console.log(imageGallery);
 
   useGsap(rootRef.current, () => {
     const timeline = gsap.timeline({
@@ -87,8 +49,8 @@ const Gallery = () => {
     gsap.from(".char", {
       scrollTrigger: {
         trigger: ".char",
-        scrub: true,
-        markers: true,
+        scrub: false,
+        markers: false,
         start: "top 25%",
       },
       opacity: 0.2,
@@ -123,8 +85,15 @@ const Gallery = () => {
         <Grid container>
           {imageGallery.map((_, index) => (
             <Grid item md={4} xs={12}>
-              <Box className="box" height="500px" bgcolor="red">
-                A
+              <Box className="box" height="500px">
+                <img
+                  src={`${_.url}`}
+                  alt={`${_.caption}`}
+                  style={{
+                    objectFit: "cover",
+                  }}
+                  width={"100%"}
+                />
               </Box>
             </Grid>
           ))}

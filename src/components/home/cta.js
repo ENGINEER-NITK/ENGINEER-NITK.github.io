@@ -3,7 +3,7 @@ import { Button, Container, Paper, Stack, Typography } from "@mui/material";
 import GradientText from "../common/gradienttext";
 import Background from "../../assets/svg/Pattern-12.svg";
 import { InlineWidget, PopupButton, PopupWidget } from "react-calendly";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Spacer from "../Spacer";
 import { Description } from "../common/typography";
 import useGsap from "../../hooks/useGsap";
@@ -13,6 +13,8 @@ import Marquee from "react-fast-marquee";
 
 const CTA = () => {
   const rootRef = useRef();
+  const containerRef = useRef();
+
   useGsap(rootRef.current, () => {
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -39,6 +41,7 @@ const CTA = () => {
       stagger: 0.1,
     });
   });
+
   return (
     <Box
       ref={rootRef}
@@ -53,7 +56,7 @@ const CTA = () => {
           "inset 0px 40px 30px -20px #1B1B1E, inset 0px -40px 30px -20px rgba(0, 0, 0, 0.8)",
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" ref={containerRef}>
         <Box
           sx={{
             width: {
@@ -72,6 +75,19 @@ const CTA = () => {
           </Description>
         </Box>
         <Marquee>
+          <Stack direction="row" spacing={5}>
+            <PhotoComponent imageUrl={image} />
+            <PhotoComponent imageUrl={image} />
+            <PhotoComponent imageUrl={image} />
+            <PhotoComponent imageUrl={image} />
+            <PhotoComponent imageUrl={image} />
+            <PhotoComponent imageUrl={image} />
+          </Stack>
+        </Marquee>
+
+        <Spacer size="sm" />
+
+        <Marquee direction="right">
           <Stack direction="row" spacing={5}>
             <PhotoComponent imageUrl={image} />
             <PhotoComponent imageUrl={image} />

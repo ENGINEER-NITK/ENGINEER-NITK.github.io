@@ -21,6 +21,9 @@ import Lenis from "@studio-freight/lenis";
 import Contact from "./pages/Contact/Contact";
 import Events from "./pages/Events/Events";
 import Countdown from "./components/page/beforerelease";
+import Accomodate from "./pages/Accomodations/Accomodate";
+import Ambassador from "./pages/Ambassadors";
+import BeforeReleaseLayout from "./components/page/layout";
 function App() {
   const root = useRef();
   const theme = useTheme();
@@ -77,9 +80,8 @@ function App() {
         }}
         className="App"
       >
-        <Countdown />
         <Routes>
-          <Route exact path="/brochure" element={<Brochure />} />{" "}
+          <Route path="/" element={<BeforeReleaseLayout />}>
           <Route exact path="/about" element={<About />} />{" "}
           <Route exact path="/gallery" element={<Gallery />} />{" "}
           <Route exact path="/events" element={<Events />} />{" "}
@@ -93,6 +95,15 @@ function App() {
             element={<AlumniConnect />}
           />{" "}
           <Route exact index path="/accomodation" element={<Accomodation />} />{" "}
+          <Route
+            exact
+            index
+            path="/alumni-connect"
+            element={<AlumniConnect />}
+          />{" "}
+          </Route>
+          <Route exact path="/ambassador" element={<Ambassador />} />{" "}
+          <Route exact path="/brochure" element={<Brochure />} />{" "}
         </Routes>{" "}
       </Box>{" "}
     </ThemeProvider>

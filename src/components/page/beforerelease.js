@@ -1,14 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { Dialog } from "@mui/material";
+import { Button, Dialog, Stack } from "@mui/material";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
+import { FiPlay, FiUsers } from "react-icons/fi";
+import Spacer from "../Spacer";
+import { Link } from "react-router-dom";
 function Countdown() {
+  // 2023-09-15 018:30:00
   const targetDate = new Date("2023-09-15 018:30:00"); // Set your target date here
   const [timeLeft, setTimeLeft] = useState(targetDate - new Date());
   const rootRef = useRef(null);
-  const [text, setText] = useState("Initial Text");
+  const [text, setText] = useState("");
 
   useGsap(rootRef.current, () => {
     const texts = [
@@ -28,7 +32,7 @@ function Countdown() {
         y: 50,
         duration: 0.5,
         onComplete: () => setText(txt),
-        ease: "expo.out",
+        ease: "power3",
       })
         .from(textSelector, { opacity: 0, y: -50, duration: 0.5 })
         .to(textSelector, { opacity: 1, y: 0, duration: 1 }); // Hold the text for 1 second
@@ -38,12 +42,24 @@ function Countdown() {
       opacity: 0,
       y: 50,
       duration: 0.5,
-    });
+      onComplete: () => setText("Website Releasing on"),
+      ease: "power3",
+    })
+      .from(textSelector, { opacity: 0, y: -50, duration: 0.5 })
+      .to(textSelector, { opacity: 1, y: 0, duration: 1 });
     tl.from(".countdown", {
       duration: 1,
       y: 100,
       opacity: 0,
       ease: "expo.out",
+    });
+
+    tl.from(".appear", {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      ease: "expo.out",
+      stagger: 0.5,
     });
   });
 
@@ -93,6 +109,21 @@ function Countdown() {
         <Typography align="center" className="countdown" variant="h1">
           {`${days}days ${hours}h ${minutes}m ${seconds}s`}
         </Typography>
+
+        <Spacer size="sm" />
+
+        <Stack direction="row" gap={2}>
+          <Link to="/brochure">
+            <Button className="appear" endIcon={<FiPlay />}>
+              Brochure
+            </Button>
+          </Link>
+          <Link to="/ambassador">
+            <Button className="appear" endIcon={<FiUsers />}>
+              Campus Ambassadors
+            </Button>
+          </Link>
+        </Stack>
       </Box>
     </Dialog>
   );

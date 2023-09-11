@@ -15,6 +15,8 @@ import EmblaCarousel from "../../components/common/carousel";
 import GradientBox from "../../components/common/gradientbox";
 import { FiArrowRight } from "react-icons/fi";
 import events from "../../assets/data/events";
+import carousal from "../../assets/data/carousal";
+import { PopupButton } from '@typeform/embed-react';
 
 const HeadCarousel = () => {
   return (
@@ -26,13 +28,11 @@ const HeadCarousel = () => {
   );
 };
 
-const HeadEvent = ({ event }) => {
+const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
   const background = event.image;
   const title = event.title;
-  const description = event.description;
-  const subtitle = event.subtitle;
-  const secondCta = event.secondCta;
-
+  const des = event.description;
+  const needRegister = event.needRegister;
   return (
     <GradientBox color="white">
       <img
@@ -47,19 +47,10 @@ const HeadEvent = ({ event }) => {
         src={background}
       />
       <Container maxWidth="lg">
-        <Box
-          sx={{
-            width: {
-              xs: "100%",
-              md: "50%",
-            },
-          }}
-        >
-          <Typography
-            fontFamily="Lato"
-            variant="body1"
-            gutterBottom
-          ></Typography>
+        {/* <Typography fontFamily="Lato" variant="body1" gutterBottom>
+          {title}
+        </Typography> */}
+        <Box sx={{width:{xs:'100%', md: '45%'}}}>
           <Typography
             variant="h1"
             sx={{
@@ -72,23 +63,23 @@ const HeadEvent = ({ event }) => {
             {" "}
             {title}
           </Typography>
-          <Typography fontWeight={700} variant="body1"></Typography>
-          <Typography variant="body1" pb={5}>
-            {subtitle}
+          {/* <Typography fontWeight={700} variant="body1">
+            Small Title{" "}
+          </Typography> */}
+          <Typography variant="body1" pb={2}>
+            {des}
           </Typography>
-          <Stack direction="row" alignItems="center">
-            <Button color="secondary" size="small">
-              Event Details
-            </Button>
-            <Button
-              variant="contained"
-              color="primary"
-              sx={{ margin: "0 10px" }}
-            >
-              Register Here
-            </Button>
-          </Stack>
         </Box>
+        <Stack direction="row" alignItems="center">
+            {needRegister && <PopupButton id="R2TLZA3k" style = {{'margin-right': '20px',
+                                                  'border-radius':' 8px',
+                                                  'padding': '0',}} >
+                                                  <Button variant="contained">Register</Button>
+            </PopupButton>}
+            <Button variant="outlined">
+              Know More
+            </Button>
+        </Stack>
       </Container>
     </GradientBox>
   );
@@ -130,6 +121,7 @@ const Event = ({ name, description }) => {
 };
 
 const Events = () => {
+  console.log(carousal);
   const rootRef = useRef();
   return (
     <Box ref={rootRef} sx={{ backgroundColor: "black" }}>
@@ -137,27 +129,113 @@ const Events = () => {
       <Container maxWidth="lg" color="white" sx={{ pt: 15 }}>
         <HeadCarousel />
         <Spacer size="md" />
-        <Heading>Bruh</Heading>
+        <Heading>Mech Committee</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
-          <Event name="Bruh" description="Bruh" />
-          <Event name="Bruh" description="Bruh" />
+          <Event name="Robo Wars" description="Bruh" />
+          <Event name="RC racing" description="Bruh" />
+          <Event name="Drone race" description="Bruh" />
+          <Event name="Wright Flight" description="Bruh" />
         </EmblaCarousel>
 
         <Spacer size="lg" />
-        <Heading>Bruh</Heading>
+        <Heading>Tech Committee</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
-          <Event name="Bruh" description="Bruh" />
-          <Event name="Bruh" description="Bruh" />
-          <Event name="Bruh" description="Bruh" />
-          <Event name="Bruh" description="Bruh" />
-          <Event name="Bruh" description="Bruh" />
+          <Event name="Tronix" description="Bruh" />
+          <Event name="Technites" description="Bruh" />
+          <Event name="Astro" description="Bruh" />
         </EmblaCarousel>
 
         <Spacer size="lg" />
+        <Heading>Talks</Heading>
+        <Spacer size="xs" />
+        <EmblaCarousel gap="20px">
+          <Event name="Engi Talks" description="Bruh" />
+          <Event name="Alumini Connects" description="Bruh" />
+        </EmblaCarousel>
 
         <Spacer size="lg" />
+        <Heading>CSR</Heading>
+        <Spacer size="xs" />
+        <EmblaCarousel gap="20px">
+          <Event name="Engi Care" description="Bruh" />
+          <Event name="Engi Connect" description="Bruh" />
+        </EmblaCarousel>
+        <Spacer size="lg" />
+        
+        <Heading>Workshops</Heading>
+        <Spacer size="xs" />
+        <EmblaCarousel gap="20px">
+          <Event name="Industrial" description="Bruh" />
+          <Event name="Clubs" description="Bruh" />
+        </EmblaCarousel>
+        <Spacer size="lg" />
+
+        <Heading>Tech Conflux</Heading>
+        <Spacer size="xs" />
+        <EmblaCarousel gap="20px">
+          <Event name="AI Robotic Arm" description="Bruh" />
+          <Event name="Clubs" description="Bruh" />
+          {/* <Event name="Clubs" description="Bruh" /> */}
+        </EmblaCarousel>
+        <Spacer size="lg" />
+
+        <Heading>Department Events</Heading>
+        <Spacer size="xs" />
+        <EmblaCarousel gap="20px">
+          <Event name="Open House of Labs" description="Bruh" />
+          <Event name="Research Paper Presentation" description="Bruh" />
+          <Event name="Quizes" description="Bruh" />
+        </EmblaCarousel>
+        <Spacer size="lg" />
+
+        <Heading>Gala</Heading>
+        <Spacer size="xs" />
+        <EmblaCarousel gap="20px">
+          <Event name="Bizwaves" description="Bruh" />
+          {/* <Event name="M.U.N" description="Bruh" /> */}
+          <Event name="Tech Quizes" description="Bruh" />
+        </EmblaCarousel>
+        <Spacer size="lg" />
+
+        <Heading>Gaming Events</Heading>
+        <Spacer size="xs" />
+        <EmblaCarousel gap="20px">
+          <Event name="B.G.M.I" description="Bruh" />
+          <Event name="FIFA" description="Bruh" />
+          <Event name="Valorant" description="Bruh" />
+        </EmblaCarousel>
+        <Spacer size="lg" />
+
+        <Heading>Proshows</Heading>
+        <Spacer size="xs" />
+        <EmblaCarousel gap="20px">
+          <Event name="Comedy Night" description="Bruh" />
+          {/* <Event name="Star Eve" description="Bruh" /> */}
+          {/* <Event name="Bike Stunt-Show" description="Bruh" /> */}
+          <Event name="DJ / Band" description="Bruh" />
+        </EmblaCarousel>
+        <Spacer size="lg" />
+
+
+
+        {/* {carousal.map((hello, index) => (
+          <>
+                <Heading>{hello.category}</Heading>
+                <Spacer size="xs" />
+                <EmblaCarousel gap="20px">
+                {carousal.map((hull, index) => (
+                <>
+                    <Event name={hull.event} description="Bruh" />
+                </>
+                ))}{" "}
+                </EmblaCarousel>
+        
+                <Spacer size="lg" />
+              </>
+            ))}{" "} */}
+
       </Container>
       <Footer />
     </Box>

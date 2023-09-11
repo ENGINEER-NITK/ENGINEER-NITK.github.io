@@ -22,38 +22,44 @@ const servicesData = [
   {
     title: "Alumni Connect",
     description:
-      "Comprehensive web solutions from frontend to backend for a seamless user experience.",
-    imageUrl: Home, // Replace with the actual image URL or import the image
+      "Celebrating 10 tech trailblazers who founded over 100 startups and lead global giants.",
+    imageUrl: Home, // Replace with the actual image URL or import the image,
+    longDescription: "Our Alumni Connect event is a testament to this belief, bringing together over 10 distinguished alumni who have carved their paths as pioneers in the tech world.  the event will  feature from founders of over 100+ game-changing startups to leaders steering global tech giants."
   },
   {
     title: "Tech Mela",
     description:
-      "Ensure smooth website operation with regular updates, backups, and technical assistance.",
+      "An innovation showcase featuring Drone Races, RC Racing, Bot Expo, and Electronic Displays with 30+ outside teams.",
     imageUrl: Party, // Replace with the actual image URL or import the image
+    longDescription: "From the adrenaline-pumping Drone Race and lightning-fast RC Racing to the mind-boggling Bot Expo and awe-inspiring Electronic Displays, Tech Mela is a melting pot of cutting-edge creativity. As the stage for over 30+ outside teams, Tech Mela transforms into a dynamic arena where ideas collide, innovation thrives, and the future of technology takes center stage."
   },
   {
     title: "Engicare",
     description:
-      "Efficiently configure and manage servers to ensure optimal performance and security.",
+      "Engi Care, our CSR initiative, enriches lives through music, games, clothing drives, and a national case study contest.",
     imageUrl: Time, // Replace with the actual image URL or import the image
+    longDescription: "Engi Care, our CSR initiative, is a testament to our dedication to making a positive difference in the lives of those around us. Events include- Music for All - Harmony Unleashed: musicalperformance by specially abled kids TechAdapt - Games Beyond Limits: games for specially abled Threads of Joy - Clothing Drive InnoVate4Good - National Case Study Contest."
   },
   {
     title: "Robowars",
     description:
-      "Efficiently configure and manage servers to ensure optimal performance and security.",
+    "NITK introduces South India's first <15 kg wireless RoboWars event, bringing together engineering talents from across the nation.",
     imageUrl: Time, // Replace with the actual image URL or import the image
+    longDescription: "NITK is proud to present the first-of-its-kind RoboWars event in (<15 kg wireless category) South India, where teams of budding engineers, innovators, and tech enthusiasts from across the nation will come together to test their mettle in the world of robotics. "
   },
   {
     title: "Tech Conflux",
     description:
-      "Efficiently configure and manage servers to ensure optimal performance and security.",
+      "Where Diversity Meets Innovation with NITK's Finest Clubs and Tech Teams!",
     imageUrl: Time, // Replace with the actual image URL or import the image
+    longDescription: "Tech Conflux isn't just a series of events; it's a celebration of diversity, innovation, and excellence. Event includes renowned clubs like FAARC, ACM ,ISTE, IE, IEEE, WEC, E-CELL and tech teams like nitk racing , robocon , baja nitk , sae and many more."
   },
   {
     title: "Cultural events",
     description:
-      "Efficiently configure and manage servers to ensure optimal performance and security.",
+    "Unforgettable diversity and creativity in one spectacular fest!",
     imageUrl: Time, // Replace with the actual image URL or import the image
+    longDescription: "Prepare for a cultural spectacle like no other at NITK's ENGI 2023! From dazzling dance performances to inspiring art displays and mouthwatering international cuisine, our fest promises an unforgettable celebration of diversity and creativity. Don't miss this chance to be part of the magic!"
   },
   // Add more service objects as needed
 ];
@@ -134,7 +140,7 @@ const Tagline = () => {
               onMouseLeave={() => handleMouseLeave(index)}
             >
               <TaglineCard {...service} index={index} />
-              <TaglineDescriptionCard index={index} />
+              <TaglineDescriptionCard {...service} index={index} />
             </Box>
           </Grid>
         ))}
@@ -143,7 +149,7 @@ const Tagline = () => {
   );
 };
 
-const TaglineDescriptionCard = ({ index }) => {
+const TaglineDescriptionCard = ({ index,longDescription }) => {
   return (
     <Box
       bgcolor="black"
@@ -151,15 +157,8 @@ const TaglineDescriptionCard = ({ index }) => {
       className={`card-description-${index}`}
     >
       <Card backgroundImage={Engineer}>
-        <Typography varinat={"body2"} fontSize="11px">
-          From the adrenaline-pumping Drone Race and lightning-fast RC Racing to
-          the mind-boggling Bot Expo and awe-inspiring Electronic Displays, Tech
-          Mela is a melting pot of cutting-edge creativity. Venture into the
-          cosmos with our Space-related Projects that bring together the
-          brightest minds to explore the uncharted territories of outer space.
-          As the stage for over 30+ outside teams, Tech Mela transforms into a
-          dynamic arena where ideas collide, innovation thrives, and the future
-          of technology takes center stage
+        <Typography varinat={"body2"} fontSize="14px">
+          {longDescription}
         </Typography>
       </Card>
     </Box>

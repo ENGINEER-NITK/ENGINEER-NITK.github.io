@@ -1,6 +1,3 @@
-
-
-
 import React, { useRef, useState } from "react";
 import {
   Box,
@@ -27,6 +24,7 @@ import AccommodationPolicies from "./AccommodationPolicies";
 import Instructions from "./Instructions";
 import ReachingNITK from "./ReachingNITK";
 import ContactUs from "./ContactUs";
+import GradientText from "../../components/common/gradienttext";
 
 const Accomodation = () => {
   const rootRef = useRef();
@@ -142,57 +140,33 @@ const Accomodation = () => {
     // You don't need to update the `value` state here.
   };
 
- 
-
   return (
     <Box ref={rootRef} sx={{ backgroundColor: "common.black" }}>
       <Appbar />
-      <Container maxWidth="lg" color="white">
-        <Box sx={{ paddingTop: isMobile ? "70px" : "80px" ,
-                    
-        }}>
-          <Box
-            sx={{
-              position: "relative",
-              transform: "translateX(-50%)",
-              width: "70%",
-              left: isMobile ? "30%" : "40%",
-              paddingX: isMobile ? "5px" : "0px",
-            }}
-          >
-            <Typography
-              textAlign="center"
-              variant="h1"
-              fontFamily="Mona"
-              fontSize={isMobile ? "1.85rem" : "7rem"}
-              fontWeight={700}
-              letterSpacing="2px"
-              color="white"
-           
-            >
-              ACCOMMODATION{" "}
-            </Typography>{" "}
-          </Box>{" "}
-
+      <Container maxWidth="md" color="white">
+        <Box sx={{ paddingTop: isMobile ? "70px" : "80px" }}>
+          <GradientText primary="Lodging" secondary="Queries" />
           {isMobile ? (
-            <FormControl fullWidth sx={{ marginBottom: "20px" , marginTop: "34px", width: "100%"}}>
+            <FormControl
+              fullWidth
+              sx={{ marginBottom: "20px", marginTop: "34px", width: "100%" }}
+            >
               <Select
                 labelId="tab-select-label"
                 id="tab-select"
                 value={selectedTab}
                 onChange={handleTabChange}
                 label="Select Tab"
-                sx={{ color: "white" ,
-                //style the dropdown text color
-                "& .MuiSelect-icon": {
+                sx={{
+                  color: "white",
+                  //style the dropdown text color
+                  "& .MuiSelect-icon": {
                     color: "white",
-                    },
-            }}
-               
+                  },
+                }}
               >
                 {tabOptions.map((option, index) => (
-                  <MenuItem key={option} value={option} sx={{ color: "black" }} 
-                >
+                  <MenuItem key={option} value={option} sx={{ color: "black" }}>
                     {option}
                   </MenuItem>
                 ))}
@@ -204,27 +178,24 @@ const Accomodation = () => {
               onChange={handleTabChangeOnLaptop}
               aria-label="icon label tabs example"
               sx={{
-                  paddingX: "45px",
-                  paddingY: "10px",
+                paddingX: "45px",
+                paddingY: "10px",
               }}
             >
               {tabOptions.map((option, index) => (
-                <Tab key={option} label={option} value={index} onChange={renderTabContent}
-               />
-               ))}
+                <Tab
+                  key={option}
+                  label={option}
+                  value={index}
+                  onChange={renderTabContent}
+                />
+              ))}
             </Tabs>
           )}
-
           {console.log(selectedTab)}
           {renderTabContent()}
-                
-
-
-
         </Box>{" "}
         <Spacer size="sm" />
-
-
         {/* <Box className="pin-brochure">
           <Box height="5vh">
             <Grid container>
@@ -242,14 +213,11 @@ const Accomodation = () => {
                   },
                 }}
               >
-                
+
               </Grid>{" "}
             </Grid>{" "}
           </Box>{" "}
         </Box>{" "} */}
-
-
-
       </Container>{" "}
       <Footer />
     </Box>
@@ -257,6 +225,3 @@ const Accomodation = () => {
 };
 
 export default Accomodation;
-
-
-
