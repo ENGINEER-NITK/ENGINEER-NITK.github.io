@@ -17,6 +17,8 @@ import { FiArrowRight } from "react-icons/fi";
 import events from "../../assets/data/events";
 import carousal from "../../assets/data/carousal";
 import { PopupButton } from '@typeform/embed-react';
+import CustomizedDialogs from "./CustomizedDialogs"
+
 
 const HeadCarousel = () => {
   return (
@@ -28,11 +30,14 @@ const HeadCarousel = () => {
   );
 };
 
-const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
+
+
+const HeadEvent = ({ subtitle, firstCta, secondCta, description, event, }) => {
   const background = event.image;
   const title = event.title;
   const des = event.description;
   const needRegister = event.needRegister;
+  const rule =event.rule;
   return (
     <GradientBox color="white">
       <img
@@ -76,9 +81,12 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
                                                   'padding': '0',}} >
                                                   <Button variant="contained">Register</Button>
             </PopupButton>}
-            <Button variant="outlined">
-              Know More
-            </Button>
+            <CustomizedDialogs title={title} description={rule}/>
+            
+            
+
+            
+            
         </Stack>
       </Container>
     </GradientBox>

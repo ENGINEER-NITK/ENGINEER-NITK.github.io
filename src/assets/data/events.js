@@ -24,6 +24,7 @@ const events = [
     firstCta: "First CTA for Event 1",
     secondCta: "Second CTA for Event 1",
     needRegister: true,
+    rule:"gfdRobo-Warshsj",
   },
   {
     image: event2,
@@ -33,6 +34,7 @@ const events = [
     firstCta: "First CTA for Event 2",
     secondCta: "Second CTA for Event 2",
     needRegister: true,
+    rule:"Bizzwave",
   },
   {
     image: event3,
@@ -42,6 +44,7 @@ const events = [
     firstCta: "First CTA for Event 3",
     secondCta: "Second CTA for Event 3",
     needRegister: true,
+    rule:"Gaming",
   },
   {
     image: event4,
@@ -51,6 +54,7 @@ const events = [
     firstCta: "First CTA for Event 4",
     secondCta: "Second CTA for Event 4",
     needRegister: false,
+    rule:"Proshowssss",
   },
   {
     image: event5,
@@ -60,6 +64,7 @@ const events = [
     firstCta: "First CTA for Event 5",
     secondCta: "Second CTA for Event 5",
     needRegister: true,
+    rule:"Hackathon",
   },
   {
     image: event5,
@@ -69,6 +74,7 @@ const events = [
     firstCta: "First CTA for Event 5",
     secondCta: "Second CTA for Event 5",
     needRegister: false,
+    rule:"Bike Show",
   },
 ];
 
