@@ -17,6 +17,10 @@ import { FiArrowRight } from "react-icons/fi";
 import events from "../../assets/data/events";
 import carousal from "../../assets/data/carousal";
 import { PopupButton } from '@typeform/embed-react';
+import talks from "../../assets/data/talks";
+import csr from "../../assets/data/csr";
+import workshops from "../../assets/data/workshops"
+import conflux from "../../assets/data/conflux"
 
 const HeadCarousel = () => {
   return (
@@ -85,12 +89,13 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
   );
 };
 
-const Event = ({ name, description }) => {
+const Event = ({ name, description,img }) => {
   return (
     <GradientBox
       height="100%"
       size="small"
       background="linear-gradient(135deg, #f7f7f7, #cfcfcf)"
+      img = {img}
     >
       <Box>
         <Typography
@@ -129,54 +134,68 @@ const Events = () => {
       <Container maxWidth="lg" color="white" sx={{ pt: 15 }}>
         <HeadCarousel />
         <Spacer size="md" />
-        <Heading>Mech Committee</Heading>
+        <Heading>Tech Committee</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
-          <Event name="Robo Wars" description="Bruh" />
-          <Event name="RC racing" description="Bruh" />
+        {events.map((_, index) => (
+            
+          <Event name={`${_.title}`} description={`${_.description}`} img={`${_.image}`}  />
+          ))}
+          {/* <Event name="RC racing" description="Bruh" />
           <Event name="Drone race" description="Bruh" />
           <Event name="Wright Flight" description="Bruh" />
+          <Event name="Tronix" description="Bruh" />
+          <Event name="Technites" description="Bruh" />
+          <Event name="Astro" description="Bruh" /> */}
         </EmblaCarousel>
 
-        <Spacer size="lg" />
+        {/* <Spacer size="lg" />
         <Heading>Tech Committee</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
           <Event name="Tronix" description="Bruh" />
           <Event name="Technites" description="Bruh" />
           <Event name="Astro" description="Bruh" />
-        </EmblaCarousel>
+        </EmblaCarousel> */}
 
         <Spacer size="lg" />
         <Heading>Talks</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
-          <Event name="Engi Talks" description="Bruh" />
-          <Event name="Alumini Connects" description="Bruh" />
+        {talks.map((_, index) => (
+            
+            <Event name={`${_.title}`} description={`${_.description}`}  />
+            ))}
         </EmblaCarousel>
 
         <Spacer size="lg" />
         <Heading>CSR</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
-          <Event name="Engi Care" description="Bruh" />
-          <Event name="Engi Connect" description="Bruh" />
+        {csr.map((_, index) => (
+            
+            <Event name={`${_.title}`} description={`${_.description}`}  />
+            ))}
         </EmblaCarousel>
         <Spacer size="lg" />
         
         <Heading>Workshops</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
-          <Event name="Industrial" description="Bruh" />
-          <Event name="Clubs" description="Bruh" />
+        {workshops.map((_, index) => (
+            
+            <Event name={`${_.title}`} description={`${_.description}`}  />
+            ))}
         </EmblaCarousel>
         <Spacer size="lg" />
 
         <Heading>Tech Conflux</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
-          <Event name="AI Robotic Arm" description="Bruh" />
-          <Event name="Clubs" description="Bruh" />
+        {conflux.map((_, index) => (
+            
+            <Event name={`${_.title}`} description={`${_.description}`}  />
+            ))}
           {/* <Event name="Clubs" description="Bruh" /> */}
         </EmblaCarousel>
         <Spacer size="lg" />
