@@ -26,6 +26,21 @@ const GradientBox = ({
         backgroundPosition: "center",
         borderRadius: "18px",
         boxSizing: "border-box",
+        zIndex:1,
+        "&::before": {
+          content: "''",
+          position: "absolute",
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          backgroundImage: `url(${img})`, // Replace with your background image URL
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.5, // Adjust opacity as needed
+          zIndex: -1 // Place it behind the main content
+        }
+        
       }}
       {...props}
     >
@@ -33,14 +48,15 @@ const GradientBox = ({
       {img && (
         <Box
           component="img"
-          src={img} // Replace with the actual image URL
-          height="100%"
+          // src={img} // Replace with the actual image URL
+          height="50%"
           position="absolute"
           right="-5%"
           bottom="-5%"
           sx={{
             display: "block",
-            rotate: rotate,
+            // rotate: rotate,
+            zIndex:0
           }}
         />
       )}
