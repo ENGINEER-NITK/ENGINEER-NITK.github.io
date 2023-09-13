@@ -26,6 +26,7 @@ import BoxContent from "../common/boxcontent";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
 import Videotext from "./videotext";
+import Background from '../../assets/png/wp9708076.gif';
 
 const recentOrders = [
   {
@@ -184,9 +185,13 @@ const Hero = () => {
     <Box
       ref={rootRef}
       sx={{
-        // backgroundImage: `url(${Morph})`, // Replace with your actual image path
+        backgroundImage: `linear-gradient(to bottom right, rgba(0, 0, 0, 0.8) 20%, transparent), url(${Background})`, // Gradient from top left to bottom right, darkening the background image
+        padding: "80px 0",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top left",
+        boxShadow:
+          "inset 0px 40px 30px -20px #1B1B1E, inset 0px -40px 30px -20px rgba(0, 0, 0, 0.8)",
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <Container maxWidth="lg">
@@ -213,7 +218,6 @@ const Hero = () => {
                 position="relative"
                 color="secondary"
               >
-                {wrapWordsWithSpan("2 0 2 3", "title")}
               </Typography>
               <Box ref={containerRef}>
                 <Videotext />

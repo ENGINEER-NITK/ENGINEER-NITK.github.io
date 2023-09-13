@@ -26,13 +26,13 @@ const Footer = () => {
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6">Contact Us</Typography>
             <Typography variant="body2">
-              Email: engineerpublicity@nitk.edu.in
+              Email: engineernitkpublicity@gmail.com
             </Typography>
             <Typography variant="body2">
-              Phone: +91- 6392569224, 9742259067
+              Phone: +91- 6392569224, 9742259067, 9632840501
             </Typography>
             <Typography variant="body2">
-              Address: NH 66, Srinivasnagar, Surathkal Mangalore, Karnataka-
+              Address: NITK, NH 66, Srinivasnagar, Surathkal Mangalore, Karnataka-
               575025
             </Typography>
           </Grid>

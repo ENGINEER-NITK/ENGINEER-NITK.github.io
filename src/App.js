@@ -81,7 +81,7 @@ function App() {
         className="App"
       >
         <Routes>
-          <Route path="/" element={<BeforeReleaseLayout />}>
+          {/*<Route path="/" element={<BeforeReleaseLayout />}>*/}
           <Route exact path="/about" element={<About />} />{" "}
           <Route exact path="/gallery" element={<Gallery />} />{" "}
           <Route exact path="/events" element={<Events />} />{" "}
@@ -101,7 +101,7 @@ function App() {
             path="/alumni-connect"
             element={<AlumniConnect />}
           />{" "}
-          </Route>
+          {/*</Route>*/}
           <Route exact path="/ambassador" element={<Ambassador />} />{" "}
           <Route exact path="/brochure" element={<Brochure />} />{" "}
         </Routes>{" "}

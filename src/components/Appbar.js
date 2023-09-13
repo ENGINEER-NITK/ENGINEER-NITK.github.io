@@ -81,24 +81,18 @@ const Appbar = ({ isGuest = false }) => {
             {/*  style={{ height: "72px" }}*/} {/*/>*/}{" "}
             {/* Your logo or site name can be placed here */}{" "}
             <Box className="logo_title">
-              <Typography
-                variant="h3"
-                fontFamily={theme.typography.fontFamily}
-                fontWeight={800}
-                color="textPrimary"
-                lineHeight="1.3rem"
-              >
-                Engi .2 K23{" "}
-              </Typography>{" "}
-              <Typography
-                variant="body2"
-                fontFamily={theme.typography.fontFamily}
-                fontWeight={500}
-                color="primary"
-                textAlign="right"
-              >
-                NITK{" "}
-              </Typography>{" "}
+              <div className="glitch-wrapper">
+                <div className="glitch" data-text="Engi 2K23">Engi 2K23</div>
+              </div>
+              {/*<Typography*/}
+              {/*  variant="body2"*/}
+              {/*  fontFamily={theme.typography.fontFamily}*/}
+              {/*  fontWeight={500}*/}
+              {/*  color="primary"*/}
+              {/*  textAlign="right"*/}
+              {/*>*/}
+              {/*  NITK{" "}*/}
+              {/*</Typography>{" "}*/}
             </Box>{" "}
           </Box>{" "}
           {/*<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>*/}{" "}
