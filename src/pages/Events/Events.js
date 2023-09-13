@@ -80,9 +80,10 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
                                                   'padding': '0',}} >
                                                   <Button variant="contained">Register</Button>
             </PopupButton>}
-            <Button variant="outlined">
-              Know More
-            </Button>
+
+
+
+            
         </Stack>
       </Container>
     </GradientBox>
