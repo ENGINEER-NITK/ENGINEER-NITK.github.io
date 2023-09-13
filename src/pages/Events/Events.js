@@ -83,7 +83,7 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
 
 
 
-            
+
         </Stack>
       </Container>
     </GradientBox>
@@ -142,22 +142,8 @@ const Events = () => {
             
           <Event name={`${_.title}`} description={`${_.description}`} img={`${_.image}`}  />
           ))}
-          {/* <Event name="RC racing" description="Bruh" />
-          <Event name="Drone race" description="Bruh" />
-          <Event name="Wright Flight" description="Bruh" />
-          <Event name="Tronix" description="Bruh" />
-          <Event name="Technites" description="Bruh" />
-          <Event name="Astro" description="Bruh" /> */}
+    
         </EmblaCarousel>
-
-        {/* <Spacer size="lg" />
-        <Heading>Tech Committee</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Tronix" description="Bruh" />
-          <Event name="Technites" description="Bruh" />
-          <Event name="Astro" description="Bruh" />
-        </EmblaCarousel> */}
 
         <Spacer size="lg" />
         <Heading>Talks</Heading>
