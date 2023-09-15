@@ -24,7 +24,7 @@ const events = [
     firstCta: "First CTA for Event 1",
     secondCta: "Second CTA for Event 1",
     needRegister: true,
-    rule:"gfdRobo-Warshsj",
+    rule:"gfdRobo-Warshsj ",
   },
   {
     image: event2,

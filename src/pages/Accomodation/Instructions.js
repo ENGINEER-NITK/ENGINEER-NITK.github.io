@@ -57,8 +57,8 @@ const Instructions = () => {
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 5.  </Box>
-
-          All visitors carrying electronic devices or any similar items must declare them at the main gate of NITK Surathkal by obtaining a 'Gate Pass.' Additionally, upon departure from NITK Surathkal, security personnel will conduct checks of both the belongings and the 'Gate Pass.' Failure to comply with this procedure may result in the confiscation of the belongings.
+          Entry will be only through the 'Main Gate' of IIT Bombay. All other
+          gates will be closed for entry.
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 6.  </Box>
