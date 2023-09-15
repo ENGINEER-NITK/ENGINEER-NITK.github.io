@@ -8,6 +8,17 @@ import { FiPlay, FiUsers } from "react-icons/fi";
 import Spacer from "../Spacer";
 import { Link } from "react-router-dom";
 import { DateTime, Interval } from 'luxon';
+import { makeStyles } from '@mui/styles';
+import VHSGif from '../../assets/bg-brochure/Layx.gif'
+
+const useStyles = makeStyles({
+  dialogBackground: {
+    backgroundImage: `url(${VHSGif})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center'
+  }
+});
+
 function Countdown() {
   // 2023-09-15 018:30:00
   const targetDate = DateTime.fromISO("2023-09-15T18:30:00"); // Use Luxon's DateTime.fromISO to parse ISO strings
@@ -64,6 +75,8 @@ function Countdown() {
     });
   });
 
+  const classes = useStyles();
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = DateTime.local(); // Get the current local time using Luxon
@@ -93,7 +106,8 @@ function Countdown() {
   const minutes = duration.minutes;
   const seconds = Math.floor(duration.seconds);
   return (
-    <Dialog fullScreen open={true}>
+    <Dialog fullScreen open={true}
+    >
       <Box
         className="beforerelease"
         display="flex"
@@ -101,8 +115,9 @@ function Countdown() {
         alignItems="center"
         justifyContent="center"
         height="100vh"
-        bgcolor="#000"
+        bgcolor="rgba(0, 0, 0, 1)"
         ref={rootRef}
+        className={classes.dialogBackground}
       >
         <Typography align="center" variant="h4" className="countdown-text">
           {text}
@@ -114,18 +129,18 @@ function Countdown() {
 
         <Spacer size="sm" />
 
-        <Stack direction="row" gap={2}>
-          <Link to="/brochure">
-            <Button className="appear" endIcon={<FiPlay />}>
-              Brochure
-            </Button>
-          </Link>
-          <Link to="/ambassador">
-            <Button className="appear" endIcon={<FiUsers />}>
-              Campus Ambassadors
-            </Button>
-          </Link>
-        </Stack>
+        {/*<Stack direction="row" gap={2}>*/}
+        {/*  <Link to="/brochure">*/}
+        {/*    <Button className="appear" endIcon={<FiPlay />}>*/}
+        {/*      Brochure*/}
+        {/*    </Button>*/}
+        {/*  </Link>*/}
+        {/*  <Link to="/ambassador">*/}
+        {/*    <Button className="appear" endIcon={<FiUsers />}>*/}
+        {/*      Campus Ambassadors*/}
+        {/*    </Button>*/}
+        {/*  </Link>*/}
+        {/*</Stack>*/}
       </Box>
     </Dialog>
   );
