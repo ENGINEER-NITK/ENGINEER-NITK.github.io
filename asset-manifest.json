@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.565a47d4.css",
-    "main.js": "/static/js/main.1c6c16c5.js",
+    "main.js": "/static/js/main.e4229039.js",
     "static/js/787.0d4f6fcd.chunk.js": "/static/js/787.0d4f6fcd.chunk.js",
     "static/media/video.mp4": "/static/media/video.b6fe4784d622c63d06a2.mp4",
     "static/media/magic.JPG": "/static/media/magic.7f4c07d09424231dc2f2.JPG",
@@ -60,6 +60,7 @@
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0003.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0003.1be6c2b6a924acc66b35.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0004.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0004.0c50335561dace213e62.jpg",
     "static/media/drone1.jpg": "/static/media/drone1.fd741250c56d6e5ad47c.jpg",
+    "static/media/Layx.gif": "/static/media/Layx.e529feab4444822bf20a.gif",
     "static/media/Dayflow Party Time.svg": "/static/media/Dayflow Party Time.1370d7b991aecb04e8e2611080b08156.svg",
     "static/media/Dayflow Park Life.svg": "/static/media/Dayflow Park Life.a1e93cf947511b79e2b29c39c5f3f284.svg",
     "static/media/Dayflow Work from Home.svg": "/static/media/Dayflow Work from Home.9bb6cd145eaea1ac2f90dee7ed3f02a4.svg",
@@ -75,11 +76,11 @@
     "static/media/spiral.svg": "/static/media/spiral.b31ac6ecb15268b3667ba9f423a0fbc4.svg",
     "index.html": "/index.html",
     "main.565a47d4.css.map": "/static/css/main.565a47d4.css.map",
-    "main.1c6c16c5.js.map": "/static/js/main.1c6c16c5.js.map",
+    "main.e4229039.js.map": "/static/js/main.e4229039.js.map",
     "787.0d4f6fcd.chunk.js.map": "/static/js/787.0d4f6fcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.565a47d4.css",
-    "static/js/main.1c6c16c5.js"
+    "static/js/main.e4229039.js"
   ]
 }
