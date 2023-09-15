@@ -30,24 +30,23 @@ const ContactUs = () => {
         <Typography variant="body1" paragraph style={{ color: "white" }}>
           Feel Free to contact for any queries
         </Typography>
-        <Typography variant="body1" paragraph style={{ color: "white" }}>
-          Kinjal Sao
-          <br />
-          Hospitality and Marketing Manager
-          <br />
-          <a href="mailto:hospitality@techfest.org" style={{ color: "#c8f704" }}>
-            hospitality@techfest.org
-          </a>
-        </Typography>
-        <Typography variant="body1" style={{ color: "white" }}>
-          Kalpit Jain
-          <br />
-          Hospitality Coordinator
-          <br />
-          <a href="mailto:kalpitjain.techfest@gmail.com" style={{ color: "#c8f704" }}>
-            kalpitjain.techfest@gmail.com
-          </a>
-        </Typography>
+        {/*<Typography variant="body1" paragraph style={{ color: "white" }}>*/}
+        {/*  <br />*/}
+        {/*  Hospitality and Marketing Manager*/}
+        {/*  <br />*/}
+        {/*  <a href="mailto:hospitality@techfest.org" style={{ color: "#c8f704" }}>*/}
+        {/*    hospitality@techfest.org*/}
+        {/*  </a>*/}
+        {/*</Typography>*/}
+        {/*<Typography variant="body1" style={{ color: "white" }}>*/}
+        {/*  Kalpit Jain*/}
+        {/*  <br />*/}
+        {/*  Hospitality Coordinator*/}
+        {/*  <br />*/}
+        {/*  <a href="mailto:kalpitjain.techfest@gmail.com" style={{ color: "#c8f704" }}>*/}
+        {/*    kalpitjain.techfest@gmail.com*/}
+        {/*  </a>*/}
+        {/*</Typography>*/}
       </Container>
     </Paper>
   );

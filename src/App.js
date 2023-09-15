@@ -24,6 +24,7 @@ import Countdown from "./components/page/beforerelease";
 import Accomodate from "./pages/Accomodations/Accomodate";
 import Ambassador from "./pages/Ambassadors";
 import BeforeReleaseLayout from "./components/page/layout";
+import Team from './pages/Team/Team';
 function App() {
   const root = useRef();
   const theme = useTheme();
@@ -83,7 +84,7 @@ function App() {
         }}
         className="App"
       >
-        <Countdown />
+        {/*<Countdown />*/}
         <Routes>
           <Route exact path="/about" element={<About />} />{" "}
           <Route exact path="/gallery" element={<Gallery />} />{" "}
@@ -106,6 +107,8 @@ function App() {
           />{" "}
           <Route exact path="/ambassador" element={<Ambassador />} />{" "}
           <Route exact path="/brochure" element={<Brochure />} />{" "}
+          <Route exact path="/team" element={<Team />} />{" "}
+
         </Routes>{" "}
       </Box>{" "}
     </ThemeProvider>

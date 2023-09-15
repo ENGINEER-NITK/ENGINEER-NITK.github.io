@@ -7,6 +7,7 @@ import useGsap from "../../hooks/useGsap";
 import Typeform from "../../components/Typeform";
 import gsap from "gsap";
 import bgBrouchure from "../../assets/jpg/bg-brochure.jpg";
+import GradientText from '../../components/common/gradienttext';
 
 const Contact = () => {
   const rootRef = useRef();
@@ -58,16 +59,8 @@ const Contact = () => {
       <Appbar />
       <Container maxWidth="lg" color="white">
         <Box pt={20}>
-          <Typography
-            textAlign="center"
-            variant="h1"
-            fontSize="5rem"
-            fontWeight={700}
-            letterSpacing="2px"
-            color="white"
-          >
-            Contact Us
-          </Typography>
+          <GradientText primary='Contact Us' secondary='Reach out to us'/>
+
 
           <Spacer size="xs" />
         </Box>

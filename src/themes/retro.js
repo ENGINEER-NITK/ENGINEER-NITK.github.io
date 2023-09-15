@@ -109,7 +109,12 @@ export default (mode) =>
       MuiIconButton: {
         styleOverrides: {
           root: {
-            color: "#3f51b5", // Customize the icon color as needed
+            backgroundColor: 'white', // Set the background color to dark
+            color: 'black', // Set the text/icon color to white
+            '&:hover': {
+              backgroundColor: 'black', // On hover, set the background color to white
+              color: 'white', // On hover, set the text/icon color to dark
+            },
           },
         },
       },

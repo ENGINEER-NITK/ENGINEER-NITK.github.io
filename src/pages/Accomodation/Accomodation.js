@@ -145,6 +145,8 @@ const Accomodation = () => {
       <Appbar />
       <Container maxWidth="md" color="white">
         <Box sx={{ paddingTop: isMobile ? "70px" : "80px" }}>
+          <Spacer size='md'/>
+
           <GradientText primary="Lodging" secondary="Queries" />
           {isMobile ? (
             <FormControl

@@ -39,8 +39,7 @@ const CTA = () => {
     });
 
     timeline.from(".photo-container", {
-      x: [20, -20],
-      y: -200,
+      opacity: 0,
       stagger: 0.1,
     });
   });
@@ -71,11 +70,13 @@ const CTA = () => {
         >
           <GradientText primary="Glimpses" secondary="of Events." />
           <Spacer size="sm" />
-          <Description className="description" fontWeight={700}>
+          <Description  fontWeight={700}>
             Discover your business's untapped potential in just 30 minutes! Our
             call will unveil growth opportunities, address challenges, and craft
             a tailored strategy for success.{" "}
           </Description>
+          <Spacer size="sm" />
+
         </Box>
         <Marquee>
           <Stack direction="row" spacing={5}>

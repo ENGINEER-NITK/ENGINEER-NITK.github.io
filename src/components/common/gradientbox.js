@@ -9,6 +9,7 @@ const GradientBox = ({
   rotate = "-20deg",
   size = "medium",
   className='gradient-box',
+  action = false,
   ...props
 }) => {
   return (
@@ -36,12 +37,14 @@ const GradientBox = ({
           borderRadius: '18px',
           bottom: 0,
           right: 0,
-          backgroundImage: `url(${img})`, // Replace with your background image URL
+          backgroundImage: action
+            ? `linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(${img})` // Overlay gradient for better visibility
+            : `url(${img})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 1, // Adjust opacity as needed
           zIndex: -1,
-          backgroundRepeat: 'no-repeat'// Place it behind the main content
+          backgroundRepeat: 'no-repeat',// Place it behind the main content
         }
 
       }}

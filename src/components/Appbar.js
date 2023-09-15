@@ -33,6 +33,7 @@ let navLinks = [
   { title: "Alumni Connect", path: "/alumni-connect" },
   { title: "Accommodation", path: "/accomodation" },
   { title: "Contact", path: "/contact" },
+  { title: "Team", path: '/team'}
 ];
 
 let mainLinks = [
@@ -43,6 +44,8 @@ let mainLinks = [
   { title: "Brochure", path: "/brochure" },
   { title: "Accommodation", path: "/accomodation" },
   { title: "Contact", path: "/contact" },
+  { title: "Team", path: '/team'}
+
 ];
 
 const Appbar = ({ isGuest = false }) => {
