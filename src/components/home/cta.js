@@ -10,6 +10,9 @@ import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
 import image from "../../assets/png/iPhone 12 _ 12 Pro.png";
 import Marquee from "react-fast-marquee";
+import {imageGallery1} from "../../assets/data/homeCTA";
+import {imageGallery2} from "../../assets/data/homeCTA";
+
 
 const CTA = () => {
   const rootRef = useRef();
@@ -25,7 +28,7 @@ const CTA = () => {
     timeline.from(".intro-section", {
       y: 100,
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
     });
 
     timeline.to(".intro-section .description", {
@@ -76,12 +79,9 @@ const CTA = () => {
         </Box>
         <Marquee>
           <Stack direction="row" spacing={5}>
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
+          {imageGallery1.map((_, index) => (
+            <PhotoComponent imageUrl={_.url} />
+            ))}
           </Stack>
         </Marquee>
 
@@ -89,12 +89,9 @@ const CTA = () => {
 
         <Marquee direction="right">
           <Stack direction="row" spacing={5}>
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
+          {imageGallery2.map((_, index) => (
+            <PhotoComponent imageUrl={_.url} />
+            ))}
           </Stack>
         </Marquee>
       </Container>
@@ -107,11 +104,11 @@ function PhotoComponent({ imageUrl }) {
     <Paper
       className="photo-container"
       sx={{
-        borderRadius: 0,
+        borderRadius: 2,
         display: "inline-block",
-        padding: 2,
-        border: (theme) => `12px solid ${theme.palette.common.white}`, // Left, right, top
-        borderBottomWidth: (theme) => `48px`, // Bottom        borderRadius: 1,
+        padding: 0,
+        border: (theme) => `4px solid ${theme.palette.common.white}`, // Left, right, top
+        borderBottomWidth: (theme) => `4px`, // Bottom        borderRadius: 1,
         boxShadow: "none",
         backgroundColor: "black",
       }}
