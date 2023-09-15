@@ -21,7 +21,8 @@ import talks from "../../assets/data/talks";
 import csr from "../../assets/data/csr";
 import workshops from "../../assets/data/workshops"
 import conflux from "../../assets/data/conflux"
-import CustomizedDialogs from "./CustomizedDialogs";
+
+
 
 const HeadCarousel = () => {
   return (
@@ -38,7 +39,8 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
   const title = event.title;
   const des = event.description;
   const needRegister = event.needRegister;
-  const rule = event.rule
+  const rule = event.rule;
+  const needRule = event.needRule;
   return (
     <GradientBox color="white">
       <img
@@ -82,7 +84,8 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
                                                   'padding': '0',}} >
                                                   <Button variant="contained">Register</Button>
             </PopupButton>}
-            <CustomizedDialogs title = {title} description={rule}/>
+          {needRule && <Button href={rule} variant="outlined">Rulebook</Button>}
+            
 
 
 
@@ -120,8 +123,17 @@ const Event = ({ name, description,img }) => {
         <Description color="black">{description}</Description>
 
         <Box position="absolute" right={"25px"} bottom="15px">
+        {/* <PopupButton id="R2TLZA3k" style = {{'margin-right': '20px',
+                                                  'border-radius':' 8px',
+                                                  'padding': '0',}} >
+                                                  <FiArrowRight />
+            </PopupButton> */}
+          
+        
           <IconButton sx={{ backgroundColor: "black", color: "white" }}>
-            <FiArrowRight />
+            <FiArrowRight  />
+           
+            
           </IconButton>
         </Box>
       </Box>

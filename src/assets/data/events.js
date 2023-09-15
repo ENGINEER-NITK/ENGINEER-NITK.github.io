@@ -3,7 +3,7 @@ import event2 from "../png/events/2.png";
 import event3 from "../png/events/3.png";
 import event4 from "../png/events/4.png";
 import event5 from "../png/events/5.png";
-import event6 from "../png/events/6.png";
+// import event6 from "../png/events/6.png";
 import event7 from "../png/events/7.png";
 import event8 from "../png/events/8.png";
 import event9 from "../png/events/9.png";
@@ -14,6 +14,18 @@ import event13 from "../png/events/13.png";
 import event14 from "../png/events/14.png";
 import event15 from "../png/events/15.png";
 import event16 from "../png/events/16.png";
+// import HackWave from "./HackWave.pdf";
+import hackWave from "../rule/hackWave.pdf";
+import robowar from "../rule/robowar.pdf";
+import linebot from "../rule/linebot.pdf";
+import event6 from "../png/events/linebot.jpg"
+
+
+
+
+
+
+
 
 const events = [
   {
@@ -24,7 +36,8 @@ const events = [
     firstCta: "First CTA for Event 1",
     secondCta: "Second CTA for Event 1",
     needRegister: true,
-    rule:"gfdRobo-Warshsj ",
+    rule:robowar,
+    needRule: true,
   },
   {
     image: event2,
@@ -34,7 +47,8 @@ const events = [
     firstCta: "First CTA for Event 2",
     secondCta: "Second CTA for Event 2",
     needRegister: true,
-    rule:"Bizzwave",
+    rule:hackWave,
+    needRule:false, 
   },
   {
     image: event3,
@@ -44,7 +58,8 @@ const events = [
     firstCta: "First CTA for Event 3",
     secondCta: "Second CTA for Event 3",
     needRegister: true,
-    rule:"Gaming",
+    rule:hackWave,
+    needRule: false,
   },
   {
     image: event4,
@@ -54,27 +69,30 @@ const events = [
     firstCta: "First CTA for Event 4",
     secondCta: "Second CTA for Event 4",
     needRegister: false,
-    rule:"Proshowssss",
+    rule:hackWave,
+    needRule: false,
   },
   {
     image: event5,
-    title: "Hackathon",
+    title: "HackWave",
     description: "Embark on an exhilarating journey through the vast realm of Computer Science, where we offer you a thrilling blend of real-life challenges and immersive hands-on experiences with cutting-edge topics in Information Technology. Get ready to ignite your passion and unleash your potential in the exciting world of haCKATHON.",
     subtitle: "Subtitle for Event 5",
     firstCta: "First CTA for Event 5",
     secondCta: "Second CTA for Event 5",
     needRegister: true,
-    rule:"Hackathon",
+    rule:hackWave,
+    needRule: true,
   },
   {
-    image: event5,
-    title: "Bike Show",
-    description: "Rev up your excitement as we present the heart-pounding Bike Show at ENGI 2023! Get ready to witness a thrilling showcase of two-wheeled wonders, featuring the latest in motorcycle technology, stunts, and customized creations. From high-speed adrenaline rushes to jaw-dropping tricks, this Bike Show is a symphony of power and precision that will leave you on the edge of your seat.",
+    image: event6,
+    title: "Line Bot",
+    description: "A line follower robot competition challenges participants to build autonomous robots that can follow a predetermined path, typically a black line on a white surface. These competitions focus on robotics, programming, and sensor integration skills. Participants compete to see whose robot can complete the course accurately and efficiently, often incorporating rules for speed and penalties for deviations from the path. ",
     subtitle: "Subtitle for Event 5",
     firstCta: "First CTA for Event 5",
     secondCta: "Second CTA for Event 5",
-    needRegister: false,
-    rule:"Bike Show",
+    needRegister: true,
+    rule:linebot,
+    needRule: true,
   },
 ];
 
