@@ -7,9 +7,10 @@ import gsap from "gsap";
 import { FiPlay, FiUsers } from "react-icons/fi";
 import Spacer from "../Spacer";
 import { Link } from "react-router-dom";
+import { DateTime, Interval } from 'luxon';
 function Countdown() {
   // 2023-09-15 018:30:00
-  const targetDate = new Date("2023-09-15 018:30:00"); // Set your target date here
+  const targetDate = DateTime.fromISO("2023-09-15T18:30:00"); // Use Luxon's DateTime.fromISO to parse ISO strings
   const [timeLeft, setTimeLeft] = useState(targetDate - new Date());
   const rootRef = useRef(null);
   const [text, setText] = useState("");
@@ -65,12 +66,14 @@ function Countdown() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const now = new Date();
-      const timeDifference = targetDate - now;
+      const now = DateTime.local(); // Get the current local time using Luxon
+      const timeDifference = targetDate.diff(now, ['days', 'hours', 'minutes', 'seconds']); // Compute the difference using Luxon's diff method
 
-      setTimeLeft(timeDifference);
+      // Convert the timeDifference to milliseconds using Luxon's Duration object
+      const timeDifferenceInMs = timeDifference.as('milliseconds');
+      setTimeLeft(timeDifferenceInMs);
 
-      if (timeDifference <= 0) {
+      if (timeDifferenceInMs <= 0) {
         clearInterval(interval);
       }
     }, 1000);
@@ -82,14 +85,13 @@ function Countdown() {
     return null; // Don't display the component if the target date has passed
   }
 
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+// Using Luxon's Duration object to extract days, hours, minutes, and seconds
+  const duration = Interval.fromDateTimes(DateTime.local(), DateTime.local().plus({ milliseconds: timeLeft })).toDuration(['days', 'hours', 'minutes', 'seconds']);
 
-  const hours = Math.floor(
-    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
+  const days = duration.days;
+  const hours = duration.hours;
+  const minutes = duration.minutes;
+  const seconds = Math.floor(duration.seconds);
   return (
     <Dialog fullScreen open={true}>
       <Box

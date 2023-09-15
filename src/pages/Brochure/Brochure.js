@@ -3,11 +3,11 @@ import {
   Box,
   Button,
   Container,
-  Grid,
+  Grid, Stack,
   Typography,
   useMediaQuery,
   useTheme,
-} from "@mui/material";
+} from '@mui/material';
 import Appbar from "../../components/Appbar";
 import Footer from "../../components/common/footer";
 import Spacer from "../../components/Spacer";
@@ -28,6 +28,8 @@ import brochurePageEleven from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BRO
 import brochurePageTwelve from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BROCHURE_page-0012.jpg";
 import brochurePageThirteen from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BROCHURE_page-0013.jpg";
 import { wrapWordsWithSpan } from "../../components/home/hero";
+import GradientText from '../../components/common/gradienttext';
+import Marquee from 'react-fast-marquee';
 
 const images = [
   {
@@ -210,63 +212,39 @@ const Brochure = () => {
               width: "70%",
             }}
           >
-            <Typography
-              textAlign="center"
-              variant="h1"
-              fontWeight={200}
-              fontFamily="Lato"
-              lineHeight="5rem"
-              color="white"
-              sx={{
-                fontSize: {
-                  md: "6rem",
-                  xs: "3rem",
-                },
-              }}
-            >
-              ENGINEER 2 K23{" "}
-            </Typography>{" "}
-            <Typography
-              textAlign="center"
-              variant="h1"
-              fontFamily="Mona"
-              fontSize="7rem"
-              fontWeight={700}
-              letterSpacing="2px"
-              sx={{
-                fontSize: {
-                  md: "7rem",
-                  xs: "3rem",
-                },
-              }}
-              color="white"
-            >
-              BROCHURE PAGE{" "}
-            </Typography>
-            <Typography
-              fontFamily="Mona"
-              textAlign="right"
-              variant="body2"
-              color="white"
-            >
-              Ensight.{" "}
-            </Typography>{" "}
-            <Typography
-              fontFamily="Mona"
-              color="white"
-              textAlign="right"
-              variant="body2"
-            >
-              Ennovation.{" "}
-            </Typography>{" "}
-            <Typography
-              fontFamily="Mona"
-              color="white"
-              textAlign="right"
-              variant="body2"
-            >
-              Envention.{" "}
-            </Typography>{" "}
+            <GradientText primary='ENGINEER 2K23' secondary='Brochure Page'/>
+            <Spacer size='xl'/>
+
+            <Box sx={{
+              backgroundColor: 'red'
+            }}>
+            <Marquee>
+                <Typography
+                  fontFamily="Mona"
+                  textAlign="right"
+                  variant="h1"
+                  color="white"
+                >
+                  Ensight.
+                </Typography>
+                <Typography
+                  fontFamily="Mona"
+                  color="white"
+                  textAlign="right"
+                  variant="h1"
+                >
+                  Ennovation.
+                </Typography>
+                <Typography
+                  fontFamily="Mona"
+                  color="white"
+                  textAlign="right"
+                  variant="h1"
+                >
+                  Envention.
+                </Typography>
+            </Marquee>
+            </Box>
           </Box>
           <Box my={45} />
           <Box overflow="hidden">

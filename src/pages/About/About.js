@@ -16,6 +16,7 @@ import { formatDistanceToNow } from "date-fns";
 import Appbar from "../../components/Appbar";
 import Hero from "../../components/about/hero";
 import Footer from "../../components/common/footer";
+import Appbartrigger from '../../components/common/appbartrigger';
 
 const wrapWordsWithSpan = (text, className) => {
   const words = text.split(" ");
@@ -38,6 +39,8 @@ const About = () => {
   return (
     <Box>
       <Appbar />
+      <Appbartrigger/>
+
       <Hero />
       <Footer />
     </Box>

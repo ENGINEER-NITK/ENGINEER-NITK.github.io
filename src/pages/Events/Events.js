@@ -114,9 +114,6 @@ const Event = ({ name, description,img }) => {
         >
           {name}
         </Typography>
-        {/*{[...Array(rating)].map((_, index) => (*/}
-        {/*  <AiFillStar key={index} />*/}
-        {/*))}*/}
         <Description color="black">{description}</Description>
 
         <Box position="absolute" right={"25px"} bottom="15px">
@@ -142,10 +139,10 @@ const Events = () => {
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
         {events.map((_, index) => (
-            
+
           <Event name={`${_.title}`} description={`${_.description}`} img={`${_.image}`}  />
           ))}
-    
+
         </EmblaCarousel>
 
         <Spacer size="lg" />
@@ -153,7 +150,7 @@ const Events = () => {
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
         {talks.map((_, index) => (
-            
+
             <Event name={`${_.title}`} description={`${_.description}`}  />
             ))}
         </EmblaCarousel>
@@ -163,17 +160,17 @@ const Events = () => {
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
         {csr.map((_, index) => (
-            
+
             <Event name={`${_.title}`} description={`${_.description}`}  />
             ))}
         </EmblaCarousel>
         <Spacer size="lg" />
-        
+
         <Heading>Workshops</Heading>
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
         {workshops.map((_, index) => (
-            
+
             <Event name={`${_.title}`} description={`${_.description}`}  />
             ))}
         </EmblaCarousel>
@@ -183,7 +180,7 @@ const Events = () => {
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
         {conflux.map((_, index) => (
-            
+
             <Event name={`${_.title}`} description={`${_.description}`}  />
             ))}
           {/* <Event name="Clubs" description="Bruh" /> */}
@@ -240,7 +237,7 @@ const Events = () => {
                 </>
                 ))}{" "}
                 </EmblaCarousel>
-        
+
                 <Spacer size="lg" />
               </>
             ))}{" "} */}

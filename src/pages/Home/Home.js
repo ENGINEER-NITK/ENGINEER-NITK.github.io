@@ -13,18 +13,23 @@ import CTA from "../../components/home/cta";
 import Footer from "../../components/common/footer";
 import Pricing from "../../components/home/pricing";
 import Tagline from "../../components/home/tagline";
+import Appbartrigger from '../../components/common/appbartrigger';
 
 const Home = () => {
-  const [open, setOpen] = useState(true);
   const root = useRef();
 
   return (
     <Box ref={root} position="relative" bgcolor="black">
       <CssBaseline />
       <Appbar />
-
+      <Appbartrigger/>
       <Hero />
-      <Spacer size="lg" />
+
+      <Spacer size="xl" />
+
+      <About />
+
+      <Spacer size="xl" />
 
       <Tagline />
 

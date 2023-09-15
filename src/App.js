@@ -10,7 +10,7 @@ import Accomodation from "./pages/Accomodation/Accomodation";
 import { Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import retro from "./themes/retro";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 import useGsap, { appear } from "./hooks/useGsap";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -29,17 +29,7 @@ function App() {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  useGsap(root, () => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+  useEffect(()=> {
     const timeline = gsap.timeline({
       scrollTrigger: {
         toggleActions: "restart none none reverse",
@@ -53,7 +43,6 @@ function App() {
       opacity: 0, // Change the background color to #1B1B1E
       y: -12,
       ease: "expo.out",
-      stagger: 0.1,
     });
 
     if (!mobile)
@@ -70,6 +59,20 @@ function App() {
         },
         "<"
       );
+  }, [])
+
+  useGsap(root, () => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
   });
   return (
     <ThemeProvider theme={retro("dark")}>

@@ -61,78 +61,58 @@ const Appbar = ({ isGuest = false }) => {
     );
 
   return (
-    <AppBar className="appbar" ref={appbarRef} elevation={0} position="fixed">
-      <Container maxWidth="lg">
-        <Toolbar
-          disableGutters
-          sx={{
-            py: 2,
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            transition: "background-color 0.3s ease",
-            position: "relative", // Set the position to relative for the AppBar
-          }}
-        >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            {/* Logo Image */} {/*<img*/} {/*  src={LogoMascot}*/}{" "}
-            {/*  alt="Logo"*/} {/*  className="logo"*/}{" "}
-            {/*  style={{ height: "72px" }}*/} {/*/>*/}{" "}
-            {/* Your logo or site name can be placed here */}{" "}
-            <Box className="logo_title">
-              <div className="glitch-wrapper">
-                <div className="glitch" data-text="Engi 2K23">Engi 2K23</div>
-              </div>
-              {/*<Typography*/}
-              {/*  variant="body2"*/}
-              {/*  fontFamily={theme.typography.fontFamily}*/}
-              {/*  fontWeight={500}*/}
-              {/*  color="primary"*/}
-              {/*  textAlign="right"*/}
-              {/*>*/}
-              {/*  NITK{" "}*/}
-              {/*</Typography>{" "}*/}
-            </Box>{" "}
-          </Box>{" "}
-          {/*<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>*/}{" "}
-          {/*    <Link to="/" sx={{ color: 'inherit', textDecoration: 'none' }}>*/}{" "}
-          {/*        <Typography fontFamily={theme.typography.fontFamily} variant="body2">Home</Typography>*/}{" "}
-          {/*    </Link>*/}{" "}
-          {/*    <Link to="/about" sx={{ color: 'inherit', textDecoration: 'none' }}>*/}{" "}
-          {/*        <Typography fontFamily={theme.typography.fontFamily} variant="body2">About</Typography>*/}{" "}
-          {/*    </Link>*/}{" "}
-          {/*    <Link to="/services" sx={{ color: 'inherit', textDecoration: 'none' }}>*/}{" "}
-          {/*        <Typography fontFamily={theme.typography.fontFamily} variant="body2">Services</Typography>*/}{" "}
-          {/*    </Link>*/} {/*</Box>*/}{" "}
-          <Box
+    <>
+      <AppBar className="appbar" ref={appbarRef} elevation={0} position="fixed">
+        <Container maxWidth="lg">
+          <Toolbar
+            disableGutters
             sx={{
-              display: {
-                md: "flex",
-                xs: "none",
-              },
+              py: 2,
+              display: "flex",
+              justifyContent: "space-between",
               alignItems: "center",
-              color: "white",
-              gap: 3,
+              transition: "background-color 0.3s ease",
+              position: "relative", // Set the position to relative for the AppBar
             }}
           >
-            {mainLinks.map((link, index) => (
-              <Link to={link.path}>
-                <Typography
-                  className="action"
-                  fontWeight={600}
-                  key={index}
-                  variant="body1"
-                >
-                  {link.title}{" "}
-                </Typography>{" "}
-              </Link>
-            ))}{" "}
-          </Box>{" "}
-          <AppMenu />
-        </Toolbar>{" "}
-      </Container>{" "}
-    </AppBar>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+
+              <Box className="logo_title">
+                <div className="glitch-wrapper">
+                  <div className="glitch" data-text="Engi 2K23">Engi 2K23</div>
+                </div>
+              </Box>{" "}
+            </Box>{" "}
+            <Box
+              sx={{
+                display: {
+                  md: "flex",
+                  xs: "none",
+                },
+                alignItems: "center",
+                color: "white",
+                gap: 3,
+              }}
+            >
+              {mainLinks.map((link, index) => (
+                <Link to={link.path}>
+                  <Typography
+                    className="action"
+                    fontWeight={600}
+                    key={index}
+                    variant="body1"
+                  >
+                    {link.title}{" "}
+                  </Typography>{" "}
+                </Link>
+              ))}{" "}
+            </Box>{" "}
+            <AppMenu />
+          </Toolbar>{" "}
+        </Container>{" "}
+      </AppBar>
+      <div className='appbar-trigger'/>
+    </>
   );
 };
 
@@ -147,7 +127,7 @@ const AppMenu = () => {
     setAnchorEl(null);
   };
   return (
-    <Box className="menu" bgcolor="white">
+    <Box  bgcolor="white" color='black'>
       <IconButton onClick={handleClick}>
         <FiMenu />
       </IconButton>{" "}

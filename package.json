@@ -27,6 +27,7 @@
     "embla-carousel-autoplay": "^8.0.0-rc11",
     "embla-carousel-react": "^8.0.0-rc11",
     "gsap": "^3.12.2",
+    "luxon": "^3.4.3",
     "memfs": "^4.2.1",
     "react": "^17.0.2",
     "react-calendly": "^4.1.1",

@@ -8,6 +8,7 @@ const GradientBox = ({
   img = null,
   rotate = "-20deg",
   size = "medium",
+  className='gradient-box',
   ...props
 }) => {
   return (
@@ -18,7 +19,7 @@ const GradientBox = ({
       height={height}
       position="relative"
       overflow="hidden"
-      className="gradient-box"
+      className={className}
       // Add the background image here
       sx={{
         background,
@@ -30,17 +31,19 @@ const GradientBox = ({
         "&::before": {
           content: "''",
           position: "absolute",
-          top: 0,
-          right: 0,
+          width: '100%',
+          height: '200px',
+          borderRadius: '18px',
           bottom: 0,
-          left: 0,
+          right: 0,
           backgroundImage: `url(${img})`, // Replace with your background image URL
           backgroundSize: "cover",
           backgroundPosition: "center",
-          opacity: 0.5, // Adjust opacity as needed
-          zIndex: -1 // Place it behind the main content
+          opacity: 1, // Adjust opacity as needed
+          zIndex: -1,
+          backgroundRepeat: 'no-repeat'// Place it behind the main content
         }
-        
+
       }}
       {...props}
     >

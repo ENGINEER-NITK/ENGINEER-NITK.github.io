@@ -1,14 +1,15 @@
 import React from "react";
 import {
-  Box,
+  Box, Button,
   Container,
   Grid,
   IconButton,
   Typography,
   useTheme,
-} from "@mui/material";
-import { FiFacebook, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
+} from '@mui/material';
+import { FiBell, FiFacebook, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import { Link } from "react-router-dom";
+import { red } from '@mui/material/colors';
 
 const Footer = () => {
   const theme = useTheme();
@@ -64,27 +65,44 @@ const Footer = () => {
               </IconButton>
             </a>
           </Grid>
-          {/*<Grid item xs={12} sm={6} md={3}>*/}
-          {/*  <Typography variant="h6">Quick Links</Typography>*/}
-          {/*  <Typography variant="body2">Home</Typography>*/}
-          {/*  <Typography variant="body2">About Us</Typography>*/}
-          {/*  <Typography variant="body2">Services</Typography>*/}
-          {/*  <Typography variant="body2">Contact</Typography>*/}
-          {/*</Grid>*/}
-          {/*<Grid item xs={12} sm={6} md={3}>*/}
-          {/*  <Typography variant="h6">Newsletter</Typography>*/}
-          {/*  <Typography variant="body2">Subscribe to our newsletter</Typography>*/}
-          {/*  /!* Add a newsletter signup form here *!/*/}
-          {/*</Grid>*/}
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Quick Links</Typography>
+            <Typography variant="body2">Home</Typography>
+            <Typography variant="body2">About Us</Typography>
+            <Typography variant="body2">Services</Typography>
+            <Typography variant="body2">Contact</Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Subscribe</Typography>
+            <SubscribeButton />
+          </Grid>
         </Grid>
-        {/*<Box mt={3} textAlign="center">*/}
-        {/*  <Typography variant="body2">*/}
-        {/*    &copy; {new Date().getFullYear()}*/}
-        {/*  </Typography>*/}
-        {/*</Box>*/}
+        <Box mt={3} textAlign="center">
+          <Typography variant="body2">
+            &copy; {new Date().getFullYear()}
+          </Typography>
+        </Box>
       </Container>
     </Box>
   );
 };
+
+function SubscribeButton() {
+  return (
+    <Button
+      variant="contained"
+      color="primary"
+      endIcon={<FiBell />}
+      style={{
+        borderRadius: '10px',
+        textTransform: 'none',
+        fontWeight: 'bold',
+        fontFamily: 'Lato'
+      }}
+    >
+      Subscribe
+    </Button>
+  );
+}
 
 export default Footer;

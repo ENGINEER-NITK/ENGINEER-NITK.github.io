@@ -35,10 +35,7 @@ const Instructions = () => {
         </Typography>{" "}
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 1.  </Box>
-          All guests carrying electronic items of any kind will have to declare
-          them at the IIT Bombay main gate through a ‘Gate Pass’. The belongings
-          will also be checked on the way out of IIT Bombay along with the ‘Gate
-          Pass’, failing to do so will result in the belongings being impounded.
+          All visitors carrying electronic devices or any similar items must declare them at the main gate of NITK Surathkal by obtaining a 'Gate Pass.' Additionally, upon departure from NITK Surathkal, security personnel will conduct checks of both the belongings and the 'Gate Pass.' Failure to comply with this procedure may result in the confiscation of the belongings.
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 2.  </Box>
@@ -60,8 +57,8 @@ const Instructions = () => {
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 5.  </Box>
-          Entry will be only through the 'Main Gate' of IIT Bombay. All other
-          gates will be closed for entry.
+
+          All visitors carrying electronic devices or any similar items must declare them at the main gate of NITK Surathkal by obtaining a 'Gate Pass.' Additionally, upon departure from NITK Surathkal, security personnel will conduct checks of both the belongings and the 'Gate Pass.' Failure to comply with this procedure may result in the confiscation of the belongings.
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 6.  </Box>
@@ -90,8 +87,7 @@ const Instructions = () => {
         </Typography>
         <Typography variant="body1" style={pointStyle}>
           <Box component="span"> 10.  </Box>
-          Techfest 2022 and IIT Bombay will not be responsible for any mishaps
-          that occur through the duration of stay for Techfest 2022.
+          NITK Surathkal and Techfest 2023 will not be held responsible for any incidents or mishaps that may occur during the duration of your stay at Techfest 2023.
         </Typography>
       </Container>
     </Paper>

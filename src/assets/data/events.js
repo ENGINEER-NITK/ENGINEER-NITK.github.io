@@ -29,7 +29,7 @@ const events = [
   {
     image: event2,
     title: "Bizzwave",
-    description: "Get ready to ride the waves of business excitement at Bizzwaves, a thrilling three-day Management Fest packed with a diverse range of events spanning Finance, Human Resource, Marketing, and Analytics. Brace yourself for a whirlwind of knowledge, hands-on workshops, and thought-provoking symposiums. Join us and immerse yourself in the sizzle of business brilliance!",
+    description: "Get ready to ride the waves of business excitement at Bizzwaves",
     // subtitle: "Subtitle for Event 2",
     firstCta: "First CTA for Event 2",
     secondCta: "Second CTA for Event 2",

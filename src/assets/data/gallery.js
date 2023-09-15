@@ -1,10 +1,10 @@
 import image1 from "./../../assets/gallery/drone2.jpg";
 import image2 from "./../../assets/gallery/drone1.jpg";
-import bnr1 from "./../../assets/gallery/BNR_1.jpg";
-import bnr2 from "./../../assets/gallery/BNR_2.jpg";
+// import bnr1 from "./../../assets/gallery/BNR_1.jpg";
+// import bnr2 from "./../../assets/gallery/BNR_2.jpg";
 import bnr3 from "./../../assets/gallery/BNR_3.jpg";
 import bnr4 from "./../../assets/gallery/BNR_4.JPG"
-import antariksh from "./../../assets/gallery/antariksh.jpg";
+// import antariksh from "./../../assets/gallery/antariksh.jpg";
 import drone3 from "./../../assets/gallery/drone3.jpg";
 import drone4 from "./../../assets/gallery/drone4.jpg";
 import proShow1 from "./../../assets/gallery/proshow1.jpg";
@@ -28,14 +28,14 @@ const imageGallery = [
         url: image2,
         caption: "Drone in flight",
     },
-    {
-        url: bnr1,
-        caption: "Majestic Mountains",
-    },
-    {
-        url: bnr2,
-        caption: "Majestic Mountains",
-    },
+    // {
+    //     url: bnr1,
+    //     caption: "Majestic Mountains",
+    // },
+    // {
+    //     url: bnr2,
+    //     caption: "Majestic Mountains",
+    // },
     {
         url: bnr3,
         caption: "Majestic Mountains",
@@ -52,10 +52,10 @@ const imageGallery = [
         url: drone4,
         caption: "Majestic Mountains",
     },
-    {
-        url: antariksh,
-        caption: "Majestic Mountains",
-    },
+    // {
+    //     url: antariksh,
+    //     caption: "Majestic Mountains",
+    // },
     {
         url: proShow1,
         caption: "Majestic Mountains",
@@ -88,7 +88,7 @@ const imageGallery = [
         url: magic2,
         caption: "Majestic Mountains",
     },
-    
+
 
 
     // ... add more images
