@@ -1,12 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.565a47d4.css",
-    "main.js": "/static/js/main.e4229039.js",
+    "main.js": "/static/js/main.ecdbac37.js",
     "static/js/787.0d4f6fcd.chunk.js": "/static/js/787.0d4f6fcd.chunk.js",
     "static/media/video.mp4": "/static/media/video.b6fe4784d622c63d06a2.mp4",
     "static/media/magic.JPG": "/static/media/magic.7f4c07d09424231dc2f2.JPG",
     "static/media/BNR_4.JPG": "/static/media/BNR_4.91893d0230657367ffcd.JPG",
+    "static/media/BNR_front.JPG": "/static/media/BNR_front.cd37a1edb2820825a492.JPG",
+    "static/media/BNR_side.JPG": "/static/media/BNR_side.c8425df69e896ebdf647.JPG",
     "static/media/drone3.jpg": "/static/media/drone3.5e93808ee9ba3890e57e.jpg",
+    "static/media/drone3cta.jpg": "/static/media/drone3cta.5e93808ee9ba3890e57e.jpg",
     "static/media/magic2.JPG": "/static/media/magic2.1b9285ddf2eb50eeac47.JPG",
     "static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0001.jpg": "/static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0001.5561a030c5ae1e0a17a4.jpg",
     "static/media/ENGINEER'NITK 2K23_BROCHURE_page-0005.jpg": "/static/media/ENGINEER'NITK 2K23_BROCHURE_page-0005.830377d4b2841d5e3610.jpg",
@@ -23,11 +26,13 @@
     "static/media/7.png": "/static/media/7.ef6c2c1d01a3a86d0119.png",
     "static/media/ENGINEER'NITK 2K23_BROCHURE_page-0007.jpg": "/static/media/ENGINEER'NITK 2K23_BROCHURE_page-0007.13ec5ea64aad06c68a07.jpg",
     "static/media/ENGINEER'NITK 2K23_BROCHURE_page-0008.jpg": "/static/media/ENGINEER'NITK 2K23_BROCHURE_page-0008.b054d8914134f0a079bf.jpg",
+    "static/media/drone2cta.jpg": "/static/media/drone2cta.d453339eed370751c476.jpg",
     "static/media/proshow3.jpg": "/static/media/proshow3.a6d16ae8e1d6bbdb98b7.jpg",
     "static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0003.jpg": "/static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0003.6f4edeaf7aa1d17b005d.jpg",
     "static/media/ENGINEER'NITK 2K23_BROCHURE_page-0009.jpg": "/static/media/ENGINEER'NITK 2K23_BROCHURE_page-0009.31ce90c654f14460519a.jpg",
     "static/media/5.png": "/static/media/5.fb8fbbdb2e2a7a62a0b3.png",
     "static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0004.jpg": "/static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0004.8c7317b4e1531183e40d.jpg",
+    "static/media/BNR_side2.jpg": "/static/media/BNR_side2.66c25ffb9804c009f160.jpg",
     "static/media/Samsung Galaxy Note20 Ultra 5G.png": "/static/media/Samsung Galaxy Note20 Ultra 5G.f7054e6101cf5f41ce06.png",
     "static/media/drone4.jpg": "/static/media/drone4.6cdd2136d091eb5fc29c.jpg",
     "static/media/1.png": "/static/media/1.32981f5c8860358451ef.png",
@@ -56,6 +61,7 @@
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0005.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0005.38fd43a045ccb32114c0.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0001.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0001.c443da1e3747360a41c0.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0002.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0002.58e7a48eeab5aaeabe98.jpg",
+    "static/media/drone1cta.jpg": "/static/media/drone1cta.21dac16956d68aef1eef.jpg",
     "static/media/trees.png": "/static/media/trees.f4b0e9a47389488cf01d.png",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0003.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0003.1be6c2b6a924acc66b35.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0004.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0004.0c50335561dace213e62.jpg",
@@ -69,6 +75,7 @@
     "static/media/DeliriumNcv-Vm5e.ttf": "/static/media/DeliriumNcv-Vm5e.a96138c95cc032e8ba64.ttf",
     "static/media/MonaSans-Bold.ttf": "/static/media/MonaSans-Bold.48f9b199e7625244a58c.ttf",
     "static/media/MonaSans-Medium.ttf": "/static/media/MonaSans-Medium.26eefb9e6598c8d26e70.ttf",
+    "static/media/logo.png": "/static/media/logo.c3f810a6a7b8f4567a9d.png",
     "static/media/morph.svg": "/static/media/morph.2d6e832e158c61332abbaa9c0aed41c1.svg",
     "static/media/bg-brochure.jpg": "/static/media/bg-brochure.b025a06660bef0d51ed3.jpg",
     "static/media/logo_mascot.svg": "/static/media/logo_mascot.e17f3a5a11e9a3545587086ad01bdfaa.svg",
@@ -76,11 +83,11 @@
     "static/media/spiral.svg": "/static/media/spiral.b31ac6ecb15268b3667ba9f423a0fbc4.svg",
     "index.html": "/index.html",
     "main.565a47d4.css.map": "/static/css/main.565a47d4.css.map",
-    "main.e4229039.js.map": "/static/js/main.e4229039.js.map",
+    "main.ecdbac37.js.map": "/static/js/main.ecdbac37.js.map",
     "787.0d4f6fcd.chunk.js.map": "/static/js/787.0d4f6fcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.565a47d4.css",
-    "static/js/main.e4229039.js"
+    "static/js/main.ecdbac37.js"
   ]
 }
