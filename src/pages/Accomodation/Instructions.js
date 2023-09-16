@@ -39,7 +39,7 @@ const Instructions = () => {
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 2.  </Box>
-          All guests will be provided with a mattress. Techfest will not provide
+          All guests will be provided with a mattress. Engineer will not provide
           mattress covers, blankets, or pillows. The guests are encouraged to
           arrange them on their own (if required), since the weather might get
           cold during the night.
@@ -57,7 +57,7 @@ const Instructions = () => {
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 5.  </Box>
-          Entry will be only through the 'Main Gate' of IIT Bombay. All other
+          Entry will be only through the 'Main Gate' of NITK. All other
           gates will be closed for entry.
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
@@ -66,19 +66,19 @@ const Instructions = () => {
           proofs at all times. In addition, the student participants are also
           required to carry their valid College photo ID card. Any guest failing
           to produce their ID card will not be permitted inside the campus
-          during Techfest 2022.
+          during Engineer 2023.
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 7.  </Box>
           Alcohol, drugs, sharp objects, and explosives of any kind are strictly
           prohibited inside the campus. Any other item if deemed unsafe will be
-          prohibited. The decision of Security and Techfest team will be final
+          prohibited. The decision of Security and Engineer team will be final
           in case of any disputes.
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 8.  </Box>
           No outside vehicles will be allowed into the campus during the
-          Techfest 2022.
+          Engineer 2023.
         </Typography>
         <Typography variant="body1" paragraph style={pointStyle}>
           <Box component="span"> 9.  </Box>
@@ -87,7 +87,7 @@ const Instructions = () => {
         </Typography>
         <Typography variant="body1" style={pointStyle}>
           <Box component="span"> 10.  </Box>
-          NITK Surathkal and Techfest 2023 will not be held responsible for any incidents or mishaps that may occur during the duration of your stay at Techfest 2023.
+          NITK Surathkal and Engineer 2023 will not be held responsible for any incidents or mishaps that may occur during the duration of your stay at Engineer 2023.
         </Typography>
       </Container>
     </Paper>

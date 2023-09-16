@@ -41,13 +41,13 @@ const VideoText = () => {
 
   return (
     <div className={classes.root}>
-      <svg style={{ opacity: 0, position: 'fixed', zIndex: -999 }} viewBox="0 0 1 1">
+      <svg style={{ opacity: 1, position: 'fixed', zIndex: -999 }} viewBox="0 0 1 1">
         <defs>
           <clipPath id="clip" clipPathUnits="objectBoundingBox">
             <text
               x="0.5"
               y="0.5"
-              font-size="1.2"
+              font-size="0.9"
               text-anchor="middle"
               alignment-baseline="middle"
               font-family="Delirium"
@@ -59,7 +59,7 @@ const VideoText = () => {
           </clipPath>
         </defs>
       </svg>
-      <video autoPlay loop muted className={classes.video}>
+      <video playsInline  autoPlay loop muted className={classes.video}>
         <source src={clip} type="video/mp4" />
       </video>
     </div>

@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 function Countdown() {
   // 2023-09-15 018:30:00
-  const targetDate = DateTime.fromISO("2023-09-15T18:30:00"); // Use Luxon's DateTime.fromISO to parse ISO strings
+  const targetDate = DateTime.fromISO("2023-09-15T18:40:00"); // Use Luxon's DateTime.fromISO to parse ISO strings
   const [timeLeft, setTimeLeft] = useState(targetDate - new Date());
   const rootRef = useRef(null);
   const [text, setText] = useState("");

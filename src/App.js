@@ -84,7 +84,7 @@ function App() {
         }}
         className="App"
       >
-        {/*<Countdown />*/}
+        <Countdown />
         <Routes>
           <Route exact path="/about" element={<About />} />{" "}
           <Route exact path="/gallery" element={<Gallery />} />{" "}

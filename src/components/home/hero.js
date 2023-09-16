@@ -119,6 +119,10 @@ const Hero = () => {
         ease: 'expo.out'
       })
 
+      tl.to(rootRef.current, {
+        backgroundSize: 'cover',
+      })
+
 
       tl.from(containerRef.current, {
         y: 100,
