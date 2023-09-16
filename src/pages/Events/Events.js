@@ -1,35 +1,35 @@
-import React, { useRef } from "react";
-import {
-  Box,
-  Button, Chip,
-  Container,
-  IconButton,
-  Stack,
-  Typography,
-} from '@mui/material';
-import Appbar from "../../components/Appbar";
-import Footer from "../../components/common/footer";
-import Spacer from "../../components/Spacer";
-import { Description, Heading } from "../../components/common/typography";
-import EmblaCarousel from "../../components/common/carousel";
-import GradientBox from "../../components/common/gradientbox";
+import React, { useRef } from 'react';
+import { Box, Button, Chip, Container, IconButton, Stack, Typography } from '@mui/material';
+import Appbar from '../../components/Appbar';
+import Footer from '../../components/common/footer';
+import Spacer from '../../components/Spacer';
+import { Description, Heading } from '../../components/common/typography';
+import EmblaCarousel from '../../components/common/carousel';
+import GradientBox from '../../components/common/gradientbox';
 import { FiArrowRight, FiClock } from 'react-icons/fi';
-import events from "../../assets/data/events";
-import carousal from "../../assets/data/carousal";
+import events from '../../assets/data/events';
+import carousal from '../../assets/data/carousal';
 import { PopupButton } from '@typeform/embed-react';
-import talks from "../../assets/data/talks";
-import csr from "../../assets/data/csr";
-import workshops from "../../assets/data/workshops"
-import conflux from "../../assets/data/conflux"
-import CustomizedDialogs from "./CustomizedDialogs";
+import talks from '../../assets/data/talks';
+import csr from '../../assets/data/csr';
+import workshops from '../../assets/data/workshops';
+import conflux from '../../assets/data/conflux';
+import CustomizedDialogs from './CustomizedDialogs';
 import GradientText from '../../components/common/gradienttext';
+import { useEventData } from '../../hooks/useEvents';
 
 const HeadCarousel = () => {
+  const { data, isLoading } = useEventData();
   return (
-    <EmblaCarousel flex="0 0 100%"  gap="20px">
-      {events.map((_, index) => (
+    <EmblaCarousel flex="0 0 100%" gap="20px">
+      {/* {events.map((_, index) => (
         <HeadEvent event={_} />
+      ))} */}
+
+      {data.map((event, index) => (
+        <HeadEvent event={event} key={index} />
       ))}
+
     </EmblaCarousel>
   );
 };
@@ -39,18 +39,18 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
   const title = event.title;
   const des = event.description;
   const needRegister = event.needRegister;
-  const rule = event.rule
+  const rule = event.rule;
   return (
-    <GradientBox height='100%' color="white">
+    <GradientBox height="100%" color="white">
       <img
         style={{
-          display: "block",
-          position: "absolute",
-          height: "100%",
+          display: 'block',
+          position: 'absolute',
+          height: '100%',
           right: 0,
           bottom: 0,
           zIndex: -1,
-          opacity: 0.4
+          opacity: 0.4,
         }}
         src={background}
       />
@@ -58,17 +58,17 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
         {/* <Typography fontFamily="Lato" variant="body1" gutterBottom>
           {title}
         </Typography> */}
-        <Box sx={{width:{xs:'100%', md: '45%'}}}>
+        <Box sx={{ width: { xs: '100%', md: '45%' } }}>
           <Typography
             variant="h1"
             sx={{
               fontSize: {
-                xs: "48px",
-                md: "72px",
+                xs: '48px',
+                md: '72px',
               },
             }}
           >
-            {" "}
+            {' '}
             {title}
           </Typography>
           {/* <Typography fontWeight={700} variant="body1">
@@ -79,22 +79,24 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
           </Typography>
         </Box>
         <Stack direction="row" alignItems="center">
-            {needRegister && <Chip label='Registration will start soon' startIcon={<FiClock />}/>}
-            {/*<CustomizedDialogs title = {title} description={rule}/>*/}
-
+          {needRegister && <Chip label="Registration will start soon" startIcon={<FiClock />} />}
+          {/*<CustomizedDialogs title = {title} description={rule}/>*/}
         </Stack>
       </Container>
     </GradientBox>
   );
 };
 
-const Event = ({ name, description,img }) => {
+const Event = ({ name, description, img }) => {
+  const { data, isLoading } = useEventData();
+  console.log(data);
+
   return (
     <GradientBox
       height="200px"
       size="small"
       background="linear-gradient(135deg, #f7f7f7, #cfcfcf)"
-      img = {img}
+      img={img}
       action={true}
     >
       <Box>
@@ -108,12 +110,12 @@ const Event = ({ name, description,img }) => {
           lineHeight="1.2"
           gutterBottom
         >
-          <span style={{backgroundColor: 'rgba(233,255,50, 0.7)'}}>{name}</span>
+          <span style={{ backgroundColor: 'rgba(233,255,50, 0.7)' }}>{name}</span>
         </Typography>
         {/*<Description color="black">{description}</Description>*/}
 
-        <Box position="absolute" right={"25px"} bottom="15px">
-          <IconButton >
+        <Box position="absolute" right={'25px'} bottom="15px">
+          <IconButton>
             <FiArrowRight />
           </IconButton>
         </Box>
@@ -123,24 +125,31 @@ const Event = ({ name, description,img }) => {
 };
 
 const Events = () => {
+  const { data, isLoading } = useEventData();
   const rootRef = useRef();
+
+  if (isLoading || !data) {
+    return null;
+  }
+
   return (
-    <Box ref={rootRef} sx={{ backgroundColor: "black" }}>
+    <Box ref={rootRef} sx={{ backgroundColor: 'black' }}>
       <Appbar />
       <Container maxWidth="lg" color="white" sx={{ pt: 15 }}>
         <HeadCarousel />
         <Spacer size="md" />
-        <GradientText primary='Major' secondary='Events'/>
+        <GradientText primary="Major" secondary="Events" />
         <Spacer size="xs" />
         <EmblaCarousel gap="20px">
-        {events.map((_, index) => (
-
-          <Event name={`${_.title}`} description={`${_.description}`} img={`${_.image}`}  />
+          {data.map((_, index) => (
+            <Event name={`${_.title}`} description={`${_.description}`} img={`${_.image}`} />
           ))}
-
         </EmblaCarousel>
 
         <Spacer size="lg" />
+
+
+        
         {/*<Heading>Talks</Heading>*/}
         {/*<Spacer size="xs" />*/}
         {/*<EmblaCarousel gap="20px">*/}
@@ -219,8 +228,6 @@ const Events = () => {
         {/*</EmblaCarousel>*/}
         {/*<Spacer size="lg" />*/}
 
-
-
         {/* {carousal.map((hello, index) => (
           <>
                 <Heading>{hello.category}</Heading>
@@ -236,7 +243,6 @@ const Events = () => {
                 <Spacer size="lg" />
               </>
             ))}{" "} */}
-
       </Container>
       <Footer />
     </Box>
