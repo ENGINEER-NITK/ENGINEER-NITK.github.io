@@ -30,7 +30,7 @@ const Footer = () => {
               Email: engineernitkpublicity@gmail.com
             </Typography>
             <Typography variant="body2">
-              Phone: +91- 6392569224, 9742259067, 9632840501
+              Phone: +91-9096642803, 6200968914
             </Typography>
             <Typography variant="body2">
               Address: NITK, NH 66, Srinivasnagar, Surathkal Mangalore, Karnataka-
@@ -44,11 +44,6 @@ const Footer = () => {
                 <FiFacebook />
               </IconButton>
             </a>
-            {/*<a target="_blank" href="https://google.com">*/}
-            {/*  <IconButton color="inherit">*/}
-            {/*    <FiTwitter />*/}
-            {/*  </IconButton>*/}
-            {/*</a>*/}
 
             <a target="_blank" href="https://www.instagram.com/engineernitk/">
               <IconButton color="inherit">
@@ -66,11 +61,14 @@ const Footer = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6">Quick Links</Typography>
-            <Typography variant="body2">Home</Typography>
-            <Typography variant="body2">About Us</Typography>
-            <Typography variant="body2">Services</Typography>
-            <Typography variant="body2">Contact</Typography>
+          <Link to='/'><Typography variant="h6">Quick Links</Typography></Link>
+            <Typography variant="body2"><Link to='/'>Home</Link></Typography>
+            <Typography variant="body2"><Link to='/events'>Events</Link></Typography>
+            <Typography variant="body2"><Link to='/ambassador'>Ambassadors</Link></Typography>
+            <Typography variant="body2"><Link to='/brochure'>Brochure</Link></Typography>
+            <Typography variant="body2"><Link to='/accomodation'>Accomodation</Link></Typography>
+            <Typography variant="body2"><Link to='/about'>About Us</Link></Typography>
+            <Typography variant="body2"><Link to='/contact'>Contact</Link></Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6">Subscribe</Typography>
@@ -100,7 +98,7 @@ function SubscribeButton() {
         fontFamily: 'Lato'
       }}
     >
-      Subscribe
+      <a href="https://www.youtube.com/@engineernitk2K23" target="_blank">Subscribe</a>
     </Button>
   );
 }
