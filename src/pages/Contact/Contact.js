@@ -66,26 +66,26 @@ const Contact = () => {
           <GradientText primary="Contact Us" secondary="Reach out to us" />
           <Spacer size="xs" />
         </Box>
-
         <Grid
           container
-          spacing={2}
           // p={9}
           mb={10}
           sx={{
             border: '2px solid rgba(11, 255, 255, 0.7)',
             borderRadius: '10px',
+            backgroundColor: '#0e0e0e',
             padding: {
               xs: '20px',
             },
           }}
         >
-          <Grid item xs={12} md={6} pb={9} mb={10}>
+          <Grid item xs={12} md={6}>
+            {' '}
             {selectedOption === null ? (
               <Box mt={5} textAlign="left">
                 <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                  1. What is your query related to?
-                </Typography>
+                  1. What is your query related to ?
+                </Typography>{' '}
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <Button
                     variant="contained"
@@ -104,9 +104,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Our Team')}
                   >
-                    A. Our Team
+                    A.Our Team{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -123,9 +122,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Events')}
                   >
-                    B. Events
+                    B.Events{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -142,9 +140,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Lost and Found')}
                   >
-                    C. Lost and Found
+                    C.Lost and Found{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -161,9 +158,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Accomodation')}
                   >
-                    D. Accomodation
+                    D.Accomodation{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -180,18 +176,18 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Help Desk')}
                   >
-                    E. Help Desk
-                  </Button>
-                </Box>
+                    E.Help Desk{' '}
+                  </Button>{' '}
+                </Box>{' '}
               </Box>
             ) : selectedOption === 'Our Team' ? (
               <Box mt={5} textAlign="left">
-                {/* Render the "Our Team" form here */}
+                {' '}
+                {/* Render the "Our Team" form here */}{' '}
                 <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                  2. Which Team is your query related to?*
+                  2. Which Team is your query related to ? *
                 </Typography>
-
-                {/* Add the form fields for "Our Team" here */}
+                {/* Add the form fields for "Our Team" here */}{' '}
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <Button
                     variant="contained"
@@ -209,9 +205,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Convener')}
                   >
-                    A. Convener
+                    A.Convener{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -228,9 +223,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Co-Convener')}
                   >
-                    B. Co-Convener
+                    B.Co - Convener{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -247,9 +241,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Chief Coordinators')}
                   >
-                    C. Chief Coordinators
+                    C.Chief Coordinators{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -266,9 +259,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Marketing')}
                   >
-                    D. Marketing
+                    D.Marketing{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -285,9 +277,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Hospitality')}
                   >
-                    E. Hospitality
+                    E.Hospitality{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -304,9 +295,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Publicity & Outreach')}
                   >
-                    F. Publicity & Outreach
+                    F.Publicity & Outreach{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -325,18 +315,18 @@ const Contact = () => {
                     }}
                     onClick={() => handleGoBack(null)}
                   >
-                    Go Back
-                  </Button>
-                </Box>
+                    Go Back{' '}
+                  </Button>{' '}
+                </Box>{' '}
               </Box>
             ) : selectedOption === 'Events' ? (
               <Box mt={5} textAlign="left">
-                {/* Render the "Our Team" form here */}
+                {' '}
+                {/* Render the "Our Team" form here */}{' '}
                 <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                  2. Event Heads*
+                  2. Event Heads *
                 </Typography>
-
-                {/* Add the form fields for "Our Team" here */}
+                {/* Add the form fields for "Our Team" here */}{' '}
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <Button
                     variant="contained"
@@ -354,9 +344,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Tech Events Head')}
                   >
-                    A. Tech Events Head
+                    A.Tech Events Head{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -373,9 +362,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Mech Event Head')}
                   >
-                    B. Mech Event Head
+                    B.Mech Event Head{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -392,9 +380,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Pro Shows Head')}
                   >
-                    C. Pro Shows Head
+                    C.Pro Shows Head{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -411,9 +398,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Academic Events Head')}
                   >
-                    D. Acad Events Head
+                    D.Acad Events Head{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -432,9 +418,9 @@ const Contact = () => {
                     }}
                     onClick={() => handleGoBack(null)}
                   >
-                    Go Back
-                  </Button>
-                </Box>
+                    Go Back{' '}
+                  </Button>{' '}
+                </Box>{' '}
               </Box>
             ) : selectedOption === 'Lost and Found' ? (
               <Box mt={5} textAlign="left">
@@ -452,20 +438,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Hospitality Head
+                    Hospitality Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    AYUSH RAUNIAR
+                    AYUSH RAUNIAR{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 91294 89002
+                    +91 91294 89002{' '}
                   </Typography>
-
                   <a
                     href="mailto:ayushrauniyar.201ch014@nitk.edu.in"
                     target="_blank"
@@ -481,10 +464,10 @@ const Contact = () => {
                         },
                       }}
                     >
-                      ayushrauniyar.201ch014@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id
+                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -503,8 +486,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack(null)}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Accomodation' ? (
               <Box
@@ -523,15 +506,13 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Visit our website's accommodation section to register for accommodation and to
-                    know our accommodation policy and instructions
+                    Visit our website 's accommodation section to register for accommodation and to
+                    know our accommodation policy and instructions{' '}
                   </Typography>
-
                   <Typography variant="h7" sx={{ color: 'white', marginBottom: '15px' }}>
-                    or Contact our hospitality team
-                  </Typography>
+                    or Contact our hospitality team{' '}
+                  </Typography>{' '}
                 </Box>
-
                 <Box
                   mt={5}
                   sx={{
@@ -547,20 +528,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Hospitality Head
+                    Hospitality Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    AYUSH RAUNIAR
+                    AYUSH RAUNIAR{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 91294 89002
+                    +91 91294 89002{' '}
                   </Typography>
-
                   <a
                     href="mailto:ayushrauniyar.201ch014@nitk.edu.in"
                     target="_blank"
@@ -576,10 +554,10 @@ const Contact = () => {
                         },
                       }}
                     >
-                      ayushrauniyar.201ch014@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id
+                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -598,17 +576,17 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack(null)}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Help Desk' ? (
               <Box mt={5} textAlign="left">
-                {/* Render the "Our Team" form here */}
+                {' '}
+                {/* Render the "Our Team" form here */}{' '}
                 <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                  2. Chief Co-Ordinators*
+                  2. Chief Co - Ordinators *
                 </Typography>
-
-                {/* Add the form fields for "Our Team" here */}
+                {/* Add the form fields for "Our Team" here */}{' '}
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <Button
                     variant="contained"
@@ -626,9 +604,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Gaurav Yadav')}
                   >
-                    A. Gaurav Yadav
+                    A.Gaurav Yadav{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -645,9 +622,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Abhay Kumar')}
                   >
-                    B. Abhay Kumar
+                    B.Abhay Kumar{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -664,9 +640,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Omkar Chitupe')}
                   >
-                    C. Omkar Chitupe
+                    C.Omkar Chitupe{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -683,9 +658,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Aryan Rawate')}
                   >
-                    D. Aryan Rawate
+                    D.Aryan Rawate{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -702,9 +676,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Racheet Vatsa')}
                   >
-                    E. Racheet Vatsa
+                    E.Racheet Vatsa{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -723,9 +696,9 @@ const Contact = () => {
                     }}
                     onClick={() => handleGoBack(null)}
                   >
-                    Go Back
-                  </Button>
-                </Box>
+                    Go Back{' '}
+                  </Button>{' '}
+                </Box>{' '}
               </Box>
             ) : selectedOption === 'Convener' ? (
               <Box
@@ -750,20 +723,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    CONVENER
+                    CONVENER{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    ABHAY THORAT
+                    ABHAY THORAT{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 9096642803
+                    +91 9096642803{' '}
                   </Typography>
-
                   <a
                     href="mailto:engineerconvener@nitk.edu.in"
                     target="_blank"
@@ -779,9 +749,8 @@ const Contact = () => {
                         },
                       }}
                     >
-                      engineerconvener@nitk.edu.in
-                    </Typography>
-                  </a>
+                      Mail Id             </Typography>{' '}
+                  </a>{' '}
                   <a
                     href="mailto:abhaysthorat.201mt058@nitk.edu.in"
                     target="_blank"
@@ -797,10 +766,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      abhaysthorat.201mt058@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -819,8 +787,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Our Team')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Co-Convener' ? (
               <Box
@@ -845,20 +813,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    CO-CONVENER
+                    CO - CONVENER{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    SHASHANK RANJAN
+                    SHASHANK RANJAN{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 6200968914
+                    +91 6200968914{' '}
                   </Typography>
-
                   <a
                     href="mailto:shashankranjan.201me152nitk.edu.in"
                     target="_blank"
@@ -874,10 +839,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      shashankranjan.201me152nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -896,8 +860,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Our Team')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Chief Coordinators' ? (
               <Box
@@ -908,10 +872,9 @@ const Contact = () => {
                 }}
               >
                 <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                  3. Chief Co-Ordinators*
+                  3. Chief Co - Ordinators *
                 </Typography>
-
-                {/* Add the form fields for "Our Team" here */}
+                {/* Add the form fields for "Our Team" here */}{' '}
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <Button
                     variant="contained"
@@ -929,9 +892,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Gaurav Yadav')}
                   >
-                    A. Gaurav Yadav
+                    A.Gaurav Yadav{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -948,9 +910,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Abhay Kumar')}
                   >
-                    B. Abhay Kumar
+                    B.Abhay Kumar{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -967,9 +928,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Omkar Chitupe')}
                   >
-                    C. Omkar Chitupe
+                    C.Omkar Chitupe{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -986,9 +946,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Aryan Rawate')}
                   >
-                    D. Aryan Rawate
+                    D.Aryan Rawate{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -1005,9 +964,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('Racheet Vatsa')}
                   >
-                    E. Racheet Vatsa
+                    E.Racheet Vatsa{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -1026,9 +984,9 @@ const Contact = () => {
                     }}
                     onClick={() => handleGoBack('Our Team')}
                   >
-                    Go Back
-                  </Button>
-                </Box>
+                    Go Back{' '}
+                  </Button>{' '}
+                </Box>{' '}
               </Box>
             ) : selectedOption === 'Marketing' ? (
               <Box
@@ -1039,10 +997,9 @@ const Contact = () => {
                 }}
               >
                 <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                  3. Marketing Heads*
+                  3. Marketing Heads *
                 </Typography>
-
-                {/* Add the form fields for "Our Team" here */}
+                {/* Add the form fields for "Our Team" here */}{' '}
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <Button
                     variant="contained"
@@ -1060,9 +1017,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('ARYAMAN MUKHERJEE')}
                   >
-                    A. ARYAMAN MUKHERJEE
+                    A.ARYAMAN MUKHERJEE{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -1079,9 +1035,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('VAISHNOVI PANDITH')}
                   >
-                    B. VAISHNOVI PANDITH
+                    B.VAISHNOVI PANDITH{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -1100,9 +1055,9 @@ const Contact = () => {
                     }}
                     onClick={() => handleGoBack('Our Team')}
                   >
-                    Go Back
-                  </Button>
-                </Box>
+                    Go Back{' '}
+                  </Button>{' '}
+                </Box>{' '}
               </Box>
             ) : selectedOption === 'Hospitality' ? (
               <Box mt={5} textAlign="left">
@@ -1120,20 +1075,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Hospitality Head
+                    Hospitality Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    AYUSH RAUNIAR
+                    AYUSH RAUNIAR{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 91294 89002
+                    +91 91294 89002{' '}
                   </Typography>
-
                   <a
                     href="mailto:ayushrauniyar.201ch014@nitk.edu.in"
                     target="_blank"
@@ -1149,10 +1101,10 @@ const Contact = () => {
                         },
                       }}
                     >
-                      ayushrauniyar.201ch014@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id
+                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1171,8 +1123,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Our Team')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Publicity & Outreach' ? (
               <Box
@@ -1183,9 +1135,8 @@ const Contact = () => {
                 }}
               >
                 <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                  3. Pro Team*
+                  3. Pro Team *
                 </Typography>
-
                 <a
                   href="mailto:engineernitkpublicity@gmail.com"
                   target="_blank"
@@ -1201,11 +1152,9 @@ const Contact = () => {
                       },
                     }}
                   >
-                    engineernitkpublicity@gmail.com
-                  </Typography>
+                    Mail Id              </Typography>{' '}
                 </a>
-
-                {/* Add the form fields for "Our Team" here */}
+                {/* Add the form fields for "Our Team" here */}{' '}
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <Button
                     variant="contained"
@@ -1223,9 +1172,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('PRANAV V BAGAL')}
                   >
-                    A. PRANAV V BAGAL
+                    A.PRANAV V BAGAL{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -1242,9 +1190,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('SHUBHANKAR KATIYAR')}
                   >
-                    B. SHUBHANKAR KATIYAR
+                    B.SHUBHANKAR KATIYAR{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -1261,9 +1208,8 @@ const Contact = () => {
                     }}
                     onClick={() => handleQueryOptionClick('SUMUKHA S SHETTY')}
                   >
-                    C. SUMUKHA S SHETTY
+                    C.SUMUKHA S SHETTY{' '}
                   </Button>
-
                   <Button
                     variant="contained"
                     color="primary"
@@ -1282,9 +1228,9 @@ const Contact = () => {
                     }}
                     onClick={() => handleGoBack('Our Team')}
                   >
-                    Go Back
-                  </Button>
-                </Box>
+                    Go Back{' '}
+                  </Button>{' '}
+                </Box>{' '}
               </Box>
             ) : selectedOption === 'Tech Events Head' ? (
               <Box mt={5} textAlign="left">
@@ -1302,20 +1248,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Tech Events Head
+                    Tech Events Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    Tupe Aniket Ankush
+                    Tupe Aniket Ankush{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 82864 01789
+                    +91 82864 01789{' '}
                   </Typography>
-
                   <a
                     href="mailto:tupeaniket.201me160@nitk.edu.in"
                     target="_blank"
@@ -1331,10 +1274,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      tupeaniket.201me160@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id                  </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1353,8 +1295,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Events')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Mech Event Head' ? (
               <Box mt={5} textAlign="left">
@@ -1372,20 +1314,18 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Mech Events Head
+                    Mech Events Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    Amogh Nayak
+                    Amogh Nayak{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 90199 86824
-                  </Typography>
-                </Box>
+                    +91 90199 86824{' '}
+                  </Typography>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1404,8 +1344,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Events')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Pro Shows Head' ? (
               <Box mt={5} textAlign="left">
@@ -1423,20 +1363,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Pro Shows Head
+                    Pro Shows Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    Himan
+                    Himan{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 83089 88245
+                    +91 83089 88245{' '}
                   </Typography>
-
                   <a
                     href="mailto:himan.201me122@nitk.edu.in"
                     target="_blank"
@@ -1452,10 +1389,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      himan.201me122@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id             </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1474,8 +1410,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Events')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Academic Events Head' ? (
               <Box mt={5} textAlign="left">
@@ -1493,20 +1429,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Academic Events Head
+                    Academic Events Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    Tijin
+                    Tijin{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 97781 94887
+                    +91 97781 94887{' '}
                   </Typography>
-
                   <a
                     href="mailto:tijin.201cs262@nitk.edu.in"
                     target="_blank"
@@ -1522,10 +1455,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      tijin.201cs262@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id             </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1544,8 +1476,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Events')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Gaurav Yadav' ? (
               <Box mt={5} textAlign="left">
@@ -1563,20 +1495,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Chief Co-Ordinator
+                    Chief Co - Ordinator{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    GAURAV YADAV
+                    GAURAV YADAV{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 6397 362 215
+                    +91 6397 362 215{' '}
                   </Typography>
-
                   <a
                     href="mailto:gauravkumaryadav.201it219@nitk.edu.in"
                     target="_blank"
@@ -1592,10 +1521,10 @@ const Contact = () => {
                         },
                       }}
                     >
-                      gauravkumaryadav.201it219@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id
+                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1614,8 +1543,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Help Desk')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Abhay Kumar' ? (
               <Box mt={5} textAlign="left">
@@ -1633,20 +1562,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Chief Co-Ordinator
+                    Chief Co - Ordinator{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    ABHAY KUMAR
+                    ABHAY KUMAR{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 97984 99056
+                    +91 97984 99056{' '}
                   </Typography>
-
                   <a
                     href="mailto:abhaykumar.201mt001@nitk.edu.in"
                     target="_blank"
@@ -1662,10 +1588,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      abhaykumar.201mt001@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id                  </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1684,8 +1609,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Help Desk')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Omkar Chitupe' ? (
               <Box mt={5} textAlign="left">
@@ -1703,20 +1628,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Chief Co-Ordinator
+                    Chief Co - Ordinator{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    OMKAR CHITUPE
+                    OMKAR CHITUPE{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 73878 41725
+                    +91 73878 41725{' '}
                   </Typography>
-
                   <a
                     href="mailto:chitupeonkar.201cv214@nitk.edu.in"
                     target="_blank"
@@ -1732,10 +1654,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      chitupeonkar.201cv214@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1754,8 +1675,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Help Desk')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Aryan Rawate' ? (
               <Box mt={5} textAlign="left">
@@ -1773,20 +1694,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Chief Co-Ordinator
+                    Chief Co - Ordinator{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    Aryan Rawate
+                    Aryan Rawate{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 95293 19352
+                    +91 95293 19352{' '}
                   </Typography>
-
                   <a
                     href="mailto:rawatearyanbalaji.201me246@nitk.edu.in"
                     target="_blank"
@@ -1802,10 +1720,10 @@ const Contact = () => {
                         },
                       }}
                     >
-                      rawatearyanbalaji.201me246@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id
+                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1824,8 +1742,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Help Desk')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'Racheet Vatsa' ? (
               <Box mt={5} textAlign="left">
@@ -1843,20 +1761,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Chief Co-Ordinator
+                    Chief Co - Ordinator{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    Racheet Vatsa
+                    Racheet Vatsa{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 6397 362 215
+                    +91 6397 362 215{' '}
                   </Typography>
-
                   <a
                     href="mailto:racheetvatsa.201ec251@nitk.edu.in"
                     target="_blank"
@@ -1872,10 +1787,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      racheetvatsa.201ec251@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1894,8 +1808,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Help Desk')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'ARYAMAN MUKHERJEE' ? (
               <Box mt={5} textAlign="left">
@@ -1913,20 +1827,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Marketing Head
+                    Marketing Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    ARYAMAN MUKHERJEE
+                    ARYAMAN MUKHERJEE{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 73496 41986
+                    +91 73496 41986{' '}
                   </Typography>
-
                   <a
                     href="mailto:aryaman.201mt009@nitk.edu.in"
                     target="_blank"
@@ -1942,10 +1853,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      aryaman.201mt009@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id               </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -1964,8 +1874,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Marketing')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'VAISHNOVI PANDITH' ? (
               <Box mt={5} textAlign="left">
@@ -1983,20 +1893,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Marketing Head
+                    Marketing Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    VAISHNOVI PANDITH
+                    VAISHNOVI PANDITH{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 97397 03000
+                    +91 97397 03000{' '}
                   </Typography>
-
                   <a
                     href="mailto:vaishnovipandith.201mn062@nitk.edu.in"
                     target="_blank"
@@ -2012,10 +1919,10 @@ const Contact = () => {
                         },
                       }}
                     >
-                      vaishnovipandith.201mn062@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id
+                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -2034,8 +1941,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Marketing')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'PRANAV V BAGAL' ? (
               <Box mt={5} textAlign="left">
@@ -2053,20 +1960,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Publicity Head
+                    Publicity Head{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    PRANAV V BAGAL
+                    PRANAV V BAGAL{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 97422 59067
+                    +91 97422 59067{' '}
                   </Typography>
-
                   <a
                     href="mailto:pranavbagal.201mt037@nitk.edu.in"
                     target="_blank"
@@ -2082,10 +1986,9 @@ const Contact = () => {
                         },
                       }}
                     >
-                      pranavbagal.201mt037@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id                   </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -2104,8 +2007,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Publicity & Outreach')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'SHUBHANKAR KATIYAR' ? (
               <Box mt={5} textAlign="left">
@@ -2123,20 +2026,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Publicity Executive
+                    Publicity Executive{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    SHUBHANKAR KATIYAR
+                    SHUBHANKAR KATIYAR{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 6392 569 224
+                    +91 6392 569 224{' '}
                   </Typography>
-
                   <a
                     href="mailto:shubhankarkatiyar.221ee153@nitk.edu.in"
                     target="_blank"
@@ -2152,10 +2052,10 @@ const Contact = () => {
                         },
                       }}
                     >
-                      shubhankarkatiyar.221ee153@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id
+                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -2174,8 +2074,8 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Publicity & Outreach')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
             ) : selectedOption === 'SUMUKHA S SHETTY' ? (
               <Box mt={5} textAlign="left">
@@ -2193,20 +2093,17 @@ const Contact = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: '#c8f704', marginBottom: '10px' }}>
-                    Publicity Executive
+                    Publicity Executive{' '}
                   </Typography>
-
                   <Typography variant="h5" sx={{ color: '#c8f704', marginBottom: '5px' }}>
-                    SUMUKHA S SHETTY
+                    SUMUKHA S SHETTY{' '}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ color: 'rgba(11, 255, 255, 0.7)', marginBottom: '15px' }}
                   >
-                    +91 96328 40501
+                    +91 96328 40501{' '}
                   </Typography>
-
                   <a
                     href="mailto:sumukhasshetty.221ee155@nitk.edu.in"
                     target="_blank"
@@ -2222,10 +2119,10 @@ const Contact = () => {
                         },
                       }}
                     >
-                      sumukhasshetty.221ee155@nitk.edu.in
-                    </Typography>
-                  </a>
-                </Box>
+                      Mail Id
+                    </Typography>{' '}
+                  </a>{' '}
+                </Box>{' '}
                 <Button
                   variant="contained"
                   color="primary"
@@ -2244,14 +2141,14 @@ const Contact = () => {
                   }}
                   onClick={() => handleGoBack('Publicity & Outreach')}
                 >
-                  Go Back
-                </Button>
+                  Go Back{' '}
+                </Button>{' '}
               </Box>
-            ) : null}
+            ) : null}{' '}
           </Grid>
-
           <Grid item xs={12} md={6}>
-            {/* Right side image */}
+            {' '}
+            {/* Right side image */}{' '}
             <Box
               mt={0}
               textAlign="center"
@@ -2266,11 +2163,11 @@ const Contact = () => {
                   width: '100%',
                   height: 'auto',
                 }}
-              />
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
+              />{' '}
+            </Box>{' '}
+          </Grid>{' '}
+        </Grid>{' '}
+      </Container>{' '}
       <Footer />
     </Box>
   );
