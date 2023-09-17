@@ -70,12 +70,6 @@ const CTA = () => {
         >
           <GradientText primary="Glimpses" secondary="of Events." />
           <Spacer size="sm" />
-          <Description  fontWeight={700}>
-            Discover your business's untapped potential in just 30 minutes! Our
-            call will unveil growth opportunities, address challenges, and craft
-            a tailored strategy for success.{" "}
-          </Description>
-          <Spacer size="sm" />
 
         </Box>
         <Marquee>

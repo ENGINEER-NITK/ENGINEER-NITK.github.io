@@ -63,7 +63,7 @@ const About = () => {
       scrollTrigger: {
         trigger: ".trigger",
         start: "top top",
-        end: "+=2000",
+        end: "+=300",//this was 2000 intially, changed to get it right for 1 card
         pin: ".trigger",
         pinSpacing: true,
         scrub: 1,
@@ -94,16 +94,6 @@ const About = () => {
           <Box   ref={eventsRef}>
             <Box sx={{height: '100vh'}}>
               <PairOfEvents />
-              <PairOfEvents />
-              <PairOfEvents />
-              <PairOfEvents />
-              <PairOfEvents />
-              <PairOfEvents />
-              <PairOfEvents />
-              <PairOfEvents />
-              <PairOfEvents />
-            <PairOfEvents />
-            <PairOfEvents />
             </Box>
           </Box>
         </Grid>
@@ -124,13 +114,13 @@ const About = () => {
 
 const PairOfEvents = () => {
   return (
-    <Box my={1}>
+    <Box my={1} mt={15}>
     <Stack direction="column" >
-      <GradientBox img={Iphone12}>
+      <GradientBox img="https://res.cloudinary.com/det9aw4gh/image/upload/v1694977732/FlashMob.jpg">
         <BoxContent
           width="65%"
-          title="DAY WISE EVENTS"
-          description="WILL BE RELEASED WITH THE SCHEDULE"
+          title="Flash Mob"
+          description="Date: 19th October 2023"
         />
       </GradientBox>
     </Stack>
