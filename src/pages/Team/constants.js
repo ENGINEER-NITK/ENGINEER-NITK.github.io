@@ -43,7 +43,7 @@ export const People = [{
         imageUrl: hritik,
         description: 'Web Developer',
         position: 'WEB TEAM',
-        linkedinUrl: 'https://www.linkedin.com/in/'
+        linkedinUrl: 'http://www.linkedin.com/in/hritik-sarraf-333099250'
     },
 
     {
@@ -51,7 +51,7 @@ export const People = [{
         imageUrl: shashank,
         description: 'Imposter',
         position: 'WEB TEAM',
-        linkedinUrl: 'https://www.linkedin.com/in/'
+        linkedinUrl: 'https://www.linkedin.com/in/s9r'
     },
 ];
 
