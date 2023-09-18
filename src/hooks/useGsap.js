@@ -2,9 +2,11 @@ import { useEffect } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Flip } from "gsap/Flip";
 
 function useGsap(context, callback) {
   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(Flip)
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
