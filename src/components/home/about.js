@@ -63,7 +63,7 @@ const About = () => {
       scrollTrigger: {
         trigger: ".trigger",
         start: "top top",
-        end: "+=300",//this was 2000 intially, changed to get it right for 1 card
+        end: "+=500",//this was 2000 intially, changed to get it right for 1 card
         pin: ".trigger",
         pinSpacing: true,
         scrub: 1,
@@ -90,10 +90,12 @@ const About = () => {
       <Spacer size="sm" />
       <Box className='trigger'>
       <Grid container spacing={1.5}>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={14} md={5}>
           <Box   ref={eventsRef}>
             <Box sx={{height: '100vh'}}>
-              <PairOfEvents />
+              <PairOfEvents key = {true} />
+              <DummyPairOfEvents />
+              <DummyPairOfEvents />
             </Box>
           </Box>
         </Grid>
@@ -103,7 +105,7 @@ const About = () => {
               borderRadius: '18px',
               boxShadow: '0px 0px 15px rgba(0,0,0,0.2)', // optional shadow for a bit of depth
               border: '1px solid #ccc' // a light border
-            }} src="https://map.proxi.co/r/KDTnimhlng4EEBF2uY71" allow="geolocation; clipboard-write"  width="100%" height="100%"  allowFullScreen></iframe>
+            }} src="https://map.proxi.co/r/2HgoqtF9Ep_1pZvrvUW7" allow="geolocation; clipboard-write"  width="100%" height="100%"  allowFullScreen></iframe>
           </GradientBox>
         </Grid>
       </Grid>
@@ -112,15 +114,32 @@ const About = () => {
   );
 };
 
-const PairOfEvents = () => {
+const PairOfEvents = (key) => {
   return (
-    <Box my={1} mt={15}>
+    <Box my={1}>
     <Stack direction="column" >
       <GradientBox img="https://res.cloudinary.com/det9aw4gh/image/upload/v1694977732/FlashMob.jpg">
-        <BoxContent
+        <BoxContent key={key}
           width="65%"
           title="Flash Mob"
           description="Date: 19th October 2023"
+          description2="Venue: CIDS 3.45 PM Onwards"
+          />
+      </GradientBox>
+    </Stack>
+    </Box>
+  )
+}
+const DummyPairOfEvents = () => {
+  return (
+    <Box my={1}>
+    <Stack direction="column" >
+      <GradientBox img="">
+        <BoxContent
+          width="65%"
+          title="Comming Sooon"
+          description="SCHEDULE FOR ALL EVENTS WILL BE UPDATED SOON"
+          key={false}
         />
       </GradientBox>
     </Stack>
