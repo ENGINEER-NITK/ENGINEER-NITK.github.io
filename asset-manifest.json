@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.565a47d4.css",
-    "main.js": "/static/js/main.64f0605b.js",
+    "main.js": "/static/js/main.dfb674aa.js",
     "static/js/787.0d4f6fcd.chunk.js": "/static/js/787.0d4f6fcd.chunk.js",
     "static/media/video.mp4": "/static/media/video.b6fe4784d622c63d06a2.mp4",
     "static/media/magic.JPG": "/static/media/magic.7f4c07d09424231dc2f2.JPG",
@@ -63,12 +63,12 @@
     "static/media/contactBG.jpg": "/static/media/contactBG.28eb273d99b76080ddd0.jpg",
     "static/media/Layx.gif": "/static/media/Layx.e529feab4444822bf20a.gif",
     "static/media/anas.jpg": "/static/media/anas.7dea3487a35b3f1b1e44.jpg",
-    "static/media/Dayflow Party Time.svg": "/static/media/Dayflow Party Time.9978c95a9dfe3bc524dc0ee09a44363e.svg",
-    "static/media/Dayflow Park Life.svg": "/static/media/Dayflow Park Life.c53be7e40bb3461dd1dc7e76909d4904.svg",
-    "static/media/Dayflow Work from Home.svg": "/static/media/Dayflow Work from Home.3916dc3d05648e4a7c880d9d9120e9a4.svg",
+    "static/media/Dayflow Party Time.svg": "/static/media/Dayflow Party Time.1370d7b991aecb04e8e2611080b08156.svg",
+    "static/media/Dayflow Park Life.svg": "/static/media/Dayflow Park Life.a1e93cf947511b79e2b29c39c5f3f284.svg",
+    "static/media/Dayflow Work from Home.svg": "/static/media/Dayflow Work from Home.9bb6cd145eaea1ac2f90dee7ed3f02a4.svg",
     "static/media/16.png": "/static/media/16.2320edf2517ab7fdcda7.png",
     "static/media/hritik.jpg": "/static/media/hritik.16327c6f286ce9310d26.jpg",
-    "static/media/Pattern-12.svg": "/static/media/Pattern-12.e8b2050916006b7dd86c5169ffa1a420.svg",
+    "static/media/Pattern-12.svg": "/static/media/Pattern-12.9e690cb4212910ce4d835463fcad7d8c.svg",
     "static/media/shashank.png": "/static/media/shashank.1dd482ffc24adc4ff874.png",
     "static/media/mardav.jpg": "/static/media/mardav.948a89a436d4ec0dca9f.jpg",
     "static/media/DeliriumNcv-Vm5e.ttf": "/static/media/DeliriumNcv-Vm5e.a96138c95cc032e8ba64.ttf",
@@ -77,18 +77,18 @@
     "static/media/logo.png": "/static/media/logo.c3f810a6a7b8f4567a9d.png",
     "static/media/shadab.jpg": "/static/media/shadab.337e8bb57259b4e2a29f.jpg",
     "static/media/abhay.jpeg": "/static/media/abhay.fb00bbff29a8e6a8e2e7.jpeg",
-    "static/media/morph.svg": "/static/media/morph.555225e7e76c51ecdfc7694b290745ec.svg",
+    "static/media/morph.svg": "/static/media/morph.2d6e832e158c61332abbaa9c0aed41c1.svg",
     "static/media/bg-brochure.jpg": "/static/media/bg-brochure.b025a06660bef0d51ed3.jpg",
-    "static/media/logo_mascot.svg": "/static/media/logo_mascot.17c9fab7902f9253d08430d2a45b877b.svg",
-    "static/media/logo_text.svg": "/static/media/logo_text.742b6979d230bb0efa7a212a206309ce.svg",
+    "static/media/logo_mascot.svg": "/static/media/logo_mascot.e17f3a5a11e9a3545587086ad01bdfaa.svg",
+    "static/media/logo_text.svg": "/static/media/logo_text.8997b5a4e2ba235789115587c20c7217.svg",
     "index.html": "/index.html",
-    "static/media/spiral.svg": "/static/media/spiral.26a259b9d6381b5dd045f07012b96524.svg",
+    "static/media/spiral.svg": "/static/media/spiral.b31ac6ecb15268b3667ba9f423a0fbc4.svg",
     "main.565a47d4.css.map": "/static/css/main.565a47d4.css.map",
-    "main.64f0605b.js.map": "/static/js/main.64f0605b.js.map",
+    "main.dfb674aa.js.map": "/static/js/main.dfb674aa.js.map",
     "787.0d4f6fcd.chunk.js.map": "/static/js/787.0d4f6fcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.565a47d4.css",
-    "static/js/main.64f0605b.js"
+    "static/js/main.dfb674aa.js"
   ]
 }
