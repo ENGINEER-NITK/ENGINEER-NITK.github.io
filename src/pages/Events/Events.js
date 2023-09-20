@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState,useEffect } from 'react';
 import { Box, Button, Chip, Container, IconButton, Stack, Typography } from '@mui/material';
 import Appbar from '../../components/Appbar';
 import Footer from '../../components/common/footer';
@@ -89,7 +89,8 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
 
 const Event = ({ name, description, img }) => {
   const { data, isLoading } = useEventData();
-  console.log(data);
+  // console.log(data);
+
 
   return (
     <GradientBox
@@ -125,8 +126,36 @@ const Event = ({ name, description, img }) => {
 };
 
 const Events = () => {
-  const { data, isLoading } = useEventData();
+  const { isLoading } = useEventData();
   const rootRef = useRef();
+  const [data, setData] = useState({});
+  const binId = '650b2bb0205af66dd4a23cb4';
+  const apiKey = '$2a$10$ALWgRdFMPxMOF8WhLWbVmuC1Q.mfj6P/O1CvmwCXLT9LRC4HM6Woq';
+  // const { data, isLoading } = useEventData();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
+          headers: {
+            'X-Master-Key': apiKey,
+          },
+        });
+
+        if (response.ok) {
+          const jsonData = await response.json();
+          setData(jsonData.record.events);
+          console.log(data)
+          // console.log(data.record.events)
+        } else {
+          console.error(`Failed to fetch data. Status code: ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  },[]);
 
   if (isLoading || !data) {
     return null;
