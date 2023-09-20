@@ -2,9 +2,9 @@ import { useQuery } from "react-query";
 import axios from "axios";
 
 const fetchEventsData = async() => {
-    const JSONBIN_URL = "https://api.jsonbin.io/v3/b/6505e5a9d972192679c4fac3"; // replace YOUR_BIN_ID with your bin's ID
+    const JSONBIN_URL = "https://api.jsonbin.io/v3/b/650ac7aaadb5f56d8f18525b"; // replace YOUR_BIN_ID with your bin's ID
     const JSONBIN_SECRET_KEY =
-        "$2b$10$Nd1poh1Gk4ivUHb1UR7fWuJUH760qVFblohLdmVVFyqGxUGtQ0IUG"; // replace with your secret key from JSONBin
+        "$2a$10$ALWgRdFMPxMOF8WhLWbVmuC1Q.mfj6P/O1CvmwCXLT9LRC4HM6Woq"; // replace with your secret key from JSONBin
 
     const headers = {
         "secret-key": JSONBIN_SECRET_KEY,
