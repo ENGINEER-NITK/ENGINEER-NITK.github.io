@@ -11,6 +11,17 @@ import { FiBell, FiFacebook, FiInstagram, FiLinkedin, FiTwitter } from 'react-ic
 import { Link } from "react-router-dom";
 import { red } from '@mui/material/colors';
 
+const linksData = [
+  { to: '/', text: 'Home' },
+  { to: '/ambassador', text: 'Ambassadors' },
+  { to: '/events', text: 'Events' },
+  { to: '/brochure', text: 'Brochure' },
+  { to: '/accommodation', text: 'Accommodation' },
+  { to: '/about', text: 'About Us' },
+  { to: '/contact', text: 'Contact' },
+  { to: '/team', text: 'Team' },
+];
+
 const Footer = () => {
   const theme = useTheme();
 
@@ -61,14 +72,12 @@ const Footer = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-          <Link to='/'><Typography variant="h6">Quick Links</Typography></Link>
-            <Typography variant="body2"><Link to='/'>Home</Link></Typography>
-            <Typography variant="body2"><Link to='/events'>Events</Link></Typography>
-            <Typography variant="body2"><Link to='/ambassador'>Ambassadors</Link></Typography>
-            <Typography variant="body2"><Link to='/brochure'>Brochure</Link></Typography>
-            <Typography variant="body2"><Link to='/accomodation'>Accomodation</Link></Typography>
-            <Typography variant="body2"><Link to='/about'>About Us</Link></Typography>
-            <Typography variant="body2"><Link to='/contact'>Contact</Link></Typography>
+          <Typography variant="h6">Quick Links</Typography>
+          {linksData.map((link, index) => (
+            <Typography key={index} variant={'body2'}>
+              <Link to={link.to}>{link.text}</Link>
+            </Typography>
+          ))}
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6">Subscribe</Typography>

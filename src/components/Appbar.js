@@ -25,12 +25,9 @@ import { Link } from "react-router-dom";
 
 let navLinks = [
   { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
+  { title: "Ambassadors", path: "/ambassador" },
   { title: "Events", path: "/events" },
   { title: "Brochure", path: "/brochure" },
-  { title: "Gallery", path: "/gallery" },
-  { title: "Engi Care", path: "/engi-care" },
-  { title: "Alumni Connect", path: "/alumni-connect" },
   { title: "Accommodation", path: "/accomodation" },
   { title: "Contact", path: "/contact" },
   { title: "Team", path: '/team'}
@@ -39,7 +36,6 @@ let navLinks = [
 let mainLinks = [
   { title: "Home", path: "/" },
   { title: "Ambassadors", path: "/ambassador" },
-
   { title: "Events", path: "/events" },
   { title: "Brochure", path: "/brochure" },
   { title: "Accommodation", path: "/accomodation" },
