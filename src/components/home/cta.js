@@ -27,7 +27,7 @@ const CTA = () => {
     timeline.from(".intro-section", {
       y: 100,
       opacity: 0,
-      duration: 0.5,
+      duration: 1,
     });
 
     timeline.to(".intro-section .description", {
@@ -90,7 +90,7 @@ const CTA = () => {
         <Spacer size="sm" />
 
         {/* {isLoading2 ? (<p>Loading</p>) : (<> */}
-          <Marquee>
+          <Marquee direction="right">
             <Stack direction="row" spacing={5}>
             {imageGallery2.map((val, index) => (
               <PhotoComponent key={index} imageUrl={val.url} />
