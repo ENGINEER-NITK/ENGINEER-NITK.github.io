@@ -15,10 +15,8 @@ import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
 import { wrapWordsWithSpan } from "../../components/home/hero";
 import imageGallery from "../../assets/data/gallery";
+import { Masonry } from '@mui/lab';
 
-const Hero = () => {
-  return <p>a</p>;
-};
 const Gallery = () => {
   const rootRef = useRef();
   const theme = useTheme();
@@ -30,19 +28,20 @@ const Gallery = () => {
       scrollTrigger: {
         trigger: ".box",
         scrub: true,
+        start: 'top 10%'
       },
     });
     timeline.fromTo(
       ".box",
       {
-        y: 0,
+        y: 100,
         opacity: 0,
       },
       {
         opacity: 1,
-        stagger: 0.2,
-        y: isMobile ? -600 : -700,
-        scrub: 2,
+        stagger: 0.8,
+        y: 0,
+        scrub: 0.5,
       }
     );
 
@@ -82,10 +81,9 @@ const Gallery = () => {
             )}
           </Typography>
         </Box>
-        <Grid container>
+        <Masonry columns={3} spacing={{ xs: 1, sm: 2, md: 3 }}>
           {imageGallery.map((_, index) => (
-            <Grid item md={4} xs={12}>
-              <Box className="box" height="500px">
+              <Box key={index} className="box" >
                 <img
                   src={`${_.url}`}
                   alt={`${_.caption}`}
@@ -93,11 +91,12 @@ const Gallery = () => {
                     objectFit: "cover",
                   }}
                   width={"100%"}
+                  loading='lazy'
                 />
               </Box>
-            </Grid>
           ))}
-        </Grid>
+        </Masonry>
+
       </Container>
       <Footer />
     </Box>

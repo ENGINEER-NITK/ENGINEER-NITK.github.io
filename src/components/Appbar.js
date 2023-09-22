@@ -3,15 +3,15 @@ import {
   AppBar,
   Box,
   Button,
-  Container,
-  IconButton,
+  Container, Dialog,
+  IconButton, List, ListItem, ListItemText,
   Menu,
   MenuItem,
-  Slide,
+  Slide, Stack,
   Toolbar,
   Typography,
   useTheme,
-} from "@mui/material";
+} from '@mui/material';
 import {
   AiFillGithub,
   AiFillTwitterCircle,
@@ -20,8 +20,10 @@ import {
 } from "react-icons/ai";
 import LogoMascot from "../assets/svg/logo_mascot.svg";
 import useGsap from "../hooks/useGsap";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from "react-router-dom";
+import GradientText from './common/gradienttext';
+import Spacer from './Spacer';
 
 let navLinks = [
   { title: "Home", path: "/" },
@@ -82,31 +84,8 @@ const Appbar = ({ isGuest = false }) => {
                 </div>
               </Box>{" "}
             </Box>{" "}
-            <Box
-              sx={{
-                display: {
-                  md: "flex",
-                  xs: "none",
-                },
-                alignItems: "center",
-                color: "white",
-                gap: 3,
-              }}
-            >
-              {mainLinks.map((link, index) => (
-                <Link to={link.path}>
-                  <Typography
-                    className="action"
-                    fontWeight={600}
-                    key={index}
-                    variant="body1"
-                  >
-                    {link.title}{" "}
-                  </Typography>{" "}
-                </Link>
-              ))}{" "}
-            </Box>{" "}
-            <AppMenu />
+
+            <FullscreenNav />
           </Toolbar>{" "}
         </Container>{" "}
       </AppBar>
@@ -174,5 +153,87 @@ const AppMenu = () => {
     </Box>
   );
 };
+
+const FullscreenNav = () => {
+  const [open, setOpen] = useState(false);
+
+  const mainLinks = [
+    { title: "Home", path: "/" },
+    { title: "Ambassadors", path: "/ambassador" },
+    { title: "Events", path: "/events" },
+    { title: "Brochure", path: "/brochure" },
+    { title: "Accommodation", path: "/accomodation" },
+    { title: "Contact", path: "/contact" },
+    { title: "Team", path: '/team'}
+  ];
+
+  const handleClick = () => {
+    setOpen(open => !open)
+  }
+
+  return (
+    <div>
+      <IconButton onClick={handleClick}>
+        <FiMenu />
+      </IconButton>
+
+    <Dialog open={open} fullScreen>
+      <Box sx={{
+        backgroundColor: 'black'
+      }}>
+        <Spacer size='md'/>
+        <Container maxWidth='md'>
+          <Box minHeight='100vh'>
+            <Stack alignItems='center' direction='row' justifyContent='space-between'>
+              <GradientText primary='Navigation' secondary='Menu'/>
+              <IconButton
+                edge="end"
+                color="inherit"
+                onClick={handleClick}
+                sx={{
+                  display: {
+                    xs: 'none',
+                    md: 'block'
+                  }
+                }}
+              >
+                <FiX />
+              </IconButton>
+            </Stack>
+
+            <List>
+              {mainLinks.map((link) => (
+                <Link to={link.path}>
+                  <ListItem button key={link.title} onClick={() => { /* Navigate to the path */ }}>
+                    <ListItemText primary={link.title} />
+                  </ListItem>
+                </Link>
+              ))}
+            </List>
+          </Box>
+          <IconButton
+            edge="end"
+            color="inherit"
+            onClick={handleClick}
+            sx={{
+              display: {
+                md: 'none',
+                xs: 'block'
+              },
+              position: 'fixed',
+              bottom: 20,
+              left: '50%',
+              transform: 'translateX(-50%)'
+            }}
+          >
+            <FiX />
+          </IconButton>
+        </Container>
+
+      </Box>
+    </Dialog>
+    </div>
+  );
+}
 
 export default Appbar;

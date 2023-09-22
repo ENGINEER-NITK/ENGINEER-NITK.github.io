@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, IconButton, Avatar } from '@mui/material';
-import { Link as LinkIcon, LinkedIn as LinkedInIcon } from '@mui/icons-material';
+import { FiLink, FiLinkedin } from 'react-icons/fi';
 
 const SponsorCard = ({ logo, name, website, linkedin }) => {
   return (
@@ -36,7 +36,7 @@ const SponsorCard = ({ logo, name, website, linkedin }) => {
           aria-label="website"
           sx={{ backgroundColor: 'rgba(0, 112, 210, 0.1)', '&:hover': { backgroundColor: 'rgba(0, 112, 210, 0.2)' } }}
         >
-          <LinkIcon />
+          <FiLink />
         </IconButton>
         <IconButton
           color="primary"
@@ -46,7 +46,7 @@ const SponsorCard = ({ logo, name, website, linkedin }) => {
           aria-label="linkedin"
           sx={{ backgroundColor: 'rgba(0, 112, 210, 0.1)', '&:hover': { backgroundColor: 'rgba(0, 112, 210, 0.2)' } }}
         >
-          <LinkedInIcon />
+          <FiLinkedin />
         </IconButton>
       </Box>
     </Box>

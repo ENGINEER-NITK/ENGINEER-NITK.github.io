@@ -1,5 +1,5 @@
 import React, { useRef,useState,useEffect } from 'react';
-import { Box, Button, Chip, Container, IconButton, Stack, Typography } from '@mui/material';
+import { Box, Button, Chip, Container, IconButton, Skeleton, Stack, Typography } from '@mui/material';
 import Appbar from '../../components/Appbar';
 import Footer from '../../components/common/footer';
 import Spacer from '../../components/Spacer';
@@ -21,7 +21,7 @@ import { useEventData } from '../../hooks/useEvents';
 const HeadCarousel = () => {
   const { data, isLoading } = useEventData();
   return (
-    <EmblaCarousel flex="0 0 100%" gap="20px">
+    isLoading ? <Skeleton height='450px' />  :  <EmblaCarousel flex="0 0 100%" gap="20px">
       {/* {events.map((_, index) => (
         <HeadEvent event={_} />
       ))} */}
@@ -126,12 +126,11 @@ const Event = ({ name, description, img }) => {
 };
 
 const Events = () => {
-  const { isLoading } = useEventData();
+  const { isLoading, isSuccess } = useEventData();
   const rootRef = useRef();
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const binId = '650b2bb0205af66dd4a23cb4';
   const apiKey = '$2a$10$ALWgRdFMPxMOF8WhLWbVmuC1Q.mfj6P/O1CvmwCXLT9LRC4HM6Woq';
-  // const { data, isLoading } = useEventData();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -140,6 +139,7 @@ const Events = () => {
             'X-Master-Key': apiKey,
           },
         });
+
 
         if (response.ok) {
           const jsonData = await response.json();
@@ -157,10 +157,6 @@ const Events = () => {
     fetchData();
   },[]);
 
-  if (isLoading || !data) {
-    return null;
-  }
-
   return (
     <Box ref={rootRef} sx={{ backgroundColor: 'black' }}>
       <Appbar />
@@ -169,16 +165,18 @@ const Events = () => {
         <Spacer size="md" />
         <GradientText primary="Major" secondary="Events" />
         <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          {data.map((_, index) => (
-            <Event name={`${_.title}`} description={`${_.description}`} img={`${_.image}`} />
-          ))}
-        </EmblaCarousel>
+        {
+          isLoading ?  <Skeleton width='100%' height='200px'/>  :     <EmblaCarousel gap="20px">
+            {data.map((_, index) => (
+              <Event name={`${_.title}`} description={`${_.description}`} img={`${_.image}`} />
+            ))}
+          </EmblaCarousel>
 
+        }
         <Spacer size="lg" />
 
 
-        
+
         {/*<Heading>Talks</Heading>*/}
         {/*<Spacer size="xs" />*/}
         {/*<EmblaCarousel gap="20px">*/}

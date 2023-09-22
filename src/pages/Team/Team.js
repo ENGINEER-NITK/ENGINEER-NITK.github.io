@@ -16,7 +16,6 @@ import {
   Select,
   MenuItem,
 } from '@mui/material';
-import { LinkedIn, GitHub } from '@mui/icons-material';
 import Appbar from '../../components/Appbar';
 import GradientText from '../../components/common/gradienttext';
 import Spacer from '../../components/Spacer';
@@ -24,6 +23,7 @@ import Typeform from '../../components/Typeform';
 import Footer from '../../components/common/footer';
 import { el, tr } from 'date-fns/locale';
 import { People, Category } from './constants';
+import { FiLinkedin } from 'react-icons/fi';
 
 const DynamicInfo = ({ selectedCategory }) => {
   const filteredPeople = People.filter((person) => person.position === selectedCategory);
@@ -78,19 +78,19 @@ const DynamicInfo = ({ selectedCategory }) => {
                     // },
                     marginRight: '10px',
                     transition: 'color 0.3s',
-                    
+
 
                     '&:focus': {
-                      outline: 'none', 
+                      outline: 'none',
                     },
                   }}
                   component={Link}
                   href={person.linkedinUrl}
                   target="_blank"
                 >
-                  <LinkedIn />
+                  <FiLinkedin />
                 </IconButton>
-                
+
               </div>
             </CardContent>
           </Card>
