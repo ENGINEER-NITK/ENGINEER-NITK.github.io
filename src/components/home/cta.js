@@ -8,11 +8,10 @@ import Spacer from "../Spacer";
 import { Description } from "../common/typography";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
-import image from "../../assets/png/iPhone 12 _ 12 Pro.png";
 import Marquee from "react-fast-marquee";
 import {imageGallery1} from "../../assets/data/homeCTA";
 import {imageGallery2} from "../../assets/data/homeCTA";
-
+// import { useGlimpsesData1, useGlimpsesData2 } from "../../hooks/useQuery";
 
 const CTA = () => {
   const rootRef = useRef();
@@ -28,7 +27,7 @@ const CTA = () => {
     timeline.from(".intro-section", {
       y: 100,
       opacity: 0,
-      duration: 0.5,
+      duration: 1,
     });
 
     timeline.to(".intro-section .description", {
@@ -43,6 +42,12 @@ const CTA = () => {
       stagger: 0.1,
     });
   });
+
+  // const { isLoading1, data1 } = useGlimpsesData1();
+  // const { isLoading2, data2 } = useGlimpsesData2();
+
+  // console.log("data1", data1);
+  // console.log("data2", data2);
 
   return (
     <Box
@@ -72,23 +77,27 @@ const CTA = () => {
           <Spacer size="sm" />
 
         </Box>
-        <Marquee>
-          <Stack direction="row" spacing={5}>
-          {imageGallery1.map((_, index) => (
-            <PhotoComponent imageUrl={_.url} />
-            ))}
-          </Stack>
-        </Marquee>
+        {/* {isLoading1 ? (<p>Loading</p>) : (<> */}
+          <Marquee>
+            <Stack direction="row" spacing={5}>
+            {imageGallery1.map((val, index) => (
+              <PhotoComponent imageUrl={val.url} />
+              ))}
+            </Stack>
+          </Marquee>
+        {/* </>)} */}
 
         <Spacer size="sm" />
 
-        <Marquee direction="right">
-          <Stack direction="row" spacing={5}>
-          {imageGallery2.map((_, index) => (
-            <PhotoComponent imageUrl={_.url} />
-            ))}
-          </Stack>
-        </Marquee>
+        {/* {isLoading2 ? (<p>Loading</p>) : (<> */}
+          <Marquee direction="right">
+            <Stack direction="row" spacing={5}>
+            {imageGallery2.map((val, index) => (
+              <PhotoComponent key={index} imageUrl={val.url} />
+              ))}
+            </Stack>
+          </Marquee>
+        {/* </>)} */}
       </Container>
     </Box>
   );
