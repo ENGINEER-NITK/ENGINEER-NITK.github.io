@@ -19,35 +19,35 @@ import magic1 from "./../../assets/gallery/magic.JPG";
 
 export const imageGallery1 = [
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892264/Engi%20Sponsers/drone1cta_cwod3v.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892264/Engi%20Gallery/drone1cta_cwod3v.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892353/Engi%20Sponsers/drone2cta_apfn9i.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892353/Engi%20Gallery/drone2cta_apfn9i.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892371/Engi%20Sponsers/drone3_ynr9mi.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892371/Engi%20Gallery/drone3_ynr9mi.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892367/Engi%20Sponsers/BNR_front_c0xhzm.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892367/Engi%20Gallery/BNR_front_c0xhzm.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892365/Engi%20Sponsers/BNR_side_s7onxj.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892365/Engi%20Gallery/BNR_side_s7onxj.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892348/Engi%20Sponsers/BNR_side2_ab2vou.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892348/Engi%20Gallery/BNR_side2_ab2vou.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892371/Engi%20Sponsers/drone3_ynr9mi.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892371/Engi%20Gallery/drone3_ynr9mi.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892336/Engi%20Sponsers/proshow5_g2vxdk.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892336/Engi%20Gallery/proshow5_g2vxdk.jpg",
         caption: "Majestic Mountains",
     },
 
@@ -56,35 +56,35 @@ export const imageGallery1 = [
 
 export const imageGallery2 = [
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892320/Engi%20Sponsers/proshow1_uwmy0b.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892320/Engi%20Gallery/proshow1_uwmy0b.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892321/Engi%20Sponsers/proshow2_qiscl7.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892321/Engi%20Gallery/proshow2_qiscl7.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892326/Engi%20Sponsers/proshow3_zqnjm5.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892326/Engi%20Gallery/proshow3_zqnjm5.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892336/Engi%20Sponsers/proshow4_xjcs0y.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892336/Engi%20Gallery/proshow4_xjcs0y.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892336/Engi%20Sponsers/proshow5_g2vxdk.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892336/Engi%20Gallery/proshow5_g2vxdk.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892331/Engi%20Sponsers/proshow6_ihbeno.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892331/Engi%20Gallery/proshow6_ihbeno.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: magic1,
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1695309528/Engi%20Gallery/magic_ysqjbe.jpg",
         caption: "Majestic Mountains",
     },
     {
-        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892354/Engi%20Sponsers/magic2_c44ymq.jpg",
+        url: "https://res.cloudinary.com/det9aw4gh/image/upload/v1694892354/Engi%20Gallery/magic2_c44ymq.jpg",
         caption: "Majestic Mountains",
     },
     
