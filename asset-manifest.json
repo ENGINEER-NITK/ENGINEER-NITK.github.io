@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.565a47d4.css",
-    "main.js": "/static/js/main.d50bd426.js",
+    "main.js": "/static/js/main.0eefce25.js",
     "static/js/787.0d4f6fcd.chunk.js": "/static/js/787.0d4f6fcd.chunk.js",
-    "static/media/video.mp4": "/static/media/video.b6fe4784d622c63d06a2.mp4",
     "static/media/magic.JPG": "/static/media/magic.7f4c07d09424231dc2f2.JPG",
     "static/media/BNR_4.JPG": "/static/media/BNR_4.91893d0230657367ffcd.JPG",
+    "static/media/video.webm": "/static/media/video.f06573b625bc01ee3d94.webm",
     "static/media/drone3.jpg": "/static/media/drone3.5e93808ee9ba3890e57e.jpg",
     "static/media/magic2.JPG": "/static/media/magic2.1b9285ddf2eb50eeac47.JPG",
     "static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0001.jpg": "/static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0001.5561a030c5ae1e0a17a4.jpg",
     "static/media/ENGINEER'NITK 2K23_BROCHURE_page-0005.jpg": "/static/media/ENGINEER'NITK 2K23_BROCHURE_page-0005.830377d4b2841d5e3610.jpg",
     "static/media/ENGINEER'NITK 2K23_BROCHURE_page-0006.jpg": "/static/media/ENGINEER'NITK 2K23_BROCHURE_page-0006.0bb54e4e689fe706e079.jpg",
-    "static/media/wp9708076.gif": "/static/media/wp9708076.8f74f855ea2dc28545f0.gif",
+    "static/media/background.gif": "/static/media/background.97594f90b2c0784c1352.gif",
     "static/media/proshow4.jpg": "/static/media/proshow4.70f5f97eaf954772f791.jpg",
     "static/media/proshow5.jpg": "/static/media/proshow5.897fe296299f4c0c87ad.jpg",
     "static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0002.jpg": "/static/media/engiENGINEER'NITK 2K23_BROCHURE_page-0002.c3fc21796445a91e25c2.jpg",
@@ -38,6 +38,7 @@
     "static/media/proshow1.jpg": "/static/media/proshow1.2f5c0a8f2f9a7c52cd9b.jpg",
     "static/media/proshow6.JPG": "/static/media/proshow6.9e7c93a974114bf07a2f.JPG",
     "static/media/ENGINEER'NITK 2K23_BROCHURE_page-0001.jpg": "/static/media/ENGINEER'NITK 2K23_BROCHURE_page-0001.7832ed20466041e114c0.jpg",
+    "static/media/skull.gif": "/static/media/skull.88fbf0ec91f976584a08.gif",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0005.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0005.38fd43a045ccb32114c0.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0001.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0001.c443da1e3747360a41c0.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0002.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0002.58e7a48eeab5aaeabe98.jpg",
@@ -69,11 +70,11 @@
     "index.html": "/index.html",
     "static/media/spiral.svg": "/static/media/spiral.b31ac6ecb15268b3667ba9f423a0fbc4.svg",
     "main.565a47d4.css.map": "/static/css/main.565a47d4.css.map",
-    "main.d50bd426.js.map": "/static/js/main.d50bd426.js.map",
+    "main.0eefce25.js.map": "/static/js/main.0eefce25.js.map",
     "787.0d4f6fcd.chunk.js.map": "/static/js/787.0d4f6fcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.565a47d4.css",
-    "static/js/main.d50bd426.js"
+    "static/js/main.0eefce25.js"
   ]
 }
