@@ -14,7 +14,6 @@ import talks from '../../assets/data/talks';
 import csr from '../../assets/data/csr';
 import workshops from '../../assets/data/workshops';
 import conflux from '../../assets/data/conflux';
-import CustomizedDialogs from './CustomizedDialogs';
 import GradientText from '../../components/common/gradienttext';
 import { useEventData } from '../../hooks/useEvents';
 
@@ -40,6 +39,7 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
   const des = event.description;
   const needRegister = event.needRegister;
   const rule = event.rule;
+  const needRule =event.needRule;
   return (
     <GradientBox height="100%" color="white">
       <img
@@ -80,7 +80,9 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
         </Box>
         <Stack direction="row" alignItems="center">
           {needRegister && <Chip label="Registration will start soon" startIcon={<FiClock />} />}
-          {/*<CustomizedDialogs title = {title} description={rule}/>*/}
+  
+          {needRule && <Button sx={{ m: 2 }} href={rule} variant="outlined">Rulebook</Button>}
+         
         </Stack>
       </Container>
     </GradientBox>
