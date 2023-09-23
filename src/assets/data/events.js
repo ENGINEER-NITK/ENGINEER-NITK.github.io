@@ -15,6 +15,7 @@ import event14 from "../png/events/14.png";
 import event15 from "../png/events/15.png";
 import event16 from "../png/events/16.png";
 
+
 const events = [
   {
     image: event1,
@@ -23,8 +24,8 @@ const events = [
     // subtitle: "Subtitle for Event 1",
     firstCta: "First CTA for Event 1",
     secondCta: "Second CTA for Event 1",
-    needRegister: true,
-    rule:"gfdRobo-Warshsj ",
+    rule:"robowar",
+    needRule: true,
   },
   {
     image: event2,
@@ -34,7 +35,8 @@ const events = [
     firstCta: "First CTA for Event 2",
     secondCta: "Second CTA for Event 2",
     needRegister: true,
-    rule:"Bizzwave",
+    rule:"hackWave",
+    needRule: false,
   },
   {
     image: event3,
@@ -54,17 +56,19 @@ const events = [
     firstCta: "First CTA for Event 4",
     secondCta: "Second CTA for Event 4",
     needRegister: false,
-    rule:"Proshowssss",
+    rule:"hackWave",
+    needRule: false,
   },
   {
     image: event5,
-    title: "Hackathon",
+    title: "hackWave",
     description: "Embark on an exhilarating journey through the vast realm of Computer Science, where we offer you a thrilling blend of real-life challenges and immersive hands-on experiences with cutting-edge topics in Information Technology. Get ready to ignite your passion and unleash your potential in the exciting world of haCKATHON.",
     subtitle: "Subtitle for Event 5",
     firstCta: "First CTA for Event 5",
     secondCta: "Second CTA for Event 5",
     needRegister: true,
-    rule:"Hackathon",
+    rule:"hackWave",
+    needRule: true,
   },
   // {
   //   // image: event5,
