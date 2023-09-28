@@ -82,7 +82,7 @@ const About = () => {
   });
   return (
     <Container id="about-root" maxWidth="lg">
-      <GradientText className="title" primary="Timeline" secondary="Our Story." />
+      <GradientText className="title" primary="Timeline" secondary="Live Events." />
       <Spacer size="sm" />
       <Box className="trigger">
         <Grid container spacing={1.5}>
@@ -94,8 +94,12 @@ const About = () => {
               </Box>{' '}
             </Box>{' '}
           </Grid>{' '}
-          <Grid item xs={12} md={7}>
-            <GradientBox className="map-box" alignItems="flex-start" height="100%">
+          <Grid item xs={12} md={7} sx={{
+            height: {
+              md: 'auto',
+              xs: '400px'
+            }
+          }}>
               <iframe
                 style={{
                   borderRadius: '18px',
@@ -110,7 +114,6 @@ const About = () => {
               >
                 {' '}
               </iframe>{' '}
-            </GradientBox>{' '}
           </Grid>{' '}
         </Grid>{' '}
       </Box>{' '}

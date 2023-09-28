@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import { Button, Container, Paper, Stack, Typography } from "@mui/material";
 import GradientText from "../common/gradienttext";
-import Background from "../../assets/svg/Pattern-12.svg";
+import Background from "../../assets/gif/space.gif";
 import { InlineWidget, PopupButton, PopupWidget } from "react-calendly";
 import { useEffect, useRef } from "react";
 import Spacer from "../Spacer";
@@ -108,13 +108,12 @@ function PhotoComponent({ imageUrl }) {
     <Paper
       className="photo-container"
       sx={{
-        borderRadius: 2,
         display: "inline-block",
         padding: 0,
         border: (theme) => `4px solid ${theme.palette.common.white}`, // Left, right, top
-        borderBottomWidth: (theme) => `4px`, // Bottom        borderRadius: 1,
         boxShadow: "none",
         backgroundColor: "black",
+        borderRadius: '0px'
       }}
     >
       <img

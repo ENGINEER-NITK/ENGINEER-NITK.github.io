@@ -17,6 +17,7 @@ import Engineer from "../../assets/png/MacBook Pro.png";
 import Spacer from "../Spacer";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
+import easyMeshGradient from 'easy-mesh-gradient';
 
 const servicesData = [
   {
@@ -166,9 +167,12 @@ const TaglineDescriptionCard = ({ index,longDescription }) => {
 };
 
 const TaglineCard = ({ title, description, icon, imageUrl, index }) => {
+  const gradientString = easyMeshGradient({
+    seed: title
+  })
   return (
     <Box className={`card-${index}`}>
-      <Card backgroundImage={imageUrl}>
+      <Card background={gradientString} backgroundImage={imageUrl}>
         <Box width="70%">
           <Heading variant="h2">
             {title.split(" ")[0]} {title.split(" ").slice(1).join(" ")}

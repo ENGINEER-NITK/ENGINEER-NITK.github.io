@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
+import easyMeshGradient from 'easy-mesh-gradient';
 
 const GradientBox = ({
   children,
@@ -12,6 +13,7 @@ const GradientBox = ({
   action = false,
   ...props
 }) => {
+
   return (
     <Box
       py={size === "medium" ? 8 : size === "small" ? 6 : 10}
@@ -23,7 +25,7 @@ const GradientBox = ({
       className={className}
       // Add the background image here
       sx={{
-        background,
+        background: background,
         backgroundSize: "cover",
         backgroundPosition: "center",
         borderRadius: "18px",
@@ -33,13 +35,11 @@ const GradientBox = ({
           content: "''",
           position: "absolute",
           width: '100%',
-          height: '200px',
+          height: '250px',
           borderRadius: '18px',
           bottom: 0,
           right: 0,
-          backgroundImage: action
-            ? `linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(${img})` // Overlay gradient for better visibility
-            : `url(${img})`,
+          backgroundImage: `url(${img})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 1, // Adjust opacity as needed

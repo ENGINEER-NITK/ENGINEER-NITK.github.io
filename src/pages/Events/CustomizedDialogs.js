@@ -7,7 +7,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { FiXCircle } from 'react-icons/fi';
+import { FiBook, FiXCircle } from 'react-icons/fi';
+import { Chip } from '@mui/material';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -30,9 +31,9 @@ export default function CustomizedDialogs(props) {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Rule Book
-      </Button>
+      <Chip size="large" color='secondary' icon={<FiBook/>} label=' Rule Book' onClick={handleClickOpen}>
+
+      </Chip>
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
@@ -54,18 +55,11 @@ export default function CustomizedDialogs(props) {
           <FiXCircle />
         </IconButton>
         <DialogContent dividers style={{ color: "Black" }}>
+          <a href={props.description} target='_blank'>
           <Typography gutterBottom>
            {props.description}
           </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+          </a>
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose}>

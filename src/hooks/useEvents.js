@@ -1,6 +1,8 @@
 import { useQuery } from "react-query";
 import axios from "axios";
 
+const twentyFourHoursInMs = 1000 * 60 * 60 * 24;
+
 const fetchEventsData = async() => {
     const JSONBIN_URL = "https://api.jsonbin.io/v3/b/650ac7aaadb5f56d8f18525b"; // replace YOUR_BIN_ID with your bin's ID
     const JSONBIN_SECRET_KEY =
@@ -21,7 +23,13 @@ const fetchEventsData = async() => {
 };
 
 export const useEventData = () => {
-    const queryResult = useQuery("eventsData", fetchEventsData);
+    const queryResult = useQuery("eventsData", fetchEventsData, {
+        refetchOnWindowFocus: false,
+        refetchOnmount: false,
+        refetchOnReconnect: false,
+        retry: false,
+        staleTime: twentyFourHoursInMs,
+    });
 
     // Here, you can also format or process the data further if needed
 

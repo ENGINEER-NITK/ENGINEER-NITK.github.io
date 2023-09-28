@@ -24,6 +24,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from "react-router-dom";
 import GradientText from './common/gradienttext';
 import Spacer from './Spacer';
+import Logo from '../assets/png/logo.png'
 
 let navLinks = [
   { title: "Home", path: "/" },
@@ -32,7 +33,9 @@ let navLinks = [
   { title: "Brochure", path: "/brochure" },
   { title: "Accommodation", path: "/accomodation" },
   { title: "Contact", path: "/contact" },
-  { title: "Team", path: '/team'}
+  { title: "Team", path: '/team'},
+  { title: "Game", path: '/game'}
+
 ];
 
 let mainLinks = [
@@ -42,8 +45,8 @@ let mainLinks = [
   { title: "Brochure", path: "/brochure" },
   { title: "Accommodation", path: "/accomodation" },
   { title: "Contact", path: "/contact" },
-  { title: "Team", path: '/team'}
-
+  { title: "Team", path: '/team'},
+  { title: "Game", path: '/game'}
 ];
 
 const Appbar = ({ isGuest = false }) => {
@@ -63,7 +66,9 @@ const Appbar = ({ isGuest = false }) => {
 
   return (
     <>
-      <AppBar className="appbar" ref={appbarRef} elevation={0} position="fixed">
+      <AppBar className="appbar" ref={appbarRef} elevation={0} position="fixed" sx={{
+
+      }}>
         <Container maxWidth="lg">
           <Toolbar
             disableGutters
@@ -73,16 +78,20 @@ const Appbar = ({ isGuest = false }) => {
               justifyContent: "space-between",
               alignItems: "center",
               transition: "background-color 0.3s ease",
-              position: "relative", // Set the position to relative for the AppBar
+              position: "relative",
+
+              // Set the position to relative for the AppBar
             }}
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
-
+              <Link to='/'>
               <Box className="logo_title">
                 <div className="glitch-wrapper">
                   <div className="glitch" data-text="Engi 2K23">Engi 2K23</div>
                 </div>
-              </Box>{" "}
+              </Box>
+              {/*    <img src={Logo}  width='72px'/>*/}
+              </Link>{" "}
             </Box>{" "}
 
             <FullscreenNav />
@@ -94,78 +103,9 @@ const Appbar = ({ isGuest = false }) => {
   );
 };
 
-const AppMenu = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  return (
-    <Box  bgcolor="white" color='black'>
-      <IconButton onClick={handleClick}>
-        <FiMenu />
-      </IconButton>{" "}
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            color: "black",
-            overflow: "visible",
-            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-            mt: 1.5,
-            "& .MuiAvatar-root": {
-              width: 32,
-              height: 32,
-              ml: -0.5,
-              mr: 1,
-            },
-            "&:before": {
-              content: '""',
-              display: "block",
-              position: "absolute",
-              top: 0,
-              right: 14,
-              width: 10,
-              height: 10,
-              bgcolor: "background.paper",
-              transform: "translateY(-50%) rotate(45deg)",
-              zIndex: 0,
-            },
-          },
-        }}
-        transformOrigin={{ horizontal: "right", vertical: "top" }}
-        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-      >
-        {" "}
-        {navLinks.map((link) => (
-          <Link to={link.path}>
-            <MenuItem onClick={handleClose}> {link.title} </MenuItem>
-          </Link>
-        ))}
-      </Menu>{" "}
-    </Box>
-  );
-};
-
 const FullscreenNav = () => {
   const [open, setOpen] = useState(false);
 
-  const mainLinks = [
-    { title: "Home", path: "/" },
-    { title: "Ambassadors", path: "/ambassador" },
-    { title: "Events", path: "/events" },
-    { title: "Brochure", path: "/brochure" },
-    { title: "Accommodation", path: "/accomodation" },
-    { title: "Contact", path: "/contact" },
-    { title: "Team", path: '/team'}
-  ];
 
   const handleClick = () => {
     setOpen(open => !open)

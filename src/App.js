@@ -21,10 +21,10 @@ import Lenis from "@studio-freight/lenis";
 import Contact from "./pages/Contact/Contact";
 import Events from "./pages/Events/Events";
 import Countdown from "./components/page/beforerelease";
-import Accomodate from "./pages/Accomodations/Accomodate";
 import Ambassador from "./pages/Ambassadors";
 import BeforeReleaseLayout from "./components/page/layout";
 import Team from './pages/Team/Team';
+import Game from './pages/Game/Game';
 function App() {
   const root = useRef();
   const theme = useTheme();
@@ -108,6 +108,7 @@ function App() {
           <Route exact path="/ambassador" element={<Ambassador />} />{" "}
           <Route exact path="/brochure" element={<Brochure />} />{" "}
           <Route exact path="/team" element={<Team />} />{" "}
+          <Route exact path="/game" element={<Game />} />{" "}
 
         </Routes>{" "}
       </Box>{" "}

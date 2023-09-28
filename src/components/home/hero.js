@@ -26,46 +26,9 @@ import BoxContent from "../common/boxcontent";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap/all";
 import Videotext from "./videotext";
-import Background from '../../assets/png/wp9708076.gif';
-
-const recentOrders = [
-  {
-    id: 1,
-    name: "John Doe",
-    product: "Product A",
-    timestamp: "2023-07-25 12:34 PM",
-    quote: "Great product! I'm loving it!",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    product: "Product B",
-    timestamp: "2023-07-25 01:45 PM",
-    quote: "Excellent service and fast delivery!",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    product: "Product B",
-    timestamp: "2023-07-25 01:45 PM",
-    quote: "Excellent service and fast delivery!",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    product: "Product B",
-    timestamp: "2023-07-25 01:45 PM",
-    quote: "Excellent service and fast delivery!",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    product: "Product B",
-    timestamp: "2023-07-25 01:45 PM",
-    quote: "Excellent service and fast delivery!",
-  },
-  // Add more recent orders as needed
-];
+import Background from '../../assets/gif/background.gif';
+import Marquee from 'react-fast-marquee';
+import Newspaper from '../../assets/gif/skull.gif'
 
 export const wrapWordsWithSpan = (text, className) => {
   const words = text.split(" ");
@@ -86,7 +49,6 @@ export const wrapWordsWithSpan = (text, className) => {
 
 export const wrapWordWithSpan = (text, className) => {
   const words = text.split("");
-  console.log(words);
 
   return (
     <>
@@ -109,15 +71,6 @@ const Hero = () => {
     rootRef,
     () => {
       const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-      tl.fromTo(rootRef.current, {
-        opacity: 0,
-        backgroundSize: '150%'
-      }, {
-        duration: 2,
-        opacity: 1,
-        backgroundSize: '100%',
-        ease: 'expo.out'
-      })
 
       tl.to(rootRef.current, {
         backgroundSize: 'cover',
@@ -131,6 +84,12 @@ const Hero = () => {
         opacity: 0,
         skewY: 10,
       }, ">-=1.3")
+
+      tl.to(containerRef.current, {
+        skewY: "-=5", // This moves the container up by 10 pixels (you can adjust this value for more/less effect)
+        duration: 3, // Duration for one up or down movement
+        ease: "expo.inOut" // Smooth easing function for a more natural hover effect
+      });
 
     },
     []
@@ -161,7 +120,7 @@ const Hero = () => {
       sx={{
         backgroundImage: `linear-gradient(to bottom right, rgba(0, 0, 0, 0.8) 20%, transparent), url(${Background})`, // Gradient from top left to bottom right, darkening the background image
         padding: "80px 0",
-        backgroundSize: "100%",
+        backgroundSize: "cover",
         backgroundPosition: "center",
         boxShadow:
           "inset 0px 40px 30px -20px #1B1B1E, inset 0px -40px 30px -20px rgba(0, 0, 0, 0.8)",
@@ -181,6 +140,51 @@ const Hero = () => {
               <Spacer size='xl' />
               <Box ref={containerRef}>
                 <Videotext />
+                <Box mt={-30}  sx={{
+                  backgroundImage: `url(${Newspaper})`, // Gradient from top left to bottom right, darkening the background image
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  boxShadow:
+                    "inset 0px 40px 30px -20px #1B1B1E, inset 0px -40px 30px -20px rgba(0, 0, 0, 0.8)",
+                }}>
+                  <Marquee>
+                    <Typography
+                      fontFamily="Mona"
+                      textAlign="right"
+                      variant="h1"
+                      color="white"
+                    >
+                      Ensight.
+                    </Typography>
+                    <Typography
+                      fontFamily="Mona"
+                      textAlign="right"
+                      variant="h1"
+                      color="white"
+
+                    >
+                      Ennovation.
+                    </Typography>
+                    <Typography
+                      fontFamily="Mona"
+                      textAlign="right"
+                      variant="h1"
+                      color="white"
+
+                    >
+                      Envention.
+                    </Typography>
+                    <Typography
+                      fontFamily="Mona"
+                      textAlign="right"
+                      variant="h1"
+                      color="red"
+
+                    >
+                      Engineer.
+                    </Typography>
+                  </Marquee>
+                </Box>
               </Box>
               <Stack direction="row" spacing={1} mt={5}>
                 {/*<Button*/}

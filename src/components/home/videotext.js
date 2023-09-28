@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import clip from "../../assets/video/video.mp4";
+import clip from "../../assets/video/video.webm";
 import { makeStyles } from "@mui/styles";
 import useGsap from "../../hooks/useGsap";
-import { wrapWordWithSpan } from "./hero";
 import gsap from "gsap";
 
 const useStyles = makeStyles((theme) => ({
@@ -52,7 +51,7 @@ const VideoText = () => {
               alignment-baseline="middle"
               font-family="Delirium"
               font-weight="900"
-              className="textStyles"
+              color='red'
             >
               ENGI
             </text>
