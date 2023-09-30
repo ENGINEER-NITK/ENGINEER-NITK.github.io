@@ -8,6 +8,7 @@ import {
   useTheme,
   FormControl,
   MenuItem,
+  Button,
   Select, Stack, Card, CardContent,
 } from '@mui/material';
 import Appbar from "../../components/Appbar";
@@ -129,6 +130,7 @@ const Accomodation = () => {
     }
   };
 
+
   const handleTabChangeOnLaptop = (event, newValue) => {
     setSelectedTab(tabOptions[newValue]);
     setValue(newValue); // Update the value state for the Tabs component
@@ -141,6 +143,7 @@ const Accomodation = () => {
   };
 
   return (
+    
     <Box ref={rootRef} sx={{ backgroundColor: "common.black" }}>
       <Appbar />
       <Container maxWidth="md" color="white">
@@ -148,8 +151,13 @@ const Accomodation = () => {
           <Spacer size='md'/>
           <Stack>
             <GradientText primary="Lodging" secondary="Queries" />
-            <a href="https://engineer.yapsody.com/event/book/785135/31574123?ref=elink" target="_blank" >Get Tickets for "Accommodation at NITK's Tech Fest Engineer 23 " only on Yapsody</a>
+            <Stack direction="row" flexWrap='wrap' alignItems="center" gap={1} ml={37} mt={2} mb={1}>
+            <Button variant="contained" href="https://engineer.yapsody.com/event/index/785135?ref=ebtn">BOOK ACCOMMODATION</Button>
+        </Stack>
+
+            {/* <a href="https://engineer.yapsody.com/event/book/785135/31574123?ref=elink" target="_blank" >Get Tickets for "Accommodation at NITK's Tech Fest Engineer 23 " only on Yapsody</a> */}
           </Stack>
+         
           {isMobile ? (
             <FormControl
               fullWidth
