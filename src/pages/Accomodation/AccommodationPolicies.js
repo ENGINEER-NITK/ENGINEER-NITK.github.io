@@ -30,7 +30,7 @@ const AccommodationPolicies = () => {
         marginTop: "20px",
       }}
     >
-    
+
       <Container maxWidth="md">
         <Box sx={headingStyle}>
           <Typography variant="h4" gutterBottom sx={
@@ -42,11 +42,12 @@ const AccommodationPolicies = () => {
           </Typography>
         </Box>
         <Typography variant="body1" paragraph style={{ color: "white" }}>
-          Accommodation charges are INR 3499 per candidate for 5 days. Maximum
-          of 5 nights stay allowed (15th Dec 6 AM - 19th Dec 10 AM). It does not
-          include food facility. Guests can purchase their meals from the food
-          court, night cafeteria, private hostel canteens, or hostel messes at
-          subsidized rates.
+          {/*Accommodation charges are INR 3499 per candidate for 5 days. Maximum*/}
+          {/*of 5 nights stay allowed (15th Dec 6 AM - 19th Dec 10 AM). It does not*/}
+          {/*include food facility. Guests can purchase their meals from the food*/}
+          {/*court, night cafeteria, private hostel canteens, or hostel messes at*/}
+          {/*subsidized rates.*/}
+          WILL BE UPDATED SOON
         </Typography>
 
         <Box sx={headingStyle}>
@@ -76,13 +77,13 @@ const AccommodationPolicies = () => {
         <Typography variant="body1" paragraph style={{ color: "white" }}>
           Confirmed Accommodation can be cancelled through email only. Send an
           e-mail having your Acco ID and the number of members for whom
-          accommodation has to be cancelled, at hospitality@techfest.org. The
+          accommodation has to be cancelled, at hospitality@engineer.org. The
           subject of the email should be "Cancellation of Accommodation". For
           any cancellations before the deadline, 75% of the total amount shall
           be refunded within 10 working days after the festival. There shall be
           no refunds for cancellation after the deadline.
           <br />
-          Deadline of cancellation: 1st December 2022.
+          {/*Deadline of cancellation: 1st December 2022.*/}
         </Typography>
       </Container>
       </Paper>

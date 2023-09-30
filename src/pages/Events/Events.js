@@ -1,53 +1,55 @@
-import React, { useRef } from "react";
-import {
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Stack,
-  Typography,
-} from "@mui/material";
-import Appbar from "../../components/Appbar";
-import Footer from "../../components/common/footer";
-import Spacer from "../../components/Spacer";
-import { Description, Heading } from "../../components/common/typography";
-import EmblaCarousel from "../../components/common/carousel";
-import GradientBox from "../../components/common/gradientbox";
-import { FiArrowRight } from "react-icons/fi";
-import events from "../../assets/data/events";
-import carousal from "../../assets/data/carousal";
-import { PopupButton } from '@typeform/embed-react';
-import CustomizedDialogs from "./CustomizedDialogs"
-
+import React, { useRef,useState,useEffect } from 'react';
+import { Box, Button, Chip, Container, IconButton, Skeleton, Stack, Typography } from '@mui/material';
+import Appbar from '../../components/Appbar';
+import Footer from '../../components/common/footer';
+import Spacer from '../../components/Spacer';
+import { Description, Heading } from '../../components/common/typography';
+import EmblaCarousel from '../../components/common/carousel';
+import GradientBox from '../../components/common/gradientbox';
+import { FiArrowRight, FiCalendar, FiClock, FiMapPin, FiUser } from 'react-icons/fi';
+import GradientText from '../../components/common/gradienttext';
+import { useEventData } from '../../hooks/useEvents';
+import CustomizedDialogs from './CustomizedDialogs';
+import { AiFillTrophy } from 'react-icons/ai';
+import easyMeshGradient from "easy-mesh-gradient";
 
 const HeadCarousel = () => {
+  const { data, isLoading } = useEventData();
   return (
-    <EmblaCarousel flex="0 0 100%" gap="20px">
-      {events.map((_, index) => (
-        <HeadEvent event={_} />
+    isLoading ? <Skeleton height='450px' />  :  <EmblaCarousel flex="0 0 100%" gap="20px">
+
+      {data.map((event, index) => (
+        <HeadEvent event={event} key={index} />
       ))}
+
     </EmblaCarousel>
   );
 };
 
-
-
-const HeadEvent = ({ subtitle, firstCta, secondCta, description, event, }) => {
+const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
   const background = event.image;
   const title = event.title;
-  const des = event.description;
   const needRegister = event.needRegister;
-  const rule =event.rule;
+  const rule = event.rule;
+  const poc = event.POC;
+  const poc_contact = event.POC_Contact;
+  const date = event.Date;
+  const venue = event.Venue
+  const isCompetition = event.isCompetition
+  const prize = event.Prize
+  const registrationLink = event.registrationLink
+
   return (
-    <GradientBox color="white">
+    <GradientBox size='small' height="100%" color="white">
       <img
         style={{
-          display: "block",
-          position: "absolute",
-          height: "400px",
+          display: 'block',
+          position: 'absolute',
+          height: '100%',
           right: 0,
           bottom: 0,
           zIndex: -1,
+          opacity: 0.4,
         }}
         src={background}
       />
@@ -55,50 +57,57 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event, }) => {
         {/* <Typography fontFamily="Lato" variant="body1" gutterBottom>
           {title}
         </Typography> */}
-        <Box sx={{width:{xs:'100%', md: '45%'}}}>
+        <Box sx={{ width: { xs: '100%', md: '45%' } }}>
           <Typography
             variant="h1"
+            pt={8}
             sx={{
               fontSize: {
-                xs: "48px",
-                md: "72px",
+                xs: '48px',
+                md: '72px',
               },
             }}
           >
-            {" "}
             {title}
           </Typography>
           {/* <Typography fontWeight={700} variant="body1">
             Small Title{" "}
           </Typography> */}
-          <Typography variant="body1" pb={2}>
-            {des}
-          </Typography>
+          <Spacer size='xs'/>
+          {/*{needRegister ? <Spacer size='xs'/> : <Typography variant='body1' pb={2}>*/}
+          {/*  {des}*/}
+          {/*</Typography>}*/}
         </Box>
-        <Stack direction="row" alignItems="center">
-            {needRegister && <PopupButton id="R2TLZA3k" style = {{'margin-right': '20px',
-                                                  'border-radius':' 8px',
-                                                  'padding': '0',}} >
-                                                  <Button variant="contained">Register</Button>
-            </PopupButton>}
-            <CustomizedDialogs title={title} description={rule}/>
-            
-            
-
-            
-            
+        <Stack direction="row" flexWrap='wrap' alignItems="center" gap={1} mb={1}>
+          {needRegister && <Chip label="Registration will start soon" icon={<FiClock />} />}
+          {needRegister && <CustomizedDialogs title = {title} description={rule}/> }
         </Stack>
+        <Stack direction="row" flexWrap='wrap' alignItems="center" gap={1} mb={1}>
+          {isCompetition && <>
+            <Chip label={`₹${prize} Pool`} icon={<AiFillTrophy />} />
+            <Chip label={`${poc} ${poc_contact}`} icon={<FiUser />}/>
+          </>
+          }
+          <Chip label={date} icon={<FiCalendar />} />
+        </Stack>
+        <Chip label={venue} icon={<FiMapPin />} />
       </Container>
     </GradientBox>
   );
 };
 
-const Event = ({ name, description }) => {
+const Event = ({ name, description, img }) => {
+  const { data, isLoading } = useEventData();
+  // console.log(data);
+
+
   return (
     <GradientBox
-      height="100%"
+      height="200px"
       size="small"
       background="linear-gradient(135deg, #f7f7f7, #cfcfcf)"
+      img={img}
+      action={true}
     >
       <Box>
         <Typography
@@ -111,15 +120,12 @@ const Event = ({ name, description }) => {
           lineHeight="1.2"
           gutterBottom
         >
-          {name}
+          <span style={{ backgroundColor: 'rgba(233,255,50, 0.7)' }}>{name}</span>
         </Typography>
-        {/*{[...Array(rating)].map((_, index) => (*/}
-        {/*  <AiFillStar key={index} />*/}
-        {/*))}*/}
-        <Description color="black">{description}</Description>
+        {/*<Description color="black">{description}</Description>*/}
 
-        <Box position="absolute" right={"25px"} bottom="15px">
-          <IconButton sx={{ backgroundColor: "black", color: "white" }}>
+        <Box position="absolute" right={'25px'} bottom="15px">
+          <IconButton>
             <FiArrowRight />
           </IconButton>
         </Box>
@@ -129,104 +135,134 @@ const Event = ({ name, description }) => {
 };
 
 const Events = () => {
-  console.log(carousal);
+  const { isLoading, isSuccess } = useEventData();
   const rootRef = useRef();
+  const [data, setData] = useState([]);
+  const binId = '650b2bb0205af66dd4a23cb4';
+  const apiKey = '$2a$10$ALWgRdFMPxMOF8WhLWbVmuC1Q.mfj6P/O1CvmwCXLT9LRC4HM6Woq';
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
+          headers: {
+            'X-Master-Key': apiKey,
+          },
+        });
+
+
+        if (response.ok) {
+          const jsonData = await response.json();
+          setData(jsonData.record.events);
+          console.log(data)
+          // console.log(data.record.events)
+        } else {
+          console.error(`Failed to fetch data. Status code: ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  },[]);
+
   return (
-    <Box ref={rootRef} sx={{ backgroundColor: "black" }}>
+    <Box ref={rootRef} sx={{ backgroundColor: 'black' }}>
       <Appbar />
       <Container maxWidth="lg" color="white" sx={{ pt: 15 }}>
         <HeadCarousel />
         <Spacer size="md" />
-        <Heading>Mech Committee</Heading>
+        <GradientText primary="Major" secondary="Events" />
         <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Robo Wars" description="Bruh" />
-          <Event name="RC racing" description="Bruh" />
-          <Event name="Drone race" description="Bruh" />
-          <Event name="Wright Flight" description="Bruh" />
-        </EmblaCarousel>
+        {
+          isLoading ?  <Skeleton width='100%' height='200px'/>  :     <EmblaCarousel gap="20px">
+            {data.map((_, index) => (
+              <Event name={`${_.title}`} description={`${_.description}`} img={`${_.image}`} />
+            ))}
+          </EmblaCarousel>
 
-        <Spacer size="lg" />
-        <Heading>Tech Committee</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Tronix" description="Bruh" />
-          <Event name="Technites" description="Bruh" />
-          <Event name="Astro" description="Bruh" />
-        </EmblaCarousel>
-
-        <Spacer size="lg" />
-        <Heading>Talks</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Engi Talks" description="Bruh" />
-          <Event name="Alumini Connects" description="Bruh" />
-        </EmblaCarousel>
-
-        <Spacer size="lg" />
-        <Heading>CSR</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Engi Care" description="Bruh" />
-          <Event name="Engi Connect" description="Bruh" />
-        </EmblaCarousel>
-        <Spacer size="lg" />
-        
-        <Heading>Workshops</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Industrial" description="Bruh" />
-          <Event name="Clubs" description="Bruh" />
-        </EmblaCarousel>
-        <Spacer size="lg" />
-
-        <Heading>Tech Conflux</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="AI Robotic Arm" description="Bruh" />
-          <Event name="Clubs" description="Bruh" />
-          {/* <Event name="Clubs" description="Bruh" /> */}
-        </EmblaCarousel>
-        <Spacer size="lg" />
-
-        <Heading>Department Events</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Open House of Labs" description="Bruh" />
-          <Event name="Research Paper Presentation" description="Bruh" />
-          <Event name="Quizes" description="Bruh" />
-        </EmblaCarousel>
-        <Spacer size="lg" />
-
-        <Heading>Gala</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Bizwaves" description="Bruh" />
-          {/* <Event name="M.U.N" description="Bruh" /> */}
-          <Event name="Tech Quizes" description="Bruh" />
-        </EmblaCarousel>
-        <Spacer size="lg" />
-
-        <Heading>Gaming Events</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="B.G.M.I" description="Bruh" />
-          <Event name="FIFA" description="Bruh" />
-          <Event name="Valorant" description="Bruh" />
-        </EmblaCarousel>
-        <Spacer size="lg" />
-
-        <Heading>Proshows</Heading>
-        <Spacer size="xs" />
-        <EmblaCarousel gap="20px">
-          <Event name="Comedy Night" description="Bruh" />
-          {/* <Event name="Star Eve" description="Bruh" /> */}
-          {/* <Event name="Bike Stunt-Show" description="Bruh" /> */}
-          <Event name="DJ / Band" description="Bruh" />
-        </EmblaCarousel>
+        }
         <Spacer size="lg" />
 
 
+
+        {/*<Heading>Talks</Heading>*/}
+        {/*<Spacer size="xs" />*/}
+        {/*<EmblaCarousel gap="20px">*/}
+        {/*{talks.map((_, index) => (*/}
+
+        {/*    <Event name={`${_.title}`} description={`${_.description}`}  />*/}
+        {/*    ))}*/}
+        {/*</EmblaCarousel>*/}
+
+        {/*<Spacer size="lg" />*/}
+        {/*<Heading>CSR</Heading>*/}
+        {/*<Spacer size="xs" />*/}
+        {/*<EmblaCarousel gap="20px">*/}
+        {/*{csr.map((_, index) => (*/}
+
+        {/*    <Event name={`${_.title}`} description={`${_.description}`}  />*/}
+        {/*    ))}*/}
+        {/*</EmblaCarousel>*/}
+        {/*<Spacer size="lg" />*/}
+
+        {/*<Heading>Workshops</Heading>*/}
+        {/*<Spacer size="xs" />*/}
+        {/*<EmblaCarousel gap="20px">*/}
+        {/*{workshops.map((_, index) => (*/}
+
+        {/*    <Event name={`${_.title}`} description={`${_.description}`}  />*/}
+        {/*    ))}*/}
+        {/*</EmblaCarousel>*/}
+        {/*<Spacer size="lg" />*/}
+
+        {/*<Heading>Tech Conflux</Heading>*/}
+        {/*<Spacer size="xs" />*/}
+        {/*<EmblaCarousel gap="20px">*/}
+        {/*{conflux.map((_, index) => (*/}
+
+        {/*    <Event name={`${_.title}`} description={`${_.description}`}  />*/}
+        {/*    ))}*/}
+        {/*  /!* <Event name="Clubs" description="Bruh" /> *!/*/}
+        {/*</EmblaCarousel>*/}
+        {/*<Spacer size="lg" />*/}
+
+        {/*<Heading>Department Events</Heading>*/}
+        {/*<Spacer size="xs" />*/}
+        {/*<EmblaCarousel gap="20px">*/}
+        {/*  <Event name="Open House of Labs" description="Bruh" />*/}
+        {/*  <Event name="Research Paper Presentation" description="Bruh" />*/}
+        {/*  <Event name="Quizes" description="Bruh" />*/}
+        {/*</EmblaCarousel>*/}
+        {/*<Spacer size="lg" />*/}
+
+        {/*<Heading>Gala</Heading>*/}
+        {/*<Spacer size="xs" />*/}
+        {/*<EmblaCarousel gap="20px">*/}
+        {/*  <Event name="Bizwaves" description="Bruh" />*/}
+        {/*  /!* <Event name="M.U.N" description="Bruh" /> *!/*/}
+        {/*  <Event name="Tech Quizes" description="Bruh" />*/}
+        {/*</EmblaCarousel>*/}
+        {/*<Spacer size="lg" />*/}
+
+        {/*<Heading>Gaming Events</Heading>*/}
+        {/*<Spacer size="xs" />*/}
+        {/*<EmblaCarousel gap="20px">*/}
+        {/*  <Event name="B.G.M.I" description="Bruh" />*/}
+        {/*  <Event name="FIFA" description="Bruh" />*/}
+        {/*  <Event name="Valorant" description="Bruh" />*/}
+        {/*</EmblaCarousel>*/}
+        {/*<Spacer size="lg" />*/}
+
+        {/*<Heading>Proshows</Heading>*/}
+        {/*<Spacer size="xs" />*/}
+        {/*<EmblaCarousel gap="20px">*/}
+        {/*  <Event name="Comedy Night" description="Bruh" />*/}
+        {/*  /!* <Event name="Star Eve" description="Bruh" /> *!/*/}
+        {/*  /!* <Event name="Bike Stunt-Show" description="Bruh" /> *!/*/}
+        {/*  <Event name="DJ / Band" description="Bruh" />*/}
+        {/*</EmblaCarousel>*/}
+        {/*<Spacer size="lg" />*/}
 
         {/* {carousal.map((hello, index) => (
           <>
@@ -239,11 +275,10 @@ const Events = () => {
                 </>
                 ))}{" "}
                 </EmblaCarousel>
-        
+
                 <Spacer size="lg" />
               </>
             ))}{" "} */}
-
       </Container>
       <Footer />
     </Box>

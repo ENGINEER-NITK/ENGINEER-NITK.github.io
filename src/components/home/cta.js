@@ -1,15 +1,17 @@
 import Box from "@mui/material/Box";
 import { Button, Container, Paper, Stack, Typography } from "@mui/material";
 import GradientText from "../common/gradienttext";
-import Background from "../../assets/svg/Pattern-12.svg";
+import Background from "../../assets/gif/space.gif";
 import { InlineWidget, PopupButton, PopupWidget } from "react-calendly";
 import { useEffect, useRef } from "react";
 import Spacer from "../Spacer";
 import { Description } from "../common/typography";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
-import image from "../../assets/png/iPhone 12 _ 12 Pro.png";
 import Marquee from "react-fast-marquee";
+import {imageGallery1} from "../../assets/data/homeCTA";
+import {imageGallery2} from "../../assets/data/homeCTA";
+// import { useGlimpsesData1, useGlimpsesData2 } from "../../hooks/useQuery";
 
 const CTA = () => {
   const rootRef = useRef();
@@ -36,11 +38,16 @@ const CTA = () => {
     });
 
     timeline.from(".photo-container", {
-      x: [20, -20],
-      y: -200,
+      opacity: 0,
       stagger: 0.1,
     });
   });
+
+  // const { isLoading1, data1 } = useGlimpsesData1();
+  // const { isLoading2, data2 } = useGlimpsesData2();
+
+  // console.log("data1", data1);
+  // console.log("data2", data2);
 
   return (
     <Box
@@ -68,35 +75,29 @@ const CTA = () => {
         >
           <GradientText primary="Glimpses" secondary="of Events." />
           <Spacer size="sm" />
-          <Description className="description" fontWeight={700}>
-            Discover your business's untapped potential in just 30 minutes! Our
-            call will unveil growth opportunities, address challenges, and craft
-            a tailored strategy for success.{" "}
-          </Description>
+
         </Box>
-        <Marquee>
-          <Stack direction="row" spacing={5}>
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-          </Stack>
-        </Marquee>
+        {/* {isLoading1 ? (<p>Loading</p>) : (<> */}
+          <Marquee>
+            <Stack direction="row" spacing={5}>
+            {imageGallery1.map((val, index) => (
+              <PhotoComponent imageUrl={val.url} />
+              ))}
+            </Stack>
+          </Marquee>
+        {/* </>)} */}
 
         <Spacer size="sm" />
 
-        <Marquee direction="right">
-          <Stack direction="row" spacing={5}>
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-            <PhotoComponent imageUrl={image} />
-          </Stack>
-        </Marquee>
+        {/* {isLoading2 ? (<p>Loading</p>) : (<> */}
+          <Marquee direction="right">
+            <Stack direction="row" spacing={5}>
+            {imageGallery2.map((val, index) => (
+              <PhotoComponent key={index} imageUrl={val.url} />
+              ))}
+            </Stack>
+          </Marquee>
+        {/* </>)} */}
       </Container>
     </Box>
   );
@@ -107,13 +108,12 @@ function PhotoComponent({ imageUrl }) {
     <Paper
       className="photo-container"
       sx={{
-        borderRadius: 0,
         display: "inline-block",
-        padding: 2,
-        border: (theme) => `12px solid ${theme.palette.common.white}`, // Left, right, top
-        borderBottomWidth: (theme) => `48px`, // Bottom        borderRadius: 1,
+        padding: 0,
+        border: (theme) => `4px solid ${theme.palette.common.white}`, // Left, right, top
         boxShadow: "none",
         backgroundColor: "black",
+        borderRadius: '0px'
       }}
     >
       <img

@@ -15,26 +15,28 @@ import event14 from "../png/events/14.png";
 import event15 from "../png/events/15.png";
 import event16 from "../png/events/16.png";
 
+
 const events = [
   {
     image: event1,
     title: "Robo-Wars",
-    description: "NITK is proud to present the first-of-its-kind RoboWars event in (<15 kg wireless category) South India, where teams of budding engineers, innovators, and tech enthusiasts from across the nation will come together to test their mettle in the world of robotics. ",
+    description: "NITK introduces South India's premier RoboWars in the <15 kg wireless category. Teams of engineers and tech enthusiasts nationwide will converge, showcasing their prowess in robotics. Join us in this groundbreaking event!",
     // subtitle: "Subtitle for Event 1",
     firstCta: "First CTA for Event 1",
     secondCta: "Second CTA for Event 1",
-    needRegister: true,
-    rule:"gfdRobo-Warshsj",
+    rule:"robowar",
+    needRule: true,
   },
   {
     image: event2,
     title: "Bizzwave",
-    description: "Get ready to ride the waves of business excitement at Bizzwaves, a thrilling three-day Management Fest packed with a diverse range of events spanning Finance, Human Resource, Marketing, and Analytics. Brace yourself for a whirlwind of knowledge, hands-on workshops, and thought-provoking symposiums. Join us and immerse yourself in the sizzle of business brilliance!",
+    description: "Ride the waves of business excitement at Bizzwaves! Dive into a realm where innovation meets strategy. We're uniting visionaries, unveiling the latest trends, and fostering transformative experiences. Whether a budding entrepreneur or a seasoned leader, Bizzwaves is your launchpad. Navigate the future of commerce with us.",
     // subtitle: "Subtitle for Event 2",
     firstCta: "First CTA for Event 2",
     secondCta: "Second CTA for Event 2",
     needRegister: true,
-    rule:"Bizzwave",
+    rule:"hackWave",
+    needRule: false,
   },
   {
     image: event3,
@@ -54,28 +56,30 @@ const events = [
     firstCta: "First CTA for Event 4",
     secondCta: "Second CTA for Event 4",
     needRegister: false,
-    rule:"Proshowssss",
+    rule:"hackWave",
+    needRule: false,
   },
   {
     image: event5,
-    title: "Hackathon",
+    title: "hackWave",
     description: "Embark on an exhilarating journey through the vast realm of Computer Science, where we offer you a thrilling blend of real-life challenges and immersive hands-on experiences with cutting-edge topics in Information Technology. Get ready to ignite your passion and unleash your potential in the exciting world of haCKATHON.",
     subtitle: "Subtitle for Event 5",
     firstCta: "First CTA for Event 5",
     secondCta: "Second CTA for Event 5",
     needRegister: true,
-    rule:"Hackathon",
+    rule:"hackWave",
+    needRule: true,
   },
-  {
-    image: event5,
-    title: "Bike Show",
-    description: "Rev up your excitement as we present the heart-pounding Bike Show at ENGI 2023! Get ready to witness a thrilling showcase of two-wheeled wonders, featuring the latest in motorcycle technology, stunts, and customized creations. From high-speed adrenaline rushes to jaw-dropping tricks, this Bike Show is a symphony of power and precision that will leave you on the edge of your seat.",
-    subtitle: "Subtitle for Event 5",
-    firstCta: "First CTA for Event 5",
-    secondCta: "Second CTA for Event 5",
-    needRegister: false,
-    rule:"Bike Show",
-  },
+  // {
+  //   // image: event5,
+  //   // title: "Bike Show",
+  //   // description: "Rev up your excitement as we present the heart-pounding Bike Show at ENGI 2023! Get ready to witness a thrilling showcase of two-wheeled wonders, featuring the latest in motorcycle technology, stunts, and customized creations. From high-speed adrenaline rushes to jaw-dropping tricks, this Bike Show is a symphony of power and precision that will leave you on the edge of your seat.",
+  //   // subtitle: "Subtitle for Event 5",
+  //   // firstCta: "First CTA for Event 5",
+  //   // secondCta: "Second CTA for Event 5",
+  //   // needRegister: false,
+  //   // rule:"Bike Show",
+  // },
 ];
 
 

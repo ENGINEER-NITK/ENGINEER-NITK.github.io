@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import clip from "../../assets/video/video.mp4";
+import clip from "../../assets/video/video.webm";
 import { makeStyles } from "@mui/styles";
 import useGsap from "../../hooks/useGsap";
-import { wrapWordWithSpan } from "./hero";
 import gsap from "gsap";
 
 const useStyles = makeStyles((theme) => ({
@@ -26,16 +25,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: 0,
     left: 0,
-  },
-  h1: {
-    position: "absolute",
-    width: "100%",
-    top: 0,
-    left: 0,
-    backgroundColor: "black",
-    color: "#fff",
-    textAlign: "center",
-    mixBlendMode: "darken",
+    clipPath: 'url(#clip)', // Referencing the clipPath id from SVG
   },
 }));
 
@@ -50,32 +40,27 @@ const VideoText = () => {
 
   return (
     <div className={classes.root}>
-      <video autoPlay loop muted className={classes.video}>
+      <svg style={{ opacity: 1, position: 'fixed', zIndex: -999 }} viewBox="0 0 1 1">
+        <defs>
+          <clipPath id="clip" clipPathUnits="objectBoundingBox">
+            <text
+              x="0.5"
+              y="0.5"
+              font-size="0.9"
+              text-anchor="middle"
+              alignment-baseline="middle"
+              font-family="Delirium"
+              font-weight="900"
+              color='red'
+            >
+              ENGI
+            </text>
+          </clipPath>
+        </defs>
+      </svg>
+      <video playsInline  autoPlay loop muted className={classes.video}>
         <source src={clip} type="video/mp4" />
       </video>
-      <Typography
-        paragraph
-        variant="h1"
-        color="textPrimary"
-        fontFamily="Delirium"
-        className={classes.h1}
-        sx={{
-          fontSize: {
-            xs: "95vw",
-            md: "70vw",
-          },
-          lineHeight: {
-            xs: "95vw",
-            md: "65vw",
-          },
-        }}
-        fontWeight={900}
-      >
-        <span className="char">E</span>
-        <span className="char">N</span>
-        <span className="char">G</span>
-        <span className="char">I</span>
-      </Typography>
     </div>
   );
 };

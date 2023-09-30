@@ -3,17 +3,17 @@ import {
   Box,
   Button,
   Container,
-  Grid,
+  Grid, Stack,
   Typography,
   useMediaQuery,
   useTheme,
-} from "@mui/material";
+} from '@mui/material';
 import Appbar from "../../components/Appbar";
 import Footer from "../../components/common/footer";
 import Spacer from "../../components/Spacer";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
-import bgBrouchure from "../../assets/jpg/bg-brochure.jpg";
+import bgBrouchure from "../../assets/png/logo.png";
 import brochurePageOne from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BROCHURE_page-0001.jpg";
 import brochurePageTwo from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BROCHURE_page-0002.jpg";
 import brochurePageThree from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BROCHURE_page-0003.jpg";
@@ -28,6 +28,10 @@ import brochurePageEleven from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BRO
 import brochurePageTwelve from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BROCHURE_page-0012.jpg";
 import brochurePageThirteen from "../../assets/jpg/brochure/ENGINEER'NITK 2K23_BROCHURE_page-0013.jpg";
 import { wrapWordsWithSpan } from "../../components/home/hero";
+import GradientText from '../../components/common/gradienttext';
+import Marquee from 'react-fast-marquee';
+import SponsorCard from '../../components/brochure/sponsor';
+import EmblaCarousel from '../../components/common/carousel';
 
 const images = [
   {
@@ -131,7 +135,7 @@ const Brochure = () => {
       {
         scale: 1.7,
         duration: 1,
-        x: 50,
+        rotate: 360,
       },
       "<"
     );
@@ -203,72 +207,41 @@ const Brochure = () => {
       <Container maxWidth="lg" color="white">
         <Box pt={20}>
           <Box
-            sx={{
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "70%",
-            }}
           >
-            <Typography
-              textAlign="center"
-              variant="h1"
-              fontWeight={200}
-              fontFamily="Lato"
-              lineHeight="5rem"
-              color="white"
-              sx={{
-                fontSize: {
-                  md: "6rem",
-                  xs: "3rem",
-                },
-              }}
-            >
-              ENGINEER 2 K23{" "}
-            </Typography>{" "}
-            <Typography
-              textAlign="center"
-              variant="h1"
-              fontFamily="Mona"
-              fontSize="7rem"
-              fontWeight={700}
-              letterSpacing="2px"
-              sx={{
-                fontSize: {
-                  md: "7rem",
-                  xs: "3rem",
-                },
-              }}
-              color="white"
-            >
-              BROCHURE PAGE{" "}
-            </Typography>
-            <Typography
-              fontFamily="Mona"
-              textAlign="right"
-              variant="body2"
-              color="white"
-            >
-              Ensight.{" "}
-            </Typography>{" "}
-            <Typography
-              fontFamily="Mona"
-              color="white"
-              textAlign="right"
-              variant="body2"
-            >
-              Ennovation.{" "}
-            </Typography>{" "}
-            <Typography
-              fontFamily="Mona"
-              color="white"
-              textAlign="right"
-              variant="body2"
-            >
-              Envention.{" "}
-            </Typography>{" "}
+            <GradientText primary='Brochure' secondary='Engineer 2K23'/>
+            <Spacer size='xl'/>
+
+            <Box sx={{
+              backgroundColor: 'red'
+            }}>
+            <Marquee>
+                <Typography
+                  fontFamily="Mona"
+                  textAlign="right"
+                  variant="h1"
+                  color="white"
+                >
+                  Ensight.
+                </Typography>
+                <Typography
+                  fontFamily="Mona"
+                  color="white"
+                  textAlign="right"
+                  variant="h1"
+                >
+                  Ennovation.
+                </Typography>
+                <Typography
+                  fontFamily="Mona"
+                  color="white"
+                  textAlign="right"
+                  variant="h1"
+                >
+                  Envention.
+                </Typography>
+            </Marquee>
+            </Box>
           </Box>
-          <Box my={45} />
           <Box overflow="hidden">
             <Box className="trigger" height="100vh" margin="auto">
               <Box className="image" width="75%" margin="auto" height="100%">
@@ -304,25 +277,37 @@ const Brochure = () => {
         <Box className="pin-brochure">
           <Box height="100vh">
             <Grid container>
-              <Grid item xs={12} md={7}>
-                <Box position="relative">
-                  {" "}
+              <Grid item xs={12} md={7} sx={{ position: 'relative', height: '90vh' }}>
+                {/* Container box for images */}
+                <Box
+                  sx={{
+                    width: '100%',
+                    height: '100%',
+                    position: 'relative',
+                  }}
+                >
                   {images.map((_, index) => (
                     <img
                       style={{
                         display: "block",
                         position: "absolute",
                         top: 0,
-                        width: "90%",
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',  // This ensures the image scales correctly
                         zIndex: images.length - index,
                       }}
                       className={`brochure-page-${index}`}
                       src={_.url}
-                      width="90%"
+                      alt="Brochure"  // Always add alt for accessibility
                     />
-                  ))}{" "}
-                </Box>{" "}
-              </Grid>{" "}
+                  ))}
+                </Box>
+              </Grid>
+
               <Grid
                 item
                 xs={12}
@@ -332,15 +317,61 @@ const Brochure = () => {
                     md: "block",
                     xs: "none",
                   },
+                  pl: 2,  // Add some padding for better aesthetics
                 }}
               >
-                <Typography color="white" variant="h1">
-                  Main Brochure
-                </Typography>{" "}
-              </Grid>{" "}
-            </Grid>{" "}
+                <GradientText primary='Sponsors'/>
+                <Spacer size='sm'/>
+                <EmblaCarousel  flex='0 0 50%'>
+                  <SponsorCard name='sponsor'/>
+
+                  <SponsorCard name='sponsor'/>
+                  <SponsorCard name='sponsor'/>
+                  <SponsorCard name='sponsor'/>
+                </EmblaCarousel>
+                <Spacer size='sm'/>
+
+                <EmblaCarousel  flex='0 0 50%'>
+                  <SponsorCard name='sponsor'/>
+
+                  <SponsorCard name='sponsor'/>
+                  <SponsorCard name='sponsor'/>
+                  <SponsorCard name='sponsor'/>
+                </EmblaCarousel>
+
+              </Grid>
+            </Grid>
           </Box>{" "}
         </Box>{" "}
+
+        <Box sx={{
+          display: {
+            md: 'none',
+            xs: 'block'
+          }
+        }}>
+          <GradientText primary='Sponsors'/>
+          <Spacer size='sm'/>
+          <EmblaCarousel  flex='0 0 50%'>
+            <SponsorCard name='sponsor'/>
+
+            <SponsorCard name='sponsor'/>
+            <SponsorCard name='sponsor'/>
+            <SponsorCard name='sponsor'/>
+          </EmblaCarousel>
+          <Spacer size='sm'/>
+
+          <EmblaCarousel  flex='0 0 50%'>
+            <SponsorCard name='sponsor'/>
+
+            <SponsorCard name='sponsor'/>
+            <SponsorCard name='sponsor'/>
+            <SponsorCard name='sponsor'/>
+          </EmblaCarousel>
+
+
+        </Box>
+        <Spacer size='xl'/>
       </Container>{" "}
       <Footer />
     </Box>

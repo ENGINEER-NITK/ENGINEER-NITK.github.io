@@ -8,8 +8,8 @@ import {
   useTheme,
   FormControl,
   MenuItem,
-  Select,
-} from "@mui/material";
+  Select, Stack, Card, CardContent,
+} from '@mui/material';
 import Appbar from "../../components/Appbar";
 import Footer from "../../components/common/footer";
 import Spacer from "../../components/Spacer";
@@ -145,7 +145,11 @@ const Accomodation = () => {
       <Appbar />
       <Container maxWidth="md" color="white">
         <Box sx={{ paddingTop: isMobile ? "70px" : "80px" }}>
-          <GradientText primary="Lodging" secondary="Queries" />
+          <Spacer size='md'/>
+          <Stack>
+            <GradientText primary="Lodging" secondary="Queries" />
+            <a href="https://engineer.yapsody.com/event/book/785135/31574123?ref=elink" target="_blank" >Get Tickets for "Accommodation at NITK's Tech Fest Engineer 23 " only on Yapsody</a>
+          </Stack>
           {isMobile ? (
             <FormControl
               fullWidth

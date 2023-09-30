@@ -85,7 +85,7 @@ const Ambassador = () => {
   console.log(data);
   return (
     <Box sx={{ backgroundColor: "common.black" }}>
-      <Appbar isGuest={true} />
+      <Appbar />
       <Container sx={{ minHeight: "100vh" }} maxWidth="lg" color="white">
         <Box py={10} />
         <GradientText primary="Campus" secondary="Ambassadors" />

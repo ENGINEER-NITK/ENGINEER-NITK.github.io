@@ -21,16 +21,18 @@ const StyledCard = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to top left, #1a237e, transparent);
-    z-index: 0;
+    background: ${({ background }) => background};
+    z-index: -1;
+    opacity: 0.4
   }
 `;
 
-export const Card = ({ backgroundImage, children, ...props }) => {
+export const Card = ({ backgroundImage, background, children, ...props }) => {
   return (
     <StyledCard
       className="gradient-box"
       backgroundImage={backgroundImage}
+      background={background}
       {...props}
     >
       {children}

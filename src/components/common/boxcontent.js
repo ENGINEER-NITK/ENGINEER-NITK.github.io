@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import Spacer from "../Spacer";
 
-const BoxContent = ({ title, description, width = "100%", mode = "dark" }) => {
+const BoxContent = ({ title, description, description2, width = "100%", mode = "dark", key }) => {
   const color = mode === "dark" ? "white" : "black";
   const descriptionColor = mode === "dark" ? "textSecondary" : "grey";
   return (
@@ -16,7 +17,8 @@ const BoxContent = ({ title, description, width = "100%", mode = "dark" }) => {
         gutterBottom
         lineHeight="1.2" // Adjust the line height as needed for better appearance
       >
-        {title}
+
+      {title}
       </Typography>
       <Typography
         variant="body1"
@@ -26,7 +28,19 @@ const BoxContent = ({ title, description, width = "100%", mode = "dark" }) => {
         fontSize="14px"
         lineHeight="18px"
       >
-        {description}
+        <span style={{backgroundColor: 'rgba(23 18 24 / 70%)'}}>{description}</span>
+      </Typography>
+      
+      <Typography
+        variant="body1"
+        fontWeight="bold"
+        color={descriptionColor}
+        fontFamily="typography.fontFamily"
+        fontSize="14px"
+        lineHeight="18px"
+
+      >
+        <span style={{backgroundColor: 'rgba(23 18 24 / 70%)'}}>{description2}</span>
       </Typography>
     </Box>
   );

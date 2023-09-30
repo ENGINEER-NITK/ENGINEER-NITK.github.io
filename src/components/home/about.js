@@ -1,16 +1,18 @@
-import { Container, Grid, Stack, Typography } from "@mui/material";
-import GradientText from "../common/gradienttext";
-import Spacer from "../Spacer";
-import GradientBox from "../common/gradientbox";
-import Iphone12 from "../../assets/png/iPhone 12 _ 12 Pro.png";
-import BoxContent from "../common/boxcontent";
-import Samsung from "../../assets/png/Samsung Galaxy Note20 Ultra 5G.png";
-import React from "react";
-import styled from "styled-components";
-import Box from "@mui/material/Box";
-import Home from "../../assets/svg/Dayflow Party Time.svg";
-import { Description, Heading } from "../common/typography";
-import useGsap, { animateOnScroll } from "../../hooks/useGsap";
+import { Container, Grid, Stack, Typography } from '@mui/material';
+import GradientText from '../common/gradienttext';
+import Spacer from '../Spacer';
+import GradientBox from '../common/gradientbox';
+import Iphone12 from '../../assets/png/iPhone 12 _ 12 Pro.png';
+import BoxContent from '../common/boxcontent';
+import Samsung from '../../assets/png/Samsung Galaxy Note20 Ultra 5G.png';
+import React, { useRef } from 'react';
+import styled from 'styled-components';
+import Box from '@mui/material/Box';
+import Home from '../../assets/svg/Dayflow Party Time.svg';
+import { Description, Heading } from '../common/typography';
+import useGsap, { animateOnScroll } from '../../hooks/useGsap';
+import gsap from 'gsap';
+import EmblaCarousel from '../common/carousel';
 
 const UserBoxContainer = styled(Box)`
   display: flex;
@@ -53,77 +55,103 @@ const SocialMediaLink = styled(Typography)`
   }
 `;
 
-const UserBox = () => {
-  // Replace the imageURL with the actual image URL of the user
-  const imageURL = Home;
-
-  return (
-    <UserBoxContainer>
-      <UserInfo>
-        <Heading>Brotherly Trust: Startup Journey</Heading>
-        <Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula
-          neque sed justo ultrices, vel scelerisque dui laoreet.
-        </Description>
-        <div>
-          {/* Replace the social media URLs with the actual links */}
-          <SocialMediaLink href="https://example.com/facebook" target="_blank">
-            <i className="fab fa-facebook"></i>
-          </SocialMediaLink>
-          <SocialMediaLink href="https://example.com/twitter" target="_blank">
-            <i className="fab fa-twitter"></i>
-          </SocialMediaLink>
-          <SocialMediaLink href="https://example.com/instagram" target="_blank">
-            <i className="fab fa-instagram"></i>
-          </SocialMediaLink>
-        </div>
-      </UserInfo>
-    </UserBoxContainer>
-  );
-};
-
 const About = () => {
-  useGsap("#about-root", () => {
-    animateOnScroll(".title", ".gradient-box");
+  const eventsRef = useRef(null);
+
+  useGsap('#about-root', () => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.trigger',
+        start: 'top top',
+        end: '+=500', //this was 2000 intially, changed to get it right for 1 card
+        pin: '.trigger',
+        pinSpacing: true,
+        scrub: 1,
+        immediateRender: false,
+      },
+    });
+
+    // Calculate the height difference (scroll distance) for the left section
+    const scrollDistance = eventsRef.current.scrollHeight - window.innerHeight;
+
+    // Create a new timeline to scroll the left section
+    timeline.to(eventsRef.current, {
+      y: -scrollDistance,
+    });
+    animateOnScroll('.title', '.gradient-box');
   });
   return (
     <Container id="about-root" maxWidth="lg">
-      <GradientText
-        className="title"
-        primary="Timeline"
-        secondary="Our Story."
-      />
+      <GradientText className="title" primary="Timeline" secondary="Live Events." />
       <Spacer size="sm" />
-      <Grid container spacing={1.5}>
-        <Grid item xs={12} md={5}>
-          <Stack direction="column" spacing={1.5}>
-            <GradientBox img={Iphone12}>
-              <BoxContent
-                width="65%"
-                title="Elevate your online Presence"
-                description="We blend visionary web design with boundless creativity, empowering your brand to leave an indelible mark in the digital landscape"
-              />
-            </GradientBox>
-            <GradientBox rotate="10deg" img={Samsung}>
-              <BoxContent
-                width="65%"
-                title="Mobile First Website Design"
-                description="Our team crafts responsive web solutions, ensuring seamless user experiences on any device with skillful design and development."
-              />
-            </GradientBox>
-          </Stack>
-        </Grid>
-        <Grid item xs={12} md={7}>
-          <GradientBox alignItems="flex-start" height="100%">
-            <BoxContent
-              width="100%"
-              title="Meet Our Stellar Team of Experts"
-              description={`Our exceptional journey began when a group of extraordinary individuals joined forces, each bringing their unparalleled expertise to the table. Modassir, a mastermind of social media and marketing, crafts strategies that amplify our brand"s reach. Anas, our frontend and devops expert, shapes captivating user experiences and ensures seamless website operations. Pervez, a brilliant mind in web3 contracts and backend development, empowers us with cutting-edge technological solutions. Srinivas, our seasoned frontend and backend expert, adds finesse to every aspect of our digital creations. Together, their collective brilliance forms the backbone of our agency, propelling us towards new heights of success and innovation.`}
-            />
-          </GradientBox>
-        </Grid>
-      </Grid>
+      <Box className="trigger">
+        <Grid container spacing={1.5}>
+          <Grid item xs={14} md={5}>
+            <Box ref={eventsRef}>
+              <Box sx={{ height: '100vh' }}>
+                <PairOfEvents key={true} /> <DummyPairOfEvents />
+                <DummyPairOfEvents />
+              </Box>{' '}
+            </Box>{' '}
+          </Grid>{' '}
+          <Grid item xs={12} md={7} sx={{
+            height: {
+              md: 'auto',
+              xs: '400px'
+            }
+          }}>
+              <iframe
+                style={{
+                  borderRadius: '18px',
+                  boxShadow: '0px 0px 15px rgba(0,0,0,0.2)', // optional shadow for a bit of depth
+                  border: '1px solid #ccc', // a light border
+                }}
+                src="https://map.proxi.co/r/2HgoqtF9Ep_1pZvrvUW7"
+                allow="geolocation; clipboard-write"
+                width="100%"
+                height="100%"
+                allowFullScreen
+              >
+                {' '}
+              </iframe>{' '}
+          </Grid>{' '}
+        </Grid>{' '}
+      </Box>{' '}
     </Container>
+  );
+};
+
+const PairOfEvents = (key) => {
+  return (
+    <Box my={1}>
+      <Stack direction="column">
+        <GradientBox img="https://res.cloudinary.com/det9aw4gh/image/upload/v1694977732/FlashMob.jpg">
+          <BoxContent
+            key={key}
+            width="65%"
+            title="Flash Mob"
+            description="Date: 19th October 2023"
+            description2="Venue: CIDS 3.45 PM Onwards"
+          />
+        </GradientBox>{' '}
+      </Stack>{' '}
+    </Box>
+  );
+};
+const DummyPairOfEvents = () => {
+  return (
+    <Box my={1}>
+      <Stack direction="column">
+        <GradientBox img="">
+          <BoxContent
+            width="65%"
+            title="Coming Soon"
+            description="SCHEDULE FOR ALL EVENTS WILL BE UPDATED SOON"
+            key={false}
+          />{' '}
+        </GradientBox>{' '}
+      </Stack>{' '}
+    </Box>
   );
 };
 

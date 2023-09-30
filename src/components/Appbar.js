@@ -3,15 +3,15 @@ import {
   AppBar,
   Box,
   Button,
-  Container,
-  IconButton,
+  Container, Dialog,
+  IconButton, List, ListItem, ListItemText,
   Menu,
   MenuItem,
-  Slide,
+  Slide, Stack,
   Toolbar,
   Typography,
   useTheme,
-} from "@mui/material";
+} from '@mui/material';
 import {
   AiFillGithub,
   AiFillTwitterCircle,
@@ -20,29 +20,33 @@ import {
 } from "react-icons/ai";
 import LogoMascot from "../assets/svg/logo_mascot.svg";
 import useGsap from "../hooks/useGsap";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from "react-router-dom";
+import GradientText from './common/gradienttext';
+import Spacer from './Spacer';
+import Logo from '../assets/png/logo.png'
 
 let navLinks = [
   { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
+  { title: "Ambassadors", path: "/ambassador" },
   { title: "Events", path: "/events" },
   { title: "Brochure", path: "/brochure" },
-  { title: "Gallery", path: "/gallery" },
-  { title: "Engi Care", path: "/engi-care" },
-  { title: "Alumni Connect", path: "/alumni-connect" },
   { title: "Accommodation", path: "/accomodation" },
   { title: "Contact", path: "/contact" },
+  { title: "Team", path: '/team'},
+  { title: "Game", path: '/game'}
+
 ];
 
 let mainLinks = [
   { title: "Home", path: "/" },
   { title: "Ambassadors", path: "/ambassador" },
-
   { title: "Events", path: "/events" },
   { title: "Brochure", path: "/brochure" },
   { title: "Accommodation", path: "/accomodation" },
   { title: "Contact", path: "/contact" },
+  { title: "Team", path: '/team'},
+  { title: "Game", path: '/game'}
 ];
 
 const Appbar = ({ isGuest = false }) => {
@@ -61,145 +65,115 @@ const Appbar = ({ isGuest = false }) => {
     );
 
   return (
-    <AppBar className="appbar" ref={appbarRef} elevation={0} position="fixed">
-      <Container maxWidth="lg">
-        <Toolbar
-          disableGutters
-          sx={{
-            py: 2,
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            transition: "background-color 0.3s ease",
-            position: "relative", // Set the position to relative for the AppBar
-          }}
-        >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            {/* Logo Image */} {/*<img*/} {/*  src={LogoMascot}*/}{" "}
-            {/*  alt="Logo"*/} {/*  className="logo"*/}{" "}
-            {/*  style={{ height: "72px" }}*/} {/*/>*/}{" "}
-            {/* Your logo or site name can be placed here */}{" "}
-            <Box className="logo_title">
-              <Typography
-                variant="h3"
-                fontFamily={theme.typography.fontFamily}
-                fontWeight={800}
-                color="textPrimary"
-                lineHeight="1.3rem"
-              >
-                Engi .2 K23{" "}
-              </Typography>{" "}
-              <Typography
-                variant="body2"
-                fontFamily={theme.typography.fontFamily}
-                fontWeight={500}
-                color="primary"
-                textAlign="right"
-              >
-                NITK{" "}
-              </Typography>{" "}
-            </Box>{" "}
-          </Box>{" "}
-          {/*<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>*/}{" "}
-          {/*    <Link to="/" sx={{ color: 'inherit', textDecoration: 'none' }}>*/}{" "}
-          {/*        <Typography fontFamily={theme.typography.fontFamily} variant="body2">Home</Typography>*/}{" "}
-          {/*    </Link>*/}{" "}
-          {/*    <Link to="/about" sx={{ color: 'inherit', textDecoration: 'none' }}>*/}{" "}
-          {/*        <Typography fontFamily={theme.typography.fontFamily} variant="body2">About</Typography>*/}{" "}
-          {/*    </Link>*/}{" "}
-          {/*    <Link to="/services" sx={{ color: 'inherit', textDecoration: 'none' }}>*/}{" "}
-          {/*        <Typography fontFamily={theme.typography.fontFamily} variant="body2">Services</Typography>*/}{" "}
-          {/*    </Link>*/} {/*</Box>*/}{" "}
-          <Box
+    <>
+      <AppBar className="appbar" ref={appbarRef} elevation={0} position="fixed" sx={{
+
+      }}>
+        <Container maxWidth="lg">
+          <Toolbar
+            disableGutters
             sx={{
-              display: {
-                md: "flex",
-                xs: "none",
-              },
+              py: 2,
+              display: "flex",
+              justifyContent: "space-between",
               alignItems: "center",
-              color: "white",
-              gap: 3,
+              transition: "background-color 0.3s ease",
+              position: "relative",
+
+              // Set the position to relative for the AppBar
             }}
           >
-            {mainLinks.map((link, index) => (
-              <Link to={link.path}>
-                <Typography
-                  className="action"
-                  fontWeight={600}
-                  key={index}
-                  variant="body1"
-                >
-                  {link.title}{" "}
-                </Typography>{" "}
-              </Link>
-            ))}{" "}
-          </Box>{" "}
-          <AppMenu />
-        </Toolbar>{" "}
-      </Container>{" "}
-    </AppBar>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Link to='/'>
+              <Box className="logo_title">
+                <div className="glitch-wrapper">
+                  <div className="glitch" data-text="Engi 2K23">Engi 2K23</div>
+                </div>
+              </Box>
+              {/*    <img src={Logo}  width='72px'/>*/}
+              </Link>{" "}
+            </Box>{" "}
+
+            <FullscreenNav />
+          </Toolbar>{" "}
+        </Container>{" "}
+      </AppBar>
+      <div className='appbar-trigger'/>
+    </>
   );
 };
 
-const AppMenu = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
+const FullscreenNav = () => {
+  const [open, setOpen] = useState(false);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleClick = () => {
+    setOpen(open => !open)
+  }
+
   return (
-    <Box className="menu" bgcolor="white">
+    <div>
       <IconButton onClick={handleClick}>
         <FiMenu />
-      </IconButton>{" "}
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            color: "black",
-            overflow: "visible",
-            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-            mt: 1.5,
-            "& .MuiAvatar-root": {
-              width: 32,
-              height: 32,
-              ml: -0.5,
-              mr: 1,
-            },
-            "&:before": {
-              content: '""',
-              display: "block",
-              position: "absolute",
-              top: 0,
-              right: 14,
-              width: 10,
-              height: 10,
-              bgcolor: "background.paper",
-              transform: "translateY(-50%) rotate(45deg)",
-              zIndex: 0,
-            },
-          },
-        }}
-        transformOrigin={{ horizontal: "right", vertical: "top" }}
-        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-      >
-        {" "}
-        {navLinks.map((link) => (
-          <Link to={link.path}>
-            <MenuItem onClick={handleClose}> {link.title} </MenuItem>
-          </Link>
-        ))}
-      </Menu>{" "}
-    </Box>
+      </IconButton>
+
+    <Dialog open={open} fullScreen>
+      <Box sx={{
+        backgroundColor: 'black'
+      }}>
+        <Spacer size='md'/>
+        <Container maxWidth='md'>
+          <Box minHeight='100vh'>
+            <Stack alignItems='center' direction='row' justifyContent='space-between'>
+              <GradientText primary='Navigation' secondary='Menu'/>
+              <IconButton
+                edge="end"
+                color="inherit"
+                onClick={handleClick}
+                sx={{
+                  display: {
+                    xs: 'none',
+                    md: 'block'
+                  }
+                }}
+              >
+                <FiX />
+              </IconButton>
+            </Stack>
+
+            <List>
+              {mainLinks.map((link) => (
+                <Link to={link.path}>
+                  <ListItem button key={link.title} onClick={() => { /* Navigate to the path */ }}>
+                    <ListItemText primary={link.title} />
+                  </ListItem>
+                </Link>
+              ))}
+            </List>
+          </Box>
+          <IconButton
+            edge="end"
+            color="inherit"
+            onClick={handleClick}
+            sx={{
+              display: {
+                md: 'none',
+                xs: 'block'
+              },
+              position: 'fixed',
+              bottom: 20,
+              left: '50%',
+              transform: 'translateX(-50%)'
+            }}
+          >
+            <FiX />
+          </IconButton>
+        </Container>
+
+      </Box>
+    </Dialog>
+    </div>
   );
-};
+}
 
 export default Appbar;

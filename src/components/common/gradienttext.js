@@ -1,7 +1,39 @@
 import { Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useRef } from 'react';
 import starImage from "../../assets/png/trees.png";
+import { gsap } from 'gsap';
+import easyMeshGradient from 'easy-mesh-gradient';
+
 const GradientText = ({ primary, secondary, ...props }) => {
+  const secondaryRef = useRef(null);
+
+  useEffect(() => {
+    // GSAP Animation
+    const shine = gsap.timeline({ repeat: -1, yoyo: true });
+
+    const animate = () => {
+      // Generate a random duration between 1 and 3 seconds
+      const randomDuration = Math.random() * 2 + 1;
+
+      shine.fromTo(secondaryRef.current, {
+        backgroundPosition: "200% center",
+      }, {
+        backgroundPosition: "-200% center",
+        duration: randomDuration,
+        ease: "power1.inOut",
+        onComplete: animate, // Call animate again after completion to keep the animation running
+      });
+    };
+
+    animate(); // Initial call to start the animation
+  }, []);
+
+  const gradientString = easyMeshGradient({
+    seed: '123',
+  });
+
+  const boxBackground = `${gradientString}`
+
   return (
     <Typography
       variant="h2"
@@ -12,8 +44,8 @@ const GradientText = ({ primary, secondary, ...props }) => {
       fontSize="48px"
       lineHeight="1.2" // Adjust the line height as needed for better appearance
       sx={{
-        background: "linear-gradient(to bottom right, #c8f704, #6c7f02)", // Gradient colors from top left to bottom right
-        backgroundImage: "linear-gradient(to bottom right, #c8f704, #6c7f02)", // Fallback for some browsers
+        background: boxBackground, // Gradient colors from top left to bottom right
+        backgroundImage: boxBackground, // Fallback for some browsers
         backgroundClip: "text",
         position: "relative",
         webkitBackgroundClip: "text", // For Safari support
@@ -26,6 +58,11 @@ const GradientText = ({ primary, secondary, ...props }) => {
           top: "-50px",
           zIndex: 1,
         },
+        ".secondary": {
+          background: "linear-gradient(90deg, transparent, transparent 47%, red 50%, transparent 53%, transparent)",
+          backgroundSize: "200% auto",
+          display: "inline-block",
+        }
       }}
       {...props}
     >
@@ -58,7 +95,9 @@ const GradientText = ({ primary, secondary, ...props }) => {
           }}
         />
       </span>{" "}
-      <br /> {secondary}
+      <br />
+
+      <span ref={secondaryRef} className='secondary'>{secondary}</span>
     </Typography>
   );
 };
