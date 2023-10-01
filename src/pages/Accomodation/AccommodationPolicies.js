@@ -42,14 +42,84 @@ const AccommodationPolicies = () => {
           </Typography>
         </Box>
         <Typography variant="body1" paragraph style={{ color: "white" }}>
-          {/*Accommodation charges are INR 3499 per candidate for 5 days. Maximum*/}
-          {/*of 5 nights stay allowed (15th Dec 6 AM - 19th Dec 10 AM). It does not*/}
-          {/*include food facility. Guests can purchase their meals from the food*/}
-          {/*court, night cafeteria, private hostel canteens, or hostel messes at*/}
-          {/*subsidized rates.*/}
-          WILL BE UPDATED SOON
+          Basic (Tier 1)  : Economical dormitory-style rooms for a one-day stay with passes to open-door events of the respective day - Rs. 499/person
+
+          <br/>
+          Standard (Tier 2) : Affordable rooms for a 3-day stay with passes to open-door events like Robowars, Drone Race, High Octane, and Wright flight , Guest Talks, Project/Art Displays and more - Rs. 1499
+          <br/>
+
+
+          Executive (Tier 3): Spacious Shivalik rooms for a 3-day stay with passes to events of Tier-2 and also including Halloween Themed Salsa Night(day1), Dandiya Night and India-Pak WC Fan Park( day2 ), and  Beach Events( day3 ) - Rs. 2499
+          <br/>
+
+
+          Premium (Tier 4): Spacious Shivalik rooms for a 3-day stay with passes to events of Tier-3 and also including Pro Shows(day 3) including Live Band (Pineapple Express) and DJ Night (DJ Roan) - Rs. 3499
+          <br/>
+          <br/>
+
+          ** All tickets are for a single-person booking. The tier 2-3-4 tickets can be converted to a multi-share ( max 2 extra people can be accommodated in one room booked ) booking by paying extra fees of-
+          <br/>
+
+          Multi Sharing ( Tier 2 & 3 ) - Rs. 299 / extra person
+          <br/>
+
+          Multi Sharing ( Tier 4 ) - Rs. 399 / extra person
+          <br/>
+          <br/>
+
+          **Note- the multi-sharing option is just an add-on for your booking of the room . No claims regarding booking of room showing ticket of multi shared accommodation will be valid . To avail a room, a single accommodation booking has to be made and then for extra people, you need to buy the add-on tickets .
+          <br/>
+
+          **Also , once you buy a ticket of a particular tier from one account , you need to use a different account to buy tickets of the same tier again.
+          <br/>
+          <br/>
+
+          POC- Himanshu ( 83089 88245 )
+          <br/>
+
+          E Mail- Himan.201me122@nitk.edu.in
         </Typography>
 
+        <Box sx={headingStyle}>
+          <Typography variant="h4" gutterBottom sx={
+            {
+              fontSize: isMobile ? "30px" : "36px"
+            }
+          }>
+            How to avail Accommodation
+          </Typography>
+        </Box>
+
+        <Typography variant="body1" paragraph style={{ color: "white" }}>
+          1. *Payment Method 1 - Direct Credit Card Payment:*
+          <br/>
+          To initiate a booking and generate an online ticket for accommodation, you can opt for a direct payment using your credit card. Once the payment is successfully processed, an online ticket will be generated and promptly emailed to you for your reference.
+          <br/>
+          <br/>
+
+          2. *Payment Method 2 - UPI Payment in 'Pay Later' Mode:*
+          <br/>
+
+          Alternatively, you can choose to make a payment using UPI (Unified Payments Interface) in a 'pay later' mode. Here are the steps to follow for this payment method:
+          <br/>
+          <br/>
+
+          - Select the 'pay later' option for UPI Payment during the booking process.
+          <br/>
+
+          - Fill out the necessary details in the provided Google form in the Yapsody Paylater.
+          <br/>
+
+          - Ensure all required details are accurately filled in the form.
+          <br/>
+
+          - Once the form is submitted, proceed with the pay later page and an E-ticket for pay later will be generated and sent to your email, confirming your registration request.
+          <br/>
+          <br/>
+
+          *Confirmation of Payment via UPI and Final E-Ticket:*
+          Our dedicated team will promptly verify your payment. Within 24 hours of your form submission, a final E-ticket confirming your purchase and accommodation booking will be generated and emailed to you. We strive to provide a seamless booking experience, and we look forward to welcoming you.
+        </Typography>
         <Box sx={headingStyle}>
           <Typography variant="h4" gutterBottom sx={
             {
