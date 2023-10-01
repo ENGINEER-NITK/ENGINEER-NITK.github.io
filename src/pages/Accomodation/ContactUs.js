@@ -30,6 +30,12 @@ const ContactUs = () => {
         <Typography variant="body1" paragraph style={{ color: "white" }}>
           Feel Free to contact for any queries
         </Typography>
+        <Typography variant="h5" paragraph style={{ color: "white", textDecoration : "" }}>
+       POC- Himanshu ( 83089 88245 )
+        </Typography>
+        <Typography variant="h5" paragraph style={{ color: "white", textDecoration : "" }}>
+        E Mail- Himan.201me122@nitk.edu.in
+        </Typography>
         {/*<Typography variant="body1" paragraph style={{ color: "white" }}>*/}
         {/*  <br />*/}
         {/*  Hospitality and Marketing Manager*/}
