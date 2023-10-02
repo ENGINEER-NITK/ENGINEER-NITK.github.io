@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.565a47d4.css",
-    "main.js": "/static/js/main.b3b984c0.js",
+    "main.css": "/static/css/main.31b7dc2f.css",
+    "main.js": "/static/js/main.aa2d317d.js",
     "static/js/787.0d4f6fcd.chunk.js": "/static/js/787.0d4f6fcd.chunk.js",
     "static/media/magic.JPG": "/static/media/magic.7f4c07d09424231dc2f2.JPG",
     "static/media/BNR_4.JPG": "/static/media/BNR_4.91893d0230657367ffcd.JPG",
@@ -42,12 +42,12 @@
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0005.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0005.38fd43a045ccb32114c0.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0001.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0001.c443da1e3747360a41c0.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0002.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0002.58e7a48eeab5aaeabe98.jpg",
-    "static/media/trees.png": "/static/media/trees.f4b0e9a47389488cf01d.png",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0003.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0003.1be6c2b6a924acc66b35.jpg",
     "static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0004.jpg": "/static/media/alumniENGINEER'NITK 2K23_BROCHURE_page-0004.0c50335561dace213e62.jpg",
     "static/media/drone1.jpg": "/static/media/drone1.fd741250c56d6e5ad47c.jpg",
     "static/media/contactBG.jpg": "/static/media/contactBG.28eb273d99b76080ddd0.jpg",
     "static/media/Layx.gif": "/static/media/Layx.e529feab4444822bf20a.gif",
+    "static/media/videogame.gif": "/static/media/videogame.d767b6250ac2dc2f8174.gif",
     "static/media/anas.jpg": "/static/media/anas.7dea3487a35b3f1b1e44.jpg",
     "static/media/Dayflow Party Time.svg": "/static/media/Dayflow Party Time.1370d7b991aecb04e8e2611080b08156.svg",
     "static/media/Dayflow Park Life.svg": "/static/media/Dayflow Park Life.a1e93cf947511b79e2b29c39c5f3f284.svg",
@@ -64,16 +64,18 @@
     "static/media/abhay.jpeg": "/static/media/abhay.fb00bbff29a8e6a8e2e7.jpeg",
     "static/media/morph.svg": "/static/media/morph.2d6e832e158c61332abbaa9c0aed41c1.svg",
     "static/media/bg-brochure.jpg": "/static/media/bg-brochure.b025a06660bef0d51ed3.jpg",
+    "static/media/Cyberpunk.ttf": "/static/media/Cyberpunk.ce09ddf4d0a0f2fd4619.ttf",
     "static/media/logo_mascot.svg": "/static/media/logo_mascot.e17f3a5a11e9a3545587086ad01bdfaa.svg",
+    "static/media/barcode.webp": "/static/media/barcode.7c68ac1dc28e37d41f11.webp",
     "static/media/logo_text.svg": "/static/media/logo_text.8997b5a4e2ba235789115587c20c7217.svg",
     "index.html": "/index.html",
     "static/media/spiral.svg": "/static/media/spiral.b31ac6ecb15268b3667ba9f423a0fbc4.svg",
-    "main.565a47d4.css.map": "/static/css/main.565a47d4.css.map",
-    "main.b3b984c0.js.map": "/static/js/main.b3b984c0.js.map",
+    "main.31b7dc2f.css.map": "/static/css/main.31b7dc2f.css.map",
+    "main.aa2d317d.js.map": "/static/js/main.aa2d317d.js.map",
     "787.0d4f6fcd.chunk.js.map": "/static/js/787.0d4f6fcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.565a47d4.css",
-    "static/js/main.b3b984c0.js"
+    "static/css/main.31b7dc2f.css",
+    "static/js/main.aa2d317d.js"
   ]
 }
