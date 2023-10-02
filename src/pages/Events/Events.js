@@ -80,7 +80,7 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
           {/*</Typography>}*/}
         </Box>
         <Stack direction="row" flexWrap='wrap' alignItems="center" gap={1} mb={1}>
-          {needRegister && <Chip label="Registration will start soon" icon={<FiClock />} />}
+          {needRegister && <Button variant="contained" href={registrationLink} >Register</Button>}
           {needRegister && <CustomizedDialogs title = {title} description={rule}/> }
         </Stack>
         <Stack direction="row" flexWrap='wrap' alignItems="center" gap={1} mb={1}>
