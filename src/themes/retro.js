@@ -22,7 +22,7 @@ export default (mode) =>
       },
     },
     typography: {
-      fontFamily: ["Tomorrow", "Raleway", "Lato", "Arial", "sans-serif"].join(
+      fontFamily: ["Barlow", "Raleway", "Lato", "Arial", "sans-serif"].join(
         ","
       ),
       h1: {
@@ -43,12 +43,12 @@ export default (mode) =>
         lineHeight: 1.2,
       },
       body1: {
-        fontFamily: "Lato, Arial, sans-serif",
+        fontFamily: "Barlow, Arial, sans-serif",
         fontSize: "1rem",
         lineHeight: 1.6,
       },
       body2: {
-        fontFamily: "Lato, Arial, sans-serif",
+        fontFamily: "Barlow, Arial, sans-serif",
         fontSize: "0.9rem",
         lineHeight: 1.6,
       },

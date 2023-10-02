@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {
   AppBar,
   Box,
@@ -25,6 +25,9 @@ import { Link } from "react-router-dom";
 import GradientText from './common/gradienttext';
 import Spacer from './Spacer';
 import Logo from '../assets/png/logo.png'
+import gsap from 'gsap';
+import Flip from 'gsap/Flip'
+import Patternbg from './common/patternbg';
 
 let navLinks = [
   { title: "Home", path: "/" },
@@ -53,6 +56,28 @@ const Appbar = ({ isGuest = false }) => {
   const appbarRef = useRef();
   const theme = useTheme();
   const color = theme.palette.text.primary;
+  const ref = useRef();
+
+  // useLayoutEffect(() => {
+  //   const timeline = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: '.appbar-trigger',
+  //       markers: true,
+  //       start: 'top top',
+  //       end: '+=1000',
+  //       scrub: true,
+  //     }
+  //   })
+  //
+  //   timeline.from('.content', {
+  //     scale: 1,
+  //     left: 50,
+  //     top: 0,
+  //     duration: 2
+  //   })
+  //
+  // }, []);
+
 
   if (isGuest)
     navLinks = navLinks.filter(
@@ -69,7 +94,7 @@ const Appbar = ({ isGuest = false }) => {
       <AppBar className="appbar" ref={appbarRef} elevation={0} position="fixed" sx={{
 
       }}>
-        <Container maxWidth="lg">
+        <Container ref={ref} maxWidth="lg">
           <Toolbar
             disableGutters
             sx={{
@@ -79,26 +104,24 @@ const Appbar = ({ isGuest = false }) => {
               alignItems: "center",
               transition: "background-color 0.3s ease",
               position: "relative",
-
               // Set the position to relative for the AppBar
             }}
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Link to='/'>
               <Box className="logo_title">
-                <div className="glitch-wrapper">
-                  <div className="glitch" data-text="Engi 2K23">Engi 2K23</div>
-                </div>
+                <Typography color='white' variant='h6' className="hero glitch layers" data-text="ENGI 2K23"><span>2K23_</span></Typography>
               </Box>
               {/*    <img src={Logo}  width='72px'/>*/}
               </Link>{" "}
+
             </Box>{" "}
 
             <FullscreenNav />
           </Toolbar>{" "}
         </Container>{" "}
       </AppBar>
-      <div className='appbar-trigger'/>
+      <Box  width='100%' height='100px' position='absolute' mt={50} className='appbar-trigger'/>
     </>
   );
 };
@@ -121,6 +144,8 @@ const FullscreenNav = () => {
       <Box sx={{
         backgroundColor: 'black'
       }}>
+        <Patternbg>
+
         <Spacer size='md'/>
         <Container maxWidth='md'>
           <Box minHeight='100vh'>
@@ -169,7 +194,7 @@ const FullscreenNav = () => {
             <FiX />
           </IconButton>
         </Container>
-
+        </Patternbg>
       </Box>
     </Dialog>
     </div>

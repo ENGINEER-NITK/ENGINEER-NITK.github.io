@@ -1,32 +1,12 @@
 import { Typography } from "@mui/material";
 import React, { useEffect, useRef } from 'react';
-import starImage from "../../assets/png/trees.png";
+import starImage from "../../assets/gif/videogame.gif";
 import { gsap } from 'gsap';
 import easyMeshGradient from 'easy-mesh-gradient';
 
 const GradientText = ({ primary, secondary, ...props }) => {
   const secondaryRef = useRef(null);
 
-  useEffect(() => {
-    // GSAP Animation
-    const shine = gsap.timeline({ repeat: -1, yoyo: true });
-
-    const animate = () => {
-      // Generate a random duration between 1 and 3 seconds
-      const randomDuration = Math.random() * 2 + 1;
-
-      shine.fromTo(secondaryRef.current, {
-        backgroundPosition: "200% center",
-      }, {
-        backgroundPosition: "-200% center",
-        duration: randomDuration,
-        ease: "power1.inOut",
-        onComplete: animate, // Call animate again after completion to keep the animation running
-      });
-    };
-
-    animate(); // Initial call to start the animation
-  }, []);
 
   const gradientString = easyMeshGradient({
     seed: '123',
@@ -56,13 +36,8 @@ const GradientText = ({ primary, secondary, ...props }) => {
           position: "absolute",
           left: "-50px",
           top: "-50px",
-          zIndex: 1,
+          zIndex: 3,
         },
-        ".secondary": {
-          background: "linear-gradient(90deg, transparent, transparent 47%, red 50%, transparent 53%, transparent)",
-          backgroundSize: "200% auto",
-          display: "inline-block",
-        }
       }}
       {...props}
     >
@@ -71,33 +46,33 @@ const GradientText = ({ primary, secondary, ...props }) => {
           display: "inline-block",
           position: "relative",
           zIndex: 4,
-          textShadow: `
-      -1px -1px 0 #fff,  
-       1px -1px 0 #fff,
-      -1px  1px 0 #fff,
-       1px  1px 0 #fff
-    `,
-          color: "black",
+          color: "white",
+          fontWeight: 300,
+          fontSize: '32px',
         }}
       >
-        {primary}
+        {primary}_
         <img
           src={starImage}
           alt="Star"
           style={{
-            width: "84px",
-            height: "84px",
-            marginLeft: "10px", // Optional: To provide some spacing after the primary text
-            marginRight: "10px", // Optional: To provide some spacing before the secondary text
+            height: "70px",
             position: "absolute",
             top: "-20px",
             right: "-60px",
+            zIndex: -2,
+            rotate: '5deg',
+            opacity: 0.5
           }}
         />
       </span>{" "}
       <br />
 
-      <span ref={secondaryRef} className='secondary'>{secondary}</span>
+      <span ref={secondaryRef} style={{
+        fontFamily: "cyberpunk, Barlow, tommorow",
+        letterSpacing: '-2px',
+        zIndex: 2
+      }} className='secondary'>{secondary}_</span>
     </Typography>
   );
 };

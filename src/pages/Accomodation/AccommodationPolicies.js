@@ -147,7 +147,8 @@ const AccommodationPolicies = () => {
         <Typography variant="body1" paragraph style={{ color: "white" }}>
           Confirmed Accommodation can be cancelled through email only. Send an
           e-mail having your Acco ID and the number of members for whom
-          accommodation has to be cancelled, at hospitality@engineer.org. The
+          accommodation has to be cancelled, at           Himan.201me122@nitk.edu.in
+          . The
           subject of the email should be "Cancellation of Accommodation". For
           any cancellations before the deadline, 75% of the total amount shall
           be refunded within 10 working days after the festival. There shall be

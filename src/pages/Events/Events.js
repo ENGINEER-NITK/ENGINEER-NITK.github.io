@@ -12,6 +12,7 @@ import { useEventData } from '../../hooks/useEvents';
 import CustomizedDialogs from './CustomizedDialogs';
 import { AiFillTrophy } from 'react-icons/ai';
 import easyMeshGradient from "easy-mesh-gradient";
+import Patternbg from '../../components/common/patternbg';
 
 const HeadCarousel = () => {
   const { data, isLoading } = useEventData();
@@ -168,6 +169,8 @@ const Events = () => {
 
   return (
     <Box ref={rootRef} sx={{ backgroundColor: 'black' }}>
+      <Patternbg>
+
       <Appbar />
       <Container maxWidth="lg" color="white" sx={{ pt: 15 }}>
         <HeadCarousel />
@@ -281,6 +284,8 @@ const Events = () => {
             ))}{" "} */}
       </Container>
       <Footer />
+      </Patternbg>
+
     </Box>
   );
 };

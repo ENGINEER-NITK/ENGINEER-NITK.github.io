@@ -32,6 +32,7 @@ import GradientText from '../../components/common/gradienttext';
 import Marquee from 'react-fast-marquee';
 import SponsorCard from '../../components/brochure/sponsor';
 import EmblaCarousel from '../../components/common/carousel';
+import Patternbg from '../../components/common/patternbg';
 
 const images = [
   {
@@ -203,6 +204,7 @@ const Brochure = () => {
 
   return (
     <Box ref={rootRef} sx={{ backgroundColor: "common.black" }}>
+      <Patternbg>
       <Appbar />
       <Container maxWidth="lg" color="white">
         <Box pt={20}>
@@ -373,7 +375,9 @@ const Brochure = () => {
         </Box>
         <Spacer size='xl'/>
       </Container>{" "}
+      </Patternbg>
       <Footer />
+
     </Box>
   );
 };

@@ -26,6 +26,7 @@ import Instructions from "./Instructions";
 import ReachingNITK from "./ReachingNITK";
 import ContactUs from "./ContactUs";
 import GradientText from "../../components/common/gradienttext";
+import { FiHome } from 'react-icons/fi';
 
 const Accomodation = () => {
   const rootRef = useRef();
@@ -152,11 +153,14 @@ const Accomodation = () => {
           <Stack>
             <GradientText primary="Lodging" secondary="Queries" />
             <Stack direction="row" flexWrap='wrap' alignItems="center" gap={1} ml={37} mt={2} mb={1}>
-            <Button variant="contained" component='a' href="https://engineer.yapsody.com/event/index/785135?ref=ebtn" target='_blank'>BOOK ACCOMMODATION</Button>
+
         </Stack>
 
             {/* <a href="https://engineer.yapsody.com/event/book/785135/31574123?ref=elink" target="_blank" >Get Tickets for "Accommodation at NITK's Tech Fest Engineer 23 " only on Yapsody</a> */}
           </Stack>
+
+
+          <Button startIcon={<FiHome/>} variant="contained" component='a' href="https://engineer.yapsody.com/event/index/785135?ref=ebtn" target='_blank'>BOOK ACCOMMODATION</Button>
 
           {isMobile ? (
             <FormControl

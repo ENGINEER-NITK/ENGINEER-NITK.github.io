@@ -7,10 +7,12 @@ import GradientText from '../../components/common/gradienttext';
 import Spacer from '../../components/Spacer';
 import { Description } from '../../components/common/typography';
 import Section from '../../components/common/section';
+import Patternbg from '../../components/common/patternbg';
 
 const Game = () => {
   return (
-    <Section  sx={{ backgroundColor: 'black' }}>
+    <Box  sx={{ backgroundColor: 'black' }}>
+    <Patternbg>
       <Appbar />
       <Container maxWidth="lg" color="white" sx={{ pt: 15 }}>
         <GradientText primary='Game' secondary='Is On!!' />
@@ -23,8 +25,9 @@ const Game = () => {
         <Spacer size='xs'/>
 
       </Container>
+    </Patternbg>
       <Footer/>
-    </Section>
+    </Box>
   );
 };
 

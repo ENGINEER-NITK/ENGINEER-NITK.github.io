@@ -13,6 +13,8 @@ import { Description, Heading } from '../common/typography';
 import useGsap, { animateOnScroll } from '../../hooks/useGsap';
 import gsap from 'gsap';
 import EmblaCarousel from '../common/carousel';
+import dots from '../../assets/png/dots-2.png'
+import Patternbg from '../common/patternbg';
 
 const UserBoxContainer = styled(Box)`
   display: flex;
@@ -81,6 +83,7 @@ const About = () => {
     animateOnScroll('.title', '.gradient-box');
   });
   return (
+<Patternbg>
     <Container id="about-root" maxWidth="lg">
       <GradientText className="title" primary="Timeline" secondary="Live Events." />
       <Spacer size="sm" />
@@ -118,6 +121,7 @@ const About = () => {
         </Grid>{' '}
       </Box>{' '}
     </Container>
+</Patternbg>
   );
 };
 

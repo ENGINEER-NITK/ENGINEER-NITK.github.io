@@ -18,6 +18,8 @@ import Spacer from "../Spacer";
 import useGsap from "../../hooks/useGsap";
 import gsap from "gsap";
 import easyMeshGradient from 'easy-mesh-gradient';
+import GradientBox from '../common/gradientbox';
+import Patternbg from '../common/patternbg';
 
 const servicesData = [
   {
@@ -123,14 +125,15 @@ const Tagline = () => {
   };
 
   return (
+    <Patternbg>
     <Container id="tagline-root" maxWidth="lg">
       <Box className="title" pb={5}>
         <GradientText primary="Key Events" secondary="And Highlights." />
       </Box>
 
-      <Grid container spacing={2}>
+      <Grid alignItems='center' container spacing={2} >
         {servicesData.map((service, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12} sm={6} md={4} key={index} >
             <Box
               key={index}
               zIndex={index === hoveredIndex ? 100 : 1}
@@ -147,6 +150,7 @@ const Tagline = () => {
         ))}
       </Grid>
     </Container>
+    </Patternbg>
   );
 };
 
@@ -172,7 +176,7 @@ const TaglineCard = ({ title, description, icon, imageUrl, index }) => {
   })
   return (
     <Box className={`card-${index}`}>
-      <Card background={gradientString} backgroundImage={imageUrl}>
+      <GradientBox backgroundImage={imageUrl}>
         <Box width="70%">
           <Heading variant="h2">
             {title.split(" ")[0]} {title.split(" ").slice(1).join(" ")}
@@ -182,7 +186,7 @@ const TaglineCard = ({ title, description, icon, imageUrl, index }) => {
             {description}
           </Description>
         </Box>
-      </Card>
+      </GradientBox>
     </Box>
   );
 };

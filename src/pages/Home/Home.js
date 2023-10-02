@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { Box, CssBaseline } from "@mui/material";
 import "./Home.css";
 import Appbar from "../../components/Appbar";
@@ -14,7 +14,8 @@ import Footer from "../../components/common/footer";
 import Pricing from "../../components/home/pricing";
 import Tagline from "../../components/home/tagline";
 import Appbartrigger from '../../components/common/appbartrigger';
-
+import useGsap from '../../hooks/useGsap';
+import gsap from 'gsap'
 const Home = () => {
   const root = useRef();
 

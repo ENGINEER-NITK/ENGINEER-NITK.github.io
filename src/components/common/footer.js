@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import {
   Box, Button,
   Container,
   Grid,
-  IconButton,
+  IconButton, Stack,
   Typography,
   useTheme,
 } from '@mui/material';
 import { FiBell, FiFacebook, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import { Link } from "react-router-dom";
 import { red } from '@mui/material/colors';
+import Logo from '../../assets/png/logo.png';
+import gsap from 'gsap';
+import Flip from 'gsap/Flip'
+import useGsap from '../../hooks/useGsap';
 
 const linksData = [
   { to: '/', text: 'Home' },
@@ -24,14 +28,78 @@ const linksData = [
 
 const Footer = () => {
   const theme = useTheme();
+  const ref = useRef()
+  const q = gsap.utils.selector(ref);
+  const [toggle, setToggle] = useState(false)
+  const [layoutState, setLayoutState] = useState();
+
+  //
+  // useGsap(ref.current,()=> {
+  //
+  // gsap.to('.content', {
+  //   scrollTrigger: {
+  //     trigger: '.footer',
+  //     markers: true,
+  //     start: 'top top',
+  //     end: '+=2000',
+  //     scrub: true,
+  //   }
+  // })
+
+
+
+  useGsap('.footer', ()=> {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.footer',
+        // markers: true,
+        scrub: true,
+      }
+    })
+
+    timeline.from('.content', {
+      scale: 3,
+      left: 0,
+      top: 0,
+      rotateZ: 360,
+      duration: 2,
+      ease: 'expo.inOut'
+    })
+
+  })
+
+  useLayoutEffect(() => {
+    if (!layoutState || !q) return;
+
+    const flip = Flip.from(layoutState, {
+      duration: 0.6,
+      // fade: true,/
+      absolute: true,
+      targets: q(".content"),
+    });
+
+    return () => {
+      flip.kill();
+    };
+  }, [layoutState]);
+
+  const handleClick = () => {
+    setToggle(prev => !prev)
+    const containers = q(".content")
+    const state = Flip.getState(containers)
+    setLayoutState(state)
+  }
+
 
   return (
     <Box
-      bgcolor={theme.palette.background.default}
+      bgcolor='#fcee0c'
       py={3}
       pt={6}
       px={theme.spacing(2)}
       color={theme.palette.text.secondary}
+      className='footer'
+      ref={ref}
     >
       <Container maxWidth="lg">
         <Grid container spacing={3} justifyContent="space-between">
@@ -71,6 +139,7 @@ const Footer = () => {
               </IconButton>
             </a>
           </Grid>
+          <Button onClick={handleClick}>AnAS</Button>
           <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6">Quick Links</Typography>
           {linksData.map((link, index) => (
@@ -85,9 +154,27 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Box mt={3} textAlign="center">
-          <Typography variant="body2">
+          <Stack direction='row' justifyContent='center'>
+            {
+              toggle ?
+                <Box data-flip-id='content'  width='18px' height='18px' className='content'>
+                  <img  src={Logo} width='100%' height='100%'/>
+                </Box>
+                :
+                <Box data-flip-id='content' width='96px' height='96px' className='content' sx={{
+                  position: 'fixed',
+                  bottom: '50px',
+                  right: '50px'
+                }}>
+                  <img src={Logo} width='100%' height='100%'/>
+                </Box>
+            }
+            <Typography variant="body2">
             &copy; {new Date().getFullYear()}
-          </Typography>
+              </Typography>
+          </Stack>
+
+
         </Box>
       </Container>
     </Box>
