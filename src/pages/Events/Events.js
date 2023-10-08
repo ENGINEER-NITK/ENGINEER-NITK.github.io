@@ -136,36 +136,36 @@ const Event = ({ name, description, img }) => {
 };
 
 const Events = () => {
-  const { data, isLoading } = useEventData();
+  const { isLoading } = useEventData();
   const rootRef = useRef();
-  // const [data, setData] = useState([]);
-  // const binId = '650b2bb0205af66dd4a23cb4';
-  // const apiKey = '$2a$10$ALWgRdFMPxMOF8WhLWbVmuC1Q.mfj6P/O1CvmwCXLT9LRC4HM6Woq';
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
-  //         headers: {
-  //           'X-Master-Key': apiKey,
-  //         },
-  //       });
+  const [data, setData] = useState([]);
+  const binId = '650b2bb0205af66dd4a23cb4';
+  const apiKey = '$2a$10$ALWgRdFMPxMOF8WhLWbVmuC1Q.mfj6P/O1CvmwCXLT9LRC4HM6Woq';
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
+          headers: {
+            'X-Master-Key': apiKey,
+          },
+        });
 
 
-  //       if (response.ok) {
-  //         const jsonData = await response.json();
-  //         setData(jsonData.record.events);
-  //         console.log(data)
-  //         // console.log(data.record.events)
-  //       } else {
-  //         console.error(`Failed to fetch data. Status code: ${response.status}`);
-  //       }
-  //     } catch (error) {
-  //       console.error('Error:', error);
-  //     }
-  //   };
+        if (response.ok) {
+          const jsonData = await response.json();
+          setData(jsonData.record.events);
+          console.log(data)
+          // console.log(data.record.events)
+        } else {
+          console.error(`Failed to fetch data. Status code: ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
 
-  //   fetchData();
-  // },[]);
+     fetchData();
+   },[]);
 
   return (
     <Box ref={rootRef} sx={{ backgroundColor: 'black' }}>
