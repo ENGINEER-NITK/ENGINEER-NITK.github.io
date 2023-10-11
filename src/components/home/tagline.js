@@ -140,8 +140,6 @@ const Tagline = () => {
               className={`card-container-${index}`}
               position="relative"
               overflow="hidden"
-              onMouseEnter={() => handleHover(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
             >
               <TaglineCard {...service} index={index} />
               <TaglineDescriptionCard {...service} index={index} />
@@ -150,6 +148,8 @@ const Tagline = () => {
         ))}
       </Grid>
     </Container>
+      <Spacer size="lg" />
+
     </Patternbg>
   );
 };
@@ -175,8 +175,9 @@ const TaglineCard = ({ title, description, icon, imageUrl, index }) => {
     seed: title
   })
   return (
-    <Box className={`card-${index}`}>
-      <GradientBox backgroundImage={imageUrl}>
+    <Box className={`card-${index}`}
+    >
+      <GradientBox backgroundImage={imageUrl} height='300px'>
         <Box width="70%">
           <Heading variant="h2">
             {title.split(" ")[0]} {title.split(" ").slice(1).join(" ")}

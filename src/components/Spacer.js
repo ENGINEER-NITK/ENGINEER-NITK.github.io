@@ -21,7 +21,7 @@ const Spacer = ({ size }) => {
 
     const spacerSize = getSize(size);
 
-    return <Box sx={{ m: `${spacerSize}rem` }} />;
+    return <Box sx={{ p: `${spacerSize}rem` }} />;
 };
 
 export default Spacer;

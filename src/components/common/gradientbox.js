@@ -5,7 +5,7 @@ import barcode from '../../assets/png/barcode.webp'
 const GradientBox = ({
   children,
   height = "auto",
-  background = "linear-gradient(to top left, #00b8ff, transparent 75%)",
+  background = "black linear-gradient(to top left, #00b8ff, transparent 75%)",
   img = null,
   rotate = "-20deg",
   size = "medium",
@@ -15,6 +15,9 @@ const GradientBox = ({
 }) => {
 
   return (
+    <Box
+      className={className}
+    >
     <Box sx={{
       overflow: 'hidden',
       position: 'relative',
@@ -65,7 +68,6 @@ const GradientBox = ({
       height={height}
       position="relative"
       overflow="hidden"
-      className={className}
       // Add the background image here
       sx={{
         '::after': {
@@ -88,8 +90,8 @@ const GradientBox = ({
           content: "''",
           position: "absolute",
           width: '100%',
-          height: '250px',
-          bottom: 0,
+          height: '100%',
+          top: 0,
           right: 0,
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
@@ -97,6 +99,7 @@ const GradientBox = ({
           opacity: 1, // Adjust opacity as needed
           zIndex: -1,
           backgroundRepeat: 'no-repeat',// Place it behind the main content
+          filter: 'blur(2px)'
         },
 
       }}
@@ -118,6 +121,7 @@ const GradientBox = ({
           }}
         />
       )}
+    </Box>
     </Box>
     </Box>
   );

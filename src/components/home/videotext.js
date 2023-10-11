@@ -51,13 +51,13 @@ const VideoText = () => {
               alignment-baseline="middle"
               font-family="Delirium"
               font-weight="900"
-              color='red'
+              stroke="black"
             >
               ENGI
             </text>
           </clipPath>
         </defs>
-      </svg>
+    </svg>
       <video playsInline  autoPlay loop muted className={classes.video}>
         <source src={clip} type="video/mp4" />
       </video>

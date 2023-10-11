@@ -1,4 +1,3 @@
-import Appbar from "./components/Appbar";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -13,18 +12,16 @@ import retro from "./themes/retro";
 import React, { useEffect, useRef } from 'react';
 import useGsap, { appear } from "./hooks/useGsap";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import LogoText from "./assets/svg/logo_text.svg";
-import LogoMascot from "./assets/svg/logo_mascot.svg";
 import Gallery from "./pages/Gallery/Gallery";
 import Lenis from "@studio-freight/lenis";
 import Contact from "./pages/Contact/Contact";
 import Events from "./pages/Events/Events";
 import Countdown from "./components/page/beforerelease";
 import Ambassador from "./pages/Ambassadors";
-import BeforeReleaseLayout from "./components/page/layout";
 import Team from './pages/Team/Team';
 import Game from './pages/Game/Game';
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
 function App() {
   const root = useRef();
   const theme = useTheme();
@@ -45,6 +42,7 @@ function App() {
       y: -12,
       ease: "expo.out",
     });
+
 
     if (!mobile)
       timeline.fromTo(
@@ -75,13 +73,76 @@ function App() {
     requestAnimationFrame(raf);
 
   });
+
+  useEffect(() => {
+
+    const sections = gsap.utils.toArray('section.section')
+
+    gsap.to('.animateImage', {
+      scrollTrigger: {
+        scrub: true
+      },
+      y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+      ease: "none",
+    });
+
+
+
+    sections.forEach((section, index) => {
+      const box = section.querySelectorAll('.gradient-box')
+      const title = section.querySelector('.gradient-text')
+      const images = section.querySelectorAll('.animateImage')
+
+      const timeline = gsap.timeline({
+        ease: 'power4.out',
+        scrollTrigger: {
+          trigger: box,
+          start: 'top center',
+          end: 'bottom center',
+          toggleActions: 'play none none reverse',
+          }
+      })
+
+
+
+
+
+
+
+
+      timeline.from(title,{
+        opacity: 0
+      })
+
+
+
+
+
+      timeline.fromTo(
+        box,
+        {
+          x: -100
+        },
+        {
+          x: 0,
+          stagger: 0.1,
+          duration: 0.5,
+          ease: 'power4.in',
+        }, '<'
+      );
+
+
+
+
+
+
+    })
+  }, []);
   return (
     <ThemeProvider theme={retro("dark")}>
       <Box
         ref={root}
-        sx={{
-          bgcolor: "background.default",
-        }}
+
         className="App"
       >
         <Countdown />
@@ -115,5 +176,11 @@ function App() {
     </ThemeProvider>
   );
 }
+
+export const animateOnScroll = (trigger, target) => {
+
+
+};
+
 
 export default App;

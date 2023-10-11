@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import { Button, Container, Paper, Stack, Typography } from "@mui/material";
 import GradientText from "../common/gradienttext";
-import Background from "../../assets/gif/space.gif";
+import Background from "../../assets/jpg/bg-new.png";
 import { InlineWidget, PopupButton, PopupWidget } from "react-calendly";
 import { useEffect, useRef } from "react";
 import Spacer from "../Spacer";
@@ -57,7 +57,7 @@ const CTA = () => {
       sx={{
         backgroundImage: `linear-gradient(to bottom right, rgba(0, 0, 0, 0.8) 20%, transparent), url(${Background})`, // Gradient from top left to bottom right, darkening the background image
         padding: "80px 0",
-        backgroundSize: "120%",
+        backgroundSize: "cover",
         backgroundPosition: "center",
         boxShadow:
           "inset 0px 40px 30px -20px #1B1B1E, inset 0px -40px 30px -20px rgba(0, 0, 0, 0.8)",

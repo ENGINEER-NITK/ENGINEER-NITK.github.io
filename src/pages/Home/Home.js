@@ -20,21 +20,18 @@ const Home = () => {
   const root = useRef();
 
   return (
-    <Box ref={root} position="relative" bgcolor="black">
+    <Box ref={root} position="relative">
       <CssBaseline />
       <Appbar />
       <Appbartrigger/>
       <Hero />
 
-      <Spacer size="xl" />
 
       <About />
 
-      <Spacer size="xl" />
 
       <Tagline />
 
-      <Spacer size="lg" />
 
       <CTA />
 

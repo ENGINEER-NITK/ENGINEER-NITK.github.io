@@ -13,6 +13,8 @@ import CustomizedDialogs from './CustomizedDialogs';
 import { AiFillTrophy } from 'react-icons/ai';
 import easyMeshGradient from "easy-mesh-gradient";
 import Patternbg from '../../components/common/patternbg';
+import { CgScrollV } from 'react-icons/cg';
+import {  GiTicket } from 'react-icons/gi';
 
 const HeadCarousel = () => {
   const { data, isLoading } = useEventData();
@@ -80,8 +82,8 @@ const HeadEvent = ({ subtitle, firstCta, secondCta, description, event }) => {
           {/*</Typography>}*/}
         </Box>
         <Stack direction="row" flexWrap='wrap' alignItems="center" gap={1} mb={1}>
-          {needRegister && <Chip label="Registration will start soon" icon={<FiClock />} />}
-          {needRegister && <CustomizedDialogs title = {title} description={rule}/> }
+          {needRegister && <a target='_blank' href={registrationLink}><Chip color='primary' label="Registration"  icon={<GiTicket />} /></a>}
+          {needRegister && <a target='_blank' href={rule}><Chip color='secondary' label="Rule book"  icon={<CgScrollV />} /></a> }
         </Stack>
         <Stack direction="row" flexWrap='wrap' alignItems="center" gap={1} mb={1}>
           {isCompetition && <>

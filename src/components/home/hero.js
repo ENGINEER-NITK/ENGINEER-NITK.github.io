@@ -91,29 +91,11 @@ const Hero = () => {
         ease: "expo.inOut" // Smooth easing function for a more natural hover effect
       });
 
+
     },
     []
   );
 
-
-  useEffect(() => {
-    const element = containerRef.current;
-
-    const handleScroll = () => {
-      if (element) {
-        const scrollY = window.scrollY;
-        gsap.from(element, {
-          y: -scrollY * 0.3, // Adjust this value to control the speed of the parallax effect
-          duration: 1,
-        });
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <Box
       ref={rootRef}
@@ -124,7 +106,7 @@ const Hero = () => {
         backgroundPosition: "center",
         boxShadow:
           "inset 0px 40px 30px -20px #1B1B1E, inset 0px -40px 30px -20px rgba(0, 0, 0, 0.8)",
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <Container maxWidth="lg">
@@ -213,6 +195,8 @@ const Hero = () => {
           {/* Second Grid Item */}
         </Grid>
       </Container>
+      <Spacer size="xl" />
+
     </Box>
   );
 };

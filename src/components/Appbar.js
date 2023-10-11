@@ -58,26 +58,6 @@ const Appbar = ({ isGuest = false }) => {
   const color = theme.palette.text.primary;
   const ref = useRef();
 
-  // useLayoutEffect(() => {
-  //   const timeline = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: '.appbar-trigger',
-  //       markers: true,
-  //       start: 'top top',
-  //       end: '+=1000',
-  //       scrub: true,
-  //     }
-  //   })
-  //
-  //   timeline.from('.content', {
-  //     scale: 1,
-  //     left: 50,
-  //     top: 0,
-  //     duration: 2
-  //   })
-  //
-  // }, []);
-
 
   if (isGuest)
     navLinks = navLinks.filter(
@@ -144,7 +124,6 @@ const FullscreenNav = () => {
       <Box sx={{
         backgroundColor: 'black'
       }}>
-        <Patternbg>
 
         <Spacer size='md'/>
         <Container maxWidth='md'>
@@ -194,7 +173,6 @@ const FullscreenNav = () => {
             <FiX />
           </IconButton>
         </Container>
-        </Patternbg>
       </Box>
     </Dialog>
     </div>

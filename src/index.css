@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Cyberpunk';
-    src: local('Cyberpunk'), url(./fonts/cyberpunk/Cyberpunk.ttf) format('opentype');
+    src: local('Cyberpunk'), url(./fonts/Cyberpunk.otf) format('opentype');
 }
 
 @font-face {
@@ -19,7 +19,6 @@
 
 body {
   margin: 0;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
@@ -572,3 +571,18 @@ a {
     .gradient-box:after {
         animation: blink 2s linear infinite;
     }
+
+
+/*@keyframes yHover {*/
+/*    0%, 100% {*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*    50% {*/
+/*        transform: translateY(-10px);*/
+/*    }*/
+/*}*/
+
+/*.animateImage {*/
+/*    transition: transform 0.3s ease;*/
+/*    animation: yHover 3s infinite;*/
+/*}*/

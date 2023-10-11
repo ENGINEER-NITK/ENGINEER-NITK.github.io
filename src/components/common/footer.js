@@ -48,41 +48,6 @@ const Footer = () => {
 
 
 
-  useGsap('.footer', ()=> {
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.footer',
-        // markers: true,
-        scrub: true,
-      }
-    })
-
-    timeline.from('.content', {
-      scale: 3,
-      left: 0,
-      top: 0,
-      rotateZ: 360,
-      duration: 2,
-      ease: 'expo.inOut'
-    })
-
-  })
-
-  useLayoutEffect(() => {
-    if (!layoutState || !q) return;
-
-    const flip = Flip.from(layoutState, {
-      duration: 0.6,
-      // fade: true,/
-      absolute: true,
-      targets: q(".content"),
-    });
-
-    return () => {
-      flip.kill();
-    };
-  }, [layoutState]);
-
   const handleClick = () => {
     setToggle(prev => !prev)
     const containers = q(".content")
@@ -101,7 +66,7 @@ const Footer = () => {
       className='footer'
       ref={ref}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" >
         <Grid container spacing={3} justifyContent="space-between">
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6">Contact Us</Typography>
@@ -139,7 +104,6 @@ const Footer = () => {
               </IconButton>
             </a>
           </Grid>
-          <Button onClick={handleClick}>AnAS</Button>
           <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6">Quick Links</Typography>
           {linksData.map((link, index) => (

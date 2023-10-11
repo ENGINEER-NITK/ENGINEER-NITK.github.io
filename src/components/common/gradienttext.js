@@ -22,6 +22,7 @@ const GradientText = ({ primary, secondary, ...props }) => {
       fontFamily="typography.fontFamily"
       letterSpacing="-1px"
       fontSize="48px"
+      className='gradient-text'
       lineHeight="1.2" // Adjust the line height as needed for better appearance
       sx={{
         background: boxBackground, // Gradient colors from top left to bottom right

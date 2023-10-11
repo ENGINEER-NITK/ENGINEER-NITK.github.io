@@ -28,9 +28,17 @@ const ContactUs = () => {
           Contact Us
         </Typography>
         <Typography variant="body1" paragraph style={{ color: "white" }}>
-          Himanshu ( 83089 88245 )
+          • Himanshu ( 83089 88245 )
           <br/>
           Himan.201me122@nitk.edu.in
+          <br/>
+          • Gaurav Kumar (6397362215)
+          <br/>
+          gk9033170@gmail.com
+          <br/>
+          • Abhay Kumar (9798499056)
+          <br/>
+          kumarabhay1407@gmail.com
         </Typography>
         {/*<Typography variant="body1" paragraph style={{ color: "white" }}>*/}
         {/*  <br />*/}
